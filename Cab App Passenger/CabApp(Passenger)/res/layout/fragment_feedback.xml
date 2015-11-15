@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191918"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/in_topbar"
+        layout="@layout/common_top_bar_maps" />
+
+    <RelativeLayout
+        android:id="@+id/rl_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_done"
+        android:layout_below="@id/in_topbar" >
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/more"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Contact us"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_feedback"
+            android:background="#fff"
+            android:gravity="left|top"
+            android:hint="Enter your message here"
+            android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
+            android:paddingBottom="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="12dp"
+            android:textColor="#191918"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="1dp"
+            android:drawableLeft="@drawable/yes"
+            android:drawablePadding="12dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="@dimen/list_padding"
+            android:text="Send"
+            android:textColor="@color/textview_unselected"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

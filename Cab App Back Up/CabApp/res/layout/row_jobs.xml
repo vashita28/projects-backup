@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+        <!-- android:text="10:30" -->
+
+        <TextView
+            android:id="@+id/txtTimeStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/txtTime"
+            android:layout_toLeftOf="@+id/txtDistanceUnit"
+            android:text="(-5 mins)"
+            android:textColor="#D51313"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtDistanceUnit"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/relPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTime"
+            android:layout_marginTop="5dp" >
+
+            <LinearLayout
+                android:id="@+id/llPickUpAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txtDistancePickup"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtPickupPinCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/textcolor_green"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtPickupAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/textcolor_green"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <!-- android:text="W1F\nNoel Street" -->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDistancePickup"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="-"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivDown"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/relPickup"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/downicon" />
+
+        <RelativeLayout
+            android:id="@+id/relDrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivDown"
+            android:layout_marginTop="8dp" >
+
+            <LinearLayout
+                android:id="@+id/llDropOffAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txtDistanceDrop"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/txtDropPinCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/textcolor_red"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDropAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/textcolor_red"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <!-- android:text="GU22\nGuildford Road" -->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDistanceDrop"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="-"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relFare"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/relDrop"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/ivPayment"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/paymentblack" />
+
+            <TextView
+                android:id="@+id/txtFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/ivPayment"
+                android:gravity="center_vertical"
+                android:text=" -"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@id/relFare" />
+    </RelativeLayout>
+
+</RelativeLayout>

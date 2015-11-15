@@ -1,0 +1,200 @@
+package com.android.cabapp.model;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.content.Context;
+import android.location.Location;
+import android.os.Handler;
+import android.util.Log;
+
+import com.android.cabapp.util.AppValues;
+import com.android.cabapp.util.Connection;
+import com.android.cabapp.util.Constants;
+import com.android.cabapp.util.Util;
+
+public class JobPayment {
+	Connection connection;
+	List<NameValuePair> nameValuePairs;
+	Context mContext;
+	String totalAmount, tip, cardFees, meterAmount, cabMiles;
+	String szJobId = "", szFeesPaidBy = "", szCardPayworkToken = "",
+			isRegisteredCard = "", szCardBrand = "", szTruncatedPan = "";
+	boolean isWalkUp = false;
+
+	public JobPayment(Context context, String totalAmout, String tip,
+			String meterAmt, String szFeesPaidBy, String cardPayworkToken,
+			String cardFees, String isRegisteredCard, String cardBrand,
+			boolean isWalkUp, String sTruncatedPan) {
+		// TODO Auto-generated constructor stub
+		mContext = context;
+		connection = new Connection(mContext);
+		nameValuePairs = new ArrayList<NameValuePair>();
+		this.totalAmount = totalAmout;
+		this.tip = tip;
+		this.meterAmount = meterAmt;
+		this.szFeesPaidBy = szFeesPaidBy;
+		this.szCardPayworkToken = cardPayworkToken;
+		this.cardFees = cardFees;
+		this.isRegisteredCard = isRegisteredCard;
+		this.szCardBrand = cardBrand;
+		this.isWalkUp = isWalkUp;
+		this.szTruncatedPan = sTruncatedPan;
+
+	}
+
+	public JobPayment(Context context, String szBookingID, String totalAmout,
+			String tip, String meterAmt, String szFeesPaidBy,
+			String cardPayworkToken, String cardFees, String isRegisteredCard,
+			String cardBrand, String szCabMiles, boolean isWalkUp,
+			String sTruncatedPan) {
+		mContext = context;
+		connection = new Connection(mContext);
+		nameValuePairs = new ArrayList<NameValuePair>();
+		this.szJobId = szBookingID;
+		this.totalAmount = totalAmout;
+		this.tip = tip;
+		this.meterAmount = meterAmt;
+		this.szFeesPaidBy = szFeesPaidBy;
+		this.szCardPayworkToken = cardPayworkToken;
+		this.cardFees = cardFees;
+		this.isRegisteredCard = isRegisteredCard;
+		this.szCardBrand = cardBrand;
+		this.cabMiles = szCabMiles;
+		this.isWalkUp = isWalkUp;
+		this.szTruncatedPan = sTruncatedPan;
+
+	}
+
+	// “bookingId” : 114,
+	// “currency” : “GBP”,
+	// // “totalAmount” : 10,
+	// // “tip” : “1”,
+	// // “feePaidBy” : “passenger”,
+	// // “payworksToken” : “8a82944a49bdfaf20149c19487002a9f”,
+	// // “cardFee” : 2,
+	// // "isRegisteredCard":1,
+	// // "cabMiles":12,
+	// // "cardBrand":""
+	// "latitude":"",
+	// "longitude":"",
+	// // "meterAmount":""
+
+	// public JobPayment(Context context,String bookingId, int noOfCredits,
+	// boolean autoTopUp,
+	// String truncatedPan, String cardType, float costPerCredit,
+	// String cardPayworkToken) {
+	// // TODO Auto-generated constructor stub
+	// mContext = context;
+	// connection = new Connection(mContext);
+	// nameValuePairs = new ArrayList<NameValuePair>();
+	// this.
+	// this.numberOfCredits = noOfCredits;
+	// this.isAutoTopUp = autoTopUp;
+	// this.szTruncatedPan = truncatedPan;
+	// this.szCardType = cardType;
+	// this.szCostPerCredit = costPerCredit;
+	// this.szCardPayworkToken = cardPayworkToken;
+	//
+	// }
+
+	public String PaymentCall() {
+		if (!isWalkUp) {
+			nameValuePairs.add(new BasicNameValuePair("data[bookingId]",
+					szJobId));
+			nameValuePairs.add(new BasicNameValuePair("data[cabMiles]", String
+					.valueOf(cabMiles)));
+			float meterAmt = 0, fTip = 0, fCardFees = 0, fCabMiles = 0;
+			if (meterAmount != null && !meterAmount.isEmpty())
+				meterAmt = Float.valueOf(meterAmount);
+			if (tip != null && !tip.isEmpty())
+				fTip = Float.valueOf(tip);
+			if (cardFees != null && !cardFees.isEmpty())
+				fCardFees = Float.valueOf(cardFees);
+			if (cabMiles != null && !cabMiles.isEmpty())
+				fCabMiles = Float.valueOf(cabMiles);
+			float totalAmount = meterAmt + fTip - fCabMiles + fCardFees;
+			nameValuePairs.add(new BasicNameValuePair("data[totalAmount]",
+					String.valueOf(totalAmount)));
+		} else {
+			nameValuePairs.add(new BasicNameValuePair("data[totalAmount]",
+					String.valueOf(totalAmount)));
+		}
+		if (Util.getLocation(mContext) != null) {
+			Location location = Util.getLocation(mContext);
+			nameValuePairs.add(new BasicNameValuePair("data[latitude]", String
+					.valueOf(Util.getLocation(mContext).getLatitude())));
+			nameValuePairs.add(new BasicNameValuePair("data[longitude]", String
+					.valueOf(Util.getLocation(mContext).getLongitude())));
+
+			if (location != null) {
+				String szAddress = Util.getCurrentAddress(mContext, location);
+				nameValuePairs.add(new BasicNameValuePair("data[address]",
+						szAddress));
+			}
+		}
+
+		if (AppValues.driverSettings.getCurrencySymbol() != null)
+			nameValuePairs.add(new BasicNameValuePair("data[currency]", String
+					.valueOf(AppValues.driverSettings.getCurrencySymbol())));
+
+		if (AppValues.driverSettings.getCurrencyCode() != null)
+			nameValuePairs
+					.add(new BasicNameValuePair("data[currencyCode]",
+							String.valueOf(AppValues.driverSettings
+									.getCurrencyCode())));
+
+		nameValuePairs.add(new BasicNameValuePair("data[tip]", String
+				.valueOf(tip)));
+		nameValuePairs.add(new BasicNameValuePair("data[cardFee]", cardFees));
+		nameValuePairs.add(new BasicNameValuePair("data[feePaidBy]",
+				szFeesPaidBy));
+		nameValuePairs.add(new BasicNameValuePair("data[isRegisteredCard]",
+				isRegisteredCard));
+		nameValuePairs.add(new BasicNameValuePair("data[brand]", szCardBrand));
+		nameValuePairs.add(new BasicNameValuePair("data[truncatedPan]",
+				szTruncatedPan));
+
+		nameValuePairs.add(new BasicNameValuePair("data[payworksToken]",
+				szCardPayworkToken));
+
+		nameValuePairs.add(new BasicNameValuePair("data[meterAmount]", String
+				.valueOf(meterAmount)));
+
+		connection.prepareConnection(nameValuePairs);
+		connection.connect(Constants.JOB_PAYMENT);
+
+		Log.e("Payment", "nameValuePairs: " + nameValuePairs.toString());
+		String paymentResponse = "";
+
+		if (connection.mInputStream != null) {
+			try {
+				{
+					paymentResponse = connection.inputStreamToString(
+							connection.mInputStream).toString();
+					Log.e("Payment", "PaymentResponse " + paymentResponse);
+					JSONObject jObject = new JSONObject(paymentResponse);
+
+					if (jObject.has("error")) {
+						paymentResponse = jObject.getString("message");
+						return paymentResponse;
+					}
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return paymentResponse;
+	}
+
+}

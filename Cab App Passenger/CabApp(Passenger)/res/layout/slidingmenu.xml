@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1e1e1c" >
+
+    <RelativeLayout
+        android:id="@+id/list_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/list_background" >
+
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/tv_edit"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Jake Davis"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/view_acount_details"
+            android:layout_width="match_parent"
+            android:layout_height="55dp" />
+
+        <TextView
+            android:id="@+id/txtMyAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtUserName"
+            android:layout_below="@+id/txtUserName"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:text="@string/preferredmethod"
+            android:textColor="@color/textcolor_myaccount"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_preferred_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtMyAccount"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/txtMyAccount"
+            android:text="Cash"
+            android:textColor="#fd6f01" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/nextarrow" />
+
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:text="My Details"
+            android:textColor="#fd6f01" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_slidermenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/list_topbar"
+        android:layout_gravity="start"
+        android:background="@color/list_divider"
+        android:choiceMode="singleChoice"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector" />
+
+    <View
+        android:id="@+id/view_belowlist"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/list_slidermenu"
+        android:background="@color/list_divider" />
+
+</RelativeLayout>

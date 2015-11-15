@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/list_background"
+    android:padding="2dp" >
+
+    <ImageView
+        android:id="@+id/ivThumbnailImage"
+        android:layout_width="95dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:background="@color/registration_bg"
+        android:padding="2dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlVideoIcon"
+        android:layout_width="95dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:background="#80272725" >
+
+        <ImageView
+            android:id="@+id/videoIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play" />
+    </RelativeLayout>
+
+</RelativeLayout>

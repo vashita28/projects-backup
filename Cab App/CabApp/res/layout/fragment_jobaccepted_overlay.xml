@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rlOverlayActiveJobs"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible" >
+
+        <com.android.cabapp.view.OverlayCircle
+            android:id="@+id/overlayHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:id="@+id/headerContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/overlayHeader"
+            android:layout_gravity="center_vertical"
+            android:background="@color/overlay_bg" >
+
+            <TextView
+                android:id="@+id/tvActiveJobs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="ACTIVE JOB"
+                android:textColor="@color/textview_selected"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvContactTheCab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvActiveJobs"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:singleLine="false"
+                android:text="On active jobs you can switch between booking details and map view, displaying route and distance"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/llBottomButtonsOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/registration_button"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/tvSkipBottomArrived"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="SKIP"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tvNextBottomArrived"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="NEXT"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="25sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlOverlayArrived"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/llTopButtonsArrivedOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/registration_button"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tvSkipTopArrived"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="SKIP"
+                android:textColor="@color/textview_selected"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/tvNextTopArrived"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="NEXT"
+                android:textColor="@color/textview_selected"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOverlayArrivedAtPickUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llTopButtonsArrivedOverlay"
+            android:visibility="gone" >
+
+            <com.android.cabapp.view.OverlayCircle
+                android:id="@+id/overlayArrived"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true" />
+
+            <RelativeLayout
+                android:id="@+id/contentArrived"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/overlayArrived"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tvArrivedAtPickUpOverlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvPassenger"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="ARRIVED AT PICK UP"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPassenger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="false"
+                    android:text="Passengers can track your arrival, when outside just tap the button to let them know the meter&apos;s running"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOverlayContactPassenger"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llTopButtonsArrivedOverlay"
+            android:visibility="gone" >
+
+            <com.android.cabapp.view.OverlayCircle
+                android:id="@+id/overlayContactPassenger"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true" />
+
+            <RelativeLayout
+                android:id="@+id/contentContactPassenger"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/overlayContactPassenger"
+                android:layout_centerInParent="true"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tvOverlayContactPassenger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvYouCanContact"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="CONTACT PASSENGER"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvYouCanContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="false"
+                    android:text="You can contact your passenger by phone or in-app message, use quick messsages to let them know you&apos;re on the way or delayed"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOverlayPayment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llTopButtonsArrivedOverlay"
+            android:visibility="gone" >
+
+            <com.android.cabapp.view.OverlayCircle
+                android:id="@+id/overlayPayment"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true" />
+
+            <RelativeLayout
+                android:id="@+id/contentPayment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/overlayPayment"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tvOverlayPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvAtTheEnd"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="COMPLETE &amp; TAKE PAYMENT"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAtTheEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="false"
+                    android:text="At the end of the job tap payment method &apos;Card&apos; or &apos;Cash&apos; to clear job. We&apos;ll also send the passenger an auto email receipt"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

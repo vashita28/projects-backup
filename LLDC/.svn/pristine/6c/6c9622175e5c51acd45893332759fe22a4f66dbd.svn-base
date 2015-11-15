@@ -1,0 +1,58 @@
+package co.uk.android.lldc.fragments.tablet;
+
+import co.uk.android.lldc.R;
+import co.uk.android.lldc.tablet.HomeActivityTablet;
+import android.content.Context;
+import android.content.pm.ActivityInfo;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+
+public class MapNavigationFragment extends Fragment {
+	
+	Context mContext;
+	
+	FragmentManager mFragmentManager;
+
+	public boolean bIsFooterOpen = false;
+
+	String mPageTitle = "";
+
+	String pageSubTitle = "";
+	String selectedId = "";
+
+	LocationManager locationManager;
+	String provider;
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		View rootView = null;
+		getActivity().setRequestedOrientation(
+				ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		rootView = inflater.inflate(R.layout.activity_home, container,
+				false);
+		
+		
+//		if (mPageTitle.equals("Search")) {
+//			mPageTitle = "Map";
+//			pageSubTitle = getIntent().getExtras().getString("PAGESUBTITLE");
+//			selectedId = getIntent().getExtras().getString("SELID");
+//			if (pageSubTitle.equals("SHOWME")) {
+//				displayView(3);
+//			} else
+//				displayView(2);
+//		} else
+//			displayView(1);
+	
+
+		return rootView;
+	}
+
+}

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_selected" >
+
+    <include
+        android:id="@+id/topbarSendUrlToPassenger"
+        layout="@layout/common_top_bar_maps" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbarSendUrlToPassenger"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rlReceiptContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/rlReceiptHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/list_background" >
+
+                    <TextView
+                        android:id="@+id/tvSendPaymentLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Send Payment Link"
+                        android:textColor="@color/textview_unselected"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvSelectMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingRight="10dp"
+                        android:text="SELECT METHOD"
+                        android:textColor="@color/textcolor_grey"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReceiptTyperadioBtns"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rlReceiptHeading"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/list_background"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/radioBtnEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.50"
+                            android:button="@android:color/transparent"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/checkbox_selector"
+                            android:drawablePadding="10dp"
+                            android:padding="8dp"
+                            android:text="Email"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/radioBtnSms"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.50"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/checkbox_selector"
+                            android:drawablePadding="10dp"
+                            android:padding="8dp"
+                            android:text="SMS"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReceiptType"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rlReceiptHeading"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/list_background"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/registration_btn_selector"
+                        android:clickable="true" >
+
+                        <TextView
+                            android:id="@+id/textEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@drawable/email"
+                            android:gravity="center_vertical"
+                            android:text="Email"
+                            android:textColor="@color/textview_selected" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/viewDivider"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:background="@color/list_divider" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlSMS"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/registration_btn_selector"
+                        android:clickable="true" >
+
+                        <TextView
+                            android:id="@+id/textSMS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@drawable/sms_grey"
+                            android:gravity="center_vertical"
+                            android:text="SMS"
+                            android:textColor="@color/textview_unselected" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etEmailOrCellNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/llReceiptType"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlSendUrl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tvSendUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Send URL"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlResendLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbarSendUrlToPassenger"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/ivPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/resendiconbig" />
+
+        <TextView
+            android:id="@+id/tvPaymentLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPayment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text="THE PAYMENT LINK HAS BEEN SENT"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBarSendURL"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large.Inverse"
+            android:layout_width="37.5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPaymentLink"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:indeterminateDrawable="@anim/progress_wheel_animation"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvAwaitingUserPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBarSendURL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="AWAITING USER&apos;S PAYMENT"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvPleaseTapBelow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAwaitingUserPayment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="PLEASE TAP BELOW ONCE COMPLETE"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rlConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tvPleaseTapBelow"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/payment_btn_selector" >
+
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Confirm"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llResendLink"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="1dp"
+            android:background="@color/list_background"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/rlResend"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/textResend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/resendiconsmall"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:text="Resend Link"
+                    android:textColor="@color/textview_unselected"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

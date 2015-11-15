@@ -1,0 +1,442 @@
+package com.android.cabapp.util;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.List;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.android.cabapp.activity.LogInActivity;
+
+public class Connection {
+	protected DefaultHttpClient client;
+	HttpParams httpParams = new BasicHttpParams();
+	String url;
+	List<NameValuePair> nameValuePairs = null;
+	public InputStream mInputStream;
+	public String jobId;
+	public String mapURL;
+	public String paymentURL;
+	Context mContext;
+
+	public Connection(Context context) {
+		// TODO Auto-generated constructor stub
+		mContext = context;
+
+		// Set the timeout in milliseconds until a connection is established.
+		// The default value is zero, that means the timeout is not used.
+		HttpConnectionParams.setConnectionTimeout(httpParams, Constants.connection_timeout);
+		// Set the default socket timeout (SO_TIMEOUT)
+		// in milliseconds which is the timeout for waiting for data.
+		HttpConnectionParams.setConnectionTimeout(httpParams, Constants.socket_timeout);
+		client = new DefaultHttpClient(httpParams);
+
+		Constants.accessToken = Util.getAccessToken(context);
+	}
+
+	// public Connection() {
+	// // TODO Auto-generated constructor stub
+	// HttpConnectionParams.setConnectionTimeout(httpParams,
+	// Constants.socket_connection_timeout);
+	// }
+
+	public void prepareConnection(List<NameValuePair> nameValuePairs) {
+		this.nameValuePairs = nameValuePairs;
+	}
+
+	public void connect(int type) {
+		switch (type) {
+		case Constants.JOBS_FRAGMENT:
+			String urlFetchJobs = Constants.driverURL + "jobs/?accessToken=" + Constants.accessToken;
+			postRequest(urlFetchJobs);
+			break;
+
+		case Constants.PRE_BOOK_FRAGMENT:
+			String urlPreBookJobs = Constants.driverURL + "pre-bookings/?accessToken=" + Constants.accessToken;
+			getRequest(urlPreBookJobs);
+			break;
+
+		case Constants.JOB_ACCEPTED:
+			Log.e("Connection", "Job ID :: " + jobId);
+			String urlJobAccepted = Constants.driverURL + "jobs/" + jobId + "/?accessToken=" + Constants.accessToken;
+			postRequest(urlJobAccepted);
+			break;
+
+		case Constants.MY_JOBS_FRAGMENT:
+			String urlmyJobs = Constants.driverURL + "driver/jobs" + "/?accessToken=" + Constants.accessToken;
+			getRequest(urlmyJobs);
+			break;
+
+		case Constants.MAP_DISTANCE:
+			getRequest(mapURL);
+			break;
+
+		case Constants.PAYMENT:
+			getRequest(paymentURL);
+			break;
+
+		case Constants.SEND_MESSAGE:
+			Log.e("Connection", "Job ID :: " + jobId);
+			String sendMessageURL = Constants.driverURL + "jobs/" + jobId + "/messages?accessToken=" + Constants.accessToken;
+			postRequest(sendMessageURL);
+			break;
+
+		case Constants.LOGIN:
+			String logInURL = Constants.driverURL + "auth/";// login
+			postRequest(logInURL);
+			break;
+
+		case Constants.FORGOT_PASSWORD:
+			String forgotPasswordURL = Constants.driverURL + "forgotpassword/";
+			postRequest(forgotPasswordURL);
+			break;
+
+		case Constants.CHANGE_PASSWORD:
+			String changePasswordURL = Constants.driverURL + "changepassword/";
+			postRequest(changePasswordURL);
+			break;
+
+		case Constants.COUNTRY:
+			String countryURL = Constants.passengerURL + "countrycode/";
+			getRequest(countryURL);
+			break;
+
+		case Constants.CONTACT_SUPPORT:
+			String supportURL = Constants.driverURL + "problem/?accessToken=" + Constants.accessToken;
+			postRequest(supportURL);
+			break;
+
+		case Constants.CITY:
+			String cityURL = Constants.cityURL;
+			getRequest(cityURL);
+			break;
+
+		case Constants.REGISTRATION:
+			String registrationURL = Constants.driverURL + "account/register/";
+			postRequest(registrationURL);
+			break;
+
+		case Constants.AVAILABLE:
+			String availableURL = Constants.driverURL + "availability/?accessToken=" + Constants.accessToken;
+			postRequest(availableURL);
+			break;
+
+		case Constants.RETRIVE_DRIVER_ACCOUNT_DETAILS:
+			String driverDetailURL = Constants.driverURL + "account/?accessToken=" + Constants.accessToken;
+			getRequest(driverDetailURL);
+			if (Constants.isDebug)
+				Log.e("Connection", "get driver details connection::>  " + driverDetailURL);
+			break;
+
+		case Constants.ACCOUNT_MODIFICATION:
+			String modificationURL = Constants.driverURL + "account/?accessToken=" + Constants.accessToken;
+			postRequest(modificationURL);
+
+			Log.e("Connection", "modificationURL :: " + modificationURL);
+			break;
+
+		case Constants.USER_AUTHORISATION:
+			String userAuthorisationURL = Constants.driverURL + "authbyemail/";
+			postRequest(userAuthorisationURL);
+			break;
+
+		case Constants.REJECT_JOBS:
+			String rejectJobsURL = Constants.driverURL + "jobs/reject/?accessToken=" + Constants.accessToken;
+			postRequest(rejectJobsURL);
+			break;
+
+		case Constants.DRIVER_SETTINGS:
+			String driverSettingsURL = Constants.driverURL + "settings/?accessToken=" + Constants.accessToken;
+			getRequest(driverSettingsURL);
+			break;
+
+		case Constants.SEND_RECEIPT:
+			String sendReceiptURL = Constants.driverURL + "receipt?accessToken=" + Constants.accessToken;
+			postRequest(sendReceiptURL);
+			break;
+
+		case Constants.CAB_PIN_VALIDATION:
+			String canPinURL = Constants.driverURL + "validcabpay/?accessToken=" + Constants.accessToken;
+			postRequest(canPinURL);
+			break;
+
+		case Constants.UPDATE_POSITION_AND_GET_JOB:
+			String getJobByJobID = Constants.driverURL + "jobs/" + jobId + "/location/?accessToken=" + Constants.accessToken;
+			postRequest(getJobByJobID);
+			break;
+
+		case Constants.PAYCYCLE:
+			String payCycleURL = Constants.driverURL + "paycycle/?accessToken=" + Constants.accessToken;
+			getRequest(payCycleURL);
+			break;
+
+		case Constants.DELETE_DOCUMENT:
+			String deleteDocURL = Constants.driverURL + "deletedocument/?driverId=" + Util.getDriverID(mContext) + "&id=" + jobId; // jobid
+																																	// is
+																																	// documentID
+																																	// here
+			getRequest(deleteDocURL);
+			break;
+
+		case Constants.CHIP_AND_PIN:
+			String chipAndPinURL = Constants.driverURL + "chipnpin/?accessToken=" + Constants.accessToken;
+			postRequest(chipAndPinURL);
+			break;
+
+		case Constants.AUTO_TOP_UP_STATUS:
+			String autoTopUpStatusURL = Constants.driverURL + "accounttoggle/?accessToken=" + Constants.accessToken;
+			postRequest(autoTopUpStatusURL);
+			break;
+
+		case Constants.FIXED_PRICE:
+			String fixedPriceURL = Constants.driverURL + "fixedprice/?accessToken=" + Constants.accessToken;
+			postRequest(fixedPriceURL);
+			break;
+
+		case Constants.MY_JOBS_COUNT:
+			String myJobsCountsURL = Constants.driverURL + "activejobcount/?accessToken=" + Constants.accessToken;
+			getRequest(myJobsCountsURL);
+			break;
+
+		case Constants.ADD_CARD:
+			String addCountURL = Constants.driverURL + "addcard/?accessToken=" + Constants.accessToken;
+			getRequest(addCountURL);
+			break;
+
+		case Constants.NO_SHOW:
+			String noShowURL = Constants.driverURL + "noshow/?accessToken=" + Constants.accessToken;
+			postRequest(noShowURL);
+			break;
+		case Constants.LOGOUT:
+			String logoutURL = Constants.driverURL + "logout/?accessToken=" + Constants.accessToken;
+			getRequest(logoutURL);
+			break;
+
+		case Constants.BUY_CREDITS:
+			String buyCreditsURL = Constants.driverURL + "buycredit?accessToken=" + Constants.accessToken;
+			postRequest(buyCreditsURL);
+			break;
+
+		case Constants.JOB_PAYMENT:
+			String jobPaymentURL = Constants.driverURL + "payment?accessToken=" + Constants.accessToken;
+			postRequest(jobPaymentURL);
+			break;
+
+		case Constants.SECTOR_CITY:
+			String sectorCityURL = Constants.sectorURL;
+			getRequest(sectorCityURL);
+			break;
+
+		case Constants.MPOS_CHIP_AND_PIN_PAYMENT:
+			String MPosChipAndPinURL = Constants.driverURL + "mpospayment?accessToken=" + Constants.accessToken;
+			postRequest(MPosChipAndPinURL);
+			break;
+
+		case Constants.MPOS_SEND_RECEIPT:
+			String MPosSendReceiptURL = Constants.driverURL + "mposreceipt?accessToken=" + Constants.accessToken;
+			postRequest(MPosSendReceiptURL);
+			break;
+
+		case Constants.PAYMENT_URL_TO_PASSENGER:
+			String paymentUrlForPassengerURL = Constants.driverURL + "payment/sendpaymenturl?accessToken="
+					+ Constants.accessToken;
+			postRequest(paymentUrlForPassengerURL);
+			break;
+
+		case Constants.CHECK_STATUS_OF_PAYMENT_URL_TO_PASSENGER:
+
+			String paymentstatusURL = Constants.driverURL + "isurlpaid?bookingId=" + jobId;
+			getRequest(paymentstatusURL);
+			break;
+		case Constants.PAYMENT_STATUS:
+			String paymentStatusUrl = Constants.driverURL + "isurlpaid?bookingId=" + jobId;
+			getRequest(paymentStatusUrl);
+			break;
+
+		default:
+			break;
+		}
+	}
+
+	public void postRequest(String url) {
+		// postMethod.addHeader("Content-Type",
+		// "application/json; charset=utf-8"); // addHeader()
+		this.url = url;
+		HttpPost httpPost = new HttpPost(url);
+		httpPost.addHeader("Content-Type", "application/x-www-form-urlencoded");
+		// httpPost.addHeader("Content-Type", "application/json");
+		try {
+			if (nameValuePairs != null)
+				httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		executeRequest(httpPost, null);
+
+		// postMethod.setEntity(new StringEntity(mainObject.toString(),
+		// "utf-8"));
+	}
+
+	public void getRequest(String url) {
+		// getRequest.addHeader("Content-Type",
+		// "application/json; charset=utf-8"); // addHeader()
+		this.url = url;
+		HttpGet httpGet = new HttpGet(url);
+		httpGet.addHeader("Content-Type", "application/x-www-form-urlencoded");
+		// httpGet.addHeader("Content-Type", "application/json");
+		executeRequest(null, httpGet);
+	}
+
+	public void executeRequest(HttpPost post, HttpGet get) {
+		try {
+			HttpResponse httpResponse;
+			if (get == null)
+				httpResponse = client.execute(post);
+			else
+				httpResponse = client.execute(get);
+
+			if (Constants.isDebug)
+				Log.v(getClass().getSimpleName(), "executeRequest::URL:: " + url);
+
+			final int statusCode = httpResponse.getStatusLine().getStatusCode();
+
+			if (statusCode != HttpStatus.SC_OK) {
+				if (Constants.isDebug)
+					Log.v(getClass().getSimpleName(), "Error " + statusCode + " for URL " + url);
+
+				mInputStream = null;
+
+				if (statusCode == 403) {// Log Out
+					logout();
+				} else {
+					showToastMessageForHTTPError("Error fetching data. Please try again");
+				}
+				return;
+			}
+
+			HttpEntity getResponseEntity = httpResponse.getEntity();
+			mInputStream = getResponseEntity.getContent();
+
+		} catch (IOException e) {
+			if (post != null)
+				post.abort();
+			else
+				get.abort();
+			if (Constants.isDebug)
+				Log.v(getClass().getSimpleName(), "Error for URL " + url, e);
+			mInputStream = null;
+		} catch (Exception e) {
+			// TODO: handle exception
+			mInputStream = null;
+			showToastMessageForHTTPError("Error fetching data. Please try again");
+		}
+	}
+
+	String convertStreamToString(java.io.InputStream is) {
+		try {
+			return new java.util.Scanner(is).useDelimiter("\\A").next();
+		} catch (java.util.NoSuchElementException e) {
+			return "";
+		}
+	}
+
+	void logout() {
+		Log.e("Connection", "logout()");
+		// Logged out due to invalid session. Please login to continue!
+		showToastMessageForHTTPError("Session expired as you logged into another device");
+		Util.setLogOutValues(mContext);
+		// Util.clearSharePRef(mContext);
+		Intent loginIntent = new Intent(mContext, LogInActivity.class);
+		loginIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		mContext.startActivity(loginIntent);
+		((Activity) mContext).finish();
+	}
+
+	void showToastMessageForHTTPError(final String szMessage) {
+		try {
+			if (Util.mContext != null)
+				((Activity) Util.mContext).runOnUiThread(new Runnable() {
+
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						Util.showToastMessage(Util.mContext, szMessage, Toast.LENGTH_LONG);
+
+					}
+				});
+		} catch (Exception e) {
+
+		}
+	}
+
+	public String inputStreamToString(InputStream content) throws IOException {
+		// TODO Auto-generated method stub
+		String line = "";
+		StringBuilder total = new StringBuilder();
+
+		if (content != null) {
+			BufferedReader rd = new BufferedReader(new InputStreamReader(content, "UTF-8"));
+			while ((line = rd.readLine()) != null) {
+				total.append(line);
+			}
+		}
+
+		// if (!total.toString().isEmpty()) {
+		// JSONObject jObject;
+		// try {
+		// jObject = new JSONObject(total.toString());
+		// if (jObject.has("errors")) {
+		//
+		// JSONArray jErrorsArray = jObject.getJSONArray("errors");
+		// if (jErrorsArray.getJSONObject(0).get("message").toString()
+		// .equalsIgnoreCase("missing or invalid accessToken")) {
+		// // Log Out
+		// AppValues.mapRegistrationData.clear();
+		// Util.setAccessToken(mContext, "");
+		// Util.clearSharePRef(mContext);
+		//
+		// Intent loginIntent = new Intent(mContext,
+		// LogInActivity.class);
+		// mContext.startActivity(loginIntent);
+		// ((Activity) mContext).finish();
+		// }
+		// }
+		// } catch (JSONException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+		//
+		// // {
+		// // "errors": [
+		// // {
+		// // "type": "AuthenticationException",
+		// // "message": "missing or invalid accessToken",
+		// // "requiredAction": "login"
+		// // }
+		// // ]
+		// // }
+		// }
+
+		return total.toString();
+	}
+}

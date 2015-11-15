@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/llTabs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/transparent"
+            android:clickable="false" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.8"
+            android:background="@drawable/right_menu_bg"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rlContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/rlCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp" >
+
+                    <ImageView
+                        android:id="@+id/ivCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/cancel" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlSearchResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rlCancel"
+                    android:background="@android:color/transparent" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlSearchEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/textcolor_grey"
+                        android:padding="1dp" >
+
+                        <co.uk.android.lldc.custom.CustomAutoCompleteView
+                            android:id="@+id/autoCompleteSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            android:completionThreshold="3"
+                            android:imeOptions="actionDone"
+                            android:paddingBottom="3dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="3dp"
+                            android:hint="Search"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:dropDownAnchor="@+id/autoCompleteSearch"
+                            android:textColor="@color/black_heading" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlShowMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/viewDivider"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_RobotoBold
+                        android:id="@+id/tvShowMe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="8dp"
+                        android:text="SHOW ME"
+                        android:textColor="@color/textcolor_pink"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llShowIcons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvShowMe"
+                        android:layout_marginLeft="12dp"
+                        android:weightSum="0.99"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:id="@+id/rlRelax"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_weight="0.33"
+                            android:gravity="center_horizontal|center_vertical" >
+
+                            <ImageView
+                                android:id="@+id/ivRelax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/relax_btn" />
+
+                            <co.uk.android.lldc.custom.CustomTextView_CartiloRegular
+                                android:id="@+id/tvRelax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivRelax"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:text="RELAX"
+                                android:textColor="@color/black_heading"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlEntertain"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_weight="0.33"
+                            android:gravity="center_horizontal" >
+
+                            <ImageView
+                                android:id="@+id/ivEntertain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/entertain_btn" />
+
+                            <co.uk.android.lldc.custom.CustomTextView_CartiloRegular
+                                android:id="@+id/tvEntertain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivEntertain"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:text="ENTERTAIN"
+                                android:textColor="@color/black_heading"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlActive"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_weight="0.33"
+                            android:gravity="center_horizontal" >
+
+                            <ImageView
+                                android:id="@+id/ivActive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/active_btn" />
+
+                            <co.uk.android.lldc.custom.CustomTextView_CartiloRegular
+                                android:id="@+id/tvActive"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivActive"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:text="ACTIVE"
+                                android:textColor="@color/black_heading"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@+id/rlImLookingfor"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rlImLookingfor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/llBottomImage"
+                    android:layout_marginLeft="12dp" 
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="0dp"
+                    >
+
+                    <co.uk.android.lldc.custom.CustomTextView_RobotoBold
+                        android:id="@+id/tvImLookingFor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginTop="13dp"
+                        android:paddingLeft="27dp"
+                        android:paddingRight="10dp"
+                        android:text="I&apos;M LOOKING FOR"
+                        android:textColor="@color/textcolor_pink"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/llRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvImLookingFor"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal"
+                        android:weightSum="90" >
+
+                        <ImageView
+                            android:id="@+id/ivMenuAtm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_weight="30"
+                            android:src="@drawable/menu_atm" />
+
+                        <ImageView
+                            android:id="@+id/ivMenuToilet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_weight="30"
+                            android:src="@drawable/menu_toilet" />
+
+                        <ImageView
+                            android:id="@+id/ivMenuEating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_weight="30"
+                            android:src="@drawable/menu_food" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llRow1"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginStart="17dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:weightSum="90" >
+
+                        <ImageView
+                            android:id="@+id/ivMenuViewPoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_weight="30"
+                            android:src="@drawable/menu_parking" />
+
+                        <ImageView
+                            android:id="@+id/ivMenuDisabled"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_weight="30"
+                            android:src="@drawable/menu_dis_parking" />
+
+                        <ImageView
+                            android:id="@+id/ivMenuInformation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_weight="30"
+                            android:src="@drawable/menu_play_area" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llBottomImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="23dp"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.38"
+                        android:background="@android:color/transparent"
+                        android:clickable="false" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.62"
+                        android:background="@android:color/transparent"
+                        android:gravity="left"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/ivMenuLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:src="@drawable/menu_logo" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

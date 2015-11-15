@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- <TextView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerInParent="true" -->
+    <!-- android:gravity="center" -->
+    <!-- android:text="HOTSPOT" -->
+    <!-- android:textColor="#ffffff" /> -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lv_hotspot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:cacheColorHint="@android:color/transparent"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrHeaderTextColor="#FFF"
+        ptr:ptrOverScroll="false"
+        ptr:ptrShowIndicator="false" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Results"
+        android:textColor="#ffffff" />
+
+    <ProgressBar
+        android:id="@+id/progress_insider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rel_filter_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" >
+
+        <!--
+             <ImageView
+            android:id="@+id/imageview_filter_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/whotel_search_list_white" />
+        -->
+        <!-- android:src="@drawable/whotel_search_list_dropdown_top_bg" -->
+
+       
+
+        <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont
+            android:id="@+id/textview_filter_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/whotel_search_list_white"
+            android:gravity="right|center_vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="25dp"
+            android:text="@string/all"
+            android:textColor="#000" />
+        
+        
+         <ImageView
+            android:id="@+id/imageview_dropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:src="@drawable/whotel_search_list_all_dropdown"
+            android:textColor="#000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rel_filter_header" >
+
+        <ListView
+            android:id="@+id/filterList"
+            android:layout_width="260px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/whotel_search_list_dropdown_top_bg_row"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:listSelector="@color/list_selector_color"
+            android:visibility="gone" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

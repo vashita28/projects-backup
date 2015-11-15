@@ -1,0 +1,147 @@
+{
+  "SignUp_Response": {
+    "Email": "testpocketa@gmail.com",
+    "SignStatus": "Success",
+    "LoginInfo": {
+      "AgentId": "HTMB",
+      "Username": "KANAD46",
+      "Password": "testtest"
+    }
+  }
+}
+
+ {
+  "MemberInfo_Response": {
+    "Prefix": "Mr.",
+    "Name": "kanad",
+    "Surname": "test",
+    "Email": "testpocketa@gmail.com",
+    "PaxPassport": "MA05110055",
+    "CountryCode": "MA05110055",
+    "Address": {
+      
+    },
+    "CityCode": "NONE",
+    "Telephone": {
+      
+    },
+    "subscribers_mail": "Y",
+    "LoginInfo": {
+      "AgentId": "HTMB",
+      "Username": "KANAD46"
+    }
+  }
+}
+
+
+{
+  "MemberInfo_Response": {
+    "LoginStatus": "Unsuccessful",
+    "Error": "UserName or Password is wrong."
+  }
+}
+
+
+{
+  "version": "8.0",
+  "timeStamp": "110214141229",
+  "merchantID": "215",
+  "respCode": "99",
+  "pan": {
+    
+  },
+  "amt": "000000058440",
+  "uniqueTransactionCode": "4d93d89b129cc0e605aa",
+  "tranRef": {
+    
+  },
+  "approvalCode": {
+    
+  },
+  "refNumber": {
+    
+  },
+  "eci": {
+    
+  },
+  "dateTime": {
+    
+  },
+  "status": "F",
+  "failReason": "System is under maintenance.",
+  "userDefined1": {
+    
+  },
+  "userDefined2": {
+    
+  },
+  "userDefined3": {
+    
+  },
+  "userDefined4": {
+    
+  },
+  "userDefined5": {
+    
+  },
+  "hashValue": "E72BC10F80F89E5389A2A44154B43D0C1719F880"
+}
+
+{
+  "version": "8.0",
+  "timeStamp": "110214163820",
+  "merchantID": "215",
+  "respCode": "99",
+  "pan": "645646XXXXXX8486",
+  "amt": "000000058440",
+  "uniqueTransactionCode": "2bb3a82df7681eb223a3",
+  "tranRef": {
+    
+  },
+  "approvalCode": {
+    
+  },
+  "refNumber": {
+    
+  },
+  "eci": {
+    
+  },
+  "dateTime": {
+    
+  },
+  "status": "F",
+  "failReason": "Invalid Card Number.",
+  "userDefined1": {
+    
+  },
+  "userDefined2": {
+    
+  },
+  "userDefined3": {
+    
+  },
+  "userDefined4": {
+    
+  },
+  "userDefined5": {
+    
+  },
+  "hashValue": "E72BC10F80F89E5389A2A44154B43D0C1719F880"
+}
+
+
+{
+    "SignUp_Response": {
+        "Email": "test@test.com",
+        "SignStatus": "Unsuccessful",
+        "Error": "Your email is duplicate."
+    }
+}
+
+{
+    "SignUp_Response": {
+        "EditStatus": "Unsuccessful",
+        "Error": "PaxPassport must required."
+    }
+}

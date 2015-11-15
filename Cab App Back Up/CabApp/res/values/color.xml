@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="list_item_title">#fff</color>
+    <color name="registration_bg">#191918</color>
+    <!-- <color name="list_background">#303030</color> -->
+    <color name="list_background">#272725</color>
+    <!-- <color name="list_background_pressed">#992416</color> -->
+    <!-- <color name="list_divider">#272727</color> -->
+    <color name="list_divider">#1e1e1c</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="bg_badge">#fd6f01</color>
+    <color name="list_item_even_bg">#F7F7F7</color>
+    <color name="list_item_odd_bg">#FFFFFF</color>
+    <color name="tab_selected">#1E1E1C</color>
+    <color name="tab_unselected">#272725</color>
+    <color name="textview_selected">#fd6f01</color>
+    <color name="textview_orange_unselected">#80fd6f01</color>
+    <color name="textview_unselected">#f5f5f5</color>
+    <color name="map_top_bar">#D9272725</color>
+    <color name="textcolor_green">#0EBF1F</color>
+    <color name="textcolor_red">#D51313</color>
+    <color name="bagde_textcolor">#FEA201</color>
+    <color name="textcolor_myaccount">#4f4f4e</color>
+    <color name="textcolor_grey">#a1a1a1</color>
+    <color name="color_or_enter_manually">#676767</color>
+    <color name="textcolor_searchbg">#00000000</color>
+    <color name="textcolor_filter">#a1a1a1</color>
+    <color name="transparent_bg">#80272725</color>
+    <color name="transparent_bg_jobs">#80000000</color>
+    <color name="map_path">#fb6f00</color>
+    <color name="button_green">#28c537</color>
+    <color name="button_green_clicked">#8028c537</color>
+    <color name="button_red">#d92c2c</color>
+    <color name="button_red_clicked">#80d92c2c</color>
+    <color name="chat_bg">#191917</color>
+    <color name="registration_button">#272725</color>
+    <color name="registration_button_clicked">#676766</color>
+    <color name="divider_color">#e5e5e5</color>
+    <color name="ligtest_grey_textcolor">#a4a4a4</color>
+    <color name="badgecolor_yellow">#ffd903</color>
+    <color name="badgecolor_green">#61cf08</color>
+    <color name="badgecolor_unselected">#4c4c4b</color>
+    <color name="item_bgcolor">#474C51</color>
+    <color name="white">#fff</color>
+    <color name="overlay_bg">#E6000000</color>
+    <color name="registration_button_transparent">#80272725</color>
+    <color name="prebook_textcolor">#1e1e1c</color>
+
+</resources>

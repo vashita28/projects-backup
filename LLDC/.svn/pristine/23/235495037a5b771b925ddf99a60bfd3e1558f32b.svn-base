@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="100dp"
+    android:background="@color/event_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/highLiteList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.35"
+            android:orientation="vertical" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:visibility="visible" >
+            </android.support.v4.view.ViewPager>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignBottom="@+id/highLiteList"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.30" />
+            <!-- <co.uk.android.lldc.custom.CirclePageIndicator -->
+
+            <com.viewpagerindicator.UnderlinePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.70"
+                android:alpha="0.6"
+                android:background="@drawable/progress_drawable" />
+        </LinearLayout>
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/tvWhatsOnThePark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llIndicator"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/whats_on_park"
+            android:textColor="@color/black_heading"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <GridView
+            android:id="@+id/events_list"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_weight="0.65"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="#f2f2f2"
+            android:dividerHeight="5dp"
+            android:horizontalSpacing="30dp"
+            android:numColumns="2"
+            android:paddingTop="15dp"
+            android:verticalSpacing="30dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNoEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No events found"
+        android:textColor="@color/black_heading"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

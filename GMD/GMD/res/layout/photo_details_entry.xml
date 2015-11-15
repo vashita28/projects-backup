@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_color" >
+
+    <!-- Header -->
+
+    <include
+        android:id="@+id/view_photo_details_entry_top_bar"
+        layout="@layout/header_photo_details_entry" />
+    <!-- Content -->
+
+    <TextView
+        android:id="@+id/textview_page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_photo_details_entry_top_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/PDE_CENTER_HEADING"
+        android:textColor="@color/page_heading_text_color"
+        android:textSize="@dimen/normal_text_size" />
+
+    <LinearLayout
+        android:id="@+id/ll_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_page_title"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/textview_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_weight="0.6"
+            android:gravity="left"
+            android:text="@string/LOCATION"
+            android:textColor="@color/textview_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="110dp"
+            android:layout_weight="0.4" >
+
+            <Spinner
+                android:id="@+id/spinner_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@color/editText_bg_text_color"
+                android:singleLine="true"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/normal_text_size"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/spinner_dropdown"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/et_location_others"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spinner_location"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/editText_bg_text_color"
+                android:hint="@string/ENTER_TEXT_HERE"
+                android:inputType="textNoSuggestions|textFilter|none"
+                android:keepScreenOn="false"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_location"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:layout_below="@+id/ll_location"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/line"
+        android:textSize="@dimen/normal_text_size" />
+
+    <LinearLayout
+        android:id="@+id/ll_postion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_location"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/textview_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_weight="0.6"
+            android:gravity="left"
+            android:text="@string/POSITION"
+            android:textColor="@color/textview_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="110dp"
+            android:layout_weight="0.4" >
+
+            <Spinner
+                android:id="@+id/spinner_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@color/editText_bg_text_color"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/spinner_dropdown" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_position"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:layout_below="@+id/ll_postion"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/line"
+        android:textSize="@dimen/normal_text_size" />
+
+    <LinearLayout
+        android:id="@+id/ll_motorpart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_position"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/textview_motorpart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_weight="0.6"
+            android:gravity="left"
+            android:text="@string/MOTOR_PART"
+            android:textColor="@color/textview_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="110dp"
+            android:layout_weight="0.4" >
+
+            <Spinner
+                android:id="@+id/spinner_motorpart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@color/editText_bg_text_color"
+                android:entries="@array/motorpart_array"
+                android:prompt="@string/motorpart_prompt"
+                android:singleLine="true"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/spinner_dropdown" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_motorpart"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:layout_below="@+id/ll_motorpart"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/line"
+        android:textSize="@dimen/normal_text_size" />
+
+    <LinearLayout
+        android:id="@+id/ll_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_motorpart"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/textview_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_weight="0.6"
+            android:gravity="left"
+            android:text="@string/COMMENTS"
+            android:textColor="@color/textview_text_color"
+            android:textSize="@dimen/normal_text_size" />
+
+        <EditText
+            android:id="@+id/et_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="140dp"
+            android:layout_weight="0.4"
+            android:background="@color/editText_bg_text_color"
+            android:hint="@string/ENTER_TEXT_HERE"
+            android:inputType="textNoSuggestions|textFilter|none"
+            android:keepScreenOn="false"
+            android:lines="1"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@color/textview_text_color"
+            android:textSize="@dimen/normal_text_size" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:layout_below="@+id/ll_comments"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/line" />
+
+    <Button
+        android:id="@+id/btn_savechanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/btn_green"
+        android:text="@string/SAVE_CHANGES"
+        android:textColor="@color/title_bar_data_text_color"
+        android:textSize="@dimen/button_text_size" />
+
+    <ProgressBar
+        android:id="@+id/progress_photodetailsentry"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

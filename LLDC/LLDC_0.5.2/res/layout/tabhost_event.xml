@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customtabhost"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:weightSum="60" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:id="@+id/releventoverview" >
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/txteventoverview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="OVERVIEW"
+            android:textColor="#E81287"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/vieweventoverview"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#A00057"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:id="@+id/releventsocial"  >
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/txteventsocial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="SOCIAL"
+            android:textColor="#B4B4B4"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/vieweventsocial"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#A00057"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="30" 
+        android:id="@+id/relvenuemedia" >
+
+        <TextView
+            android:id="@+id/txtvenuemedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="MEDIA"
+            android:textColor="#A0A0A0"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/viewvenuemedia"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/venue_topbar_text"
+            android:visibility="gone" />
+    </RelativeLayout> -->
+
+</LinearLayout>

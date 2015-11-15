@@ -1,0 +1,86 @@
+package co.uk.android.lldc.fragments;
+
+import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.text.Html;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import co.uk.android.lldc.LLDCApplication;
+import co.uk.android.lldc.R;
+
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+
+public class VenueOverviewFragment extends Fragment {
+
+	ImageView img_imagedetls, img_feature1, img_feature2, img_feature3,
+			img_feature4, img_feature5, img_feature6;
+	TextView eventname, eventdate, txt_eventdetails;
+	ImageLoader imageLoader;
+	DisplayImageOptions options;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		View rootView = inflater.inflate(R.layout.fragment_venue_overview,
+				container, false);
+		imageLoader = ImageLoader.getInstance();
+		options = new DisplayImageOptions.Builder().cacheOnDisc(true)
+				// .imageScaleType(ImageScaleType.EXACTLY)
+				.imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2)
+				.bitmapConfig(Bitmap.Config.RGB_565).build();
+		img_imagedetls = (ImageView) rootView.findViewById(R.id.img_imagedetls);
+		img_feature1 = (ImageView) rootView.findViewById(R.id.img_feature1);
+		img_feature2 = (ImageView) rootView.findViewById(R.id.img_feature2);
+		img_feature3 = (ImageView) rootView.findViewById(R.id.img_feature3);
+		img_feature4 = (ImageView) rootView.findViewById(R.id.img_feature4);
+		img_feature5 = (ImageView) rootView.findViewById(R.id.img_feature5);
+		img_feature6 = (ImageView) rootView.findViewById(R.id.img_feature6);
+		eventname = (TextView) rootView.findViewById(R.id.eventname);
+		eventdate = (TextView) rootView.findViewById(R.id.eventdate);
+		txt_eventdetails = (TextView) rootView
+				.findViewById(R.id.txt_eventdetails);
+		onLoadVenueData();
+		return rootView;
+
+	}
+
+	@SuppressLint("DefaultLocale")
+	public void onLoadVenueData() {
+
+		// img_feature1.setVisibility(View.VISIBLE);
+		// img_feature2.setVisibility(View.VISIBLE);
+		// img_feature3.setVisibility(View.VISIBLE);
+
+		try {
+			String szImageUrl = LLDCApplication.selectedModel.getLargeImage();
+			Log.e("ExplorerAdapter", "szImageUrl::> " + szImageUrl);
+			ImageLoader.getInstance().displayImage(szImageUrl, img_imagedetls);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// img_feature4, img_feature5, img_feature6;
+		eventname.setText(LLDCApplication.selectedModel.getName().toString()
+				.toUpperCase());
+		eventdate.setText(LLDCApplication.selectedModel.getActiveDays()
+				.toString().toUpperCase());
+
+		String tmp = "<p><b>" + LLDCApplication.selectedModel.getShortDesc()
+				+ "</b></p> </br></br>" + "<p>"
+				+ LLDCApplication.selectedModel.getShortDesc() + "</p>";
+
+		txt_eventdetails.setText(Html.fromHtml(tmp));
+
+	}
+
+}

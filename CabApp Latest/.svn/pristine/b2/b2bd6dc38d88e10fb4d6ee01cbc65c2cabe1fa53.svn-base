@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registration_bg" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_registration" />
+
+    <RelativeLayout
+        android:id="@+id/rlTopPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:layout_marginTop="1dp"
+        android:background="@color/list_background"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:id="@+id/tvPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="5. PAYMENT"
+            android:textColor="@color/textview_selected"
+            android:textSize="@dimen/heading_textsize"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivRegister5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/register5" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvFinish"
+        android:layout_below="@+id/rlTopPoint" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rlIAccept"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/tvIAccept"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="I ACCEPT"
+                    android:textColor="@color/textview_selected"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llIAcceptData"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlIAccept"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:weightSum="1" >
+
+                <CheckBox
+                    android:id="@+id/checkboxCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.50"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/checkbox_selector_payment"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:padding="8dp"
+                    android:text="CASH"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/checkboxCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.50"
+                    android:button="@android:color/transparent"
+                    android:drawableLeft="@drawable/checkbox_selector_payment"
+                    android:drawablePadding="10dp"
+                    android:padding="8dp"
+                    android:text="CARD"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cashboxAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.3"
+                    android:button="@drawable/checkbox_selector"
+                    android:drawablePadding="7dp"
+                    android:text="ACCOUNT"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlBankDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llIAcceptData" >
+
+                <RelativeLayout
+                    android:id="@+id/rlBankName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:id="@+id/tvBankName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:paddingBottom="10dp"
+                        android:text="BANK NAME"
+                        android:textColor="@color/textview_selected"
+                        android:textSize="@dimen/subheading_textsize"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlBankNameData"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rlBankName" >
+
+                    <com.android.cabapp.view.CustomEditText
+                        android:id="@+id/etBankNameData"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@android:color/white"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAccountName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rlBankNameData"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:id="@+id/tvAccountName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:paddingBottom="10dp"
+                        android:text="ACCOUNT NAME"
+                        android:textColor="@color/textview_selected"
+                        android:textSize="@dimen/subheading_textsize"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAccountNameData"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rlAccountName" >
+
+                    <com.android.cabapp.view.CustomEditText
+                        android:id="@+id/etAccountNameData"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@android:color/white"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAccountNoSortCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/rlAccountNameData"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/tvAccountNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="bottom"
+                        android:paddingBottom="10dp"
+                        android:singleLine="true"
+                        android:text="ACCOUNT NO."
+                        android:textColor="@color/textview_selected"
+                        android:textSize="@dimen/subheading_textsize"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvSortCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="bottom"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:text="SORT CODE"
+                        android:textColor="@color/textview_selected"
+                        android:textSize="@dimen/subheading_textsize"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAccountNoSortCodeData"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/llAccountNoSortCode"
+                    android:background="@android:color/white"
+                    android:weightSum="1" >
+
+                    <EditText
+                        android:id="@+id/etAccountNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.5"
+                        android:background="@android:color/white"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@android:color/black" />
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="2dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/divider_color" />
+
+                    <EditText
+                        android:id="@+id/etSortCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="0.5"
+                        android:background="@android:color/white"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="8dp"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvHiddenFinish"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlBankDetails"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Finish"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvFinish"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Finish"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

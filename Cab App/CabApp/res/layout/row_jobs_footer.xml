@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_item_even_bg" >
+
+    <RelativeLayout
+        android:id="@+id/relPersons"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivPerson"
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/manicon" />
+
+        <TextView
+            android:id="@+id/txtPassengerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/ivPerson"
+            android:gravity="bottom"
+            android:text="1-4"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/ivHearingImpaired"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_toLeftOf="@+id/rlWheelchair"
+            android:src="@drawable/hearing_impaired" />
+
+        <RelativeLayout
+            android:id="@+id/rlWheelchair"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/ivWheelchair"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/handicap" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relPersons"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" >
+
+        <TextView
+            android:id="@+id/txtLuggage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:id="@+id/llButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtLuggage"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/rl_btnAccept"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/green_btn_selector" >
+
+                <TextView
+                    android:id="@+id/tvAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:drawableLeft="@drawable/tickwhite"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Accept"
+                    android:textColor="@android:color/white"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_btnReject"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/red_btn_selector"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/tvReject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:drawableLeft="@drawable/cross"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Reject"
+                    android:textColor="@android:color/white"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@id/llButtons" />
+    </RelativeLayout>
+
+</RelativeLayout>

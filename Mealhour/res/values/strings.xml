@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Should you have any trouble contact me via moft.in -->
+    <!-- Visit our website: admin@moft.in -->
+    
+    <!-- This is the main file you need to modify -->
+    <!-- REMEMBER to change Package name from AndroidManifest.xml -->
+    <!-- Replace any images/graphics by once that have similar resolution. -->
+
+
+    <!-- General data -->
+    <string name="app_name">Meal Hour</string>
+    <string name="CurrencySign">Rs.</string>
+    <string name="MobileNumberForSMSOrders">9773047575</string>
+    <string name="EmailAdressForEmailOrders">mealhour.service@gmail.com</string>
+    <!-- Accepted methods of order. Just put in 'true' or 'false'. (Make both 'true' to let app send you orders by email and sms. If you don't want to recieve emails set it to 'false') -->
+    <!-- Remember to remove any unnessassary sms permissions from AndroidManifest.xml -->
+    <string name="OrderBySMSEnabled">true</string>
+    <string name="OrderByEmailEnabled">true</string>
+
+    <!-- Main menu text content -->
+    <string name="Title">MealHour Delivery App</string>
+    <string name="SubTitle">Simply Delicious</string>
+    <string name="Motto"> Orders should be placed one day in advance.</string>
+    <string name="StartOrder_button">Start Order</string>
+    <string name="HelpLinePhoneNumber">97 73 047 575</string>
+    <string name="TakeAwayAddress">mealhour.service@gmail.com</string>
+
+    <!-- images displayed in main menu below order now button -->
+    <string-array name="DisplayImages">
+        <item>meal1</item>
+        <item>mealopen1</item>
+        <item>mealopen2</item>
+        <item>mealopen3</item>
+        <item>icecream</item>
+        <item>kulfi</item>
+        
+    </string-array>
+
+    <!-- Menu text content -->
+    <string name="MenuTitle">Menu</string>
+    <string name="MenuYourOrder">Your Order</string>
+    <string name="MenuOrderHint">Click \'Add To Order\' On any item to fill this up.</string>
+    <string name="MenuNoItemsInOrder">Please order at least one item</string>
+    <string name="MenuAddToOrderButton">Add To Order</string>
+    <string name="MenuCategories">Select Your Meal</string>
+
+    <!-- Item Profile text content.-->
+    <string name="BackToMenuButton">&lt;&lt; Back</string>
+
+    <!-- DeliveryAddress text content -->
+    <string name="DeliveryTitle">Delivery Address</string>
+    <string name="DeliveryName">Name</string>
+    <string name="DeliveryPhone">Phone/Mobile Number</string>
+    <string name="DeliveryHouseAndStreet">House and Street (Housename, Street name)</string>
+    <string name="DeliveryTown">Your Town</string>
+    <string name="DeliveryYourOrder">Your Order</string>
+    <string name="IncorrectName">Please enter a correct Name</string>
+    <string name="IncorrectPhone">Enter a correct phone/mobile number</string>
+    <string name="IncorrectHomeStreet">Enter a correct House and Street Address</string>
+    <string name="IncorrectTown">Please select your Town</string>
+
+    <!-- Confirm Order text content -->
+    <string name="ConfirmTitle">Confirm Order</string>
+    <string name="Confirm1">You are going to buy the following items:</string>
+    <string name="Confirm2">You can choose to send your order via SMS or Email. Make sure you can send an SMS through this Device.</string>
+    <string name="Confirm3">The delivery will be made to:</string>
+    <string name="ConfirmOrderNowButton_SMS">Order by SMS</string>
+    <string name="ConfirmOrderNowButton_EMAIL">Order by Email</string>
+
+    <!-- Delivery accepted Towns/locations. Leave the first item "Select location" or something like that -->
+    <string-array name="AcceptedTowns">
+        <item>Select location</item>
+        <item>Charkop</item>
+        <item>Gorai</item>
+        <item>MHB Colony</item>
+        <item>Babhai naka</item>
+        <item>Vazira Naka</item>
+        <item>TPS Road</item>
+        <item>Saibaba Nagar</item>
+        <item>Chikoowadi</item>
+        <item>Eksar Road</item>
+        <item>IC Colony</item>
+        <item>Yogi nagar</item>
+        <item>Haridas Nagar</item>
+        <item>Kastur Park</item>
+        <item>Sodawala Lane</item>
+        <item>Carter Road,Borivali East</item>
+        <item>National Park,Borivali East</item>
+    </string-array>
+
+    <!-- categories. LEAVE THE FIRST ONE AS ALL OR EQUIVALENT.You can then specify the category bellow in "ItemCategory" starting from 1-->
+    <string-array name="MenuCategories">
+        <item>All</item>
+        <item>Mini Meal</item>
+        <item>Normal Meal</item>
+        <item>Special Meal</item>
+        <item>Desserts</item>
+        <item>Bulk Order</item>
+    </string-array>
+    <!-- Your Menu. The below arrays need to have the same amount of items -->
+    <string-array name="ItemTitle">
+        <item>Mini Meal</item>
+        <item>Full Meal</item>
+        <item>Special Meal</item>
+		<item>Jain Mini Meal</item>
+		 <item>Jain Full Meal</item>
+        <item>Jain Special Meal</item>
+        <item>Bulk Order</item>
+       <item>Ice Cream</item>
+       <item>Yogurt</item>
+       <item>Kulfi</item>
+       
+    </string-array>
+    <string-array name="ItemImage">
+        <item>mealopen2</item>
+        <item>mealopen3</item>
+        <item>mealopen1</item>
+		<item>mealopen2</item>
+        <item>mealopen3</item>
+        <item>mealopen1</item>
+       <item>meal1</item>
+        <item>icecream</item>
+        <item>yogurt</item>
+        <item>kulfi</item>
+        
+       
+    </string-array>
+    <string-array name="ItemShortDescription">
+        <item>One Veg Sabji/Four Chappati/Pickle and Nimbu/Papad</item>
+        <item>One Veg Sabji/Three Chapati/Dal/Rice/Pickle and Nimbu/Papad</item>
+        <item>One Veg Sabji/One Special Sabji/Four Chappati/Dal/Rice/Pickle and Nimbu/Papad/Sweet Dish/Butter Milk</item>
+		<item>One Veg Sabji/Four Chappati/Pickle and Nimbu/Papad</item>
+        <item>One Veg Sabji/Three Chapati/Dal/Rice/Pickle and Nimbu/Papad</item>
+        <item>One Veg Sabji/One Special Sabji/Four Chappati/Dal/Rice/Pickle and Nimbu/Papad/Sweet Dish/Butter Milk</item>
+       <item>We offer Bulk/Party Orders also. You can customize the meals also. Minimum Meal Orders = 10</item>
+        <item>Amazing Icecreams Offered by us </item>
+         <item>Amazing Yogurt Offered by us</item>
+          <item>Amazing Kulfis Offered by us</item>
+          
+     
+    </string-array>
+    <string-array name="ItemDescription">
+        <item>Mini Meal Course contains 
+
+One Veg Sabji/Four Chappati/Pickle and Nimbu/Papad
+
+<p>Monthly subscription Available:
+
+1 month ( 30 days ) = Rs. 1500
+1 month ( 20 days ) = Rs. 1000</p>
+</item>
+ 
+ <item>Full Meal course contains.
+One Veg Sabji/Four Chappati/Two types of Dal/Rice/Pickle and Nimbu/Papad
+
+<p>Monthly subscription Available:
+1 month ( 30 days ) = Rs. 2970
+1 month ( 20 days ) = Rs. 1980</p></item>
+        <item>Special Meal course contains:
+One Veg Sabji/One Special Sabji ( paneer)/Four Chappati/Two types of Indian Dal./Rice/Pickle and Nimbu/Papad/Sweet Dish/Butter Milk
+
+<p>Monthly subscription Available:
+1 month ( 30 days ) = Rs. 5100
+1 month ( 20 days ) = Rs. 3400</p></item>
+<item>Jain Mini Meal Course contains 
+
+One Veg Sabji/Four Chappati/Pickle and Nimbu/Papad
+
+<p>Monthly subscription Available:
+
+1 month ( 30 days ) = Rs. 1500
+1 month ( 20 days ) = Rs. 1000</p>
+</item>
+        <item>Jain Full Meal course contains:
+One Veg Sabji/Four Chappati/Two types of Dal/Rice/Pickle and Nimbu/Papad.      Monthly subscription Available:
+1 month ( 30 days ) = Rs. 2970
+1 month ( 20 days ) = Rs. 1980</item>
+ <item>Jain Special Meal course contains:
+One Veg Sabji/One Special Sabji ( paneer)/Four Chappati/Two types of Indian Dal./Rice/Pickle and Nimbu/Papad/Sweet Dish/Butter Milk
+
+<p>Monthly subscription Available:
+1 month ( 30 days ) = Rs. 5100
+1 month ( 20 days ) = Rs. 3400</p></item>
+           <item>We offer Bulk/Party Orders also. You can customize the meals also. Minimum Meal Orders 10.
+               Get Complimentary Offers on Party Orders. </item>
+          <item>Amazing Icecreams Offered by us </item>
+         <item>Amazing Yogurt Offered by us</item>
+          <item>Amazing Kulfis Offered by us</item>
+         
+       
+    </string-array>
+    <string-array name="ItemPrice">
+        <item>55</item>
+        <item>85</item>
+        <item>130</item>
+		<item>55</item>
+        <item>85</item>
+        <item>130</item>
+        <item>550</item>
+        <item>10</item>
+        <item>100</item>
+        <item>120</item>
+        
+       
+    </string-array>
+     <integer-array name="ItemCategory">
+        <item>1</item>
+         <item>2</item>
+		 <item>3</item>
+		<item>1</item>
+         <item>2</item>
+         <item>3</item>
+         <item>5</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+        
+       
+    </integer-array>
+
+</resources>
+

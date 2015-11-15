@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/rel_header_row"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/whotel_insider_top_image_bg" >
+
+        <uk.co.pocketapp.whotel.customview.RecyclingImageView
+            android:id="@+id/imageview_deals_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@android:color/darker_gray" />
+        <!-- android:src="@drawable/deals1" -->
+
+        <uk.co.pocketapp.whotel.customview.RecyclingImageView
+            android:id="@+id/imageview_read_more_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_imgdesc"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/whotel_insider_read_more_icon" />
+
+        <uk.co.pocketapp.whotel.customview.CustomTextView_italicfont
+            android:id="@+id/textview_readmore_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_imgdesc"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="11dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingRight="5dp"
+            android:text="@string/read_more"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_imgdesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottommargin"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/whotel_deals_transparent_extrahigh"
+            android:orientation="vertical" >
+
+            <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+                android:id="@+id/textview_deals_banner_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="CHOCLATE FANTASY"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+
+            <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont
+                android:id="@+id/textview_deals_banner_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Buy one get one free, 50% off on all almonds falvour."
+                android:textColor="@android:color/white"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottommargin"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <!-- <ProgressBar -->
+    <!-- android:id="@+id/progress_banner" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerInParent="true" -->
+    <!-- android:visibility="gone" /> -->
+
+</RelativeLayout>

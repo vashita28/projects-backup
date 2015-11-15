@@ -1,0 +1,285 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="match_parent" > -->
+
+
+<!-- <TextView -->
+<!-- android:id="@+id/txtLabel" -->
+<!-- android:layout_width="wrap_content" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_centerInParent="true" -->
+<!-- android:text="Jobs" -->
+<!-- android:textSize="16dp" /> -->
+
+
+<!-- <ImageView -->
+<!-- android:layout_width="wrap_content" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_below="@id/txtLabel" -->
+<!-- android:layout_centerHorizontal="true" -->
+<!-- android:layout_marginTop="10dp" -->
+<!-- android:src="@drawable/ic_home" /> -->
+
+
+<!-- <android.support.v4.app.FragmentTabHost -->
+<!-- android:id="@android:id/tabhost" -->
+<!-- android:layout_width="fill_parent" -->
+<!-- android:layout_height="fill_parent" > -->
+
+
+<!-- <TabWidget -->
+<!-- android:id="@android:id/tabs" -->
+<!-- android:layout_width="fill_parent" -->
+<!-- android:layout_height="wrap_content" /> -->
+
+
+<!-- <FrameLayout> -->
+<!-- android:id="@android:id/tabcontent" -->
+<!-- android:layout_width="fill_parent" -->
+<!-- android:layout_height="fill_parent" /> -->
+
+
+<!-- <FrameLayout -->
+<!-- android:id="@+id/realtabcontent" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" /> -->
+<!-- </android.support.v4.app.FragmentTabHost> -->
+
+
+<!-- </android.support.v4.app.FragmentTabHost> -->
+
+
+<!-- </RelativeLayout> -->
+
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/tab_unselected" >
+
+            <!-- #f99944 -->
+
+            <RelativeLayout
+                android:id="@+id/relMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/menu2" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/circle"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/round_badge"
+                        android:gravity="center"
+                        android:minHeight="20dp"
+                        android:minWidth="20dp"
+                        android:text="3"
+                        android:textColor="@color/bagde_textcolor" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp" >
+
+                <ImageView
+                    android:id="@+id/imageviewFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/headericon" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/circle"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/round_badge"
+                        android:gravity="center"
+                        android:minHeight="20dp"
+                        android:minWidth="20dp"
+                        android:text="8"
+                        android:textColor="@color/bagde_textcolor" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvCashBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:textColor="#fd6f01"
+                android:textSize="18sp"
+                android:visibility="visible" />
+            <!-- android:text="\u00A315.50" -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlFilterOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tab_unselected"
+            android:visibility="gone" >
+
+            <include
+                android:id="@+id/filterLayout"
+                layout="@layout/fragment_jobs_filter" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/filterLayout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/filterLayout"
+                android:layout_marginTop="10dp"
+                android:background="@color/tab_selected" />
+        </RelativeLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/tab_selected"
+            android:orientation="horizontal"
+            android:showDividers="none" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+
+        <FrameLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottombar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/tab_selected"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <TextView
+                android:id="@+id/tvCabPay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.35"
+                android:drawableLeft="@drawable/card2new"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:text="Cab:Pay"
+                android:textColor="#f5f5f5"
+                android:textSize="@dimen/heading_textsize" />
+
+            <RelativeLayout
+                android:id="@+id/rlCashback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.40"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tvCashback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/cashbackicon"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Cashback"
+                    android:textColor="#f5f5f5"
+                    android:textSize="@dimen/heading_textsize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAvailable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="15dp"
+                android:layout_weight="0.25"
+                android:gravity="right" >
+
+                <TextView
+                    android:id="@+id/tvAvailable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/availablegreen"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Free"
+                    android:textColor="@color/textcolor_green"
+                    android:textSize="@dimen/heading_textsize" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/tab_selected" />
+
+    <include
+        android:id="@+id/jobsOverlay"
+        layout="@layout/fragment_job_overlay"
+        android:visibility="visible" />
+
+</TabHost>

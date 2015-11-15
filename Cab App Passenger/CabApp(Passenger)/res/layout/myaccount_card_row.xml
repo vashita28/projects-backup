@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rel_favsrow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff" >
+
+        <ToggleButton
+            android:id="@+id/cb_card"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/favourites_toggle"
+            android:button="@android:color/transparent"
+            android:clickable="false"
+            android:textOff=""
+            android:textOn="" />
+
+        <TextView
+            android:id="@+id/tv_card_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/cb_card"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="**** **** **** 2345"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_deletecard"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:src="@drawable/crossgray" />
+
+        <TextView
+            android:id="@+id/tv_cardtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_deletecard"
+            android:layout_toRightOf="@+id/tv_card_no"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="VISA"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/rel_favsrow"
+        android:background="#000" />
+
+    <RelativeLayout
+        android:id="@+id/rel_delete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/list_background"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Delete?"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_pick_up_top_no"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/prebook_rightdrawablepadding"
+            android:background="@color/list_background"
+            android:drawableLeft="@drawable/no"
+            android:drawablePadding="@dimen/prebook_rightdrawablepadding"
+            android:padding="@dimen/list_padding"
+            android:text="No"
+            android:textColor="@color/textview_unselected"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_pick_up_top_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/prebook_rightdrawablepadding"
+            android:layout_toLeftOf="@+id/tv_pick_up_top_no"
+            android:background="@color/list_background"
+            android:drawableLeft="@drawable/yes"
+            android:drawablePadding="@dimen/prebook_rightdrawablepadding"
+            android:padding="@dimen/list_padding"
+            android:text="Yes"
+            android:textColor="@color/textview_unselected"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

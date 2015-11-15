@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_edit_friends"
+        android:title="@string/menu_edit_friends_label">
+    </item>
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/menu_logout_label">
+    </item>
+    <item
+        android:id="@+id/action_camera"
+        android:icon="@drawable/cameraiconstatusbar"
+        android:showAsAction="always"
+        android:title="@string/menu_camera_label">
+    </item>
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/setting"
+        android:showAsAction="always"
+        android:title="@string/menu_settings_label">
+    </item>
+
+</menu>

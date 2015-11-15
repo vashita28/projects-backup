@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_maps" />
+
+    <FrameLayout
+        android:id="@+id/map_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tvDone"
+        android:layout_below="@+id/topbar" >
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/passenger" />
+
+    <RelativeLayout
+        android:id="@+id/rel_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/map_frame"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/getataxi_bg"
+        android:clickable="false" >
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/iv_dragmap"
+            android:clickable="false"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_dragmap"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:clickable="false"
+            android:src="@drawable/passengers" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_currentlocation"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/tvDone"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/mapimage" >
+
+        <ImageView
+            android:id="@+id/iv_currentlocation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/track" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDone"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Done"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

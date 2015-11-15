@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bridgestone</string>
+
+    <!-- Main Activity -->
+    <string name="send">Senden</string>
+    <string name="bt_not_enabled">Bluetooth ist (war) deaktiviert.</string>
+    <string name="title_connecting">Verbinden&#8230;</string>
+    <string name="title_connected_to">Verbunden: </string>
+    <string name="title_not_connected">nicht verbunden</string>
+    <string name="sensors">Sensoren</string>
+    <string name="minimum_sensor_pressure">Mindest (Sensor-)Luftdruck:</string>
+    <string name="sensors_captured">Sensoren erfasst</string>
+    <string name="sensors_below_min_pressure">Sensoren unter mindest Luftdruck</string>
+    <string name="uploaded">Hochgeladen</string>
+    <string name="btnUploadNow">jetzt Hochladen</string>
+    <string name="btnUploaded">Hochgeladen</string>
+
+    <!-- DeviceListActivity -->
+    <string name="scanning">Suche Geräte&#8230;</string>
+    <string name="select_device">Bitte wählen Sie ein Gerät zum Verbinden</string>
+    <string name="none_paired">Es wurden keine Geräte verbunden</string>
+    <string name="none_found">Kein Gerät gefunden</string>
+    <string name="title_paired_devices">Verknüpfte (verbundene) Geräte</string>
+    <string name="title_other_devices">Andere verfügbare Geräte</string>
+    <string name="button_scan">Suche nach Geräten</string>
+    <string name="no_device_selected">Bitte wählen Sie ein gültiges Gerät aus der Liste</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">Verbinden mit Gerät - Sicher</string>
+    <string name="insecure_connect">Verbinden mit Gerät - Unsicher</string>
+    <string name="discoverable">feststellbar machen</string>
+
+    <!-- Login Activity -->
+    <string name="login">Log-In</string>
+    <string name="btnLogin">Einloggen</string>
+    <string name="user">Benutzer</string>
+    <string name="enter_user_id">User-ID eingeben</string>
+    <string name="preferences">Einstellungen</string>
+    <string name="language">Sprache</string>
+    <string name="pressuremeasurement">Luftdruckmessung</string>
+    <string name="user_id_error">Bitte User-ID eingeben</string>
+    <string name="user_id_must_contain_alphanumberic">Bitte alphanumerische User-ID eingeben</string>
+    <string name="user_id_invalid_length">Bitte alphanumerische User-ID mit 6 Zeichen eingeben</string>
+
+    <!-- Setup Activity -->
+    <string name="set_up">Einstellung</string>
+    <string name="current_status">Aktueller Status</string>
+    <string name="not_connected">nicht verbunden</string>
+    <string name="connected">verbunden</string>
+    <string name="to_a_device">mit einem Gerät</string>
+    <string name="connect_device">Verbundene Geräte</string>
+    <string name="change_device">Gerät ändern</string>
+
+    <!-- Sensor Details Activity -->
+    <string name="sensor_details">Sensor Details</string>
+    <string name="sensor_id">Sensor ID</string>
+    <string name="pressure">Luftdruck</string>
+    <string name="save">Speichern</string>
+    <string name="input_length_error">Bitte geben Sie eine Nummer ein</string>
+    <string name="input_number_invalid_error">Bitte geben Sie eine gültige Nummer ein</string>
+    <string name="bar">BAR</string>
+    <string name="psi">PSI</string>
+
+    <!-- Toast messages -->
+    <string name="no_network_error">Keine Netzwerkverbindung. Bitte versuchen Sie es später noch ein mal.</string>
+    <string name="upload_error">Fehler beim Hochladen der Daten. Bitte versuchen Sie es später noch ein mal.</string>
+    <string name="uploading">Hochladen&#8230;</string>
+    <string name="connecting">Verbinden&#8230;</string>
+
+    <string-array name="languagesArray">
+        <item>Englisch</item>
+        <item>Französisch</item>
+        <item>Deutsch</item>
+        <item>Spanisch</item>
+        <item>Italienisch</item>
+        <item>Portugiesisch</item>
+        <item>Polnisch</item>
+        <item>Tschechisch</item>
+        <item>Ungarisch</item>
+        <!-- <item>Slovak</item> -->
+        <item>Holländisch</item>
+    </string-array>
+    <string-array name="pressuremeasurementArray">
+        <item>BAR</item>
+        <item>PSI</item>
+    </string-array>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="exit">Verlassen</string>
+    <string name="confirm_exit">Verlassen bestätigen?</string>
+    <string name="no_results">Keine Ergebnisse</string>
+    <string name="bluetooth_not_available">Bluetooth is not available</string>
+    <string name="unable_to_connect_device">Unable to connect device</string>
+    <string name="device_connection_lost">Device connection was lost</string>
+    <string name="network_not_available">Network not available</string>
+
+</resources>

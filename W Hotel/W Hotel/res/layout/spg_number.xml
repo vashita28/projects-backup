@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:visibility="visible"
+                android:id="@+id/ll_my_spg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+    <ImageView
+            android:id="@+id/imageview_spg_bg"
+            android:src="@drawable/spg_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="false"
+            android:layout_alignParentTop="true"
+            />
+
+    <ImageView
+            android:id="@+id/iv_top_purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/whotel_spg_number_page_top_purple"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+            android:id="@+id/ll_my_spg_inside"
+            android:layout_below="@+id/iv_top_purple"
+            android:layout_width="match_parent"
+            android:background="@android:color/white"
+            android:layout_height="wrap_content">
+
+        <!--<TextView-->
+        <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont
+                android:id="@+id/tv_enter_your_spg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="15sp"
+                android:text="@string/enter_your_spg_number"/>
+
+        <EditText
+                android:id="@+id/et_spg_number"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:layout_below="@+id/tv_enter_your_spg"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/whotel_spg_number_text_box_"/>
+
+        <LinearLayout
+                android:id="@+id/ll_btn"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/et_spg_number"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/btn_spg_save"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/save"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/whotel_spg_number_save_button"/>
+
+            <Button
+                    android:id="@+id/btn_spg_close"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/close"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/whotel_spg_number_close_button"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

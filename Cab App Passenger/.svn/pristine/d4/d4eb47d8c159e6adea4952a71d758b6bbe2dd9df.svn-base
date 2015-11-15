@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="CommitTransaction">
+        <ignore path="src/com/example/cabapppassenger/fragments/Hail_NowFragment.java" />
+    </issue>
+    <issue id="DefaultLocale">
+        <ignore path="src/com/example/cabapppassenger/fragments/Hail_NowFragment.java" />
+    </issue>
+    <issue id="ValidFragment">
+        <ignore path="src/com/example/cabapppassenger/fragments/AddNewCardFragment.java" />
+        <ignore path="src/com/example/cabapppassenger/fragments/ChatFragment.java" />
+        <ignore path="src/com/example/cabapppassenger/fragments/FavouritesFragment.java" />
+        <ignore path="src/com/example/cabapppassenger/fragments/OnMapFragment.java" />
+        <ignore path="src/com/example/cabapppassenger/fragments/RecentFragment.java" />
+    </issue>
+</lint>

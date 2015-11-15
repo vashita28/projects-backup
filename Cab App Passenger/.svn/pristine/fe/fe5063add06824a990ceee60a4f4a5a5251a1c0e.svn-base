@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191918"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/in_topbar"
+        layout="@layout/common_top_bar_maps" />
+
+    <WebView
+        android:id="@+id/wv_tandc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_topbar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_terms_and_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_topbar"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_terms_and_conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/more"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Terms and conditions"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/tv_terms_and_conditions"
+            android:background="#fff" >
+
+            <TextView
+                android:id="@+id/tv_tandc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/tandc_data"
+                android:textColor="#191918"
+                android:textSize="16sp" />
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

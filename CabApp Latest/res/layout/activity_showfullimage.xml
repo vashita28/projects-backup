@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/chat_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <include
+        android:id="@+id/commonTopBar"
+        layout="@layout/common_top_bar_maps" />
+
+    <RelativeLayout
+        android:id="@+id/rlImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/commonTopBar" >
+
+        <ImageView
+            android:id="@+id/ivFullImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:visibility="visible" />
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

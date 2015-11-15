@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/rlMyJobsOverlayHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_bg"
+        android:visibility="visible" >
+
+        <View
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <RelativeLayout
+            android:id="@+id/rlMyJobFakeRow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/emptyView"
+            android:layout_marginRight="60dp"
+            android:background="@color/registration_button"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tvFakeMyJobs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/passengers"
+                android:drawablePadding="10dp"
+                android:paddingLeft="10dp"
+                android:text="My Jobs"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/nextarrow" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvFakeMyJobs1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlMyJobFakeRow"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingTop="20dp"
+            android:text="MY JOBS"
+            android:textColor="@color/textview_selected"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvGetASummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFakeMyJobs1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="false"
+            android:text="Get a summary of all active jobs and see your history. Filter or search for a specific job, see status of card payment and resend passenger receipts"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlMyjobsOkyGotIt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/registration_button"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tvOkGotItMyJobs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="OKAY GOT IT!"
+            android:textColor="@color/textview_selected"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

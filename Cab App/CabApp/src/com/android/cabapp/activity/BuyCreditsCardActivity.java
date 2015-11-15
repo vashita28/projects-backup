@@ -1,0 +1,306 @@
+package com.android.cabapp.activity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.text.Html;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.ArrayAdapter;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.cabapp.R;
+import com.android.cabapp.datastruct.json.DriverDetails.Cards;
+import com.android.cabapp.model.AddCard;
+import com.android.cabapp.util.AppValues;
+import com.android.cabapp.util.Constants;
+import com.android.cabapp.util.Util;
+
+public class BuyCreditsCardActivity extends RootActivity {
+
+	private static final String TAG = BuyCreditsCardActivity.class
+			.getSimpleName();
+
+	Spinner spinnercards;
+	ArrayAdapter<String> cardSpinnerAdapter;
+	RelativeLayout rlcardDropDown, rlbottombarConfirm;
+	TextView textAddNewCard, tvSavedCards;
+	List<Cards> cardsList;
+	List<String> cardTruncatedPan;
+
+	private ProgressDialog dialogBuyCreditsCard;
+
+	static Context _context;
+
+	Bundle mBundle;
+
+	@SuppressWarnings("unchecked")
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_buycreditscard);
+		_context = this;
+
+		mBundle = getIntent().getExtras();
+
+		textAddNewCard = (TextView) findViewById(R.id.tvAddNewCard);
+		spinnercards = (Spinner) findViewById(R.id.spinnercards);
+		tvSavedCards = (TextView) findViewById(R.id.tvSavedCard);
+		rlcardDropDown = (RelativeLayout) findViewById(R.id.rlcardDropDown);
+		rlbottombarConfirm = (RelativeLayout) findViewById(R.id.rlbottombarConfirm);
+		rlbottombarConfirm.setOnClickListener(new TextViewOnClickListener());
+		textAddNewCard.setOnClickListener(new TextViewOnClickListener());
+
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		super.initWidgets();
+		setCardSpinner();
+	}
+
+	void setCardSpinner() {
+
+		Log.e(TAG, "Update spinner");
+		cardsList = new ArrayList<Cards>();
+		cardTruncatedPan = new ArrayList<String>();
+		if (AppValues.driverDetails != null) {
+			cardsList.addAll(AppValues.driverDetails.getCards());
+			if (!cardsList.isEmpty() && cardsList.size() > 0) {
+				tvSavedCards.setVisibility(View.VISIBLE);
+				rlcardDropDown.setVisibility(View.VISIBLE);
+				String szAddNewCardText = "<font color=#fd6f01>+ </font> <font color=#f5f5f5>Or add new card </font>";
+				textAddNewCard.setText(Html.fromHtml(szAddNewCardText));
+				for (int i = 0; i < cardsList.size(); i++) {
+					if (!cardTruncatedPan.contains("**** **** **** "
+							+ cardsList.get(i).getTruncatedPan())) {
+
+						Log.e(TAG, "New card: add in spinner!");
+						cardTruncatedPan.add("**** **** **** "
+								+ cardsList.get(i).getTruncatedPan());
+					} else {
+						Log.e(TAG, "Card already found! ");
+					}
+				}
+			} else {
+				tvSavedCards.setVisibility(View.GONE);
+				rlcardDropDown.setVisibility(View.GONE);
+				String szAddNewCardText = "<font color=#fd6f01>+ </font> <font color=#f5f5f5>Add new cards </font>";
+				textAddNewCard.setText(Html.fromHtml(szAddNewCardText));
+			}
+
+			// Setting CARD spinner Data:
+			if (cardTruncatedPan.size() > 0) {
+				cardSpinnerAdapter = new ArrayAdapter<String>(this,
+						android.R.layout.simple_spinner_item, cardTruncatedPan);
+				spinnercards.setAdapter(cardSpinnerAdapter);
+			}
+		}
+	}
+
+	class TextViewOnClickListener implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+
+			case R.id.tvAddNewCard:
+
+				Intent scanCardIntent = new Intent(BuyCreditsCardActivity.this,
+						ScanCardActivity.class);
+				startActivity(scanCardIntent);
+
+				/* Old Flow: AddCardTask was called */
+
+				// float szCardDeductionFees = 0;
+				//
+				// if (AppValues.driverSettings != null
+				// && AppValues.driverSettings
+				// .getCardPaymentMinimumAmount() != null) {
+				// szCardDeductionFees = Float
+				// .valueOf(AppValues.driverSettings
+				// .getCardPaymentMinimumAmount());
+				//
+				// final AlertDialog dialog = new AlertDialog.Builder(_context)
+				// .setMessage(
+				// AppValues.driverSettings
+				// .getCurrencySymbol()
+				// + String.format(Locale.ENGLISH,
+				// "%.2f", szCardDeductionFees)
+				// +
+				// " will be deducted from your account. Do you want to continue?")
+				// .setPositiveButton("Ok",
+				// new DialogInterface.OnClickListener() {
+				// @Override
+				// public void onClick(
+				// DialogInterface argDialog,
+				// int argWhich) {
+				// if (NetworkUtil
+				// .isNetworkOn(_context)) {
+				//
+				// dialogBuyCreditsCard = new ProgressDialog(
+				// BuyCreditsCardActivity.this);
+				// dialogBuyCreditsCard
+				// .setMessage("Loading...");
+				// dialogBuyCreditsCard
+				// .setCancelable(false);
+				// dialogBuyCreditsCard.show();
+				//
+				// AddCardTask addCardTask = new AddCardTask();
+				// addCardTask.execute();
+				// } else {
+				// Util.showToastMessage(
+				// _context,
+				// getResources()
+				// .getString(
+				// R.string.no_network_error),
+				// Toast.LENGTH_LONG);
+				// }
+				//
+				// }
+				// })
+				// .setNegativeButton("Cancel",
+				// new DialogInterface.OnClickListener() {
+				//
+				// @Override
+				// public void onClick(
+				// DialogInterface dialog,
+				// int which) {
+				// // TODO Auto-generated method stub
+				// dialog.dismiss();
+				// }
+				// }).create();
+				// dialog.setCanceledOnTouchOutside(false);
+				// dialog.show();
+				//
+				// } else {
+				// Util.showToastMessage(_context, "Please try again",
+				// Toast.LENGTH_LONG);
+				// }
+
+				break;
+
+			case R.id.rlbottombarConfirm:
+
+				ConfirmButtonCall();
+				break;
+
+			}
+		}
+	}
+
+	void ConfirmButtonCall() {
+		if (_context != null)
+			Util.hideSoftKeyBoard(_context, rlbottombarConfirm);
+
+		if (cardTruncatedPan.isEmpty() || cardTruncatedPan.size() <= 0) {
+			Util.showToastMessage(_context, "Please add a card",
+					Toast.LENGTH_LONG);
+		} else {
+			String sSelectedTruncatedPan = spinnercards.getSelectedItem()
+					.toString();
+
+			for (int i = 0; i < cardsList.size(); i++) {
+				if (sSelectedTruncatedPan.contains(cardsList.get(i)
+						.getTruncatedPan())) {
+
+					mBundle.putString(Constants.BUYCREDITS_CARD_BRAND,
+							cardsList.get(i).getBrand());
+					mBundle.putString(Constants.BUYCREDITS_DRIVERCARDID,
+							cardsList.get(i).getDriverCardId());
+					mBundle.putString(Constants.BUYCREDITS_CARD_ISSELECTED,
+							cardsList.get(i).getIsSelected());
+					mBundle.putString(Constants.BUYCREDITS_CARD_TRUNCATEDPAN,
+							cardsList.get(i).getTruncatedPan());
+					mBundle.putString(Constants.BUYCREDITS_CARD_PAYWORKTOKEN,
+							cardsList.get(i).getPaymentToken());
+					break;
+				}
+			}
+
+			Intent intentCardConfirmActiviy = new Intent(
+					BuyCreditsCardActivity.this,
+					BuyCreditsConfirmActivity.class);
+			intentCardConfirmActiviy.putExtras(mBundle);
+			startActivity(intentCardConfirmActiviy);
+		}
+	}
+
+	public static void finishActivity() {
+		if (_context != null)
+			((Activity) _context).finish();
+	}
+
+	/* Old Flow: uses AddCardActivity in which url is passed and open in webview */
+	public class AddCardTask extends AsyncTask<String, Void, String> {
+		String szURL = "";
+
+		@Override
+		protected String doInBackground(String... params) {
+			// TODO Auto-generated method stub
+
+			AddCard addCard = new AddCard(BuyCreditsCardActivity.this);
+			JSONObject jAddCardResponseObject = null;
+			try {
+
+				jAddCardResponseObject = new JSONObject(addCard.getAddCardURL());
+				if (jAddCardResponseObject.has("url")) {
+
+					szURL = jAddCardResponseObject.getString("url");
+					Log.e(TAG, "add card url:: " + szURL);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			return szURL;
+
+		}
+
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+
+			if (dialogBuyCreditsCard != null)
+				dialogBuyCreditsCard.dismiss();
+
+			Intent addCardIntent = new Intent(BuyCreditsCardActivity.this,
+					AddCardActivity.class);
+			if (mBundle == null)
+				mBundle = new Bundle();
+			mBundle.putString("paymentURL", result);
+			addCardIntent.putExtras(mBundle);
+			_context.startActivity(addCardIntent);
+
+			// On success update spinner
+			setCardSpinner();
+
+		}
+	}
+
+}

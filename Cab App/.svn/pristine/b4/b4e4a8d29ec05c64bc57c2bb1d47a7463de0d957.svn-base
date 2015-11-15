@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registration_bg" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_registration" />
+
+    <RelativeLayout
+        android:id="@+id/rlTopPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:layout_marginTop="1dp"
+        android:background="@color/list_background"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:id="@+id/tvUploadYourLicence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="UPLOAD YOUR LICENSE"
+            android:textColor="@color/textview_selected"
+            android:textSize="@dimen/heading_textsize"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivRegister3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/register3"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llBottomBar"
+        android:layout_below="@+id/rlTopPoint" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp" >
+
+            <RelativeLayout
+                android:id="@+id/rlLicencingDocument"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/tvLicensingDocument"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="LICENSING DOCUMENT"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLicencingDocumentText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlLicencingDocument"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/tvLicensingDocumentText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/licensing_document_text"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llLicencingDocumentRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlLicencingDocumentText"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAddImage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/llLicencingDocumentRow"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/textview_selected"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="+ Add Image"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvUpload"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="0.50"
+            android:background="@drawable/registration_btn_selector"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Upload"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/dividerView"
+            android:layout_width="1dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvSkip"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="0.50"
+            android:background="@drawable/registration_btn_selector"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Skip"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_progress_sync"
+        android:layout_width="200dip"
+        android:layout_height="40dip"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progress_sync"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="200dip"
+            android:layout_height="40dip"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/horizontal_progress_drawable" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <!-- style="@android:style/Widget.ProgressBar.Large" -->
+    </RelativeLayout>
+
+</RelativeLayout>

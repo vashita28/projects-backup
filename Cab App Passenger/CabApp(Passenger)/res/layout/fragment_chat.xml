@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <include
+        android:id="@+id/in_topbar"
+        layout="@layout/common_top_bar_maps" />
+
+    <RelativeLayout
+        android:id="@+id/rl_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/in_topbar"
+        android:layout_marginTop="1dp"
+        android:background="@color/list_background"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/tv_passenger_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/tv_quick_messages"
+            android:drawableLeft="@drawable/contact"
+            android:drawablePadding="7dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/textview_unselected"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_quick_messages"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/edit"
+            android:drawablePadding="7dp"
+            android:gravity="center_vertical"
+            android:text="Quick Messages"
+            android:textColor="@color/textview_unselected"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_send"
+        android:layout_below="@id/rl_topbar"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:stackFromBottom="false"
+        android:transcriptMode="alwaysScroll" >
+    </ListView>
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_send"
+        android:layout_below="@id/rl_topbar"
+        android:gravity="center"
+        android:text="No items"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@id/ll_send"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/rl_call_driver"
+        android:background="@color/list_divider"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:gravity="top"
+            android:inputType="textCapSentences|textMultiLine|textNoSuggestions"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:background="@drawable/registration_btn_selector"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Send"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlQuickMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_topbar"
+        android:background="@android:color/white"
+        android:divider="@android:color/black"
+        android:dividerHeight="2dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/lvQuickMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/viewDivider"
+            android:background="@android:color/white"
+            android:divider="@android:color/black"
+            android:dividerHeight="2dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_above="@+id/textCancel"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/textCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Cancel"
+            android:textColor="@color/textview_selected"
+            android:textSize="19sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_call_driver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/tv_call_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="1dp"
+            android:drawableLeft="@drawable/calldriver"
+            android:drawablePadding="12dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="@dimen/list_padding"
+            android:text="Call Driver"
+            android:textColor="@color/textview_unselected"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

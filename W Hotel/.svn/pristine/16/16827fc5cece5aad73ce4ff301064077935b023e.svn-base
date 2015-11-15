@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont -->
+
+    <ImageView
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/whotel_search_list_dropdown_divider" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="10dp" >
+    </View>
+
+    <!-- <TextView -->
+
+    <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont
+        android:id="@+id/textview_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/findhotspot_title"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="10dp" >
+    </View>
+
+</LinearLayout>

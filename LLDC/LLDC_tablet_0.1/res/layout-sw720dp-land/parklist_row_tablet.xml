@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="250dp"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingTop="10dp"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.3"
+        android:background="@android:color/transparent"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/parklist_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/qeop_placeholder" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.7"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/parklist_header"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.5"
+            android:gravity="bottom"
+            android:text="GETTING TO THE PARK"
+            android:textColor="@color/black_heading"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/svDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:gravity="top" >
+
+            <co.uk.android.lldc.custom.CustomTextView_CartiloRegular
+                android:id="@+id/parklist_normal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:minLines="3"
+                android:text="OUR ACCESS AND AVAILABLE OPTIONS"
+                android:textColor="@color/black_heading"
+                android:textSize="16sp" />
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

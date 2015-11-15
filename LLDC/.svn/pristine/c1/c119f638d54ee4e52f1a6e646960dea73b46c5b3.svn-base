@@ -1,0 +1,100 @@
+package co.uk.android.lldc.fragments;
+
+import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.text.Html;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import co.uk.android.lldc.LLDCApplication;
+import co.uk.android.lldc.R;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
+
+public class ExploreDetailsFragment extends Fragment {
+
+	TextView place_title, text_time, text_walk, text_duration, text_accessible,
+			txt_eventdetails;
+
+	LinearLayout dynamic_innerlayout;
+
+	ImageView img_imagedetls;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+
+		View rootView = inflater.inflate(R.layout.fragment_exploredetails,
+				container, false);
+
+		place_title = (TextView) rootView.findViewById(R.id.place_title);
+		text_walk = (TextView) rootView.findViewById(R.id.text_walk);
+		text_duration = (TextView) rootView.findViewById(R.id.text_duration);
+		text_accessible = (TextView) rootView.findViewById(R.id.text_);
+		txt_eventdetails = (TextView) rootView
+				.findViewById(R.id.txt_eventdetails);
+		img_imagedetls = (ImageView) rootView.findViewById(R.id.img_imagedetls);
+		text_time = (TextView) rootView.findViewById(R.id.text_time);
+		dynamic_innerlayout = (LinearLayout) rootView
+				.findViewById(R.id.dynamic_innerlayout);
+		String pageTitle = (String) getActivity().getIntent().getExtras()
+				.get("PAGETITLE");
+
+		if (pageTitle.equals("Facilities")) {
+			text_time.setVisibility(View.VISIBLE);
+			dynamic_innerlayout.setVisibility(View.GONE);
+		} else {
+			text_time.setVisibility(View.GONE);
+			dynamic_innerlayout.setVisibility(View.VISIBLE);
+		}
+
+		onLoadData();
+		return rootView;
+	}
+
+	@SuppressLint("DefaultLocale")
+	public void onLoadData() {
+
+		place_title.setText(LLDCApplication.selectedModel.getName().toString()
+				.toUpperCase());
+
+		text_time.setText(LLDCApplication.selectedModel.getActiveDays()
+				.toString().toUpperCase());
+
+		place_title.setTextColor(Color.parseColor(LLDCApplication.selectedModel
+				.getColor()));
+
+		text_time.setTextColor(Color.parseColor(LLDCApplication.selectedModel
+				.getColor()));
+
+		try {
+			String szImageUrl = LLDCApplication.selectedModel.getLargeImage();
+			Log.e("ExplorerAdapter", "szImageUrl::> " + szImageUrl);
+			ImageLoader.getInstance().displayImage(szImageUrl, img_imagedetls);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// dynamic_innerlayout.setVisibility(View.GONE);
+
+		// text_walk.setText(ExploreListingActivity.selectedModel.getName());
+		// text_duration.setText(ExploreListingActivity.selectedModel.getName());
+		// text_accessible.setText(ExploreListingActivity.selectedModel.getName());
+
+		String temp = "<p>" + LLDCApplication.selectedModel.getShortDesc()
+				+ "</p>" + "<p>"
+				+ LLDCApplication.selectedModel.getLongDescription() + "</p>";
+
+		txt_eventdetails.setText(Html.fromHtml(temp));
+
+	}
+
+}

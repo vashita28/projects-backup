@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimage"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ActivityLogIn" >
+
+    <ImageView
+        android:id="@+id/tapsnapLogo"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/tapsnap" />
+
+    <EditText
+        android:id="@+id/usernameField"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/tapsnapLogo"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/textfield"
+        android:ems="10"
+        android:hint="@string/username_hint"
+        android:maxHeight="40dp"
+        android:minHeight="@dimen/edit_text_vertical_height"
+        android:paddingLeft="12dp"
+        android:paddingRight="5dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/usernameField"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/textfield"
+        android:ems="10"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:minHeight="@dimen/edit_text_vertical_height"
+        android:paddingLeft="12dp"
+        android:paddingRight="5dp"
+        android:singleLine="true" />
+
+    <!--
+         <TextView
+        android:id="@+id/signUpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/haveAccountTextView"
+        android:layout_alignBottom="@+id/haveAccountTextView"
+        android:layout_alignRight="@+id/passwordField"
+        android:layout_marginRight="15dp"
+        android:text="@string/go_to_activity_sign_up_text"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+    -->
+
+    <LinearLayout
+        android:id="@+id/llLoginReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordField"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="26dp" >
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_button_selector"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/login_text"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/loginTextView"
+            android:layout_weight="1"
+            android:background="@drawable/reset_button_selector"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/reset_text"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_below="@+id/llLoginReset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:id="@+id/rlRegisterNow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/register_button_selector" >
+
+        <TextView
+            android:id="@+id/registerNowTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/register_now"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

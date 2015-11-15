@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bridgestone</string>
+
+    <!-- Main Activity -->
+    <string name="send">Poslat</string>
+    <string name="bt_not_enabled">Bluetooth nebylo povoleno.</string>
+    <string name="title_connecting">Připojuji&#8230;</string>
+    <string name="title_connected_to">připojeno: </string>
+    <string name="title_not_connected">není připojeno</string>
+    <string name="sensors">senzory</string>
+    <string name="minimum_sensor_pressure">Min. tlak na senzoru:</string>
+    <string name="sensors_captured">senzory načteny</string>
+    <string name="sensors_below_min_pressure">senzory pod min. tlakem</string>
+    <string name="uploaded">nahráno</string>
+    <string name="btnUploadNow">nahrát nyní</string>
+    <string name="btnUploaded">nahráno</string>
+
+    <!-- DeviceListActivity -->
+    <string name="scanning">hledám zařízení&#8230;</string>
+    <string name="select_device">vyber zařízení ke spárování</string>
+    <string name="none_paired">Žádné zařízení nebylo spárováno</string>
+    <string name="none_found">Nenalezena žádná zařízení</string>
+    <string name="title_paired_devices">Spárované zařízení</string>
+    <string name="title_other_devices">Další dostupná zařízení</string>
+    <string name="button_scan">Hledat zařízení</string>
+    <string name="no_device_selected">Prosím zvolte platné zařízení ze seznamu</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">Připojit zařízení - zabezpečeně</string>
+    <string name="insecure_connect">Připojit zařízení - nezabezpečeně</string>
+    <string name="discoverable">Nastavit vyditelné</string>
+
+    <!-- Login Activity -->
+    <string name="login">Přihlášení</string>
+    <string name="btnLogin">přihlášení</string>
+    <string name="user">Uživatel</string>
+    <string name="enter_user_id">zadej uživatelské jméno</string>
+    <string name="preferences">preference</string>
+    <string name="language">jazyk</string>
+    <string name="pressuremeasurement">Měření tlaku</string>
+    <string name="user_id_error">Prosím zadej uživatelské jméno</string>
+    <string name="user_id_must_contain_alphanumberic">Prosím zadejte alfanumericky uživatelské jméno</string>
+    <string name="user_id_invalid_length">Prosím zadejte alfanumericky uživatelské jméno o délce 6 znaků</string>
+
+    <!-- Setup Activity -->
+    <string name="set_up">nastavení</string>
+    <string name="current_status">Aktuální status</string>
+    <string name="not_connected">Nepřipojeno</string>
+    <string name="connected">Připojeno</string>
+    <string name="to_a_device">k zařízení</string>
+    <string name="connect_device">připojit zařízení</string>
+    <string name="change_device">změnit zařízení</string>
+
+    <!-- Sensor Details Activity -->
+    <string name="sensor_details">detaily senzoru</string>
+    <string name="sensor_id">ID senzoru</string>
+    <string name="pressure">Tlak</string>
+    <string name="save">Uložit</string>
+    <string name="input_length_error">Prosím vložte číslo</string>
+    <string name="input_number_invalid_error">Prosím vložte platné číslo</string>
+    <string name="bar">BAR</string>
+    <string name="psi">PSI</string>
+
+    <!-- Toast messages -->
+    <string name="no_network_error">Žádné síťové připojení. Opakujte později.</string>
+    <string name="upload_error">Chyba v nahrávání dat. Opakujte později.</string>
+    <string name="uploading">Nahrávání&#8230;</string>
+    <string name="connecting">Pripojování&#8230;</string>
+
+    <string-array name="languagesArray">
+        <item>Angličtina</item>
+        <item>Francouzština</item>
+        <item>Němčina</item>
+        <item>Španělština</item>
+        <item>Italština</item>
+        <item>Portugalština</item>
+        <item>Polština</item>
+        <item>Čeština</item>
+        <item>Maďarština</item>
+        <!-- <item>Slovak</item> -->
+        <item>Holandský</item>
+    </string-array>
+    <string-array name="pressuremeasurementArray">
+        <item>BAR</item>
+        <item>PSI</item>
+    </string-array>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Zrušit</string>
+    <string name="exit">Ukončit</string>
+    <string name="confirm_exit">Opravdu ukoncit?</string>
+    <string name="no_results">Bez výsledku</string>
+    <string name="bluetooth_not_available">Bluetooth is not available</string>
+    <string name="unable_to_connect_device">Unable to connect device</string>
+    <string name="device_connection_lost">Device connection was lost</string>
+    <string name="network_not_available">Network not available</string>
+
+</resources>

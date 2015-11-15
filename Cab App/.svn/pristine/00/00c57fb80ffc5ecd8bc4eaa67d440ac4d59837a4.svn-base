@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registration_bg" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_registration" />
+
+    <RelativeLayout
+        android:id="@+id/rlTopPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:layout_marginTop="1dp"
+        android:background="@color/list_background"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:id="@+id/tvBillingAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:text="BILLING ADDRESS"
+            android:textColor="@color/textview_selected"
+            android:textSize="@dimen/heading_textsize"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivRegister2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/register2"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvSaveBillingAddress"
+        android:layout_below="@+id/rlTopPoint" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rlAddressLine1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/tvAddressLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="ADDRESS LINE #1"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAddressLine1Data"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlAddressLine1" >
+
+                <EditText
+                    android:id="@+id/etAddressLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAddressLine2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlAddressLine1Data"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/tvAddressLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="ADDRESS LINE #2"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAddressLine2Data"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlAddressLine2" >
+
+                <EditText
+                    android:id="@+id/etAddressLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCityPostCodeText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlAddressLine2Data"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="CITY"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCityPostCodeTextData"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlCityPostCodeText" >
+
+                <EditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rlCountry"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlCityPostCodeTextData"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/tvCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="COUNTY"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPostCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="0.5"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="POST CODE"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCountryData"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlCountry"
+                android:background="@android:color/white"
+                android:weightSum="1" >
+
+                <EditText
+                    android:id="@+id/etCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="2dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divider_color" />
+
+                <EditText
+                    android:id="@+id/etPostCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvHiddenSave"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/llCountryData"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Save"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvSaveBillingAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Save"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

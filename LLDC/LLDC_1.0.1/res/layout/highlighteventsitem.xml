@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="10" >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/eventlist_highlight_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:scaleType="centerCrop" />
+
+    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+        android:id="@+id/eventlist_eventname_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="#86bc25"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <co.uk.android.lldc.custom.CustomTextView_RobotoRegular
+        android:id="@+id/eventlist_venuename_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/eventlist_eventname_header"
+        android:layout_marginTop="5dp"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <co.uk.android.lldc.custom.CustomTextView_RobotoItalic
+        android:id="@+id/eventlist_date_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventlist_venuename_header"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="10dp"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:textStyle="bold|italic" />
+
+</RelativeLayout>

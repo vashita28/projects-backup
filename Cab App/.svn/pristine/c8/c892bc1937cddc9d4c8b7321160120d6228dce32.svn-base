@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registration_bg" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_registration" />
+
+    <RelativeLayout
+        android:id="@+id/rlTermsAndConditions"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/topbar"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <!--
+             <TextView
+            android:id="@+id/tvTermsAndConditions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+            android:text="TERMS &amp; CONDITIONS"
+            android:textColor="@color/textview_selected"
+            android:textStyle="bold" />
+        -->
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webviewTandC"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/topbar" />
+
+    <!--
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTermsAndConditions" >
+
+        <RelativeLayout
+            android:id="@+id/rlTermsAndConditionsData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tvTermsAndConditionsData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="10dp"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </ScrollView>
+    -->
+
+</RelativeLayout>

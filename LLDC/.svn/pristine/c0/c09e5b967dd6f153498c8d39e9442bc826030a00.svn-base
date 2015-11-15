@@ -1,0 +1,315 @@
+package co.uk.android.lldc.fragments.tablet;
+
+import android.annotation.SuppressLint;
+import android.content.pm.ActivityInfo;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import co.uk.android.lldc.R;
+import co.uk.android.lldc.fragments.EventsFragment;
+import co.uk.android.lldc.fragments.VenueMediaFragment;
+import co.uk.android.lldc.fragments.VenueOverviewFragment;
+import co.uk.android.lldc.fragments.WelcomeFragment;
+import co.uk.android.lldc.tablet.HomeActivityTablet;
+import co.uk.android.lldc.tablet.LLDCApplication;
+import co.uk.android.lldc.utils.Constants;
+
+public class VenueFragmentTablet extends Fragment {
+	private static final String TAG = VenueFragmentTablet.class.getSimpleName();
+
+	FragmentManager mFragmentManager;
+
+	/** For tab host **/
+	RelativeLayout relvenueoverview, relvenueevents, relvenuemedia;
+	TextView txtvenueoverview, txtvenueevents, txtvenuemedia;
+	View viewvenueoverview, viewvenueevents, viewvenuemedia;
+
+	public Handler mVenueDetailsHandler = null;
+
+	ViewPager pager;
+	View tabHost;
+
+	private static String[] CONTENT = new String[] { "Overview", "Events",
+			"Media" };
+
+	@SuppressLint({ "ResourceAsColor", "HandlerLeak" })
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View rootView = null;
+		getActivity().setRequestedOrientation(
+				ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		rootView = inflater.inflate(R.layout.activity_venue_tablet, container,
+				false);
+
+		Constants.FragmentRecommendationBack = VenueFragmentTablet.class
+				.getSimpleName();
+		Constants.PageTitle = "Venues";
+
+		mVenueDetailsHandler = new Handler() {
+			public void handleMessage(Message message) {
+
+				if (message.what == 1101) {
+					try {
+						if (LLDCApplication.isInsideThePark
+								|| LLDCApplication.isDebug) {
+							// relSearch.setVisibility(View.VISIBLE);
+						} else {
+							// relSearch.setVisibility(View.GONE);
+						}
+						mVenueDetailsHandler.sendEmptyMessageDelayed(1101,
+								300000);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		};
+
+		/** For tab host **/
+		relvenueoverview = (RelativeLayout) rootView
+				.findViewById(R.id.relvenueoverview);
+		relvenueevents = (RelativeLayout) rootView
+				.findViewById(R.id.relvenueevents);
+		relvenuemedia = (RelativeLayout) rootView
+				.findViewById(R.id.relvenuemedia);
+		txtvenueoverview = (TextView) rootView
+				.findViewById(R.id.txtvenueoverview);
+		txtvenueevents = (TextView) rootView.findViewById(R.id.txtvenueevents);
+		txtvenuemedia = (TextView) rootView.findViewById(R.id.txtvenuemedia);
+		viewvenueoverview = (View) rootView
+				.findViewById(R.id.viewvenueoverview);
+		viewvenueevents = (View) rootView.findViewById(R.id.viewvenueevents);
+		viewvenuemedia = (View) rootView.findViewById(R.id.viewvenuemedia);
+		relvenueoverview.setOnClickListener(new onTabChangeListener());
+		relvenueevents.setOnClickListener(new onTabChangeListener());
+		relvenuemedia.setOnClickListener(new onTabChangeListener());
+
+		// tvHeaderTitle.setText("Venues");
+
+		pager = (ViewPager) rootView.findViewById(R.id.pager);
+		tabHost = (View) rootView.findViewById(R.id.tabHost);
+
+		((HomeActivityTablet) getActivity()).tvHeaderTitle.setText("Venues");
+		((HomeActivityTablet) getActivity()).showBackButton();
+		((HomeActivityTablet) getActivity()).showNavigationIcon();
+		((HomeActivityTablet) getActivity()).rlBackBtn
+				.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						getParentFragment().getChildFragmentManager()
+								.popBackStack();
+					}
+				});
+
+		// Added logic to hide unwanted tab
+		CONTENT = new String[] { "Overview" };
+		tabHost.setVisibility(View.GONE);
+
+		if (LLDCApplication.selectedModel.getMediaList().size() > 0
+				&& LLDCApplication.selectedModel.getEventCount() != 0) {
+			tabHost.setVisibility(View.VISIBLE);
+			CONTENT = new String[] { "Overview", "Events", "Media" };
+		} else if (LLDCApplication.selectedModel.getMediaList().size() > 0
+				&& LLDCApplication.selectedModel.getEventCount() == 0) {
+			tabHost.setVisibility(View.VISIBLE);
+			CONTENT = new String[] { "Overview", "Media" };
+			relvenueevents.setVisibility(View.GONE);
+		} else if (LLDCApplication.selectedModel.getEventCount() != 0
+				&& LLDCApplication.selectedModel.getMediaList().size() == 0) {
+			tabHost.setVisibility(View.VISIBLE);
+			CONTENT = new String[] { "Overview", "Events" };
+			relvenuemedia.setVisibility(View.GONE);
+		}
+		// else {
+		// relvenuemedia.setVisibility(View.GONE);
+		// relvenueevents.setVisibility(View.GONE);
+		// relvenueoverview.setVisibility(View.GONE);
+		// }
+
+		pager.setOnPageChangeListener(new OnPageChangeListener() {
+
+			@Override
+			public void onPageSelected(int arg0) {
+				// TODO Auto-generated method stub
+				if (arg0 == 0) {
+					txtvenueoverview.setTextColor(Color.parseColor("#41C0F0"));
+					txtvenueevents.setTextColor(Color.parseColor("#A0A0A0"));
+					txtvenuemedia.setTextColor(Color.parseColor("#A0A0A0"));
+					viewvenueoverview.setVisibility(View.VISIBLE);
+					viewvenueevents.setVisibility(View.GONE);
+					viewvenuemedia.setVisibility(View.GONE);
+				} else if (arg0 == 1) {
+					txtvenueoverview.setTextColor(Color.parseColor("#A0A0A0"));
+					txtvenueevents.setTextColor(Color.parseColor("#41C0F0"));
+					txtvenuemedia.setTextColor(Color.parseColor("#A0A0A0"));
+					viewvenueoverview.setVisibility(View.GONE);
+					viewvenueevents.setVisibility(View.VISIBLE);
+					viewvenuemedia.setVisibility(View.GONE);
+				} else {
+					txtvenueoverview.setTextColor(Color.parseColor("#A0A0A0"));
+					txtvenueevents.setTextColor(Color.parseColor("#A0A0A0"));
+					txtvenuemedia.setTextColor(Color.parseColor("#41C0F0"));
+					viewvenueoverview.setVisibility(View.GONE);
+					viewvenueevents.setVisibility(View.GONE);
+					viewvenuemedia.setVisibility(View.VISIBLE);
+				}
+			}
+
+			@Override
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void onPageScrollStateChanged(int arg0) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+
+		FragmentPagerAdapter adapter = new GoogleMusicAdapter(
+				getChildFragmentManager());
+
+		pager.setAdapter(adapter);
+
+		mVenueDetailsHandler.sendEmptyMessage(1101);
+
+		return rootView;
+	}
+
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+
+		((HomeActivityTablet) getActivity()).rlHeader
+				.setVisibility(View.VISIBLE);
+	}
+
+	class onTabChangeListener implements OnClickListener {
+		@Override
+		public void onClick(View v) {
+			Fragment f = null;
+			switch (v.getId()) {
+			case R.id.relvenueoverview:
+				mFragmentManager = getChildFragmentManager();
+				f = mFragmentManager
+						.findFragmentById(R.id.frame_container_venue);
+				if (f instanceof VenueOverviewFragment) {
+
+				} else {
+					txtvenueoverview.setTextColor(Color.parseColor("#41C0F0"));
+					txtvenueevents.setTextColor(Color.parseColor("#A0A0A0"));
+					txtvenuemedia.setTextColor(Color.parseColor("#A0A0A0"));
+					viewvenueoverview.setVisibility(View.VISIBLE);
+					viewvenueevents.setVisibility(View.GONE);
+					viewvenuemedia.setVisibility(View.GONE);
+				}
+				pager.setCurrentItem(0);
+				break;
+			case R.id.relvenueevents:
+				mFragmentManager = getChildFragmentManager();
+				f = mFragmentManager
+						.findFragmentById(R.id.frame_container_venue);
+
+				// mFragmentManager =
+				// getParentFragment().getChildFragmentManager();
+				// f =
+				// mFragmentManager.findFragmentById(R.id.frame_container_parent);
+				if (f instanceof EventsFragment) {
+
+				} else {
+					txtvenueoverview.setTextColor(Color.parseColor("#A0A0A0"));
+					txtvenueevents.setTextColor(Color.parseColor("#41C0F0"));
+					txtvenuemedia.setTextColor(Color.parseColor("#A0A0A0"));
+					viewvenueoverview.setVisibility(View.GONE);
+					viewvenueevents.setVisibility(View.VISIBLE);
+					viewvenuemedia.setVisibility(View.GONE);
+				}
+				pager.setCurrentItem(1);
+				break;
+			case R.id.relvenuemedia:
+				mFragmentManager = getChildFragmentManager();
+				f = mFragmentManager
+						.findFragmentById(R.id.frame_container_venue);
+				if (f instanceof WelcomeFragment) {
+
+				} else {
+					txtvenueoverview.setTextColor(Color.parseColor("#A0A0A0"));
+					txtvenueevents.setTextColor(Color.parseColor("#A0A0A0"));
+					txtvenuemedia.setTextColor(Color.parseColor("#41C0F0"));
+					viewvenueoverview.setVisibility(View.GONE);
+					viewvenueevents.setVisibility(View.GONE);
+					viewvenuemedia.setVisibility(View.VISIBLE);
+				}
+				pager.setCurrentItem(2);
+				break;
+			}
+		}
+	}
+
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		try {
+			mVenueDetailsHandler.removeMessages(1101);
+			mVenueDetailsHandler = null;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	class GoogleMusicAdapter extends FragmentPagerAdapter {
+		public GoogleMusicAdapter(FragmentManager fm) {
+			super(fm);
+		}
+
+		@Override
+		public Fragment getItem(int position) {
+			String pageTitle = getPageTitle(position).toString();
+			Fragment fragment = null;
+			if (pageTitle.equals("OVERVIEW")) {
+				fragment = new VenueOverviewFragment();
+			} else if (pageTitle.equals("EVENTS")) {
+				Bundle bundle = new Bundle();
+				fragment = new EventsFragment();
+				bundle.putBoolean(Constants.IS_COMING_FROM_EXPLORE, true);
+				bundle.putString(Constants.IS_FOR_TODAY_EVENT, "VenueActivity");
+				fragment.setArguments(bundle);
+			} else {
+				fragment = new VenueMediaFragment();
+			}
+			return fragment;
+		}
+
+		@Override
+		public CharSequence getPageTitle(int position) {
+			return CONTENT[position % CONTENT.length].toUpperCase();
+		}
+
+		@Override
+		public int getCount() {
+			return CONTENT.length;
+		}
+	}
+
+}

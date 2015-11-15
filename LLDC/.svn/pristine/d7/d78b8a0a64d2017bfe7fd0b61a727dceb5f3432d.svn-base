@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/ivBanner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imgnt_placeholder" />
+
+    <RelativeLayout
+        android:id="@+id/rlSocialHeader"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white_transparent"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlProfileImage"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical" >
+
+            <co.uk.android.lldc.custom.RoundImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@+id/tvlikesCount"
+            android:layout_toRightOf="@+id/rlProfileImage"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="Name"
+            android:textColor="@color/black_heading"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvlikesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ivHeart"
+            android:text="1"
+            android:textColor="@color/black_heading" />
+
+        <ImageView
+            android:id="@+id/ivHeart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/like_icon" />
+    </RelativeLayout>
+
+</RelativeLayout>

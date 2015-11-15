@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llexplore"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:paddingEnd="5dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="5dp"
+    android:paddingStart="0dp"
+    android:weightSum="1" >
+
+    <RelativeLayout
+        android:id="@+id/rlImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.40"
+        android:background="@android:color/holo_blue_bright" >
+
+        <FrameLayout
+            android:id="@+id/fm_imageview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" >
+
+            <co.uk.android.lldc.custom.SquareImageView
+                android:id="@+id/ivExploreImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.60"
+        android:padding="10dp" >
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/tvExploreHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:maxLines="2"
+            android:minLines="1"
+            android:text="explore event 1"
+            android:textSize="18sp" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoBoldItalic
+            android:id="@+id/tvExploreTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvExploreHeading"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            android:text="ALL WEEK 10AM-6PM"
+            android:textSize="16sp" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoLight
+            android:id="@+id/tvExploreDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="1"
+            android:textColor="@color/black_heading"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

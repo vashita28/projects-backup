@@ -1,0 +1,650 @@
+package com.android.cabapp.activity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Rect;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.view.Window;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
+
+import com.android.cabapp.R;
+import com.android.cabapp.model.AccountModification;
+import com.android.cabapp.model.DriverAccountDetails;
+import com.android.cabapp.model.DriverSettingDetails;
+import com.android.cabapp.util.AppValues;
+import com.android.cabapp.util.Constants;
+import com.android.cabapp.util.NetworkUtil;
+import com.android.cabapp.util.Util;
+
+public class SignUp_VehicleDetails_Activity extends RootActivity {
+
+	private static final String TAG = SignUp_VehicleDetails_Activity.class
+			.getSimpleName();
+
+	static Context mContext;
+
+	EditText etVechicleRegistrationNo, etMake, etModel;
+	TextView textNext, textHiddenNext, tvVehicleDetailsNote, textYes, textNo,
+			txtEdit;
+	ImageView ivRegister4;
+	ToggleButton toogleWheelChair;
+	RelativeLayout rlTopPoint;
+	Spinner spinnerColor, spinnerMaxPassenger;
+	ArrayAdapter<CharSequence> colorSpinnerAdapter, passengerSpinnerAdapter;
+	Bundle vehicleDetailsBundle;
+	boolean isComingFromEditMyAccount;
+
+	List<String> listNoOfPassenger = new ArrayList<String>();
+
+	private ProgressDialog dialogVehicleDetails;
+
+	View activityRootView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_signup_vehicledetails);
+		mContext = this;
+		vehicleDetailsBundle = getIntent().getExtras();
+
+		activityRootView = findViewById(R.id.relMain);
+		spinnerColor = (Spinner) findViewById(R.id.spinnerColor);
+		spinnerMaxPassenger = (Spinner) findViewById(R.id.spinnerPassengers);
+		toogleWheelChair = (ToggleButton) findViewById(R.id.toogleWheelChair);
+		etVechicleRegistrationNo = (EditText) findViewById(R.id.etVechicleRegistrationNo);
+		etMake = (EditText) findViewById(R.id.etMake);
+		etModel = (EditText) findViewById(R.id.etModel);
+		rlTopPoint = (RelativeLayout) findViewById(R.id.rlTopPoint);
+		tvVehicleDetailsNote = (TextView) findViewById(R.id.tvVehicleDetails);
+		ivRegister4 = (ImageView) findViewById(R.id.ivRegister4);
+		txtEdit = (TextView) findViewById(R.id.tvEdit);
+		txtEdit.setVisibility(View.GONE);
+		textNext = (TextView) findViewById(R.id.tvNext);
+		textHiddenNext = (TextView) findViewById(R.id.tvHiddenNext);
+		textNext.setOnClickListener(new TextViewOnClickListener());
+		textHiddenNext.setOnClickListener(new TextViewOnClickListener());
+
+		activityRootView.getViewTreeObserver().addOnGlobalLayoutListener(
+				new OnGlobalLayoutListener() {
+					@Override
+					public void onGlobalLayout() {
+						Rect r = new Rect();
+						// r will be populated with the coordinates of your view
+						// that area still visible.
+						activityRootView.getWindowVisibleDisplayFrame(r);
+
+						int heightDiff = activityRootView.getRootView()
+								.getHeight() - (r.bottom - r.top);
+						if (heightDiff > 100) {
+							textHiddenNext.setVisibility(View.VISIBLE);
+							textNext.setVisibility(View.GONE);
+						} else {
+
+							textHiddenNext.setVisibility(View.GONE);
+							textNext.setVisibility(View.VISIBLE);
+						}
+					}
+				});
+
+		// Setting COLOR spinner Data:
+		colorSpinnerAdapter = ArrayAdapter.createFromResource(this,
+				R.array.color_options, R.layout.custom_spinner_item);
+		spinnerColor.setAdapter(colorSpinnerAdapter);
+		spinnerColor.setOnTouchListener(new onTouchListener());
+
+		// Setting PASSENGER spinner Data:
+		listNoOfPassenger.add("");
+		if (Util.getCitySelectedLondon(mContext)) {
+			listNoOfPassenger.add("1-5");
+			if (AppValues.maxNoOfPassenger == 6) {
+				listNoOfPassenger.add("1-6");
+			} else {
+				SetNoOfMaxPassengers();
+			}
+		} else {
+			listNoOfPassenger.add("1-4");
+			if (AppValues.maxNoOfPassenger == 5) {
+				listNoOfPassenger.add("1-5");
+			} else {
+				SetNoOfMaxPassengers();
+			}
+		}
+
+		ArrayAdapter<String> passengerSpinnerAdapter = new ArrayAdapter<String>(
+				this, android.R.layout.simple_spinner_item, listNoOfPassenger);
+		passengerSpinnerAdapter
+				.setDropDownViewResource(R.layout.custom_spinner_item);
+		spinnerMaxPassenger.setAdapter(passengerSpinnerAdapter);
+		spinnerMaxPassenger.setOnTouchListener(new onTouchListener());
+
+		// if (Util.getCitySelectedLondon(mContext)) {
+		// passengerSpinnerAdapter = ArrayAdapter.createFromResource(this,
+		// R.array.passenger_options_for_london,
+		// R.layout.custom_spinner_item);
+		// spinnerMaxPassenger.setAdapter(passengerSpinnerAdapter);
+		// } else {
+		// passengerSpinnerAdapter = ArrayAdapter.createFromResource(this,
+		// R.array.passenger_options, R.layout.custom_spinner_item);
+		// spinnerMaxPassenger.setAdapter(passengerSpinnerAdapter);
+		// }
+
+		// For wheelchair
+		if (AppValues.isWheelChairAccess) {
+			toogleWheelChair.setChecked(true);
+			toogleWheelChair.setEnabled(true);// false
+		} else {
+			toogleWheelChair.setChecked(false);
+		}
+
+		// If london set wheelchair edit:false
+		if (Util.getCitySelectedLondon(mContext) != null
+				&& Util.getCitySelectedLondon(mContext))
+			toogleWheelChair.setEnabled(false);
+
+		if (AppValues.mapRegistrationData
+				.containsKey(Constants.VECHILE_REGISTRATION_NO)) {
+			etVechicleRegistrationNo.setText(AppValues.mapRegistrationData
+					.get(Constants.VECHILE_REGISTRATION_NO));
+			etMake.setText(AppValues.mapRegistrationData
+					.get(Constants.VECHILE_MAKE));
+			etModel.setText(AppValues.mapRegistrationData
+					.get(Constants.VECHILE_MODEL));
+			String colorCode = AppValues.mapRegistrationData
+					.get(Constants.VECHILE_COLOUR);
+
+			etVechicleRegistrationNo.setSelection(etVechicleRegistrationNo
+					.getText().length());
+			etMake.setSelection(etMake.getText().length());
+			etModel.setSelection(etModel.getText().length());
+
+			etVechicleRegistrationNo.setSelection(etVechicleRegistrationNo
+					.getText().length());
+			etMake.setSelection(etMake.getText().length());
+			etModel.setSelection(etModel.getText().length());
+
+			if (colorCode != null && colorSpinnerAdapter != null) {
+				for (int i = 0; i < colorSpinnerAdapter.getCount(); i++) {
+					if (colorCode.equals(colorSpinnerAdapter.getItem(i)
+							.toString())) {
+						spinnerColor.setSelection(i);
+						break;
+					}
+				}
+			}
+
+			if (AppValues.mapRegistrationData
+					.containsKey(Constants.WORKING_CITY)) {
+
+			}
+			String passengerValue = AppValues.mapRegistrationData
+					.get(Constants.VECHILE_MAXIMUM_PASSENGERS);
+			if (passengerValue != null && passengerSpinnerAdapter != null) {
+				for (int i = 0; i < passengerSpinnerAdapter.getCount(); i++) {
+					if (passengerSpinnerAdapter.getItem(i).toString()
+							.contains(passengerValue)) {// passengerValue.equals(passengerSpinnerAdapter
+						// .getItem(i).toString())
+						spinnerMaxPassenger.setSelection(i);
+						break;
+					}
+				}
+			}
+		}
+
+		if (vehicleDetailsBundle != null) {
+			if (vehicleDetailsBundle
+					.containsKey(Constants.FROM_EDIT_MY_ACC_VECHILE_DETAILS)) {
+
+				isComingFromEditMyAccount = vehicleDetailsBundle
+						.getBoolean(Constants.FROM_EDIT_MY_ACC_VECHILE_DETAILS);
+				if (isComingFromEditMyAccount) {
+					rlTopPoint.getLayoutParams().height = RelativeLayout.LayoutParams.WRAP_CONTENT;
+					rlTopPoint.getLayoutParams().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+					tvVehicleDetailsNote.setText(getResources().getString(
+							R.string.vehicle_details));
+					tvVehicleDetailsNote.setGravity(Gravity.CENTER);
+					ivRegister4.setVisibility(View.GONE);
+					textNext.setText("Save");
+					textHiddenNext.setText("Save");
+
+					if (AppValues.driverDetails != null) {
+						etVechicleRegistrationNo
+								.setText(AppValues.driverDetails.getVehicle()
+										.getRegistration());
+						etMake.setText(AppValues.driverDetails.getVehicle()
+								.getMake());
+						etModel.setText(AppValues.driverDetails.getVehicle()
+								.getModel());
+						String colorCode = String
+								.valueOf(AppValues.driverDetails.getVehicle()
+										.getColour());
+
+						Log.e(TAG,
+								"AppValues.driverDetails.getWheelchairAccess() "
+										+ AppValues.driverDetails
+												.getWheelchairAccess());
+
+						// Wheel chair
+						if (AppValues.driverDetails.getWheelchairAccess()
+								.equals("true")) {
+							AppValues.isWheelChairAccess = true;
+							toogleWheelChair.setChecked(true);
+							/* Only for london driver can't change to No */
+							// toogleWheelChair.setEnabled(false);
+						} else {
+							AppValues.isWheelChairAccess = false;
+							toogleWheelChair.setChecked(false);
+						}
+
+						etVechicleRegistrationNo
+								.setSelection(etVechicleRegistrationNo
+										.getText().length());
+						etMake.setSelection(etMake.getText().length());
+						etModel.setSelection(etModel.getText().length());
+						if (colorCode != null && colorSpinnerAdapter != null) {
+							for (int i = 0; i < colorSpinnerAdapter.getCount(); i++) {
+								if (colorCode.equals(colorSpinnerAdapter
+										.getItem(i).toString())) {
+									spinnerColor.setSelection(i);
+									break;
+								}
+							}
+						}
+						String passengerValue = String
+								.valueOf(AppValues.driverDetails
+										.getPassengerCapacity());
+						if (passengerValue != null
+								&& passengerSpinnerAdapter != null) {
+							for (int i = 0; i < passengerSpinnerAdapter
+									.getCount(); i++) {
+
+								if (passengerValue
+										.equals(passengerSpinnerAdapter
+												.getItem(i).toString())
+										|| passengerSpinnerAdapter
+												.getItem(i)
+												.toString()
+												.trim()
+												.contains(passengerValue.trim())) {
+									spinnerMaxPassenger.setSelection(i);
+									break;
+								}
+							}
+						}
+
+					}
+				}
+			}
+		}
+
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		super.initWidgets();
+
+	}
+
+	class TextViewOnClickListener implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.tvNext:
+				nextButtonCall();
+
+				break;
+
+			case R.id.tvHiddenNext:
+				nextButtonCall();
+
+				break;
+			}
+		}
+	}
+
+	class onTouchListener implements OnTouchListener {
+
+		@Override
+		public boolean onTouch(View v, MotionEvent arg1) {
+			// TODO Auto-generated method stub
+
+			switch (v.getId()) {
+			case R.id.spinnerColor:
+				Util.hideSoftKeyBoard(mContext, textNext);
+
+				break;
+
+			case R.id.spinnerPassengers:
+				Util.hideSoftKeyBoard(mContext, textNext);
+
+				break;
+			}
+			return false;
+		}
+
+	}
+
+	void nextButtonCall() {
+		if (mContext != null)
+			Util.hideSoftKeyBoard(mContext, textNext);
+
+		String vechicleRegistrationNo = etVechicleRegistrationNo.getText()
+				.toString().trim();
+		String make = etMake.getText().toString().trim();
+		String model = etModel.getText().toString().trim();
+		String color = spinnerColor.getSelectedItem().toString();
+		String maxPassenger = spinnerMaxPassenger.getSelectedItem().toString();
+		if (maxPassenger.equals("1-4"))
+			maxPassenger = "4";
+		else if (maxPassenger.equals("1-5"))
+			maxPassenger = "5";
+		else if (maxPassenger.equals("1-6"))
+			maxPassenger = "6";
+		else if (maxPassenger.equals("1-7"))
+			maxPassenger = "7";
+		else if (maxPassenger.equals("1-8"))
+			maxPassenger = "8";
+		else if (maxPassenger.equals("1-9"))
+			maxPassenger = "9";
+
+		String isWheelChairAccess = "";
+		if (toogleWheelChair.isChecked())
+			isWheelChairAccess = "true";
+		else
+			isWheelChairAccess = "false";
+
+		if (vechicleRegistrationNo.isEmpty() || make.isEmpty()
+				|| model.isEmpty() || color.trim().isEmpty()
+				|| maxPassenger.trim().isEmpty()) {
+			Util.showToastMessage(mContext, "Please complete all fields",
+					Toast.LENGTH_LONG);
+		} else {
+
+			vehicleDetailsBundle.putString(Constants.VECHILE_REGISTRATION_NO,
+					vechicleRegistrationNo);
+			vehicleDetailsBundle.putString(Constants.VECHILE_MAKE, make);
+			vehicleDetailsBundle.putString(Constants.VECHILE_MODEL, model);
+			vehicleDetailsBundle.putString(Constants.VECHILE_COLOUR, color);
+			vehicleDetailsBundle.putString(
+					Constants.VECHILE_MAXIMUM_PASSENGERS, maxPassenger);
+			vehicleDetailsBundle.putString(Constants.VECHILE_WHEELCHAIR_ACCESS,
+					isWheelChairAccess);
+
+			AppValues.mapRegistrationData.put(
+					Constants.VECHILE_REGISTRATION_NO, vechicleRegistrationNo);
+			AppValues.mapRegistrationData.put(Constants.VECHILE_MAKE, make);
+			AppValues.mapRegistrationData.put(Constants.VECHILE_MODEL, model);
+			AppValues.mapRegistrationData.put(Constants.VECHILE_COLOUR, color);
+			AppValues.mapRegistrationData.put(
+					Constants.VECHILE_MAXIMUM_PASSENGERS, maxPassenger);
+			AppValues.mapRegistrationData.put(
+					Constants.VECHILE_WHEELCHAIR_ACCESS, isWheelChairAccess);
+
+			if (isComingFromEditMyAccount) {
+				// final Dialog dialog = new Dialog(mContext,
+				// R.style.mydialogstyle);
+				// dialog.setContentView(R.layout.confirmation_dialog);
+				// dialog.setCanceledOnTouchOutside(false);
+				// // dialog.setTitle("Alert!!");
+				// dialog.setCancelable(false);
+				// dialog.show();
+				// textYes = (TextView) dialog.findViewById(R.id.tvYes);
+				// textNo = (TextView) dialog.findViewById(R.id.tvNo);
+				// textNo.setOnClickListener(new OnClickListener() {
+				//
+				// @Override
+				// public void onClick(View v) {
+				// // TODO Auto-generated method stub
+				// dialog.dismiss();
+				// }
+				// });
+				// textYes.setOnClickListener(new OnClickListener() {
+				//
+				// @Override
+				// public void onClick(View v) {
+				// // TODO Auto-generated method stub
+				// dialog.dismiss();
+				if (AppValues.driverDetails != null) {
+
+					vehicleDetailsBundle.putString(Constants.FIRSTNAME,
+							AppValues.driverDetails.getFirstname());
+					vehicleDetailsBundle.putString(Constants.SURNAME,
+							AppValues.driverDetails.getSurname());
+					vehicleDetailsBundle.putString(Constants.COUNRTY_CODE,
+							AppValues.driverDetails.getInternationalCode());
+					vehicleDetailsBundle.putString(Constants.MOBILE_NUMBER,
+							AppValues.driverDetails.getMobileNumber());
+					vehicleDetailsBundle
+							.putString(Constants.WORKING_CITY, String
+									.valueOf(AppValues.driverDetails
+											.getCityId()));
+					vehicleDetailsBundle.putString(Constants.EMAIL_ADDRESS,
+							AppValues.driverDetails.getEmail());
+					vehicleDetailsBundle.putString(Constants.USERNAME,
+							AppValues.driverDetails.getUsername());
+					vehicleDetailsBundle.putString(
+							Constants.REGISTRATION_PASSWORD,
+							Util.getPassword(mContext));
+					vehicleDetailsBundle.putString(Constants.PAYMENT_TYPE,
+							AppValues.driverDetails.getPaymentType());
+
+					if (AppValues.driverDetails.getPaymentType().equals("both")) {
+						vehicleDetailsBundle.putString(Constants.PAYMENT_TYPE,
+								AppValues.driverDetails.getPaymentType());
+						vehicleDetailsBundle.putString(Constants.BANK_NAME,
+								AppValues.driverDetails.getBankDetails()
+										.getName());
+						vehicleDetailsBundle.putString(
+								Constants.BANK_ACCOUNT_NAME,
+								AppValues.driverDetails.getBankDetails()
+										.getAccountName());
+						vehicleDetailsBundle.putString(
+								Constants.BANK_ACCOUNT_NUMBER,
+								AppValues.driverDetails.getBankDetails()
+										.getAccountNumber());
+						vehicleDetailsBundle.putString(
+								Constants.BANK_SORT_CODE,
+								AppValues.driverDetails.getBankDetails()
+										.getSortCode());
+						vehicleDetailsBundle.putString(Constants.BANK_IBAN, "");
+					}
+
+					vehicleDetailsBundle.putString(Constants.BILLING_ADDRESS1,
+							AppValues.driverDetails.getBillingAddress1());
+					vehicleDetailsBundle.putString(Constants.BILLING_ADDRESS2,
+							AppValues.driverDetails.getBillingAddress2());
+					vehicleDetailsBundle.putString(Constants.BILLING_CITY,
+							AppValues.driverDetails.getBillingCity());
+					vehicleDetailsBundle.putString(Constants.BILLING_COUNTRY,
+							AppValues.driverDetails.getBillingCounty());
+					vehicleDetailsBundle.putString(Constants.BILLING_POSTCODE,
+							AppValues.driverDetails.getBillingPostcode());
+
+					if (NetworkUtil.isNetworkOn(mContext)) {
+
+						dialogVehicleDetails = new ProgressDialog(
+								SignUp_VehicleDetails_Activity.this);
+						dialogVehicleDetails.setMessage("Loading...");
+						dialogVehicleDetails.setCancelable(false);
+						dialogVehicleDetails.show();
+						EditVehicleDetailsTask editVechileDetails = new EditVehicleDetailsTask();
+						editVechileDetails.bundle = vehicleDetailsBundle;
+						editVechileDetails.execute();
+					} else {
+						Util.showToastMessage(mContext, getResources()
+								.getString(R.string.no_network_error),
+								Toast.LENGTH_LONG);
+					}
+
+				}
+				// }
+				// });
+			} else {
+				Intent intent = new Intent(SignUp_VehicleDetails_Activity.this,
+						SignUp_Payment_Activity.class);
+				intent.putExtras(vehicleDetailsBundle);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+			}
+		}
+	}
+
+	public class EditVehicleDetailsTask extends AsyncTask<String, Void, String> {
+		public Bundle bundle;
+		String errorMessage = "";
+
+		@Override
+		protected String doInBackground(String... params) {
+			// TODO Auto-generated method stub
+			AccountModification accModification = new AccountModification(
+					SignUp_VehicleDetails_Activity.this, bundle);
+			String response = accModification.ModificationCredentials();
+			Log.e(TAG, "EditVehicleDetailsTask response::> " + response);
+			try {
+				JSONObject jObject = new JSONObject(response);
+				if (jObject.has("success")
+						&& jObject.getString("success").equals("true")) {
+
+					if (jObject.has("isauthorized")) {
+						if (jObject.getString("isauthorized").equals("false")) {
+
+							DriverAccountDetails driverAccount = new DriverAccountDetails(
+									mContext);
+							driverAccount.retriveAccountDetails(mContext);
+
+							DriverSettingDetails driverSettings = new DriverSettingDetails(
+									mContext);
+							driverSettings.retriveDriverSettings(mContext);
+
+							return "success";
+						} else if (jObject.getString("isauthorized").equals(
+								"true")) {
+							errorMessage = "pending";
+							return errorMessage;
+						}
+					}
+					// return "success";
+				} else {
+					if (jObject.has("errors")) {
+						JSONArray jErrorsArray = jObject.getJSONArray("errors");
+
+						errorMessage = jErrorsArray.getJSONObject(0).getString(
+								"message");
+						return errorMessage;
+					}
+				}
+				return "success";
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			return errorMessage;
+
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+
+			if (dialogVehicleDetails != null)
+				dialogVehicleDetails.dismiss();
+
+			if (result.equals("success")) {
+				SignUp_DriverDetails_Activity.finishActivity();
+				finish();
+				// DocumentUploadCall();
+				SignUp_DriverDetails_Activity.finishActivity();
+				finish();
+
+			} else if (result.equals("pending")) {
+				Util.showToastMessage(mContext,
+						"Your account is awaiting approval", Toast.LENGTH_LONG);
+				SignUp_DriverDetails_Activity.finishActivity();
+				LogInActivity.finishActivity();
+				MainActivity.finishActivity();
+				finish();
+
+				Intent intent = new Intent(SignUp_VehicleDetails_Activity.this,
+						TutorialActivity.class);
+				intent.putExtra("isFromMyAccount", true);
+				// intent.putExtra(Constants.FROM_MY_ACCOUNT_EDIT, true);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+
+				// DocumentUploadCall();
+			} else {
+				Util.showToastMessage(mContext, result, Toast.LENGTH_LONG);
+			}
+		}
+	}
+
+	static void finishActivity() {
+		if (mContext != null)
+			((Activity) mContext).finish();
+	}
+
+	void DocumentUploadCall() {
+		Intent intent = new Intent(SignUp_VehicleDetails_Activity.this,
+				DocumentUploadActivity.class);
+		intent.putExtras(vehicleDetailsBundle);
+		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(intent);
+	}
+
+	void SetNoOfMaxPassengers() {
+		if (AppValues.maxNoOfPassenger == 6) {
+			if (!Util.getCitySelectedLondon(mContext))
+				listNoOfPassenger.add("1-5");
+			listNoOfPassenger.add("1-6");
+		} else if (AppValues.maxNoOfPassenger == 7) {
+			if (!Util.getCitySelectedLondon(mContext))
+				listNoOfPassenger.add("1-5");
+			listNoOfPassenger.add("1-6");
+			listNoOfPassenger.add("1-7");
+		} else if (AppValues.maxNoOfPassenger == 8) {
+			if (!Util.getCitySelectedLondon(mContext))
+				listNoOfPassenger.add("1-5");
+			listNoOfPassenger.add("1-6");
+			listNoOfPassenger.add("1-7");
+			listNoOfPassenger.add("1-8");
+		} else if (AppValues.maxNoOfPassenger == 9) {
+			if (!Util.getCitySelectedLondon(mContext))
+				listNoOfPassenger.add("1-5");
+			listNoOfPassenger.add("1-6");
+			listNoOfPassenger.add("1-7");
+			listNoOfPassenger.add("1-8");
+			listNoOfPassenger.add("1-9");
+		}
+	}
+
+}

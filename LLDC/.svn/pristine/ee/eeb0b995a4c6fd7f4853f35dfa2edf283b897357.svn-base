@@ -1,0 +1,350 @@
+package co.uk.android.lldc.fragments;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+
+import android.annotation.SuppressLint;
+import android.app.AlarmManager;
+import android.app.Dialog;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.FragmentActivity;
+import android.text.Html;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import co.uk.android.lldc.EventDetailsActivity;
+import co.uk.android.lldc.LLDCApplication;
+import co.uk.android.lldc.R;
+import co.uk.android.lldc.TodaysEventActivity;
+import co.uk.android.lldc.models.DashboardModel;
+import co.uk.android.lldc.models.ServerModel;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+
+@SuppressLint({ "HandlerLeak", "DefaultLocale" })
+public class WelcomeFragment extends RootFragment implements
+		View.OnClickListener {
+	private static final String TAG = WelcomeFragment.class.getSimpleName();
+
+	int bIsToday = 0;
+	ImageView ivParkImage;
+	TextView tvWelcomeText, tvEmpty, tvStadiumCloseText, tvExploreThePark;
+	LinearLayout llParkEventList, llWelcomeText;
+	ArrayList<ServerModel> eventList;
+	View headerview;
+	DashboardModel dashboardModel = new DashboardModel();
+
+	ImageLoader imageLoader;
+	DisplayImageOptions options;
+
+	public static Handler welComeFragHandler = null;
+
+	public WelcomeFragment() {
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View rootView = inflater.inflate(R.layout.fragment_welcome, container,
+				false);
+		super.initWidgets(rootView, this.getClass().getName());
+
+		welComeFragHandler = new Handler() {
+			public void handleMessage(Message message) {
+
+				if (message.what == 1004) {
+
+					try {
+						if (!dashboardModel.getMajorNotice().equals("")) {
+							onShowUrgentClosureDialog();
+						}
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						LLDCApplication.onShowLogCat("WelcomeFrag:onShowClosureDialog", e.getMessage());
+					}
+
+				}
+
+			};
+		};
+
+		imageLoader = ImageLoader.getInstance();
+		options = new DisplayImageOptions.Builder().cacheOnDisc(true)
+				// .imageScaleType(ImageScaleType.EXACTLY)
+				.imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2)
+				.bitmapConfig(Bitmap.Config.RGB_565).build();
+
+		ivParkImage = (ImageView) rootView.findViewById(R.id.ivParkImage);
+		tvWelcomeText = (TextView) rootView.findViewById(R.id.tvWelcomeText);
+		tvEmpty = (TextView) rootView.findViewById(android.R.id.empty);
+		headerview = (View) rootView.findViewById(R.id.headerview);
+		tvStadiumCloseText = (TextView) rootView
+				.findViewById(R.id.tvParkMinorNotice);
+		llParkEventList = (LinearLayout) rootView
+				.findViewById(R.id.llParkTaskList);
+		llWelcomeText = (LinearLayout) rootView
+				.findViewById(R.id.llWelcomeText);
+
+		tvExploreThePark = (TextView) rootView
+				.findViewById(R.id.tvExploreThePark);
+
+		tvExploreThePark.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+
+		onLoadServerData();
+		return rootView;
+
+	}
+
+	public void onSetServerData() {
+		if (!LLDCApplication.isInsideThePark) {
+			ivParkImage.setImageResource(R.drawable.dashboard_image_outside);
+			tvWelcomeText.setVisibility(View.VISIBLE);
+			headerview.setVisibility(View.GONE);
+			llWelcomeText.setPadding(0, 50, 0, 0);
+		} else {
+			ivParkImage.setImageResource(R.drawable.dashboard_image_inside);
+			tvWelcomeText.setVisibility(View.GONE);
+			headerview.setVisibility(View.VISIBLE);
+			llWelcomeText.setPadding(0, 0, 0, 0);
+		}
+
+		tvWelcomeText.setText(dashboardModel.getWelcomeMsgIn().toString()
+				.toUpperCase());
+		tvStadiumCloseText.setText(Html.fromHtml(dashboardModel
+				.getMinorNotice().toString().toUpperCase()));
+		tvStadiumCloseText.setSelected(true);
+		onCreateEventList();
+
+		// if (HomeActivity.mHomeActivityHandler != null) {
+		// HomeActivity.mHomeActivityHandler.sendEmptyMessage(1007);
+		// }
+	}
+
+	@SuppressLint("InflateParams")
+	public void onCreateEventList() {
+		LayoutInflater inflater = LayoutInflater.from(getActivity());
+		//
+		llParkEventList.removeAllViews();
+
+		if (eventList.size() == 0) {
+			tvEmpty.setVisibility(View.VISIBLE);
+		} else if (LLDCApplication.isInsideThePark) {
+			/* check for istoday, add today's UI */
+			for (int i = 0; i < eventList.size(); i++) {
+				bIsToday = Integer.parseInt(eventList.get(i).getIsToday()
+						.toString());
+				if (bIsToday == 1) {
+					View horizontalItem = inflater.inflate(
+							R.layout.today_event, null);
+					ImageView ivParkEvent = (ImageView) horizontalItem
+							.findViewById(R.id.ivCalenderBg);
+					Calendar calender = Calendar.getInstance();
+
+					TextView tvDate = (TextView) horizontalItem
+							.findViewById(R.id.tvDate);
+					TextView tvMonth = (TextView) horizontalItem
+							.findViewById(R.id.tvMonth);
+
+					int month = calender.get(Calendar.MONTH);
+					switch (month) {
+					case 1:
+						tvMonth.setText("JAN");
+						break;
+					case 2:
+						tvMonth.setText("FEB");
+						break;
+					case 3:
+						tvMonth.setText("MAR");
+						break;
+					case 4:
+						tvMonth.setText("APR");
+						break;
+					case 5:
+						tvMonth.setText("MAY");
+						break;
+					case 6:
+						tvMonth.setText("JUN");
+						break;
+					case 7:
+						tvMonth.setText("JUL");
+						break;
+					case 8:
+						tvMonth.setText("AUG");
+						break;
+					case 9:
+						tvMonth.setText("SEP");
+						break;
+					case 10:
+						tvMonth.setText("OCT");
+						break;
+					case 11:
+						tvMonth.setText("NOV");
+						break;
+					case 12:
+						tvMonth.setText("DEC");
+						break;
+					}
+
+					tvDate.setText(calender.get(Calendar.DATE) + "");
+
+					ivParkEvent.setTag("10001," + eventList.get(i).get_id());
+
+					ivParkEvent.setOnClickListener(new OnClickListener() {
+
+						@Override
+						public void onClick(View v) {
+							// TODO Auto-generated method stub
+							Log.e(TAG, v.getTag().toString());
+							Intent intent = new Intent(getActivity(),
+									TodaysEventActivity.class);
+							startActivity(intent);
+						}
+					});
+
+					llParkEventList.addView(horizontalItem);
+
+					break;
+				}
+			}
+		}
+
+		for (int i = 0; i < eventList.size(); i++) {
+			int bIsToday = Integer.parseInt(eventList.get(i).getIsToday());
+			if (bIsToday == 1 && LLDCApplication.isInsideThePark)
+				continue;
+			View horizontalItem = inflater.inflate(R.layout.park_item, null);
+			TextView tvParkEventHeading = (TextView) horizontalItem
+					.findViewById(R.id.tvParkEventHeading);
+			ImageView ivParkEvent = (ImageView) horizontalItem
+					.findViewById(R.id.ivParkEvent);
+
+			imageLoader = ImageLoader.getInstance();
+			options = new DisplayImageOptions.Builder().cacheOnDisc(true)
+					// .imageScaleType(ImageScaleType.EXACTLY)
+					.imageScaleType(ImageScaleType.IN_SAMPLE_POWER_OF_2)
+					.bitmapConfig(Bitmap.Config.RGB_565).build();
+
+			// ivParkEvent
+			tvParkEventHeading
+					.setText(eventList.get(i).getName().toUpperCase());
+			tvParkEventHeading.setSelected(true);
+
+			String szImageUrl = eventList.get(i).getThumbImage();
+			ImageLoader.getInstance().displayImage(szImageUrl, ivParkEvent);
+			ivParkEvent.setTag(i + "," + eventList.get(i).get_id());
+			ivParkEvent.setOnClickListener(this);
+			llParkEventList.addView(horizontalItem);
+		}
+	}
+
+	public void getDataFromDB() {
+		try {
+			dashboardModel = LLDCApplication.DBHelper.onGetDashBoardData();
+			eventList = LLDCApplication.DBHelper.getEventData("");
+			onSetServerData();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		if (v.getTag() != null || v.getTag().toString().equals("")) {
+			String tag = v.getTag().toString().trim();
+			if (tag.contains(",")) {
+				String[] tag_arr = tag.split(",");
+				if (tag_arr[0].equals("10001")) {
+					// Show todays event page
+				} else {
+					// Show event details page
+					Intent intent = new Intent(getActivity(),
+							EventDetailsActivity.class);
+					intent.putExtra("EVENTID", tag_arr[1]);
+					getActivity().startActivity(intent);
+				}
+			}
+		}
+	}
+
+	private void onLoadServerData() {
+		// TODO Auto-generated method stub
+		if (!LLDCApplication.isMajorNotificationShown) {
+			welComeFragHandler.sendEmptyMessage(1004);
+			LLDCApplication.isMajorNotificationShown = true;
+		}
+		getDataFromDB();
+		// onSyncServerData();
+	}
+
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+	}
+
+	public void onShowUrgentClosureDialog() {
+		final Dialog dialog = new Dialog(getActivity(),
+				android.R.style.Theme_Translucent_NoTitleBar);
+		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		dialog.setContentView(R.layout.urgentclosuredialog);
+		dialog.setCanceledOnTouchOutside(false);
+
+		// set the custom dialog components - text, image and button
+		TextView text = (TextView) dialog.findViewById(R.id.text);
+		text.setText(Html.fromHtml(dashboardModel.getMajorNotice()));
+
+		TextView dialogButton = (TextView) dialog
+				.findViewById(R.id.dialogButtonOK);
+		// if button is clicked, close the custom dialog
+		dialogButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				dialog.dismiss();
+			}
+		});
+
+		dialog.show();
+	}
+
+	// public void onSyncServerData() {
+	// Calendar calendar = Calendar.getInstance();
+	// Intent myIntent = new Intent(getActivity(), LLDC_Sync_Servcie.class);
+	// PendingIntent pendingIntent = PendingIntent.getService(getActivity(),
+	// 0, myIntent, 0);
+	//
+	// getActivity();
+	// AlarmManager alarmManager = (AlarmManager) getActivity()
+	// .getSystemService(FragmentActivity.ALARM_SERVICE);
+	// alarmManager.setRepeating(AlarmManager.RTC,
+	// calendar.getTimeInMillis() + 1800000, 1800000/* 60000 */,
+	// pendingIntent); // 1800000 30 min
+	// }
+
+}

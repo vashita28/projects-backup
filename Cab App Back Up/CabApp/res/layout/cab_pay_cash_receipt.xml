@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/list_divider" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/common_top_bar_maps" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlSendReceipt"
+        android:layout_below="@+id/header" >
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rlReceiptHeading"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1dp"
+                android:background="@color/list_background" >
+
+                <TextView
+                    android:id="@+id/tvReceipt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Receipt"
+                    android:textColor="@color/textview_unselected"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvSelectMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:text="SELECT METHOD"
+                    android:textColor="@color/textcolor_grey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llReceiptType"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlReceiptHeading"
+                android:layout_marginTop="1dp"
+                android:background="@color/list_background"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/rlEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/registration_btn_selector"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/textEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Enter your email id"
+                        android:textColor="@color/textview_selected"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <!--
+                <RelativeLayout
+                    android:id="@+id/rlEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/registration_btn_selector"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/textEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/email"
+                        android:gravity="center_vertical"
+                        android:text="Email"
+                        android:textColor="@color/textview_selected" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewDivider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@color/list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rlSMS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/registration_btn_selector"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/textSMS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/sms_grey"
+                        android:gravity="center_vertical"
+                        android:text="SMS"
+                        android:textColor="@color/textview_unselected" />
+                </RelativeLayout>
+                -->
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etEmailOrCellNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/llReceiptType"
+                android:background="@android:color/white"
+                android:imeOptions="actionNext"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <RelativeLayout
+                android:id="@+id/rlPickupPoint"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/etEmailOrCellNumber"
+                android:layout_marginTop="30dp"
+                android:background="@color/list_background"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/tvPickUpPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/pickup_point"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="Pick Up "
+                    android:textColor="@color/textview_unselected"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvPickUpOptionalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:text="OPTIONAL"
+                    android:textColor="@color/textcolor_grey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llPickUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlPickupPoint"
+                android:layout_marginTop="1dp"
+                android:background="@color/list_background"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="1" >
+
+                <RelativeLayout
+                    android:id="@+id/rlPickUpAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" >
+
+                    <com.android.cabapp.util.CustomAutoCompleteTextView
+                        android:id="@+id/autoCompleteTextPickUpAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@android:color/white"
+                        android:hint="Address "
+                        android:imeOptions="actionNext"
+                        android:nextFocusDown="@+id/etPickupPincode"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/etPickupPincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/autoCompleteTextPickUpAddress"
+                        android:background="@android:color/white"
+                        android:hint="Postcode"
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvPickUpLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/location_btn_selector"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="23dp"
+                    android:text="Location"
+                    android:textColor="@drawable/textcolor_selector"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlDropOffPoint"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/llPickUp"
+                android:layout_marginTop="30dp"
+                android:background="@color/list_background"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/tvDropOffPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/drop_point"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="Drop Off "
+                    android:textColor="@color/textview_unselected"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvDropOffOptionalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:text="OPTIONAL"
+                    android:textColor="@color/textcolor_grey"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llDropOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlDropOffPoint"
+                android:layout_marginTop="1dp"
+                android:background="@color/list_background"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="1" >
+
+                <RelativeLayout
+                    android:id="@+id/rlDropOffAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" >
+
+                    <com.android.cabapp.util.CustomAutoCompleteTextView
+                        android:id="@+id/autoCompleteTextDropOffAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@android:color/white"
+                        android:hint="Address "
+                        android:imeOptions="actionNext"
+                        android:nextFocusDown="@+id/etDropOffPinCode"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/etDropOffPinCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/autoCompleteTextDropOffAddress"
+                        android:background="@android:color/white"
+                        android:hint="Postcode"
+                        android:imeOptions="actionDone"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvDropOffLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/location_btn_selector"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="23dp"
+                    android:text="Location"
+                    android:textColor="@drawable/textcolor_selector"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/llDropOff"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="false"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="= Total"
+                android:textColor="@color/textview_unselected"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlTotalAmt"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/tvTotal"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:id="@+id/tvTotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal|bottom"
+                    android:text="-"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlHiddenSendReceipt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlTotalAmt"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/ivHiddenSendReceipt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:clickable="false"
+                    android:src="@drawable/send_receipt" />
+
+                <TextView
+                    android:id="@+id/tvHiddenSendReceipt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/ivHiddenSendReceipt"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="Send Receipt"
+                    android:textColor="@color/textview_unselected" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlSendReceipt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/ivSendReceipt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:src="@drawable/send_receipt" />
+
+        <TextView
+            android:id="@+id/tvSendReceipt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ivSendReceipt"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="Send Receipt"
+            android:textColor="@color/textview_unselected"
+            android:textSize="@dimen/heading_textsize" />
+    </RelativeLayout>
+
+</RelativeLayout>

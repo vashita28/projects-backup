@@ -1,0 +1,15 @@
+com.get2gether.deliveryapp.BuildConfig
+com.get2gether.deliveryapp.R
+com.get2gether.deliveryapp.R$array
+com.get2gether.deliveryapp.R$attr
+com.get2gether.deliveryapp.R$drawable
+com.get2gether.deliveryapp.R$id
+com.get2gether.deliveryapp.R$layout
+com.get2gether.deliveryapp.R$string
+com.get2gether.deliveryapp.R$style
+com.rassaapp.deliveryapp.AddressPage:
+    160:165:public int fontpercent_screenwidth(double)
+com.rassaapp.deliveryapp.ConfirmPage:
+    android.widget.TextView texthint
+    178:179:public int dp(int)
+    194:199:public int fontpercent_screenwidth(double)

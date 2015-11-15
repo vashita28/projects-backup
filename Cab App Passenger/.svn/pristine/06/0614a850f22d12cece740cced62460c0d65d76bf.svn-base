@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191918"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_maps" />
+
+    <com.example.cabapppassenger.util.MyGallery
+        android:id="@+id/gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/image_count"
+        android:layout_below="@+id/topbar"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:spacing="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/tvskip"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/registration_btn_selector"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Skip"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/image_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlFooter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="#fff"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvPosition1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/textshape_selected" />
+
+        <TextView
+            android:id="@+id/tvPosition2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/textshape_unselected" />
+
+        <TextView
+            android:id="@+id/tvPosition3"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/textshape_unselected" />
+
+        <TextView
+            android:id="@+id/tvPosition4"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/textshape_unselected" />
+    </LinearLayout>
+
+</RelativeLayout>

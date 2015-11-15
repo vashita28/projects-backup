@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/list_background" >
+
+    <LinearLayout
+        android:id="@+id/llHeading"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="GU22 TO W1F"
+            android:textColor="@color/textview_unselected"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textPassengerName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:paddingRight="12dp"
+            android:singleLine="true"
+            android:text="Jake"
+            android:textColor="@color/textview_unselected"
+            android:textSize="20sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlMsgText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llHeading"
+        android:background="@android:color/white"
+        android:paddingBottom="13dp"
+        android:paddingTop="7dp" >
+
+        <TextView
+            android:id="@+id/tvTimeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:paddingRight="12dp"
+            android:text="13:59 27/12/13"
+            android:textColor="@color/textview_selected"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTimeDate"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="marquee"
+            android:gravity="left"
+            android:maxLines="2"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s"
+            android:textSize="@dimen/normal_textsize" />
+    </RelativeLayout>
+
+</RelativeLayout>

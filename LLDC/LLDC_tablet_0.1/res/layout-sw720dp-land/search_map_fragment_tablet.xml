@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="false"
+    android:orientation="vertical" >
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoDragView="@+id/slidingView"
+        sothree:umanoInitialState="collapsed"
+        sothree:umanoOverlay="true"
+        sothree:umanoPanelHeight="150dp"
+        sothree:umanoShadowHeight="4dp" >
+
+        <com.google.android.gms.maps.MapView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true" />
+
+        <include
+            android:id="@+id/slidingView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/mapvenuedetails_tablet"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone" />
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlVenueDirection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/viewdivider"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/explorer_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rlVenueDirectionsChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewdivider"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/rlVenueDirectionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true" >
+
+                <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                    android:id="@+id/tvVenueDirectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/ivWalks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/tvVenueDirectionTitle"
+                    android:src="@drawable/walk" />
+
+                <co.uk.android.lldc.custom.CustomTextView_CartiloRegular
+                    android:id="@+id/tvVenueDirectionDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@+id/ivWalks"
+                    android:layout_toRightOf="@+id/ivWalks"
+                    android:singleLine="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right|center_vertical"
+                android:background="@android:color/white"
+                android:gravity="right"
+                android:paddingEnd="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
+                android:paddingStart="10dp" >
+
+                <ImageView
+                    android:id="@+id/ivCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cancel_btn" />
+
+                <TextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/ivCancel"
+                    android:text="CANCEL"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

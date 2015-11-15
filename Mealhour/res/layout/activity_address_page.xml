@@ -1,0 +1,205 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="1.0" >
+
+    <!-- Top -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".10"
+        android:background="@drawable/border1" >
+
+        <TextView
+            android:id="@+id/menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/DeliveryTitle"
+            android:textColor="#ffffff"
+            android:textScaleX="1.2"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+    <!-- middle -->
+
+
+    <!-- Menu scroll -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".67"
+        android:background="@drawable/mealhour_bg"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/menuscroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/DeliveryName"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <EditText
+                android:id="@+id/name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:inputType="text" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/DeliveryPhone"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <EditText
+                android:id="@+id/phone_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:inputType="phone" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/housestreet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/DeliveryHouseAndStreet"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <EditText
+                android:id="@+id/housestreet_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:inputType="text" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/town"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/DeliveryTown"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <Spinner
+                android:id="@+id/town_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:inputType="text" >
+            </Spinner>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- your order -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight=".05"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp" >
+
+        <TextView
+            android:id="@+id/yourorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DeliveryYourOrder"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <!-- bottom -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".18"
+        android:background="@drawable/border2"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:weightSum="1" >
+
+        <!-- order scroll -->
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".80"
+            android:background="#212121"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/orderscroll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".20" >
+
+            <ImageButton
+                android:id="@+id/confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/order" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

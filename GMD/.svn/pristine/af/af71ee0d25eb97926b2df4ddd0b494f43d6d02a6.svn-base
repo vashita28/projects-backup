@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <Button
+            android:id="@+id/btn_sync_with_server"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:text="Sync with server"
+            android:textColor="@color/textview_text_color"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:text="Logout"
+            android:textColor="@color/textview_text_color"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview_download_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/SYNC_SUCCESSFULLY"
+        android:textSize="32sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rel_progress_sync"
+        android:layout_width="200dip"
+        android:layout_height="40dip"
+        android:layout_centerInParent="true" >
+
+        <ProgressBar
+            android:id="@+id/progress_sync"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dip"
+            android:layout_height="40dip"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <!-- style="@android:style/Widget.ProgressBar.Large" -->
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview_loadingstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_progress_sync"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/DOWNLOADING_REPORT" />
+
+</RelativeLayout>

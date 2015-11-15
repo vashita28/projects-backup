@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_btnIamOutside"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rel_airport_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rel_select_airport"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="#272725" >
+
+            <TextView
+                android:id="@+id/tv_selectairport"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/list_background"
+                android:gravity="center_vertical"
+                android:text="@string/airport_dropoff"
+                android:textColor="#727272"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_airport"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/rel_select_airport"
+            android:background="#000" >
+
+            <ListView
+                android:id="@+id/lv_airports"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginTop="0.5dp" >
+            </ListView>
+
+            <TextView
+                android:id="@+id/tv_noairports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No Airports"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_cabapp_loc_text"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/rel_airport"
+            android:background="#272725" >
+
+            <ImageView
+                android:id="@+id/iv_cablocation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/question" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_notgoing_airport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageView1"
+                android:layout_toRightOf="@+id/iv_cablocation"
+                android:gravity="left"
+                android:text="@string/notgoing_airport"
+                android:textColor="#727272"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/airport_nextarrow" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

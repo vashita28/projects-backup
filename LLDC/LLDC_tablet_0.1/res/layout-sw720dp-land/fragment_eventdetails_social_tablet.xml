@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="100dp"
+    android:orientation="vertical" >
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:horizontalSpacing="20dp"
+        android:numColumns="4"
+        android:verticalSpacing="20dp"
+        android:visibility="visible" >
+    </GridView>
+
+    <RelativeLayout
+        android:id="@+id/rlProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal" >
+
+        <ProgressBar
+            android:id="@+id/pagingprogress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@color/explorer_bg" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="No list found!"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</LinearLayout>

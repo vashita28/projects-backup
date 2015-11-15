@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bridgestone</string>
+
+    <!-- Main Activity -->
+    <string name="send">küldeni</string>
+    <string name="bt_not_enabled">a Bluetooth nem elérheto.</string>
+    <string name="title_connecting">csatlakozás&#8230;</string>
+    <string name="title_connected_to">kapcsolódva: </string>
+    <string name="title_not_connected">nincs kapcsolat</string>
+    <string name="sensors">érzékelok</string>
+    <string name="minimum_sensor_pressure">az érzékelok a minimum nyomásérték alatt vannak:</string>
+    <string name="sensors_captured">szenzorok csatlakoztatva</string>
+    <string name="sensors_below_min_pressure">az érzékelok a minimum nyomásérték alatt vannak</string>
+    <string name="uploaded">feltöltve</string>
+    <string name="btnUploadNow">feltöltés</string>
+    <string name="btnUploaded">feltöltve</string>
+
+    <!-- DeviceListActivity -->
+    <string name="scanning">eszközök keresése&#8230;</string>
+    <string name="select_device">válasszon egy eszközt csatlakozáshoz</string>
+    <string name="none_paired">nincs csatlakoztatott eszköz</string>
+    <string name="none_found">nem található eszköz</string>
+    <string name="title_paired_devices">csatlakoztatott eszközök</string>
+    <string name="title_other_devices">egyébb elérheto eszközök</string>
+    <string name="button_scan">eszközök keresése</string>
+    <string name="no_device_selected">kérem válaszzon egy elérheto eszközt a listából</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">eszköz csatlakoztatása - biztonságos</string>
+    <string name="insecure_connect">eszköz csatlakoztatása- nem biztosnágos</string>
+    <string name="discoverable">láthatóvá tétel</string>
+
+    <!-- Login Activity -->
+    <string name="login">belépés</string>
+    <string name="btnLogin">belépés</string>
+    <string name="user">felhasználható</string>
+    <string name="enter_user_id">adja meg a felhasználói azonosítót</string>
+    <string name="preferences">beállítások</string>
+    <string name="language">nyelv</string>
+    <string name="pressuremeasurement">nyomás mérés</string>
+    <string name="user_id_error">adja meg a felhasználói azonosítót</string>
+    <string name="user_id_must_contain_alphanumberic">kérem adja meg a felhasználói azonosítót ABCsorrendben</string>
+    <string name="user_id_invalid_length">kérem adja meg a 6 karakterbol álló felhasználói azonosítót ABC sorrendben</string>
+
+    <!-- Setup Activity -->
+    <string name="set_up">beállítás</string>
+    <string name="current_status">jelenlegi állapot</string>
+    <string name="not_connected">nincs kapcsoódva</string>
+    <string name="connected">kapcsoódva</string>
+    <string name="to_a_device">eszközhöz</string>
+    <string name="connect_device">eszköz csatlakoztatása</string>
+    <string name="change_device">eszköz váltása</string>
+
+    <!-- Sensor Details Activity -->
+    <string name="sensor_details">érzékelő adatok</string>
+    <string name="sensor_id">Érzékelő azonosító</string>
+    <string name="pressure">nyomás</string>
+    <string name="save">mentés</string>
+    <string name="input_length_error">kérem írjon be egy értéket</string>
+    <string name="input_number_invalid_error">kérem írjon be egy érvényes érteéket</string>
+    <string name="bar">BAR</string>
+    <string name="psi">PSI</string>
+
+    <!-- Toast messages -->
+    <string name="no_network_error">nincs hálózati kapcsolat. Kérem próbákozzon később.</string>
+    <string name="upload_error">hiba az adatok betöltésében. Kérem próbálja később.</string>
+    <string name="uploading">feltöltés&#8230;</string>
+    <string name="connecting">csatlakozás&#8230;</string>
+
+    <string-array name="languagesArray">
+        <item>angol</item>
+        <item>francia</item>
+        <item>német</item>
+        <item>spanyol</item>
+        <item>olasz</item>
+        <item>portugál</item>
+        <item>lenygel</item>
+        <item>cseh</item>
+        <item>magyar</item>
+        <!-- <item>Slovak</item> -->
+        <item>Holland</item>
+    </string-array>
+    <string-array name="pressuremeasurementArray">
+        <item>BAR</item>
+        <item>PSI</item>
+    </string-array>
+
+    <string name="ok">OK</string>
+    <string name="cancel">mégse</string>
+    <string name="exit">Kilépés</string>
+    <string name="confirm_exit">Kilépés megerosítése?</string>
+    <string name="no_results">Nincs találat</string>
+    <string name="bluetooth_not_available">Bluetooth is not available</string>
+    <string name="unable_to_connect_device">Unable to connect device</string>
+    <string name="device_connection_lost">Device connection was lost</string>
+    <string name="network_not_available">Network not available</string>
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="libs/commons-io-2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/crashlytics.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/flurryAnalytics_3.4.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/google-play-services.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/MobileAppTracker-3.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/MobileAppTracker-javadoc-3.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/Parse-1.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/picasso-2.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/universal-image-loader-1.8.6.jar"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

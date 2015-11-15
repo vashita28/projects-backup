@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="1.0" >
+
+    <!-- Top -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.70"
+        android:background="@drawable/mealhour_bg" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="0.92"
+                    android:background="@drawable/logo"
+                    
+                    android:textColor="#ffffff"
+                    android:textScaleX="1.2"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/restaurant_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/SubTitle"
+                    android:textColor="#ffffff"
+                    android:textScaleX="1.5"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/startorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/borderradius1"
+            android:padding="8dp"
+            android:text="@string/StartOrder_button"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/restaurant_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/startorder"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="@string/TakeAwayAddress"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/restaurant_phonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/restaurant_address"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="@string/HelpLinePhoneNumber"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+    <!-- middle -->
+
+    <!-- bottom -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".30"
+        android:background="@drawable/border2"
+        android:orientation="vertical"
+        android:paddingTop="3dp" >
+
+        <!-- image scroll -->
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#212121"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/imagescroll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- motto -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="#0b0b0b" >
+
+            <TextView
+                android:id="@+id/restaurant_motto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/Motto"
+                android:textColor="#e7dcc6"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

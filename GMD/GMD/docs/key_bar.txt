@@ -1,0 +1,18 @@
+<key_bar>
+	<item>
+		<number></number>
+		<movement></movement>
+	</item>
+	<item>
+		<number></number>
+		<movement></movement>
+	</item>
+	<item>
+		<number></number>
+		<movement></movement>
+	</item>
+	<item>
+		<number></number>
+		<movement></movement>
+	</item>
+</key_bar>

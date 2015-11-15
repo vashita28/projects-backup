@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="7dp"
+    android:background="#ffffff"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:weightSum="1" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/fm_imageview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" >
+
+            <co.uk.android.lldc.custom.SquareImageView
+                android:id="@+id/recommendationlist_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:background="@android:color/white"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.6"
+        android:padding="10dp" >
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/recommendationlist_eventname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:maxLines="2"
+            android:minLines="1"
+            android:ellipsize="end"
+            android:textColor="#86bc25"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoLight
+            android:id="@+id/recommendationlist_venuename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/recommendationlist_eventname"
+            android:layout_alignStart="@id/recommendationlist_eventname"
+            android:layout_below="@id/recommendationlist_eventname"
+            android:minLines="1"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/black_heading"
+            android:textSize="14sp" />
+
+        <co.uk.android.lldc.custom.CustomTextView_HelveticaNeue_Italic
+            android:id="@+id/recommendationlist_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/recommendationlist_venuename"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@id/recommendationlist_venuename"
+            android:textColor="@color/black_heading"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+
+</LinearLayout>

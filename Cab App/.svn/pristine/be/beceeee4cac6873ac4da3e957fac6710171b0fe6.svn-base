@@ -1,0 +1,924 @@
+package com.android.cabapp.fragments;
+
+import java.util.Locale;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.bluetooth.BluetoothAdapter;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.cabapp.R;
+import com.android.cabapp.activity.AddScanCardJobsActivity;
+import com.android.cabapp.activity.DeviceListActivity;
+import com.android.cabapp.activity.MainActivity;
+import com.android.cabapp.async.ChipAndPinTask;
+import com.android.cabapp.async.GetPaymentURLTask;
+import com.android.cabapp.async.PaymentTask;
+import com.android.cabapp.async.SendReceiptTask;
+import com.android.cabapp.handpoint.CallbackListener;
+import com.android.cabapp.handpoint.HandPointClass;
+import com.android.cabapp.model.CabPinValidation;
+import com.android.cabapp.util.AppValues;
+import com.android.cabapp.util.Constants;
+import com.android.cabapp.util.NetworkUtil;
+import com.android.cabapp.util.Util;
+import com.handpoint.api.Currency;
+import com.handpoint.api.TransactionResult;
+
+public class PaymentDetailsFragment extends RootFragment {
+	private static final String TAG = PaymentDetailsFragment.class
+			.getSimpleName();
+
+	TextView textPaymentMethod, textMeterAmt, textTip, textCardFee,
+			textCabMiles, textTotal, textPassengerCabPin;
+	RelativeLayout rlConfirm, rlCabPin;
+	EditText etCabPin1;
+	String szJobID = "", szTotalValue = "", szTip = "", szFee = "",
+			szCabMiles = "", szMeterValue = "";
+
+	int nTotalValue = 0, nTip = 0, nFee = 0, nMeterValue = 0, nCabmiles = 0,
+			nTotalValueAfterAddition = 0;
+
+	private ProgressDialog dialogPaymentDetails;
+
+	public static Handler mHandler;
+	static Context mContext;
+
+	// Local Bluetooth adapter
+	private BluetoothAdapter mBluetoothAdapter = null;
+	private static final int REQUEST_CONNECT_TO_PED = 1;
+	private static final int REQUEST_ENABLE_BT = 3;
+
+	ProgressDialog mConnectingDialog;
+
+	HandPointClass mHandPointClass;
+	Timer handpointTimer, connectionTimeoutTimer;
+	float totalAmt = 0;
+	public static String JobIdReturned = "";
+
+	// Overlay
+	RelativeLayout rlCabPinOkyGotIt, rlCabPinOverlay;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+
+		// getActivity().getWindow().setSoftInputMode(
+		// WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE
+		// | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
+		View rootView = inflater.inflate(R.layout.fragment_payment_details,
+				container, false);
+		super.initWidgets(rootView, this.getClass().getName());
+		rlConfirm = (RelativeLayout) rootView.findViewById(R.id.rlConfirm);
+		rlCabPin = (RelativeLayout) rootView.findViewById(R.id.rlCabPin);
+		etCabPin1 = (EditText) rootView.findViewById(R.id.etCabPin1);
+		textPaymentMethod = (TextView) rootView
+				.findViewById(R.id.textPaymentMethodData);
+		textMeterAmt = (TextView) rootView.findViewById(R.id.textMeterAmtData);
+		textTip = (TextView) rootView.findViewById(R.id.textTipData);
+		textCardFee = (TextView) rootView.findViewById(R.id.textCardFeeData);
+		textCabMiles = (TextView) rootView.findViewById(R.id.textCabMilesData);
+		textTotal = (TextView) rootView.findViewById(R.id.textTotalData);
+		textPassengerCabPin = (TextView) rootView
+				.findViewById(R.id.textPassengerCabPin);
+		rlConfirm.setOnClickListener(new TextOnClickListener());
+
+		rlCabPinOverlay = (RelativeLayout) rootView
+				.findViewById(R.id.rlCabPinOverlayData);
+		rlCabPinOkyGotIt = (RelativeLayout) rootView
+				.findViewById(R.id.rlCabPinOkyGotIt);
+		rlCabPinOkyGotIt.setOnClickListener(new TextOnClickListener());
+		if (!Util.getIsOverlaySeen(getActivity(), TAG)) {
+			rlCabPinOverlay.setVisibility(View.VISIBLE);
+		}
+		return rootView;
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+	}
+
+	class TextOnClickListener implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+
+			case R.id.rlConfirm:
+
+				Util.hideSoftKeyBoard(Util.mContext, rlConfirm);
+				String szCabPin1 = etCabPin1.getText().toString().trim();
+				if (rlCabPin.getVisibility() == View.GONE) {
+					// call AddScanCardJobsActivity:
+					Intent intent = new Intent(getActivity(),
+							AddScanCardJobsActivity.class);
+					intent.putExtras(mMainBundle);
+					startActivity(intent);
+				} else {
+					if (NetworkUtil.isNetworkOn(Util.mContext)) {
+
+						CabPinValidationTask cabPinTask = new CabPinValidationTask();
+						cabPinTask.szCabPin = szCabPin1;
+						cabPinTask.szJobId = szJobID;
+						cabPinTask.execute();
+
+					} else {
+						Util.showToastMessage(Util.mContext, getResources()
+								.getString(R.string.no_network_error),
+								Toast.LENGTH_LONG);
+					}
+				}
+
+				// if (rlCabPin.getVisibility() == View.GONE) {
+				// proceedWithPaymentWithoutHandpoint();
+				// } else {
+				// if (szCabPin1.isEmpty()) {// || szCabPin2.isEmpty()
+				// Util.showToastMessage(Util.mContext,
+				// "Please enter Cab pin.", Toast.LENGTH_LONG);
+				// } else {
+				// String szPaymentURL = "";
+				// String szTruncatedPan = "";
+				//
+				// if (mMainBundle.containsKey("truncatedPan"))
+				// szTruncatedPan = mMainBundle
+				// .getString("truncatedPan");
+				//
+				// if (!szTruncatedPan.isEmpty()) {
+				// szPaymentURL = Constants.driverURL
+				// + "payment?bookingId=" + szJobID
+				// + "&totalAmount=" + nTotalValue + "&fee="
+				// + nFee + "&tip=" + nTip + "&amount="
+				// + nMeterValue + "&truncatedPan="
+				// + szTruncatedPan;
+				// } else if (!szJobID.equals(""))
+				// szPaymentURL = Constants.driverURL
+				// + "payment?bookingId=" + szJobID
+				// + "&totalAmount=" + nTotalValue + "&fee="
+				// + nFee + "&tip=" + nTip + "&amount="
+				// + nMeterValue;
+				// else
+				// szPaymentURL = Constants.driverURL
+				// + "payment?accessToken="
+				// + Constants.accessToken + "&totalAmount="
+				// + nTotalValue + "&fee=" + nFee + "&tip="
+				// + nTip + "&amount=" + nMeterValue;
+				//
+				// if (AppValues.driverSettings != null)
+				// szPaymentURL = szPaymentURL
+				// + "&feePaidBy="
+				// + AppValues.driverSettings
+				// .getCardPaymentFeePaidBy();
+				//
+				// if (Constants.isDebug)
+				// Log.e(TAG, "szPaymentURL::> " + szPaymentURL);
+				//
+				// if (NetworkUtil.isNetworkOn(Util.mContext)) {
+				//
+				// CabPinValidationTask cabPinTask = new CabPinValidationTask();
+				// cabPinTask.szCabPin = szCabPin1;// + szCabPin2
+				// cabPinTask.szJobId = szJobID;
+				// cabPinTask.szPaymentURL = szPaymentURL;
+				// cabPinTask.execute();
+				//
+				// } else {
+				// Util.showToastMessage(Util.mContext, getResources()
+				// .getString(R.string.no_network_error),
+				// Toast.LENGTH_LONG);
+				// }
+				// }
+				// }
+				break;
+
+			case R.id.rlCabPinOkyGotIt:
+				Util.setIsOverlaySeen(getActivity(), true, TAG);
+				rlCabPinOverlay.setVisibility(View.GONE);
+				rlCabPinOkyGotIt.setVisibility(View.GONE);
+				break;
+			}
+		}
+	}
+
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+
+		mContext = Util.mContext;
+		mMainBundle = this.getArguments();
+		if (mMainBundle != null) {
+			if (Constants.isDebug) {
+				Log.e(TAG, "bundle: " + mMainBundle.toString());
+				if (mMainBundle != null && mMainBundle.containsKey("position"))
+					Log.e(PaymentDetailsFragment.class.getName(),
+							"Job Position is:: "
+									+ mMainBundle.getInt("position")
+									+ "          jobid::> "
+									+ mMainBundle.getString("jobId"));
+			}
+			szJobID = mMainBundle.getString(Constants.JOB_ID);
+			szTotalValue = mMainBundle.getString(Constants.TOTAL_VALUE);
+			szTip = mMainBundle.getString(Constants.TIP_VALUE);
+			szFee = mMainBundle.getString(Constants.CARD_FEE_VALUE);
+			szMeterValue = mMainBundle.getString(Constants.METER_VALUE);
+			szCabMiles = mMainBundle.getString(Constants.CAB_MILES);
+			Log.e(TAG, "szCabMiles:   " + szCabMiles);
+			if (szTip == null || szTip.isEmpty())
+				szTip = "0";
+
+			if (szFee == null || szFee.isEmpty())
+				szFee = "0";
+
+			if (szCabMiles == null || szCabMiles.isEmpty())
+				szCabMiles = "0";
+
+			if (!szTotalValue.isEmpty())
+				nTotalValue = (int) (Float.parseFloat(szTotalValue) * 100);
+			if (!szMeterValue.isEmpty())
+				nMeterValue = (int) (Float.parseFloat(szMeterValue) * 100);
+			if (!szFee.isEmpty())
+				nFee = (int) (Float.parseFloat(szFee) * 100);
+			if (!szTip.isEmpty())
+				nTip = (int) (Float.parseFloat(szTip) * 100);
+
+			if (Constants.isDebug) {
+				nTotalValueAfterAddition = nMeterValue + nFee + nTip;
+				Log.d("PaymentDetailsFragment", "Payment Total Value:: "
+						+ nTotalValue + " Total Value after addition:: "
+						+ nTotalValueAfterAddition);
+			}
+
+			String szPaymentMethod = mMainBundle.getString("brand");
+
+			if (!mMainBundle.getString("truncatedPan").equals(""))
+				szPaymentMethod = szPaymentMethod + "-"
+						+ mMainBundle.getString("truncatedPan");
+			else
+				szPaymentMethod = szPaymentMethod.substring(0, 1).toUpperCase()
+						+ szPaymentMethod.substring(1);
+
+			textPaymentMethod.setText(szPaymentMethod);
+
+			if (textPaymentMethod.getText().equals("Card")) {
+				Log.e(TAG, "Card type: TRUE");
+				rlCabPin.setVisibility(View.GONE);
+			}
+
+			String szCurrenySymbol = "";
+			if (AppValues.driverSettings != null)
+				szCurrenySymbol = AppValues.driverSettings.getCurrencySymbol();
+
+			totalAmt = Float.parseFloat(szMeterValue) + Float.parseFloat(szFee)
+					+ Float.parseFloat(szTip) - Float.parseFloat(szCabMiles);
+
+			textMeterAmt.setText(szCurrenySymbol + " " + szMeterValue);
+			textTip.setText(szCurrenySymbol + " " + szTip);
+			textCardFee.setText(szCurrenySymbol + " " + szFee);
+			textTotal.setText(szCurrenySymbol + " "
+					+ String.format(Locale.ENGLISH, "%.2f", totalAmt));
+			if (szCabMiles.isEmpty()) {
+				szCabMiles = "0";
+				textCabMiles.setText("- " + szCurrenySymbol + " " + szCabMiles);
+			} else {
+				textCabMiles.setText("- " + szCurrenySymbol + " " + szCabMiles);
+			}
+		}
+
+		mHandler = new Handler() {
+			@Override
+			public void handleMessage(Message msg) {
+				// TODO Auto-generated method stub
+				super.handleMessage(msg);
+				Bundle mBundleReturned;
+
+				if (msg.what == 2) {
+					mBundleReturned = (Bundle) msg.getData();
+					if (mBundleReturned != null
+							&& mBundleReturned.getBoolean("success")) {
+						JobIdReturned = mBundleReturned.getString("jobId");
+						Util.setCashBack(getActivity(), String
+								.valueOf(mBundleReturned
+										.getLong("cashBackReturned")));
+
+						CallSendReceipt();
+
+					} else {
+						Log.e(TAG, "Error: payment");
+					}
+				}
+			}
+		};
+
+		/* Old payment flow */
+		// mHandler = new Handler() {
+		// @Override
+		// public void handleMessage(final Message message) {
+		// super.handleMessage(message);
+		//
+		// mMainBundle = (Bundle) message.obj;
+		//
+		// if (mMainBundle != null)
+		// if (Constants.isDebug)
+		// Log.e(TAG,
+		// "mMainBundle:inside handler Payment details fragment "
+		// + mMainBundle);
+		//
+		// szJobID = mMainBundle.getString(Constants.JOB_ID);
+		// szTotalValue = mMainBundle.getString(Constants.TOTAL_VALUE);
+		// szTip = mMainBundle.getString(Constants.TIP_VALUE);
+		// szFee = mMainBundle.getString(Constants.CARD_FEE_VALUE);
+		// szMeterValue = mMainBundle.getString(Constants.METER_VALUE);
+		//
+		// ((Activity) Util.mContext).runOnUiThread(new Runnable() {
+		//
+		// @Override
+		// public void run() {
+		// // TODO Auto-generated method stub
+		// // final Dialog dialog = new Dialog(mContext,
+		// // R.style.mydialogstyle);
+		// // dialog.setContentView(R.layout.receipt_dialog);
+		// // dialog.setCanceledOnTouchOutside(false);
+		// // dialog.setCancelable(false);
+		// // dialog.show();
+		// // TextView textReceiptYes, textReceiptNo;
+		// //
+		// // textReceiptYes = (TextView) dialog
+		// // .findViewById(R.id.tvYes);
+		// // textReceiptNo = (TextView) dialog
+		// // .findViewById(R.id.tvNo);
+		// // textReceiptNo.setOnClickListener(new
+		// // OnClickListener() {
+		// //
+		// // @Override
+		// // public void onClick(View v) {
+		// // // TODO Auto-generated method stub
+		// // dialog.dismiss();
+		// // Check if walkin or not
+		// if (!szJobID.isEmpty()) {
+		// if (NetworkUtil.isNetworkOn(Util.mContext)) {
+		// SendReceiptTask sendReceiptTask = new SendReceiptTask();
+		// sendReceiptTask.mContext = mContext;
+		// sendReceiptTask.szJobID = szJobID;
+		// sendReceiptTask.szType = "email";
+		// sendReceiptTask.szAmount = szTotalValue;
+		// sendReceiptTask.szTip = szTip;
+		// sendReceiptTask.szFee = szFee;
+		//
+		// String szEmail = Util
+		// .getEmailOrUserName(mContext);
+		// sendReceiptTask.szEmail = szEmail;
+		// sendReceiptTask.szMobile = "";
+		// sendReceiptTask.szInternationalCode = "";
+		// sendReceiptTask.szPaymentType = "card";
+		//
+		// if (mMainBundle != null
+		// && mMainBundle
+		// .containsKey(Constants.PICK_UP_ADDRESS)) {
+		// sendReceiptTask.szPU = mMainBundle
+		// .getString(Constants.PICK_UP_ADDRESS);
+		// sendReceiptTask.szDO = mMainBundle
+		// .getString(Constants.DROP_ADDRESS);
+		// } else {
+		// sendReceiptTask.szPU = "";
+		// sendReceiptTask.szDO = "";
+		// }
+		// sendReceiptTask.execute();
+		// } else {
+		// Util.showToastMessage(
+		// Util.mContext,
+		// getResources().getString(
+		// R.string.no_network_error),
+		// Toast.LENGTH_LONG);
+		// }
+		//
+		// } else {
+		// // Job Completed
+		// Fragment fragment = null;
+		// fragment = new com.android.cabapp.fragments.MyJobsFragment();
+		// ((MainActivity) mContext)
+		// .setSlidingMenuPosition(Constants.MY_JOBS_FRAGMENT);
+		// if (fragment != null)
+		// ((MainActivity) mContext).replaceFragment(
+		// fragment, true);
+		// }
+		// // }
+		// // });
+		// // textReceiptYes
+		// // .setOnClickListener(new OnClickListener() {
+		// //
+		// // @Override
+		// // public void onClick(View v) {
+		// // // TODO Auto-generated method stub
+		// // dialog.dismiss();
+		// //
+		// // if (mMainBundle == null)
+		// // mMainBundle = new Bundle();
+		// //
+		// // mMainBundle.putString(
+		// // Constants.TOTAL_VALUE,
+		// // szTotalValue);
+		// // mMainBundle.putString(
+		// // Constants.METER_VALUE,
+		// // szMeterValue);
+		// // mMainBundle.putString(
+		// // Constants.TIP_VALUE, szTip);
+		// // mMainBundle.putString(Constants.JOB_ID,
+		// // szJobID);
+		// // mMainBundle
+		// // .putString(
+		// // Constants.CARD_FEE_VALUE,
+		// // szFee);
+		// //
+		// // // Payment type:
+		// // mMainBundle.putString(
+		// // Constants.PAYMENT_TYPE_CABPAY,
+		// // "card");
+		// //
+		// // mMainBundle
+		// // .putString(
+		// // Constants.PAYMENT_METHOD_DETAILS,
+		// // "card");
+		// //
+		// // Fragment fragment = null;
+		// // fragment = new
+		// // com.android.cabapp.fragments.CabPayReceiptFragment();//
+		// // JobsFragment
+		// // fragment.setArguments(mMainBundle);
+		// // // ((MainActivity) mContext)
+		// // //
+		// // .setSlidingMenuPosition(Constants.JOBS_FRAGMENT);
+		// //
+		// // if (message.what == 100) {
+		// // if (fragment != null)
+		// // ((MainActivity) mContext)
+		// // .replaceFragment(
+		// // fragment, false);
+		// // } else {
+		// // if (fragment != null)
+		// // ((MainActivity) mContext)
+		// // .replaceFragment(
+		// // fragment, true);
+		// // }
+		// // }
+		// // });
+		//
+		// }
+		// });
+		//
+		// }
+		// };
+
+	}
+
+	void CallSendReceipt() {
+
+		if (NetworkUtil.isNetworkOn(Util.mContext)) {
+
+			SendReceiptTask sendReceiptTask = new SendReceiptTask();
+
+			SendReceiptTask.bIsWalkUp = false;
+
+			sendReceiptTask.szPaymentType = "card";
+			sendReceiptTask.szType = "email";
+			sendReceiptTask.szEmail = mMainBundle
+					.getString(Constants.PASSENGER_EMAIL);
+			sendReceiptTask.szMobile = "";
+			sendReceiptTask.szInternationalCode = "";
+
+			sendReceiptTask.mContext = Util.mContext;
+			sendReceiptTask.szJobID = JobIdReturned;
+
+			sendReceiptTask.szAmount = String.valueOf(totalAmt);
+			sendReceiptTask.szTip = String.valueOf(mMainBundle
+					.getString(Constants.TIP_VALUE));
+			sendReceiptTask.szFee = String.valueOf(mMainBundle
+					.getString(Constants.CARD_FEE_VALUE));
+
+			sendReceiptTask.execute();
+		} else {
+			Util.showToastMessage(Util.mContext,
+					getResources().getString(R.string.no_network_error),
+					Toast.LENGTH_LONG);
+		}
+	}
+
+	class CabPinValidationTask extends AsyncTask<String, Void, String> {
+		public String szCabPin, szJobId, szPaymentURL;
+
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+			dialogPaymentDetails = new ProgressDialog(Util.mContext);
+			dialogPaymentDetails.setMessage("Loading...");
+			dialogPaymentDetails.setCancelable(false);
+			dialogPaymentDetails.show();
+		}
+
+		@Override
+		protected String doInBackground(String... params) {
+			// // TODO Auto-generated method stub
+			CabPinValidation cabPinValidation = new CabPinValidation(
+					Util.mContext, szCabPin, szJobId);
+			String response = cabPinValidation.isCabPinValidResponse();
+			try {
+				JSONObject jObject = new JSONObject(response);
+
+				if (jObject.has("success")
+						&& jObject.getString("success").equalsIgnoreCase(
+								"Valid")) {
+					return "success";
+				} else {
+					if (jObject.has("errors")) {
+						JSONArray jErrorsArray = jObject.getJSONArray("errors");
+
+						String errorMessage = jErrorsArray.getJSONObject(0)
+								.getString("message");
+						return errorMessage;
+					}
+				}
+				return "success";
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+
+				e.printStackTrace();
+			}
+
+			return response;
+
+			// return "success";
+
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+
+			if (dialogPaymentDetails != null)
+				dialogPaymentDetails.dismiss();
+
+			if (result.equals("success")) {
+
+				CallPayment();
+				// checkForPOSDevice();
+				// proceedWithPaymentWithoutHandpoint();
+			} else {
+				Util.showToastMessage(Util.mContext, "Invalid Cab Pin!",
+						Toast.LENGTH_LONG);
+			}
+
+		}
+	}
+
+	void CallPayment() {
+
+		if (NetworkUtil.isNetworkOn(Util.mContext)) {
+			String szFeesPaidBy = "";
+
+			PaymentTask paymentTask = new PaymentTask();
+			paymentTask.jobId = mMainBundle.getString(Constants.JOB_ID);
+			Log.e(TAG,
+					"bundle job id: " + mMainBundle.getString(Constants.JOB_ID)
+							+ "    paymentTask.jobId: " + paymentTask.jobId);
+
+			if (AppValues.driverSettings != null
+					&& AppValues.driverSettings.getCardPaymentFeePaidBy() != null)
+				szFeesPaidBy = AppValues.driverSettings
+						.getCardPaymentFeePaidBy();
+			if (mMainBundle != null
+					&& mMainBundle.containsKey(Constants.CAB_MILES)
+					&& mMainBundle.getString(Constants.CAB_MILES) != null)
+				paymentTask.cabmiles = mMainBundle
+						.getString(Constants.CAB_MILES);
+
+			paymentTask.meterAmount = mMainBundle
+					.getString(Constants.METER_VALUE);
+			paymentTask.totalAmount = String.valueOf(totalAmt);
+			paymentTask.tip = mMainBundle.getString(Constants.TIP_VALUE);
+			paymentTask.cardFees = mMainBundle
+					.getString(Constants.CARD_FEE_VALUE);
+			paymentTask.szFeesPaidBy = szFeesPaidBy;
+			paymentTask.szCardPayworkToken = mMainBundle
+					.getString(Constants.PAYMENT_ACCESS_TOKEN_VALUE);
+			paymentTask.isRegisteredCard = String.valueOf(mMainBundle
+					.getString(Constants.PAYMENT_CARD_ISSELECTED));
+			paymentTask.szCardType = mMainBundle.getString("brand");
+			paymentTask.isWalkUp = false;
+			paymentTask.mHandler = mHandler;
+
+			paymentTask.execute();
+		} else {
+			Util.showToastMessage(Util.mContext,
+					getResources().getString(R.string.no_network_error),
+					Toast.LENGTH_LONG);
+		}
+
+	}
+
+	void checkForPOSDevice() {
+		// Get local Bluetooth adapter
+		if (!mBluetoothAdapter.isEnabled()) {
+			Intent enableIntent = new Intent(
+					BluetoothAdapter.ACTION_REQUEST_ENABLE);
+			startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
+			// Otherwise, setup the Bluetooth session
+		} else {
+			connectToPED();
+		}
+	}
+
+	void connectToPED() {
+		// Intent serverIntent = new Intent(getActivity(),
+		// com.android.cabapp.activity.DeviceListActivity.class);
+		// startActivityForResult(serverIntent, REQUEST_CONNECT_TO_PED);
+
+		((Activity) Util.mContext).runOnUiThread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				showConnectingDialog();
+
+				mHandPointClass = new HandPointClass(Util.mContext,
+						mCallbackListener, Util.getPOSDeviceName(Util.mContext));
+			}
+		});
+	}
+
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		switch (requestCode) {
+		case REQUEST_CONNECT_TO_PED:
+			if (resultCode == Activity.RESULT_OK) {
+				// get result from device discovery handler and connect to
+				// device
+				if (data != null
+						&& !(data
+								.getExtras()
+								.getString(
+										com.android.cabapp.activity.DeviceListActivity.EXTRA_DEVICE_ADDRESS)
+								.equals(""))) {
+					showConnectingDialog();
+
+					mHandPointClass = new HandPointClass(Util.mContext,
+							mCallbackListener, data.getExtras().getString(
+									DeviceListActivity.EXTRA_DEVICE_NAME));
+				} else {
+					Util.showToastMessage(Util.mContext,
+							"Proceeding with Payment without device",
+							Toast.LENGTH_LONG);
+					proceedWithPaymentWithoutHandpoint();
+				}
+			}
+			break;
+		case REQUEST_ENABLE_BT:
+			// When the request to enable Bluetooth returns
+			if (resultCode == Activity.RESULT_OK) {
+				// Bluetooth is now enabled, so set up a bluetooth session
+				try {
+					connectToPED();
+				} catch (Exception e) {
+
+				}
+			} else {
+				// User did not enable Bluetooth or an error occured
+				Log.d(TAG, "BT not enabled");
+				Util.showToastMessage(Util.mContext,
+						getResources().getString(R.string.bt_not_enabled),
+						Toast.LENGTH_SHORT);
+			}
+			break;
+		}
+
+	}
+
+	void showConnectingDialog() {
+		// MyTimerTask myTask = new MyTimerTask();
+		// myTask.bIsCancelConnectDialog = true;
+		// myTimer = new Timer();
+		// myTimer.schedule(myTask, 15000, 1500);
+
+		mConnectingDialog = new ProgressDialog(Util.mContext);
+		mConnectingDialog.setCanceledOnTouchOutside(false);
+		mConnectingDialog.setCancelable(false);
+		// mConnectingDialog.setMessage(getResources().getString(
+		// R.string.connecting));
+		mConnectingDialog
+				.setMessage("Handpoint device entry found in account settings. Trying to connect. Please wait...");
+		mConnectingDialog.show();
+	}
+
+	private void showChipAndPinPaymentFailedDialog() {
+		// TODO Auto-generated method stub
+		AlertDialog.Builder builder = new AlertDialog.Builder(Util.mContext);
+		builder.setMessage("Payment using Chip and Pin failed!")
+				.setCancelable(false)
+				.setPositiveButton("Retry",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								showConnectingDialog();
+								mHandPointClass = new HandPointClass(
+										Util.mContext, mCallbackListener,
+										Util.getPOSDeviceName(Util.mContext));
+							}
+						})
+				.setNegativeButton(getString(android.R.string.cancel),
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								proceedWithPaymentWithoutHandpoint();
+							}
+						});
+		builder.setTitle("Optimal Payment");
+		AlertDialog alert = builder.create();
+		alert.setCancelable(false);
+		alert.show();
+	}
+
+	void dismissConnectingDialog() {
+		if (mConnectingDialog != null) {
+			mConnectingDialog.dismiss();
+			mConnectingDialog = null;
+		}
+	}
+
+	CallbackListener mCallbackListener = new CallbackListener() {
+
+		@Override
+		public void onDeviceConnect(final String devicename) {
+			// TODO Auto-generated method stub
+
+			Log.e("PaymentDetailsFragment", "onDeviceConnect");
+			((Activity) Util.mContext).runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					if (mConnectingDialog != null)
+						mConnectingDialog
+								.setMessage("Handpoint device connected. Initiating payment process! Please wait...");
+				}
+			});
+
+			HandpointTimerTask handpointTimerTask = new HandpointTimerTask();
+			handpointTimer = new Timer();
+			handpointTimer.schedule(handpointTimerTask, 5000);
+
+			ConnectionTimeoutTimerTask connectionTask = new ConnectionTimeoutTimerTask();
+			connectionTimeoutTimer = new Timer();
+			connectionTimeoutTimer.schedule(connectionTask, 25000);
+		}
+
+		@Override
+		public void onTransactionComplete(final String response) {
+			// TODO Auto-generated method stub
+			Log.e("CabPayFragment", "onTransactionComplete");
+			((Activity) Util.mContext).runOnUiThread(new Runnable() {
+
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					dismissConnectingDialog();
+					if (response.contains("DECLINED")
+							|| response.contains("PROCESSED")
+							|| response.contains("FAILED")
+							|| response.contains("CANCELLED")) {
+						Util.showToastMessage(mContext,
+								"Error processing payment!", Toast.LENGTH_LONG);
+						showChipAndPinPaymentFailedDialog();
+					}
+				}
+			});
+		}
+
+		@Override
+		public void onDeviceNotFound() {
+			// TODO Auto-generated method stub
+			((Activity) Util.mContext).runOnUiThread(new Runnable() {
+
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					dismissConnectingDialog();
+					Util.showToastMessage(
+							Util.mContext,
+							"Unable to connect with Handpoint Device. Proceeding with Payment without device",
+							Toast.LENGTH_LONG);
+					proceedWithPaymentWithoutHandpoint();
+				}
+			});
+		}
+
+		@Override
+		public void onTransactionComplete(
+				final TransactionResult transactionResult) {
+			// TODO Auto-generated method stub
+			dismissConnectingDialog();
+			// Util.showToastMessage(getActivity(),
+			// "Chip And Pin payment successful!", Toast.LENGTH_LONG);
+
+			((Activity) Util.mContext).runOnUiThread(new Runnable() {
+
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					ProgressDialog pDialog = new ProgressDialog(mContext);
+					pDialog.setMessage("Processing payment details...");
+					pDialog.setCancelable(false);
+					pDialog.show();
+
+					ChipAndPinTask chipAndPinTask = new ChipAndPinTask();
+					chipAndPinTask.bundle = mMainBundle;
+					chipAndPinTask.transactionResult = transactionResult;
+					chipAndPinTask.szTip = szTip;
+					chipAndPinTask.szJobID = szJobID;
+					chipAndPinTask.szTotalValue = szTotalValue;
+					chipAndPinTask.szCardFees = szFee;
+					chipAndPinTask.bIsFromCabPayFragment = false;
+					chipAndPinTask.mContext = Util.mContext;
+					chipAndPinTask.pDialog = pDialog;
+					chipAndPinTask.execute();
+				}
+			});
+		}
+	};
+
+	class HandpointTimerTask extends TimerTask {
+
+		public void run() {
+			mHandPointClass.pay(String.valueOf(nTotalValue), Currency.GBP);
+			handpointTimer.cancel();
+		}
+	}
+
+	class ConnectionTimeoutTimerTask extends TimerTask {
+		public void run() {
+			if (mConnectingDialog != null && mConnectingDialog.isShowing()) {
+				// dismissConnectingDialog();
+				// Util.showToastMessage(
+				// getActivity(),
+				// "Error establishing connection with the device! Please try again",
+				// Toast.LENGTH_LONG);
+				mConnectingDialog.setCancelable(true);
+			}
+			connectionTimeoutTimer.cancel();
+		}
+	}
+
+	void proceedWithPaymentWithoutHandpoint() {
+
+		String szPaymentURL = Constants.driverURL + "payment?accessToken="
+				+ Constants.accessToken + "&totalAmount=" + nTotalValue
+				+ "&fee=" + nFee + "&tip=" + nTip + "&amount=" + nMeterValue;
+
+		if (AppValues.driverSettings != null)
+			szPaymentURL = szPaymentURL + "&feePaidBy="
+					+ AppValues.driverSettings.getCardPaymentFeePaidBy();
+
+		if (mMainBundle == null)
+			mMainBundle = new Bundle();
+
+		mMainBundle.putString(Constants.TOTAL_VALUE, szTotalValue);
+		mMainBundle.putString(Constants.TIP_VALUE, szTip);
+
+		// dialogPaymentDetails = new ProgressDialog(mContext);
+		// dialogPaymentDetails.setMessage("Loading...");
+		// dialogPaymentDetails.setCancelable(false);
+
+		GetPaymentURLTask getPaymentURLTask = new GetPaymentURLTask();
+		getPaymentURLTask.szURL = szPaymentURL;
+		getPaymentURLTask.mBundle = mMainBundle;
+		getPaymentURLTask.mContext = mContext;
+		// getPaymentURLTask.pDialog = dialogPaymentDetails;
+		getPaymentURLTask.execute();
+	}
+
+}

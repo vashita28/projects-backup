@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_id">1555180021374328</string> <!--1555180021374328 1420425551545576  442408765903438-->
+    <string name="app_name">TapSnap</string>
+    <string name="main_activity">MainActivty</string>
+    <string name="app_name_alt">SnapNShare</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_section1">Snaps</string>
+    <string name="title_section2">Requests</string>
+    <string name="title_section3">Friends</string>
+    <string name="title_activity_login">Login</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="email_hint">Email Address</string>
+    <string name="birthday_hint">Birthday</string>
+    <string name="search_hint">Search friends</string>
+    <string name="select_date">Select Date</string>
+    <string name="login_text">LOG IN</string>
+    <string name="reset_text">RESET</string>
+    <string name="register_now">REGISTER NOW</string>
+    <string name="register">REGISTER</string>
+    <string name="login_with_facebook">LOGIN WITH FACEBOOK</string>
+    <string name="go_to_activity_sign_up_text">Sign Up</string>
+    <string name="create_account_text">Sign Up</string>
+    <string name="submit_text">SUBMIT</string>
+    <string name="save_text">SAVE</string>
+    <string name="password_reset_error_message">Please enter a valid email address!</string>
+    <string name="title_activity_sign_up">Create Account</string>
+    <string name="signup_error_message">Please make sure you enter a Username, Password, Email Address and Birthday!</string>
+    <string name="signup_error_message_for_user_length">Username should be minimum 1 and  maximum 16 characters long.</string>
+    <string name="signup_error_message_for_password_length">Password should be minimum 6 and  maximum 16 characters long.</string>
+    <string name="signup_error_message_email">Please make sure you enter an Email!</string>
+    <string name="signup_error_message_birthday">Please make sure you select a Birthday!</string>
+    <string name="signup_error_message_profile_picture">Please select a Profile Picture!</string>
+    <string name="signup_error_message_valid_email">Please enter a valid email address!</string>
+    <string name="signup_error_title">Oops!</string>
+    <string name="connectivity_error">Please check your Internet connectivity and try again later!</string>
+    <string name="connectivity_error_for_loading_image">Cannot fetch image. Please check your Internet connectivity and try again later!</string>
+    <string name="login_error_message">Please make sure you enter a Username and Password!</string>
+    <string name="login_error_message_for_user">Please make sure you enter a Username!</string>
+    <string name="login_error_message_for_password">Please make sure you enter a Password!</string>
+    <string name="login_error_title">Oops!</string>
+    <string name="menu_logout_label">Logout</string>
+    <string name="empty_inbox_label">No new messages!</string>
+    <string name="empty_friends_label">Add friends to begin!</string>
+    <string name="empty_requests_label">No new requests!</string>
+    <string name="menu_edit_friends_label">Edit Friends</string>
+    <string name="title_activity_edit_friends">Edit Friends</string>
+    <string name="title_activity_password_reset">Password Reset</string>
+    <string name="error_title">We\'re sorry!</string>
+    <string name="menu_camera_label">Camera</string>
+    <string name="menu_settings_label">Settings</string>
+    <string name="error_external_storage">There was a problem accessing your device\'s external storage.</string>
+    <string name="general_error">Sorry, there was an error!</string>
+    <string name="video_size_limit_warning">The selected video must be less than 10 MB.</string>
+    <string name="error_selecting_file">There was an error with the file selected. Please select a different file.</string>
+    <string name="current_account">CURRENT ACCOUNT:</string>
+    <string name="signup_error_for_correct_year">Kind</string>
+
+    <string-array name="camera_choices">
+        <item>Take Picture</item>
+        <item>Take Video</item>
+        <item>Choose Picture</item>
+        <item>Choose Video</item>
+    </string-array>
+    <string-array name="camera_choices_signup">
+        <item>Take Picture</item>
+        <item>Choose Picture</item>
+    </string-array>
+
+    <string name="checking_status">CHECKING STATUS...</string>
+    <string name="friendship_confirmed">FRIENDSHIP CONFIRMED</string>
+    <string name="friend_request_pending">FRIEND REQUEST PENDING</string>
+    <string name="video_file_size_warning">The selected video must be less than 10 MB.</string>
+    <string name="error_opening_file">There was a problem with the selected file.</string>
+    <string name="error_file_size_too_large">The selected file is too large! Select a new file.</string>
+    <string name="title_activity_recipients">Choose Recipients</string>
+    <string name="empty_recipients_list_message">Choose some friends first!</string>
+    <string name="menu_send_label">Send</string>
+    <string name="error_selecting_file_title">We\'re sorry!</string>
+    <string name="success_message">Message sent!</string>
+    <string name="error_sending_message">There was an error sending your message. Please try again.</string>
+    <string name="title_activity_view_image">Snap-N-Share</string>
+    <string name="settings">Settings</string>
+    <string name="user_not_found">Invalid login credentials!</string>
+    <string name="user_already">User already exist!</string>
+    <string name="valid_email">User not found. \nPlease enter a valid email address!</string>
+    <string name="title_activity_edit_username">Edit Username</string>
+    <string name="title_activity_edit_email">Edit Email Address</string>
+    <string name="title_activity_edit_profile_picture">Edit Profile Picture</string>
+    <string name="title_activity_terms_of_use">Terms Of Use</string>
+    <string name="title_activity_privacy_policy">Privacy Policy</string>
+    <string name="title_activity_getting_started">Getting Started</string>
+    <string name="email_text"><Data>
+<![CDATA[ Check out this app it lets you share private photo
+         and video messages between you and your friends. 
+         The coolest part is you only have 15 seconds after you tap on the message 
+         to view it before it vanishes forever.
+         <p> <a href="%@">google.com</a>     it now then add       
+            to your friends list so we can chat. See you soon!</p>     
+         ]]> <!-- <font color="green">(%@)</font> -->
+</Data></string>
+
+</resources>

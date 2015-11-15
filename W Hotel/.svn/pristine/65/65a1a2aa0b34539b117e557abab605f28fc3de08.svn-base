@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello">Sync message inbox with the sync button.</string>
+    <string name="button">Sync</string>
+    <string name="app_name">W INSIDER</string>
+    <string name="device_id">Device ID:</string>
+    <string name="insider_title">W ATLANTA / INSIDER</string>
+    <string name="deals_title">W ATLANTA / DEALS</string>
+    <string name="hotel_title">W ATLANTA / HOTEL</string>
+    <string name="findhotspot_title">W ATLANTA / HOTSPOT</string>
+    <string name="btn_agree_and_continue">AGREE &amp; CONTINUE</string>
+    <string name="text_agree_and_continue">\u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 The W Insider App brings \n
+        \u0020 \u0020 \u0020 \u0020 \u0020 you W curated offers and \n
+        \u0020 \u0020 \u0020 \u0020 tips from hand selected local \n
+        \u0020 \u0020 \u0020 destinations. Your location \n
+        \u0020 \u0020 information will be accessed \n
+        \u0020 so we can best customize \n
+        your experience.</string>
+    <string name="btn_insider">INSIDER</string>
+    <string name="btn_deals">DEALS</string>
+    <string name="btn_hotspot">FIND HOTSPOT</string>
+    <string name="btn_hotel">HOTEL</string>
+    <string name="btn_spg">MY SPG</string>
+    <string name="read_more">READ MORE</string>
+    <string name="dining">DINING</string>
+    <string name="nightlife">NIGHTLIFE</string>
+    <string name="music">MUSIC</string>
+    <string name="fashion_beauty">FASHION/BEAUTY</string>
+    <string name="health_fitness">HEALTH/FITNESS</string>
+    <string name="arts_culture">ARTS/CULTURE</string>
+    <string name="events">EVENTS</string>
+    <string name="luxury">LUXURY</string>
+    <string name="all">ALL</string>
+    <string name="w_atlanta_downtown">ATLANTA DOWNTOWN</string>
+    <string name="w_atlanta_buckhead">ATLANTA BUCKHEAD</string>
+    <string name="w_atlanta_midtown">ATLANTA MIDTOWN</string>
+    <string name="enter_your_spg_number">Enter your SPG number here</string>
+    <string name="save">SAVE</string>
+    <string name="close">CLOSE</string>
+    <string name="book_now">BOOK NOW</string>
+    <string name="get_directions">GET DIRECTIONS</string>
+
+    <array name="hotspot_filter_data">
+        <item>DINING</item>
+        <item>NIGHTLIFE</item>
+        <item>MUSIC</item>
+        <item>FASHION/BEAUTY</item>
+        <item>HEALTH/FITNESS</item>
+        <item>ARTS/CULTURE</item>
+        <item>EVENTS</item>
+        <item>LUXURY</item>
+        <item>ALL</item>
+    </array>
+    <array name="hotel_filter_data">
+        <item>W ATLANTA-DOWNTOWN</item>
+        <item>W ATLANTA-BUCKHEAD</item>
+        <item>W ATLANTA-MIDTOWN</item>
+        <item>ALL</item>
+    </array>
+
+</resources>

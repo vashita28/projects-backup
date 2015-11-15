@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black" >
+
+    <RelativeLayout
+        android:id="@+id/rel_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <ImageView
+            android:id="@+id/imageview_top_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/whotel_insider_top_pink" />
+
+        <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+            android:id="@+id/textview_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/insider_title"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageview_gpslock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/whotel_insidermap_icon"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/textview_header"
+            android:layout_toRightOf="@id/imageview_gpslock"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/imageview_partition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/whotel_insidermappink_divider" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_search_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_header" >
+
+        <ImageView
+            android:id="@+id/imageview_top_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:scaleType="fitXY"
+            android:src="@drawable/whotel_insider_top_white_full" />
+
+        <LinearLayout
+            android:id="@+id/linear_map_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1" >
+
+            <RelativeLayout
+                android:id="@+id/rl_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingLeft="35dp" >
+
+                <ImageView
+                    android:id="@+id/imageview_top_transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+                    android:id="@+id/textview_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="30dp"
+                    android:text="MAP"
+                    android:textColor="@color/textcolor_pink" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5" >
+
+                <ImageView
+                    android:id="@+id/imageview_top_pink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/whotel_insider_top_pink_half" />
+
+                <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+                    android:id="@+id/textview_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="LIST"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageview_top_right_pink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/whotel_insider_top_right_pink"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageview_choice_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/whotel_insider_earth_icon"
+            android:visibility="gone" />
+        <!-- whotel_insidermap_list_icon -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/whotel_insider_search_box" />
+
+            <ImageView
+                android:id="@+id/imageview_search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:src="@drawable/whotel_insider_search_icon" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@+id/imageview_search_icon"
+                android:background="#fbfbfb"
+                android:hint="Search"
+                android:imeOptions="actionSearch"
+                android:inputType="textNoSuggestions"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:singleLine="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

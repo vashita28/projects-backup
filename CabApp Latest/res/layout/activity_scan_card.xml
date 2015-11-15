@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_selected" >
+
+    <include
+        android:id="@+id/topbarAddCard"
+        layout="@layout/common_top_bar_maps" />
+
+    <ProgressBar
+        android:id="@+id/progressPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlScanCard"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/topbarAddCard"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/scaniconImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:src="@drawable/scan_icon" />
+
+        <TextView
+            android:id="@+id/tvScanYourCard"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/scaniconImageView"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="Scan your card"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingRight="15dp"
+            android:src="@drawable/nextarrow" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvNextScanCard"
+        android:layout_below="@+id/rlScanCard"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/llEnterManually"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <View
+                    android:id="@+id/viewLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.35"
+                    android:background="@color/color_or_enter_manually" />
+
+                <TextView
+                    android:id="@+id/tvOrEnterManually"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.25"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:singleLine="true"
+                    android:text="OR ENTER MANUALLY"
+                    android:textColor="@color/color_or_enter_manually" />
+
+                <View
+                    android:id="@+id/viewRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.35"
+                    android:background="@color/color_or_enter_manually" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/llEnterManually"
+                android:gravity="center_vertical|bottom"
+                android:paddingBottom="7dp"
+                android:paddingLeft="15dp"
+                android:text="CARD NUMBER"
+                android:textColor="@color/textview_selected"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlCardNumberData"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tvCardNumber"
+                android:background="@android:color/white" >
+
+                <EditText
+                    android:id="@+id/etCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_toLeftOf="@+id/ivCard"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/ivCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:paddingRight="15dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlCardNumberData"
+                android:gravity="center_vertical|bottom"
+                android:paddingBottom="7dp"
+                android:paddingLeft="15dp"
+                android:text="EXPIRY DATE"
+                android:textColor="@color/textview_selected"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llExpiryDateData"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tvExpiryDate"
+                android:background="@android:color/white" >
+
+                <RelativeLayout
+                    android:id="@+id/rlMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" >
+
+                    <Spinner
+                        android:id="@+id/spinnerMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@android:color/white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black" />
+
+                    <ImageView
+                        android:id="@+id/ivDropDownMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/downarrow"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="2dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rlYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" >
+
+                    <Spinner
+                        android:id="@+id/spinnerYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@android:color/white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black" />
+
+                    <ImageView
+                        android:id="@+id/ivDropDownYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/downarrow"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSecurityNumber"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/llExpiryDateData"
+                android:gravity="center_vertical|bottom"
+                android:paddingBottom="7dp"
+                android:paddingLeft="15dp"
+                android:text="SECURITY NUMBER"
+                android:textColor="@color/textview_selected"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rlSecurityNoData"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tvSecurityNumber"
+                android:background="@android:color/white" >
+
+                <EditText
+                    android:id="@+id/etSecurityNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:password="true"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvHiddenNextScanCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlSecurityNoData"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Next"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvNextScanCard"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

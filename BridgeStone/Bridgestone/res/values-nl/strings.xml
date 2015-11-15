@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bridgestone</string>
+
+    <!-- Main Activity -->
+    <string name="send">Verzenden</string>
+    <string name="bt_not_enabled">Bluetooth niet actief.</string>
+    <string name="title_connecting">Verbinden&#8230;</string>
+    <string name="title_connected_to">Verbonden: </string>
+    <string name="title_not_connected">Niet verbonden</string>
+    <string name="sensors">sensoren</string>
+    <string name="minimum_sensor_pressure">minimale spanning sensor:</string>
+    <string name="sensors_captured">sensoren ontvangen</string>
+    <string name="sensors_below_min_pressure">sensoren onder de minimale spanning</string>
+    <string name="uploaded">opgeladen</string>
+    <string name="btnUploadNow">nu opladen</string>
+    <string name="btnUploaded">opgeladen</string>
+
+    <!-- DeviceListActivity -->
+    <string name="scanning">zoeken naar apparaten&#8230;</string>
+    <string name="select_device">selecteer een apparaat om te verbinden</string>
+    <string name="none_paired">Er zijn geen gekoppelde apparaten</string>
+    <string name="none_found">Geen apparaten gevonden</string>
+    <string name="title_paired_devices">Gekoppelde apparaten</string>
+    <string name="title_other_devices">Andere beschikbare apparaten</string>
+    <string name="button_scan">Zoek naar apparaten</string>
+    <string name="no_device_selected">Selecteer een geldig apparaat uit de lijst</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">Apparaat verbinden - Beveiligd</string>
+    <string name="insecure_connect">Apparaat verbinden - Onbeveiligd</string>
+    <string name="discoverable">Maak zichtbaar</string>
+
+    <!-- Login Activity -->
+    <string name="login">Aanmelden</string>
+    <string name="btnLogin">Aanmelden</string>
+    <string name="user">Gebruiker</string>
+    <string name="enter_user_id">Voer gebruikersnaam in</string>
+    <string name="preferences">Voorkeuren</string>
+    <string name="language">Taal</string>
+    <string name="pressuremeasurement">Meeting bandenspanning</string>
+    <string name="user_id_error">Voer een gebruikersnaam in</string>
+    <string name="user_id_must_contain_alphanumberic">Voer een alfa-numerieke gebruikersnaam in</string>
+    <string name="user_id_invalid_length">Voer een 6 letterig, alfa-numerieke, gebruikersnaam in</string>
+
+    <!-- Setup Activity -->
+    <string name="set_up">set up</string>
+    <string name="current_status">Huidige status</string>
+    <string name="not_connected">Niet verbonden</string>
+    <string name="connected">Verbonden</string>
+    <string name="to_a_device">naar een apparaat</string>
+    <string name="connect_device">apparaat verbinden</string>
+    <string name="change_device">apparaat wisselen</string>
+
+    <!-- Sensor Details Activity -->
+    <string name="sensor_details">details sensor</string>
+    <string name="sensor_id">Sensor ID</string>
+    <string name="pressure">Bandenspanning</string>
+    <string name="save">Opslaan</string>
+    <string name="input_length_error">Voer een nummer in</string>
+    <string name="input_number_invalid_error">Voer een geldig nummer in</string>
+    <string name="bar">BAR</string>
+    <string name="psi">PSI</string>
+
+    <!-- Toast messages -->
+    <string name="no_network_error">Geen netwerkverbinding. Probeer later nog eens.</string>
+    <string name="upload_error">Fout tijdens opladen data. Probeer het later nog eens.</string>
+    <string name="uploading">Opladen&#8230;</string>
+    <string name="connecting">Verbinden&#8230;</string>
+
+    <string-array name="languagesArray">
+        <item>Engels</item>
+        <item>Frans</item>
+        <item>Duits</item>
+        <item>Spaans</item>
+        <item>Italiaans</item>
+        <item>Portugees</item>
+        <item>Pools</item>
+        <item>Tsjechisch</item>
+        <item>Hongaars</item>
+        <!-- <item>Slovak</item> -->
+        <item>Nederlands</item>
+    </string-array>
+    <string-array name="pressuremeasurementArray">
+        <item>BAR</item>
+        <item>PSI</item>
+    </string-array>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Annuleren</string>
+    <string name="exit">Afsluiten</string>
+    <string name="confirm_exit">Bevestiging afsluiten?</string>
+    <string name="no_results">Geen resultaten</string>
+    <string name="bluetooth_not_available">Bluetooth is not available</string>
+    <string name="unable_to_connect_device">Unable to connect device</string>
+    <string name="device_connection_lost">Device connection was lost</string>
+    <string name="network_not_available">Network not available</string>
+
+</resources>

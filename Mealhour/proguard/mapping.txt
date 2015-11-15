@@ -1,0 +1,112 @@
+com.rassaapp.deliveryapp.AddressPage -> com.rassaapp.deliveryapp.AddressPage:
+    android.content.Context context -> a
+    android.widget.Spinner town_input -> b
+    android.widget.EditText name_input -> c
+    android.widget.EditText phone_input -> d
+    android.widget.EditText housestreet_input -> e
+    android.widget.LinearLayout order -> f
+    android.widget.TextView texthint -> g
+    java.lang.String[] item_image -> h
+    java.util.ArrayList items_in_order -> i
+    java.lang.String[] accepted_towns -> j
+    void onCreate(android.os.Bundle) -> onCreate
+    void addItemToOrder(int) -> a
+    int dp(int) -> b
+    int fontpercent_screenheight(double) -> a
+com.rassaapp.deliveryapp.AddressPage$1 -> com.rassaapp.deliveryapp.a:
+    com.rassaapp.deliveryapp.AddressPage this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rassaapp.deliveryapp.ConfirmPage -> com.rassaapp.deliveryapp.ConfirmPage:
+    android.content.Context context -> a
+    android.widget.LinearLayout order -> b
+    java.lang.String[] item_title -> c
+    java.lang.String[] item_price -> d
+    java.lang.String sign -> e
+    java.lang.String name -> f
+    java.lang.String phone -> g
+    java.lang.String houseandstreet -> h
+    java.lang.String town -> i
+    java.lang.String OrderTitles -> j
+    void onCreate(android.os.Bundle) -> onCreate
+    void send_email(java.lang.String,java.lang.String,java.lang.String) -> a
+    void send_sms(java.lang.String,java.lang.String) -> a
+    int fontpercent_screenheight(double) -> a
+com.rassaapp.deliveryapp.ConfirmPage$1 -> com.rassaapp.deliveryapp.b:
+    com.rassaapp.deliveryapp.ConfirmPage this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rassaapp.deliveryapp.ConfirmPage$2 -> com.rassaapp.deliveryapp.c:
+    com.rassaapp.deliveryapp.ConfirmPage this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rassaapp.deliveryapp.ItemProfile -> com.rassaapp.deliveryapp.ItemProfile:
+    android.content.Context context -> a
+    java.lang.String sign -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    int fontpercent_screenheight(double) -> a
+    int fontpercent_screenwidth(double) -> b
+com.rassaapp.deliveryapp.ItemProfile$1 -> com.rassaapp.deliveryapp.d:
+    com.rassaapp.deliveryapp.ItemProfile this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rassaapp.deliveryapp.ItemProfile$2 -> com.rassaapp.deliveryapp.e:
+    com.rassaapp.deliveryapp.ItemProfile this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.rassaapp.deliveryapp.MainMenu -> com.rassaapp.deliveryapp.MainMenu:
+    android.content.Context context -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    int fontpercent_screenwidth(double) -> a
+com.rassaapp.deliveryapp.MainMenu$1 -> com.rassaapp.deliveryapp.f:
+    com.rassaapp.deliveryapp.MainMenu this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rassaapp.deliveryapp.MainMenu$2 -> com.rassaapp.deliveryapp.g:
+    com.rassaapp.deliveryapp.MainMenu this$0 -> a
+    android.widget.Button val$startorder -> b
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.rassaapp.deliveryapp.Menu -> com.rassaapp.deliveryapp.Menu:
+    android.content.Context context -> a
+    android.widget.LinearLayout order -> b
+    android.widget.ImageButton startorder -> c
+    android.widget.LinearLayout menu -> d
+    android.widget.LinearLayout categories_list -> e
+    android.widget.TextView texthint -> f
+    java.lang.String[] item_image -> g
+    java.lang.String[] item_title -> h
+    java.lang.String[] item_shortdesc -> i
+    java.lang.String[] item_desc -> j
+    java.lang.String[] item_price -> k
+    int[] item_category -> l
+    java.lang.String[] MenuCategories -> m
+    java.lang.String sign -> n
+    java.util.ArrayList items_in_order -> o
+    android.widget.TextView buy -> p
+    void onCreate(android.os.Bundle) -> onCreate
+    void RefreshMenuItems(int) -> a
+    void addItemToOrder(int) -> b
+    int dp(int) -> c
+    int fontpercent_screenheight(double) -> a
+    int fontpercent_screenwidth(double) -> b
+com.rassaapp.deliveryapp.Menu$1 -> com.rassaapp.deliveryapp.h:
+    com.rassaapp.deliveryapp.Menu this$0 -> a
+    int val$currenti -> b
+    void onClick(android.view.View) -> onClick
+com.rassaapp.deliveryapp.Menu$2 -> com.rassaapp.deliveryapp.i:
+    com.rassaapp.deliveryapp.Menu this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.rassaapp.deliveryapp.Menu$3 -> com.rassaapp.deliveryapp.j:
+    com.rassaapp.deliveryapp.Menu this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rassaapp.deliveryapp.Menu$4 -> com.rassaapp.deliveryapp.k:
+    com.rassaapp.deliveryapp.Menu this$0 -> a
+    int val$currenti -> b
+    void onClick(android.view.View) -> onClick
+com.rassaapp.deliveryapp.Menu$5 -> com.rassaapp.deliveryapp.l:
+    com.rassaapp.deliveryapp.Menu this$0 -> a
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.rassaapp.deliveryapp.Menu$6 -> com.rassaapp.deliveryapp.m:
+    com.rassaapp.deliveryapp.Menu this$0 -> a
+    int val$currenti -> b
+    void onClick(android.view.View) -> onClick
+com.rassaapp.deliveryapp.Menu$7 -> com.rassaapp.deliveryapp.n:
+    com.rassaapp.deliveryapp.Menu this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.rassaapp.deliveryapp.Menu$8 -> com.rassaapp.deliveryapp.o:
+    com.rassaapp.deliveryapp.Menu this$0 -> a
+    void run() -> run

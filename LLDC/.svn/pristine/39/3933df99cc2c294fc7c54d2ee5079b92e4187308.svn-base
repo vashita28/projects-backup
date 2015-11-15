@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_background">#ebebeb</color>
+    <color name="closure_text_color">#CCCCCC</color>
+    <color name="menu_text_color">#515151</color>
+    <color name="venue_topbar_text">#41C0F0</color>
+    <color name="menu_sliding_transparent">#CC444444</color>
+    <color name="white_transparent">#CCffffff</color>
+    <color name="textcolor_pink">#e6007e</color>
+    <color name="textcolor_grey">#898989</color>
+    <color name="transparent_grey">#80898989</color>
+    <color name="selected_tab">#ebebeb</color>
+    <color name="park_tab_grey">#e5e1dd</color>
+    <color name="today_event_tabcolor">#96ffffff</color>
+    <color name="common_footer">#f2f2f2</color>
+    <color name="explorer_bg">#e6007e</color>
+    <color name="venues_attraction_bg">#a00057</color>
+    <color name="london2012_bg">#770041</color>
+    <color name="facilities_bg">#570030</color>
+    <color name="explore_fragment_bg">#ebebeb</color>
+    <color name="event_topbar">#86BC26</color>
+    <color name="black_heading">#444444</color>
+    <color name="calender_bg_selected">#a00057</color>
+    <color name="calender_bg_unselected">#ebecee</color>
+
+</resources>

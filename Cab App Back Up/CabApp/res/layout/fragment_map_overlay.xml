@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlOverlays"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/llTopButtonsOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/registration_button"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tvOkGotItMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="OKAY GOT IT!"
+                android:textColor="@color/textview_selected"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOverlayMapAtPickUp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llTopButtonsOverlay"
+            android:visibility="gone" >
+
+            <com.android.cabapp.view.OverlayCircle
+                android:id="@+id/overlayMapAtPickUp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true" />
+
+            <RelativeLayout
+                android:id="@+id/rlContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/overlayMapAtPickUp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/overlay_bg"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tvMapToPickUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="MAP TO PICK UP"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOnceAccepted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvMapToPickUp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="false"
+                    android:text="Once accepted use the in-app map to guide you to passenger pick up address"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

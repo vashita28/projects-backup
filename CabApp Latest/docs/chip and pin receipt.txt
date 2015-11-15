@@ -1,0 +1,33 @@
+Customer Receipt
+----------------
+
+<html><body><div id='merchant_name'>Cab:App</div><div id='merchant_address'>0 <br> 0 0 </div><br/>MID: **19106<br/>TID: ****8910<br/><div id='date'>Date: 27.08.2014</div><div id='time'>Time: 13:18</div>Auth code: 639869<br/>Reference: 28ad2f52-75b0-432f-8cee-646ef175cb3d<br/><br/><div id='receipt_owner'>** CARDHOLDER COPY **</div><br/>Application Label: VISA DEBIT02<br/>Entry: ICC<br/>Card Scheme: VISA<br/>CardNumber: **** **** **** 0226<br/>Aid: A0000000031010<br/>APP PSN: 05<br/>{COPY_RECEIPT}<br/><div id='transaction_type'>SALE</div><div id='amount_value'>GBP587.03</div><br/>Your account will be debited with the above amount<br/>       ** Cardholder PIN verified **<br/>** AUTHORISED **<br/><br/><div id='footer_text'>Please keep this receipt for your records</div></body></html>
+
+
+Merchant Receipt
+----------------
+
+<html><body><div id='merchant_name'>Cab:App</div><div id='merchant_address'>0 <br> 0 0 </div><br/>MID: 6819106<br/>TID: 90008910<br/><div id='date'>Date: 27.08.2014</div><div id='time'>Time: 13:18</div>Transaction No: 0000133<br/>Auth code: 639869<br/>Reference: 28ad2f52-75b0-432f-8cee-646ef175cb3d<br/><br/><div id='receipt_owner'>** MERCHANT COPY **</div><br/>Application Label: VISA DEBIT02<br/>Entry: ICC<br/>Card Scheme: VISA<br/>CardNumber: **** **** **** 0226<br/>Aid: A0000000031010<br/>APP EFFECTIVE date: 07/2009<br/>APP EXP date: 12/2015<br/>APP PSN: 05<br/>{COPY_RECEIPT}<br/><div id='transaction_type'>SALE</div><div id='amount_value'>GBP587.03</div><br/>Your account will be debited with the above amount<br/>       ** Cardholder PIN verified **<br/>** AUTHORISED **<br/><br/><div id='footer_text'>Please keep this receipt for your records</div></body></html>
+
+
+ChipAndPinResponse::
+-------------------
+
+{"success":"true","message":"Payment details updated"}
+
+
+
+
+Customer Receipt
+----------------
+
+<html><body><div id='merchant_name'>Cab:App</div><div id='merchant_address'>0 <br> 0 0 </div><br/>MID: **19106<br/>TID: ****8910<br/><div id='date'>Date: 27.08.2014</div><div id='time'>Time: 13:28</div>Auth code: 639875<br/>Reference: 0a64e5a1-35b4-4037-af76-1a4e36f7815f<br/><br/><div id='receipt_owner'>** CARDHOLDER COPY **</div><br/>Application Label: VISA DEBIT02<br/>Entry: ICC<br/>Card Scheme: VISA<br/>CardNumber: **** **** **** 0226<br/>Aid: A0000000031010<br/>APP PSN: 05<br/>{COPY_RECEIPT}<br/><div id='transaction_type'>SALE</div><div id='amount_value'>GBP587.03</div><br/>Your account will be debited with the above amount<br/>       ** Cardholder PIN verified **<br/>** AUTHORISED **<br/><br/><div id='footer_text'>Please keep this receipt for your records</div></body></html>
+
+ 
+Merchant Receipt
+----------------
+
+<html><body><div id='merchant_name'>Cab:App</div><div id='merchant_address'>0 <br> 0 0 </div><br/>MID: 6819106<br/>TID: 90008910<br/><div id='date'>Date: 27.08.2014</div><div id='time'>Time: 13:28</div>Transaction No: 0000135<br/>Auth code: 639875<br/>Reference: 0a64e5a1-35b4-4037-af76-1a4e36f7815f<br/><br/><div id='receipt_owner'>** MERCHANT COPY **</div><br/>Application Label: VISA DEBIT02<br/>Entry: ICC<br/>Card Scheme: VISA<br/>CardNumber: **** **** **** 0226<br/>Aid: A0000000031010<br/>APP EFFECTIVE date: 07/2009<br/>APP EXP date: 12/2015<br/>APP PSN: 05<br/>{COPY_RECEIPT}<br/><div id='transaction_type'>SALE</div><div id='amount_value'>GBP587.03</div><br/>Your account will be debited with the above amount<br/>       ** Cardholder PIN verified **<br/>** AUTHORISED **<br/><br/><div id='footer_text'>Please keep this receipt for your records</div></body></html>
+
+
+

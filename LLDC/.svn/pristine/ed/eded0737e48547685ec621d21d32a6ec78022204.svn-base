@@ -1,0 +1,788 @@
+package co.uk.android.lldc.database;
+
+import java.util.ArrayList;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import co.uk.android.lldc.LLDCApplication;
+import co.uk.android.lldc.models.DashboardModel;
+import co.uk.android.lldc.models.MediaModel;
+import co.uk.android.lldc.models.ServerModel;
+
+public class LLDCDataBaseHelper extends SQLiteOpenHelper {
+
+	// String _id, name, shortDesc, longDescription, venueId, venueTitle,
+	// thumbImage, largeImage, flag, isToday, activeDays, category, color,
+	// order;
+	//
+	// long latitude, longitude, startDateTime, endDateTime;
+	//
+	// ArrayList<MediaModel> mediaList;
+
+	public static final String TABLE_EVENTS = "events";
+	public static final String TABLE_VENUES = "venues";
+	public static final String TABLE_TRAILS = "trails";
+	public static final String TABLE_MEDIA = "media";
+	public static final String TABLE_DASHBOARD = "dashboard";
+	public static final String TABLE_STATIC_TRAILS = "staticTrails";
+
+	public static final String TABLE_FACILITIES = "facilities";
+	public static final String COLUMN_ID = "_id";
+	public static final String COLUMN_NAME = "name";
+	public static final String COLUMN_SHORT_DESC = "shortDesc";
+	public static final String COLUMN_LONG_DESC = "longDescription";
+	public static final String COLUMN_VENUE_ID = "venueId";
+	public static final String COLUMN_VENUE_TITLE = "venueTitle";
+	public static final String COLUMN_LAT = "lat";
+	public static final String COLUMN_LONG = "long";
+	public static final String COLUMN_START_DATE_TIME = "startDateTime";
+	public static final String COLUMN_END_DATE_TIME = "endDateTime";
+	public static final String COLUMN_THUMB_IMAGE = "thumbImage";
+	public static final String COLUMN_LARGE_IMAGE = "largeImage";
+	public static final String COLUMN_FLAG = "flag";
+	public static final String COLUMN_IS_TODAY = "isToday";
+	public static final String COLUMN_ACTIVE_DAYS = "activeDays";
+	public static final String COLUMN_CATEGORY = "category";
+	public static final String COLUMN_COLOR = "color";
+	public static final String COLUMN_ORDER = "_order";
+	public static final String COLUMN_MODEL_TYPE = "modelType";
+	private static final String DATABASE_NAME = "lldc.db";
+	private static final int DATABASE_VERSION = 1;
+
+	private static final String COLUMN_MEDIA_URL = "mediaUrl";
+	private static final String COLUMN_MEDIA_TYPE = "mediaType";
+
+	private static final String COLUMN_DASHBOARD_WELCOMEMSG_IN = "welcome_msg_in";
+	private static final String COLUMN_DASHBOARD_WELCOMEMSG_OUT = "welcome_msg_out";
+	private static final String COLUMN_DASHBOARD_WELCOMEIMAGE_IN = "welcome_image_in";
+	private static final String COLUMN_DASHBOARD_WELCOMEIMAGE_OUT = "welcome_image_out";
+	private static final String COLUMN_DASHBOARD_WELCOMEMINOR_NOTIFICATION = "welcome_minor_notification";
+	private static final String COLUMN_DASHBOARD_WELCOMEMAJOR_NOTIFICATION = "welcome_major";
+
+	private static final String COLUMN_STATIC_TRAILS_TITLE = "welcome_msg_in";
+	private static final String COLUMN_STATIC_TRAILS_DESCRIPTION = "welcome_msg_out";
+	private static final String COLUMN_STATIC_TRAILS_IMAGE = "welcome_image_in";
+
+	// Database creation sql statement
+	private static final String DATABASE_CREATE_DASHBOARD = "create table "
+			+ TABLE_DASHBOARD + "(" + COLUMN_ID
+			+ " integer primary key autoincrement, "
+			+ COLUMN_DASHBOARD_WELCOMEMSG_IN + " text, "
+			+ COLUMN_DASHBOARD_WELCOMEMSG_OUT + " text, "
+			+ COLUMN_DASHBOARD_WELCOMEIMAGE_IN + " text, "
+			+ COLUMN_DASHBOARD_WELCOMEIMAGE_OUT + " text, "
+			+ COLUMN_DASHBOARD_WELCOMEMINOR_NOTIFICATION + " text, "
+			+ COLUMN_DASHBOARD_WELCOMEMAJOR_NOTIFICATION + " text);";
+
+	private static final String DATABASE_CREATE_EVENT = "create table "
+			+ TABLE_EVENTS + "(" + COLUMN_ID + " integer primary key, "
+			+ COLUMN_NAME + " text not null, " + COLUMN_SHORT_DESC
+			+ " text not null, " + COLUMN_LONG_DESC + " text not null, "
+			+ COLUMN_VENUE_ID + " text not null, " + COLUMN_VENUE_TITLE
+			+ " text not null, " + COLUMN_LAT + " text not null, "
+			+ COLUMN_LONG + " text not null, " + COLUMN_START_DATE_TIME
+			+ " text not null, " + COLUMN_END_DATE_TIME + " text not null, "
+			+ COLUMN_THUMB_IMAGE + " text not null, " + COLUMN_LARGE_IMAGE
+			+ " text not null, " + COLUMN_FLAG + " text not null, "
+			+ COLUMN_IS_TODAY + " text not null, " + COLUMN_ACTIVE_DAYS
+			+ " text not null, " + COLUMN_CATEGORY + " text not null, "
+			+ COLUMN_COLOR + " text not null, " + COLUMN_ORDER
+			+ " text not null, " + COLUMN_MODEL_TYPE + " text not null);";
+
+	private static final String DATABASE_CREATE_VENUES = "create table "
+			+ TABLE_VENUES + "(" + COLUMN_ID + " integer primary key, "
+			+ COLUMN_NAME + " text not null, " + COLUMN_SHORT_DESC
+			+ " text not null, " + COLUMN_LONG_DESC + " text not null, "
+			+ COLUMN_VENUE_ID + " text not null, " + COLUMN_VENUE_TITLE
+			+ " text not null, " + COLUMN_LAT + " text not null, "
+			+ COLUMN_LONG + " text not null, " + COLUMN_START_DATE_TIME
+			+ " text not null, " + COLUMN_END_DATE_TIME + " text not null, "
+			+ COLUMN_THUMB_IMAGE + " text not null, " + COLUMN_LARGE_IMAGE
+			+ " text not null, " + COLUMN_FLAG + " text not null, "
+			+ COLUMN_IS_TODAY + " text not null, " + COLUMN_ACTIVE_DAYS
+			+ " text not null, " + COLUMN_CATEGORY + " text not null, "
+			+ COLUMN_COLOR + " text not null, " + COLUMN_ORDER
+			+ " text not null, " + COLUMN_MODEL_TYPE + " text not null);";
+
+	private static final String DATABASE_CREATE_FACILITIES = "create table "
+			+ TABLE_FACILITIES + "(" + COLUMN_ID + " integer primary key, "
+			+ COLUMN_NAME + " text not null, " + COLUMN_SHORT_DESC
+			+ " text not null, " + COLUMN_LONG_DESC + " text not null, "
+			+ COLUMN_VENUE_ID + " text not null, " + COLUMN_VENUE_TITLE
+			+ " text not null, " + COLUMN_LAT + " text not null, "
+			+ COLUMN_LONG + " text not null, " + COLUMN_START_DATE_TIME
+			+ " text not null, " + COLUMN_END_DATE_TIME + " text not null, "
+			+ COLUMN_THUMB_IMAGE + " text not null, " + COLUMN_LARGE_IMAGE
+			+ " text not null, " + COLUMN_FLAG + " text not null, "
+			+ COLUMN_IS_TODAY + " text not null, " + COLUMN_ACTIVE_DAYS
+			+ " text not null, " + COLUMN_CATEGORY + " text not null, "
+			+ COLUMN_COLOR + " text not null, " + COLUMN_ORDER
+			+ " text not null, " + COLUMN_MODEL_TYPE + " text not null);";
+
+	private static final String DATABASE_CREATE_TRAILS = "create table "
+			+ TABLE_TRAILS + "(" + COLUMN_ID + " integer primary key, "
+			+ COLUMN_NAME + " text not null, " + COLUMN_SHORT_DESC
+			+ " text not null, " + COLUMN_LONG_DESC + " text not null, "
+			+ COLUMN_VENUE_ID + " text not null, " + COLUMN_VENUE_TITLE
+			+ " text not null, " + COLUMN_LAT + " text not null, "
+			+ COLUMN_LONG + " text not null, " + COLUMN_START_DATE_TIME
+			+ " text not null, " + COLUMN_END_DATE_TIME + " text not null, "
+			+ COLUMN_THUMB_IMAGE + " text not null, " + COLUMN_LARGE_IMAGE
+			+ " text not null, " + COLUMN_FLAG + " text not null, "
+			+ COLUMN_IS_TODAY + " text not null, " + COLUMN_ACTIVE_DAYS
+			+ " text not null, " + COLUMN_CATEGORY + " text not null, "
+			+ COLUMN_COLOR + " text not null, " + COLUMN_ORDER
+			+ " text not null, " + COLUMN_MODEL_TYPE + " text not null);";
+
+	// 1 for event, 2 for venue, 3 for facilities, 4 for Trails
+	private static final String DATABASE_CREATE_MEDIA = "create table "
+			+ TABLE_MEDIA + "(" + COLUMN_ID + " integer key, "
+			+ COLUMN_MEDIA_URL + " text not null, " + COLUMN_MEDIA_TYPE
+			+ " text not null);";
+
+	public LLDCDataBaseHelper(Context context) {
+		super(context, DATABASE_NAME, null, DATABASE_VERSION);
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase database) {
+		try {
+			database.execSQL(DATABASE_CREATE_DASHBOARD);
+			database.execSQL(DATABASE_CREATE_EVENT);
+			database.execSQL(DATABASE_CREATE_FACILITIES);
+			database.execSQL(DATABASE_CREATE_TRAILS);
+			database.execSQL(DATABASE_CREATE_VENUES);
+			database.execSQL(DATABASE_CREATE_MEDIA);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		Log.w(LLDCDataBaseHelper.class.getName(),
+				"Upgrading database from version " + oldVersion + " to "
+						+ newVersion + ", which will destroy all old data");
+		db.execSQL("DROP TABLE IF EXISTS " + DATABASE_CREATE_DASHBOARD);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_EVENTS);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_FACILITIES);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_TRAILS);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_VENUES);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_MEDIA);
+		onCreate(db);
+	}
+
+	/***** Open database for insert,update,delete in syncronized manner *****/
+	private static synchronized SQLiteDatabase open() throws SQLException {
+		return LLDCApplication.DBHelper.getWritableDatabase();
+	}
+
+	public void onInsertEventData(ArrayList<ServerModel> eventList) {
+		final SQLiteDatabase db = open();
+		try {
+			for (int i = 0; i < eventList.size(); i++) {
+				// if (isEventDataPresent(eventList.get(i).get_id(), db,
+				// TABLE_EVENTS)) {
+				// onUpdateEventData(eventList.get(i), db, TABLE_EVENTS);
+				// } else {
+				onInsertEvent(eventList.get(i), db, TABLE_EVENTS);
+				onInsertMediaData(eventList.get(i).getMediaList(),
+						LLDCApplication.EVENT, eventList.get(i).get_id(), db);
+				// }
+			}
+			db.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public void onInsertVenuesData(ArrayList<ServerModel> eventList) {
+		final SQLiteDatabase db = open();
+		try {
+			for (int i = 0; i < eventList.size(); i++) {
+				// if (isEventDataPresent(eventList.get(i).get_id(), db,
+				// TABLE_VENUES)) {
+				// onUpdateEventData(eventList.get(i), db, TABLE_VENUES);
+				// } else {
+				onInsertEvent(eventList.get(i), db, TABLE_VENUES);
+				onInsertMediaData(eventList.get(i).getMediaList(),
+						LLDCApplication.VENUE, eventList.get(i).get_id(), db);
+				// }
+			}
+			db.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:onInsertVenuesData",
+					"" + e.getMessage());
+		}
+	}
+
+	public void onInsertFacilitiesData(ArrayList<ServerModel> eventList) {
+		final SQLiteDatabase db = open();
+		try {
+			for (int i = 0; i < eventList.size(); i++) {
+				// if (isEventDataPresent(eventList.get(i).get_id(), db,
+				// TABLE_FACILITIES)) {
+				// onUpdateEventData(eventList.get(i), db, TABLE_FACILITIES);
+				// } else {
+				onInsertEvent(eventList.get(i), db, TABLE_FACILITIES);
+				onInsertMediaData(eventList.get(i).getMediaList(),
+						LLDCApplication.FACILITIES, eventList.get(i).get_id(),
+						db);
+				// }
+			}
+			db.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:onInsertFacilitiesData",
+					"" + e.getMessage());
+		}
+	}
+
+	public void onInsertTrailsData(ArrayList<ServerModel> eventList) {
+		final SQLiteDatabase db = open();
+		try {
+			for (int i = 0; i < eventList.size(); i++) {
+				// if (isEventDataPresent(eventList.get(i).get_id(), db,
+				// TABLE_TRAILS)) {
+				// onUpdateEventData(eventList.get(i), db, TABLE_TRAILS);
+				// } else {
+				onInsertEvent(eventList.get(i), db, TABLE_TRAILS);
+				onInsertMediaData(eventList.get(i).getMediaList(),
+						LLDCApplication.TRAILS, eventList.get(i).get_id(), db);
+				// }
+			}
+			db.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:onInsertTrailsData",
+					"" + e.getMessage());
+		}
+	}
+
+	@SuppressWarnings("unused")
+	public void onInsertMediaData(ArrayList<MediaModel> eventList,
+			int mediaType, String _id, SQLiteDatabase db) {
+		// final SQLiteDatabase db = open();
+		try {
+			for (int i = 0; i < eventList.size(); i++) {
+				ContentValues values = new ContentValues();
+				values.put(COLUMN_ID, _id);
+				values.put(COLUMN_MEDIA_TYPE, mediaType);
+				values.put(COLUMN_MEDIA_URL, eventList.get(i).getImageUrl());
+				long todo_id = db.insert(TABLE_MEDIA, null, values);
+			}
+			// db.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:onInsertMediaData",
+					"" + e.getMessage());
+		}
+	}
+
+	public void onInsertEvent(ServerModel event, SQLiteDatabase db,
+			String tableName) {
+		@SuppressWarnings("unused")
+		long todo_id = 0;
+		try {
+			ContentValues values = new ContentValues();
+			values.put(COLUMN_ID, event.get_id());
+			values.put(COLUMN_NAME, event.getName());
+			values.put(COLUMN_SHORT_DESC, event.getShortDesc());
+			values.put(COLUMN_LONG_DESC, event.getLongDescription());
+			values.put(COLUMN_VENUE_ID, event.getVenueId());
+			values.put(COLUMN_VENUE_TITLE, event.getVenueTitle());
+			values.put(COLUMN_THUMB_IMAGE, event.getThumbImage());
+			values.put(COLUMN_LARGE_IMAGE, event.getLargeImage());
+			values.put(COLUMN_LAT, event.getLatitude());
+			values.put(COLUMN_LONG, event.getLongitude());
+			values.put(COLUMN_START_DATE_TIME, event.getStartDateTime());
+			values.put(COLUMN_END_DATE_TIME, event.getEndDateTime());
+			values.put(COLUMN_FLAG, event.getFlag());
+			values.put(COLUMN_IS_TODAY, event.getIsToday());
+			values.put(COLUMN_ACTIVE_DAYS, event.getActiveDays());
+			values.put(COLUMN_CATEGORY, event.getCategory());
+			values.put(COLUMN_COLOR, event.getColor());
+			values.put(COLUMN_ORDER, event.getOrder());
+			values.put(COLUMN_MODEL_TYPE, event.getModelType() + "");
+			todo_id = db.insert(tableName, null, values);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:onInsertEvent",
+					"" + e.getMessage());
+		}
+	}
+
+	public boolean isEventDataPresent(String eventId, SQLiteDatabase db,
+			String tableName) {
+		try {
+			Cursor mCursor = db.rawQuery("Select * from " + tableName
+					+ " where " + COLUMN_ID + " = '" + eventId + "'", null);
+
+			if (mCursor.getCount() > 0) {
+				mCursor.close();
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			LLDCApplication.onShowLogCat("DB:isEventDataPresent",
+					"" + e.getMessage());
+		}
+		return false;
+	}
+
+	public void onUpdateEventData(ServerModel event, SQLiteDatabase db,
+			String tableName) {
+		try {
+			ContentValues values = new ContentValues();
+			values.put(COLUMN_NAME, event.getName());
+			values.put(COLUMN_SHORT_DESC, event.getShortDesc());
+			values.put(COLUMN_LONG_DESC, event.getLongDescription());
+			values.put(COLUMN_VENUE_ID, event.getVenueId());
+			values.put(COLUMN_VENUE_TITLE, event.getVenueTitle());
+			values.put(COLUMN_THUMB_IMAGE, event.getThumbImage());
+			values.put(COLUMN_LARGE_IMAGE, event.getLargeImage());
+			values.put(COLUMN_LAT, event.getLatitude());
+			values.put(COLUMN_LONG, event.getLongitude());
+			values.put(COLUMN_START_DATE_TIME, event.getStartDateTime());
+			values.put(COLUMN_END_DATE_TIME, event.getEndDateTime());
+			values.put(COLUMN_FLAG, event.getFlag());
+			values.put(COLUMN_IS_TODAY, event.getIsToday());
+			values.put(COLUMN_ACTIVE_DAYS, event.getActiveDays());
+			values.put(COLUMN_CATEGORY, event.getCategory());
+			values.put(COLUMN_COLOR, event.getColor());
+			values.put(COLUMN_ORDER, event.getOrder());
+			values.put(COLUMN_MODEL_TYPE, event.getModelType() + "");
+			int rowid = db.update(tableName, values,
+					COLUMN_ID + " ='" + event.get_id() + "'", null);
+			LLDCApplication.onShowLogCat("DB:ClearEventTable",
+					"Row count after delete " + rowid);
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:UpdateDataTable",
+					"" + e.getMessage());
+		}
+	}
+
+	public ArrayList<ServerModel> getEventData(String where) {
+		final SQLiteDatabase db = open();
+		ArrayList<ServerModel> eventList = new ArrayList<ServerModel>();
+		try {
+			Cursor mCursor = null;
+			if (where.equals(""))
+				mCursor = db.rawQuery("Select * from " + TABLE_EVENTS, null);
+			else
+				mCursor = db.rawQuery("Select * from " + TABLE_EVENTS
+						+ " where " + COLUMN_CATEGORY + " = '" + where + "'",
+						null);
+
+			if (mCursor != null && mCursor.getCount() > 0) {
+				mCursor.moveToFirst();
+				for (int i = 0; i < mCursor.getCount(); i++) {
+					ServerModel model = onGetData(mCursor);
+					ArrayList<MediaModel> mMediaList = onGetMediaData(
+							LLDCApplication.EVENT, model.get_id());
+					model.setMediaList(mMediaList);
+					eventList.add(model);
+					mCursor.moveToNext();
+				}
+			}
+
+			db.close();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return eventList;
+	}
+
+	public ArrayList<ServerModel> getTodaysEventData() {
+		final SQLiteDatabase db = open();
+		ArrayList<ServerModel> eventList = new ArrayList<ServerModel>();
+		try {
+			Cursor mCursor = db.rawQuery("Select * from " + TABLE_EVENTS
+					+ " where " + COLUMN_IS_TODAY + " = '1';", null);
+			if (mCursor != null && mCursor.getCount() > 0) {
+				mCursor.moveToFirst();
+				for (int i = 0; i < mCursor.getCount(); i++) {
+					ServerModel model = onGetData(mCursor);
+					ArrayList<MediaModel> mMediaList = onGetMediaData(
+							LLDCApplication.EVENT, model.get_id());
+					model.setMediaList(mMediaList);
+					eventList.add(model);
+					mCursor.moveToNext();
+				}
+			}
+
+			db.close();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return eventList;
+	}
+
+	public ArrayList<ServerModel> onGetFacilitiesData(String where) {
+		final SQLiteDatabase db = open();
+		ArrayList<ServerModel> facilitiesList = new ArrayList<ServerModel>();
+		try {
+			Cursor mCursor = null;
+			if (where.equals(""))
+				mCursor = db
+						.rawQuery("Select * from " + TABLE_FACILITIES, null);
+			else
+				mCursor = db.rawQuery("Select * from " + TABLE_FACILITIES
+						+ " where " + COLUMN_CATEGORY + " = '" + where + "'",
+						null);
+			if (mCursor != null && mCursor.getCount() > 0) {
+				mCursor.moveToFirst();
+				for (int i = 0; i < mCursor.getCount(); i++) {
+					ServerModel model = onGetData(mCursor);
+					ArrayList<MediaModel> mMediaList = onGetMediaData(
+							LLDCApplication.FACILITIES, model.get_id());
+					model.setMediaList(mMediaList);
+					facilitiesList.add(model);
+					mCursor.moveToNext();
+				}
+			}
+
+			db.close();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return facilitiesList;
+	}
+
+	public ArrayList<ServerModel> onGetVenueData(String where) {
+		final SQLiteDatabase db = open();
+		ArrayList<ServerModel> venuesList = new ArrayList<ServerModel>();
+		try {
+			Cursor mCursor = null;
+			if (where.equals(""))
+				mCursor = db.rawQuery("Select * from " + TABLE_VENUES, null);
+			else
+				mCursor = db.rawQuery("Select * from " + TABLE_VENUES
+						+ " where " + COLUMN_CATEGORY + " = '" + where + "'",
+						null);
+			if (mCursor != null && mCursor.getCount() > 0) {
+				mCursor.moveToFirst();
+				for (int i = 0; i < mCursor.getCount(); i++) {
+					ServerModel model = onGetData(mCursor);
+					ArrayList<MediaModel> mMediaList = onGetMediaData(
+							LLDCApplication.VENUE, model.get_id());
+					model.setMediaList(mMediaList);
+					venuesList.add(model);
+					mCursor.moveToNext();
+				}
+			}
+
+			db.close();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return venuesList;
+	}
+
+	public ArrayList<ServerModel> onGetTrailsData(String where) {
+		final SQLiteDatabase db = open();
+		ArrayList<ServerModel> trailsList = new ArrayList<ServerModel>();
+		try {
+			Cursor mCursor = null;
+			if (where.equals(""))
+				mCursor = db.rawQuery("Select * from " + TABLE_TRAILS, null);
+			else
+				mCursor = db.rawQuery("Select * from " + TABLE_TRAILS
+						+ " where " + COLUMN_CATEGORY + " = '" + where + "'",
+						null);
+			if (mCursor != null && mCursor.getCount() > 0) {
+				mCursor.moveToFirst();
+				for (int i = 0; i < mCursor.getCount(); i++) {
+					ServerModel model = onGetData(mCursor);
+					ArrayList<MediaModel> mMediaList = onGetMediaData(
+							LLDCApplication.TRAILS, model.get_id());
+					model.setMediaList(mMediaList);
+					trailsList.add(model);
+					mCursor.moveToNext();
+				}
+			}
+
+			db.close();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return trailsList;
+	}
+
+	public ServerModel getLondonTrail() {
+		final SQLiteDatabase db = open();
+		ServerModel trailsList = new ServerModel();
+		try {
+			Cursor mCursor = db.rawQuery("Select * from " + TABLE_TRAILS
+					+ " where " + COLUMN_NAME + " = 'London 2012';", null);
+			if (mCursor != null && mCursor.getCount() > 0) {
+				mCursor.moveToFirst();
+				for (int i = 0; i < mCursor.getCount(); i++) {
+					trailsList = onGetData(mCursor);
+					ArrayList<MediaModel> mMediaList = onGetMediaData(
+							LLDCApplication.TRAILS, trailsList.get_id());
+					trailsList.setMediaList(mMediaList);
+					mCursor.moveToNext();
+				}
+			}
+
+			db.close();
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return trailsList;
+	}
+
+	public ArrayList<MediaModel> onGetMediaData(int mediaType, String id) {
+		final SQLiteDatabase db = open();
+		ArrayList<MediaModel> mMediaList = new ArrayList<MediaModel>();
+
+		try {
+
+			Cursor mCursor = db.rawQuery("Select * from " + TABLE_MEDIA
+					+ " where " + COLUMN_MEDIA_TYPE + " = '" + mediaType
+					+ "' and " + COLUMN_ID + " = " + id + ";", null);
+			if (mCursor != null && mCursor.getCount() > 0) {
+				mCursor.moveToFirst();
+				for (int i = 0; i < mCursor.getCount(); i++) {
+					MediaModel model = new MediaModel();
+					model.set_id(Long.parseLong(id));
+					model.setMediaType((long) mediaType);
+					model.setImageUrl(mCursor.getString(mCursor
+							.getColumnIndex(COLUMN_MEDIA_URL)));
+					mMediaList.add(model);
+				}
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return mMediaList;
+	}
+
+	public ServerModel onGetData(Cursor mCursor) {
+		ServerModel item = new ServerModel();
+		try {
+			item.set_id(mCursor.getString(mCursor.getColumnIndex(COLUMN_ID)));
+			item.setName(mCursor.getString(mCursor.getColumnIndex(COLUMN_NAME)));
+			item.setShortDesc(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_SHORT_DESC)));
+			item.setLongDescription(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_LONG_DESC)));
+			item.setVenueId(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_VENUE_ID)));
+			item.setVenueTitle(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_VENUE_TITLE)));
+			item.setLatitude(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_LAT)));
+			item.setLongitude(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_LONG)));
+			item.setStartDateTime(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_START_DATE_TIME)));
+			item.setEndDateTime(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_END_DATE_TIME)));
+			item.setThumbImage(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_THUMB_IMAGE)));
+			item.setLargeImage(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_LARGE_IMAGE)));
+			item.setFlag(mCursor.getString(mCursor.getColumnIndex(COLUMN_FLAG)));
+			item.setIsToday(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_IS_TODAY)));
+			item.setActiveDays(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_ACTIVE_DAYS)));
+			item.setCategory(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_CATEGORY)));
+			item.setColor(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_COLOR)));
+			item.setOrder(mCursor.getString(mCursor
+					.getColumnIndex(COLUMN_ORDER)));
+			item.setModelType(mCursor.getInt(mCursor
+					.getColumnIndex(COLUMN_MODEL_TYPE)));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return item;
+	}
+
+	public void onClearDashboadTable() {
+		final SQLiteDatabase db = open();
+		try {
+			// db.delete(TABLE_EVENTS, null, null);
+			db.execSQL("delete from " + TABLE_DASHBOARD);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:ClearDashboadTable", e.getMessage());
+		}
+	}
+	
+	public void onClearEventTable() {
+		final SQLiteDatabase db = open();
+		try {
+			// db.delete(TABLE_EVENTS, null, null);
+			db.execSQL("delete from " + TABLE_EVENTS);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:ClearEventTable", e.getMessage());
+		}
+	}
+
+	public void onClearVenuesTable() {
+		final SQLiteDatabase db = open();
+		try {
+			db.execSQL("delete from " + TABLE_VENUES);
+			// db.delete(TABLE_VENUES, null, null);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:ClearEventTable", e.getMessage());
+		}
+	}
+
+	public void onClearFacilitiesTable() {
+		final SQLiteDatabase db = open();
+		try {
+			db.execSQL("delete from " + TABLE_FACILITIES);
+			db.delete(TABLE_FACILITIES, null, null);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:ClearEventTable", e.getMessage());
+		}
+	}
+
+	public void onClearTrailsTable() {
+		final SQLiteDatabase db = open();
+		try {
+			db.execSQL("delete from " + TABLE_TRAILS);
+			// db.delete(TABLE_TRAILS, null, null);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:ClearEventTable", e.getMessage());
+		}
+	}
+
+	public void onClearMediaTable() {
+		final SQLiteDatabase db = open();
+		try {
+			db.execSQL("delete from " + TABLE_MEDIA);
+			// db.delete(TABLE_MEDIA, null, null);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:ClearEventTable", e.getMessage());
+		}
+	}
+
+	public ServerModel getSingleData(String _id, String tableName) {
+		ServerModel model = new ServerModel();
+		final SQLiteDatabase db = open();
+		try {
+			// db.execSQL("delete from "+ TABLE_VIDEO);
+			Cursor mCursor = db.rawQuery("Select * from " + tableName
+					+ " where " + COLUMN_ID + " = '" + _id + "';", null);
+
+			if (mCursor != null && mCursor.getCount() > 0) {
+				mCursor.moveToFirst();
+				model = onGetData(mCursor);
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:ClearEventTable", e.getMessage());
+		}
+		return model;
+	}
+
+	@SuppressWarnings("unused")
+	public void onInsertDashboardData(DashboardModel model) {
+		long todo_id = 0;
+		final SQLiteDatabase db = open();
+		try {
+			ContentValues values = new ContentValues();
+			values.put(COLUMN_DASHBOARD_WELCOMEMSG_IN, model.getWelcomeMsgIn());
+			values.put(COLUMN_DASHBOARD_WELCOMEMSG_OUT,
+					model.getWelcomeMsgOut());
+			values.put(COLUMN_DASHBOARD_WELCOMEIMAGE_IN,
+					model.getWelcomeImageIn());
+			values.put(COLUMN_DASHBOARD_WELCOMEIMAGE_OUT,
+					model.getWelcomeImageOut());
+			values.put(COLUMN_DASHBOARD_WELCOMEMINOR_NOTIFICATION,
+					model.getMinorNotice());
+			values.put(COLUMN_DASHBOARD_WELCOMEMAJOR_NOTIFICATION,
+					model.getMajorNotice());
+			todo_id = db.insert(TABLE_DASHBOARD, null, values);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	public void onClearDashboardTable() {
+		final SQLiteDatabase db = open();
+		try {
+			// db.execSQL("delete from "+ TABLE_VIDEO);
+			db.delete(TABLE_DASHBOARD, null, null);
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			LLDCApplication.onShowLogCat("DB:ClearDashboardTable",
+					e.getMessage());
+		}
+	}
+
+	public DashboardModel onGetDashBoardData() {
+		final SQLiteDatabase db = open();
+		DashboardModel model = new DashboardModel();
+		try {
+			Cursor mCursor = db.rawQuery("Select * from " + TABLE_DASHBOARD,
+					null);
+			if (mCursor != null && mCursor.getCount() > 0) {
+				mCursor.moveToFirst();
+				model.setWelcomeMsgIn(mCursor.getString(mCursor
+						.getColumnIndex(COLUMN_DASHBOARD_WELCOMEMSG_IN)));
+				model.setWelcomeMsgOut(mCursor.getString(mCursor
+						.getColumnIndex(COLUMN_DASHBOARD_WELCOMEMSG_OUT)));
+				model.setWelcomeImageIn(mCursor.getString(mCursor
+						.getColumnIndex(COLUMN_DASHBOARD_WELCOMEIMAGE_IN)));
+				model.setWelcomeImageOut(mCursor.getString(mCursor
+						.getColumnIndex(COLUMN_DASHBOARD_WELCOMEIMAGE_OUT)));
+				model.setMinorNotice(mCursor.getString(mCursor
+						.getColumnIndex(COLUMN_DASHBOARD_WELCOMEMINOR_NOTIFICATION)));
+				model.setMajorNotice(mCursor.getString(mCursor
+						.getColumnIndex(COLUMN_DASHBOARD_WELCOMEMAJOR_NOTIFICATION)));
+			}
+			db.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return model;
+
+	}
+}

@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_color"
+    android:orientation="vertical"
+    tools:context=".DisplayImagePreview" >
+
+    <!-- Header -->
+
+    <include
+        android:id="@+id/view_review_photo_top_bar"
+        layout="@layout/header" />
+
+    <!-- Content -->
+
+    <ImageView
+        android:id="@+id/imageview_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_takePhotoAgain"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_orange"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="@string/TAKE_AGAIN"
+            android:textColor="@color/title_bar_data_text_color"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_green"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="@string/NEXT"
+            android:textColor="@color/title_bar_data_text_color"
+            android:textSize="@dimen/button_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

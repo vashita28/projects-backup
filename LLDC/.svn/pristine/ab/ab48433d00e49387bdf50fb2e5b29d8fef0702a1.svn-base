@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llexplore"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:paddingEnd="5dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="5dp"
+    android:paddingStart="0dp"
+    android:weightSum="1" >
+
+    <RelativeLayout
+        android:id="@+id/rlImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.60"
+        android:background="@android:color/transparent" >
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/ivExploreImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgnt_placeholder" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.40"
+        android:padding="15dp" >
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/tvExploreHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:maxLines="2"
+            android:text="explore event 1"
+            android:textSize="18sp" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoBoldItalic
+            android:id="@+id/tvExploreTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvExploreHeading"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            android:text="ALL WEEK 10AM-6PM"
+            android:textSize="16sp" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoLight
+            android:id="@+id/tvExploreDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tvExploreTime"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="2"
+            android:minLines="1"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            android:textColor="@color/black_heading"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

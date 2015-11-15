@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimage"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SignUpActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" >
+
+        <ImageView
+            android:id="@+id/ivBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/backbutton" />
+
+        <ImageView
+            android:id="@+id/tapsnapLogo"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/tapsnap" />
+
+        <ImageView
+            android:id="@+id/ivSelectionProfilePic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/defaultprofilepic"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:visibility="visible" />
+
+        <com.facebook.widget.ProfilePictureView
+            android:id="@+id/selection_profile_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            facebook:preset_size="small" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svContents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHeader"
+        android:fillViewport="true"
+         >
+
+        <RelativeLayout
+            android:id="@+id/rlcontents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="80dp" >
+
+           
+
+            <EditText
+                android:id="@+id/usernameField"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/textfield"
+                android:ems="10"
+                android:hint="@string/username_hint"
+                android:maxHeight="40dp"
+                android:minHeight="@dimen/text_view_vertical_height"
+                android:paddingLeft="12dp"
+                android:paddingRight="5dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/passwordField"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/usernameField"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/textfield"
+                android:ems="10"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:maxHeight="40dp"
+                android:minHeight="@dimen/text_view_vertical_height"
+                android:paddingLeft="12dp"
+                android:paddingRight="5dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/emailField"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/passwordField"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/textfield"
+                android:ems="10"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:maxHeight="40dp"
+                android:minHeight="@dimen/text_view_vertical_height"
+                android:paddingLeft="12dp"
+                android:paddingRight="5dp"
+                android:singleLine="true" />
+
+            <RelativeLayout
+                android:id="@+id/rlDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/emailField"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp" >
+
+                <EditText
+                    android:id="@+id/birthdayField"
+                    android:layout_width="220dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/textfield"
+                    android:ems="10"
+                    android:hint="@string/birthday_hint"
+                    android:inputType="date"
+                    android:maxHeight="40dp"
+                    android:minHeight="@dimen/text_view_vertical_height"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/background_dark" />
+
+                <ImageView
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:contentDescription="@string/select_date"
+                    android:src="@drawable/calender" />
+            </RelativeLayout>
+            
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/rlDate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/logo" />
+        </RelativeLayout>
+        
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlRegister"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/register_button_selector" >
+
+        <TextView
+            android:id="@+id/RegisterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/register"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

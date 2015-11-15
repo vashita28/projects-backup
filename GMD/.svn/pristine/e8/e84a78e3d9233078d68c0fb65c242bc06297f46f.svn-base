@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_row_tools_n_instruments"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/tools_edittext_TNI"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/editText_bg_text_color"
+                android:hint="@string/TOOLS"
+                android:inputType="textNoSuggestions|textFilter|none"
+                android:lines="1"
+                android:nextFocusDown="@+id/quantity_edittext"
+                android:singleLine="true"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <!-- <RelativeLayout -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginRight="5dp" -->
+            <!-- android:layout_weight="0.4" > -->
+
+
+            <!-- <Spinner -->
+            <!-- android:id="@+id/list_of_tools_spinner" -->
+            <!-- android:layout_width="290dp" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="10dp" -->
+            <!-- android:background="@color/editText_bg_text_color" -->
+            <!-- android:textColor="@color/hint_text_color" -->
+            <!-- android:textSize="@dimen/normal_text_size" /> -->
+
+
+            <!-- <ImageView -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_alignParentRight="true" -->
+            <!-- android:layout_marginTop="7dp" -->
+            <!-- android:background="@drawable/spinner_dropdown" /> -->
+            <!-- </RelativeLayout> -->
+
+            <View
+                android:layout_width="295dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/below_line_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/quantity_edittext_TNI"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/editText_bg_text_color"
+                android:hint="@string/QUANTITY"
+                android:inputType="textNoSuggestions|textFilter|none"
+                android:lines="1"
+                android:nextFocusDown="@+id/remarks_edittext"
+                android:singleLine="true"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <View
+                android:layout_width="163dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/below_line_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/date_edittext_TNI"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/editText_bg_text_color"
+                android:hint="@string/DATE"
+                android:inputType="textNoSuggestions|textFilter|none"
+                android:lines="1"
+                android:singleLine="true"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <View
+                android:layout_width="163dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/below_line_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/remarks_edittext_TNI"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/editText_bg_text_color"
+                android:hint="@string/REMARKS"
+                android:inputType="textNoSuggestions|textFilter|none"
+                android:lines="1"
+                android:singleLine="true"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/below_line_2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+</LinearLayout>

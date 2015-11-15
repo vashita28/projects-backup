@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/txtLabel" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_centerInParent="true" -->
+    <!-- android:text="Book Now" -->
+    <!-- android:textSize="16dp" /> -->
+
+
+    <!-- <ImageView -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@id/txtLabel" -->
+    <!-- android:layout_centerHorizontal="true" -->
+    <!-- android:layout_marginTop="10dp" -->
+    <!-- android:src="@drawable/ic_pages" /> -->
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/android:list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:childDivider="@android:color/transparent"
+            android:childIndicator="@null"
+            android:divider="@android:color/transparent"
+            android:groupIndicator="@null"
+            android:scrollbarStyle="outsideOverlay" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+<!--     <TextView
+        android:id="@+id/android:empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Jobs Available"
+        android:textSize="@dimen/heading_textsize"
+        android:visibility="gone" /> -->
+
+    <RelativeLayout
+        android:id="@+id/rlEmpty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/ivTaxiIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/dlocation" />
+
+        <TextView
+            android:id="@+id/tvNoJobs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivTaxiIcon"
+            android:gravity="center_horizontal"
+            android:text="@string/no_jobs"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTryAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNoJobs"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="Please try again later"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/nowProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

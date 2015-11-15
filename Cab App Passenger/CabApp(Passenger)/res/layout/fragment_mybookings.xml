@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/inc_header"
+        layout="@layout/common_top_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/tab_selected" />
+
+    <RelativeLayout
+        android:id="@+id/rlSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inc_header"
+        android:background="@color/transparent_bg"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rlSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@android:color/white" >
+
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/textcolor_searchbg"
+                android:hint="@string/type_here"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingRight="30dp"
+                android:singleLine="true"
+                android:tag="search" />
+
+            <ImageView
+                android:id="@+id/ivCancelSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:src="@drawable/crossgray" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/topbarTabs"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/rlSearchLayout"
+        android:background="@color/tab_unselected" >
+
+        <TextView
+            android:id="@+id/tvAll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/alliconselected"
+            android:gravity="center_horizontal"
+            android:text="@string/all"
+            android:textColor="@color/textview_selected" />
+
+        <TextView
+            android:id="@+id/tvCash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cash"
+            android:gravity="center_horizontal"
+            android:text="@string/cash"
+            android:textColor="@color/textcolor_grey" />
+
+        <TextView
+            android:id="@+id/tvCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/card2"
+            android:gravity="center_horizontal"
+            android:text="@string/card"
+            android:textColor="@color/textcolor_grey" />
+
+        <TextView
+            android:id="@+id/tvAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/account"
+            android:gravity="center_horizontal"
+            android:text="@string/account"
+            android:textColor="@color/textcolor_grey"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvMyBookings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottombar"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/topbarTabs"
+        android:layout_marginTop="1dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottombar"
+        android:layout_below="@+id/topbarTabs"
+        android:gravity="center"
+        android:text="No bookings" />
+
+    <ProgressBar
+        android:id="@+id/nowProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottombar"
+        android:layout_below="@+id/topbarTabs"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tab_unselected"
+        android:clickable="true" >
+
+        <RelativeLayout
+            android:id="@+id/rl_active"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/tab_unselected"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/tvActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/activeselected"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/active"
+                android:textColor="@color/textview_selected" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/tab_unselected"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/tv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/time2"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/history"
+                android:textColor="@color/textcolor_grey" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

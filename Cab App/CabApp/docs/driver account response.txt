@@ -1,0 +1,31 @@
+{
+  workingCity: "117",
+  firstname: "Madalsa",
+  surname: "Khandelwal",
+  email: "vashita@pocketapp.co.uk",
+  username: "madalsa",
+  cityId: "117",
+  badgeColour: "",
+  badgeNumber: "8888",
+  badgeExpiration: "12/10/2019",
+  sector: "",
+  mobileNumber: "2355689741",
+  internationalCode: "91",
+  paymentType: "both",
+  vehicle: {
+    registration: "QWERTY",
+    make: "QWERTY",
+    model: "QWERTY",
+    colour: "RED"
+  },
+  credits: 4999,
+  wheelchairAccess: "false",
+  passengerCapacity: 4,
+  availability: "true",
+  bankDetails: {
+    name: "QWERTY",
+    accountName: "QWERTY",
+    accountNumber: "12355688",
+    sortCode: "123456"
+  }
+}

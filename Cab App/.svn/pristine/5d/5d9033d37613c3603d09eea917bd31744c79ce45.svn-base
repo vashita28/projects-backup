@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registration_bg" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_maps" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlSetUpAutoTopUp"
+        android:layout_below="@+id/topbar"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:paddingBottom="30dp" >
+
+            <RelativeLayout
+                android:id="@+id/rlMinimumSpend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/registration_btn_selector"
+                android:gravity="center_vertical"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/txtAuto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/auto_update_top_up"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtMinimumSpend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtAuto"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:text="MINIMUM SPEND "
+                    android:textColor="@color/textcolor_grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNumberOfCredits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlMinimumSpend"
+                android:layout_marginTop="1dp"
+                android:background="@color/tab_unselected"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/tvNoOfCredits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Number of credits"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="18sp" />
+
+                <SeekBar
+                    android:id="@+id/creditsbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNoOfCredits"
+                    android:layout_margin="10dp"
+                    android:max="100"
+                    android:progressDrawable="@drawable/progress_bar"
+                    android:secondaryProgress="0"
+                    android:thumb="@drawable/seekbar_thumb_selector" />
+                <!-- android:progress="20" -->
+
+                <LinearLayout
+                    android:id="@+id/llCreditsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/creditsbar"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/registration_bg"
+                    android:orientation="horizontal"
+                    android:paddingTop="1dp" >
+
+                    <TextView
+                        android:id="@+id/tvCreditsValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_weight="0.3"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvCredits"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.7"
+                        android:background="@color/tab_unselected"
+                        android:gravity="center"
+                        android:text="Credits"
+                        android:textColor="@color/textview_selected"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlNumberOfCredits"
+                android:layout_marginTop="25dp"
+                android:background="@color/tab_unselected"
+                android:gravity="center"
+                android:text="= Total"
+                android:textColor="@color/textview_unselected"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/tvTotalCreditsValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTotal"
+                android:background="@android:color/white"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tvTotalAmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCostPerCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTotalAmt"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:hint="per credit"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlSetUpAutoTopUp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <TextView
+            android:id="@+id/tvSetUpAutoTopup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/registration_btn_selector"
+            android:drawableLeft="@drawable/buy"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Set up auto top up"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

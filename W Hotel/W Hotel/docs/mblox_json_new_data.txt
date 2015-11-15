@@ -1,0 +1,138 @@
+{
+  "banner_image": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/56d17f23-e67e-4de5-a4b5-2e584af40407",
+  "app_data": {
+    "lng": "-84.360391",
+    "phone": "404-681-4434",
+    "type": "deals",
+    "hotspot": "Parish",
+    "address": "240 N. Highland Ave NE Atlanta, GA 30307",
+    "lat": "33.762327"
+  },
+  "click_url": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/56d17f23-e67e-4de5-a4b5-2e584af40407",
+  "title": "Parish:  Buy a Glass, Get the Bottle",
+  "desc": "Tuesdays and Thursdays, buy a glass from our featured wine list and we'll give you the bottle! ",
+  "type": "ad",
+  "click_action": "show_image"
+}{
+  "click_url": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/1b8a1038-1ba1-4efb-8c65-9f8eba7488d5",
+  "title": "Top Flr: Tuesdays",
+  "desc": "Enjoy a special selection of half-priced appetizers at the bar all night long. ",
+  "click_action": "show_image",
+  "priority": "3",
+  "banner_image": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/1b8a1038-1ba1-4efb-8c65-9f8eba7488d5",
+  "app_data": {
+    "dealpriority": "high",
+    "lng": "-84.380286",
+    "phone": "404-685-3110",
+    "type": "deals",
+    "hotspot": "Top Flr",
+    "address": "674 Myrtle St NE         Atlanta, GA 30308",
+    "lat": "33.773797"
+  },
+  "type": "ad"
+}{
+  "banner_image": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/078c28da-a153-4ba3-acdd-b38f8a20fd0f",
+  "app_data": {
+    "lng": "-84.38256",
+    "phone": "404-961-7177",
+    "type": "deals",
+    "hotspot": "The Lawrence",
+    "address": "905 Juniper St NE        Atlanta, GA 30309",
+    "lat": "33.779968"
+  },
+  "click_url": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/078c28da-a153-4ba3-acdd-b38f8a20fd0f",
+  "title": "The Lawrence: Sunday ",
+  "desc": "The Supper Experience, enjoy an entrée, side and a glass of wine for $20.",
+  "type": "ad",
+  "click_action": "show_image"
+}{
+  "banner_image": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/96e0241c-acd6-4b38-a75c-13744053ea48",
+  "app_data": {
+    "lng": "-84.42515",
+    "phone": "404-343-6574",
+    "type": "deals",
+    "hotspot": "Bone Lick BBQ",
+    "address": "1133 Huff Rd NW                   Atlanta, GA 30318",
+    "lat": "33.789616"
+  },
+  "click_url": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/96e0241c-acd6-4b38-a75c-13744053ea48",
+  "title": "Bone Lick BBQ Exclusive",
+  "desc": "Off the Menu Smoked Rib Tips tossed in Chipotle BBQ sauce for $10. ",
+  "type": "ad",
+  "click_action": "show_image"
+}{
+  "banner_image": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/69229a8c-62dd-41b9-9347-2d7c189cd002",
+  "app_data": {
+    "lng": "-84.384534",
+    "phone": "678-666-5198",
+    "type": "deals",
+    "hotspot": "Escorpion",
+    "address": "800 Peachtree St NE Atlanta, GA 30308",
+    "lat": "33.776936"
+  },
+  "click_url": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/69229a8c-62dd-41b9-9347-2d7c189cd002",
+  "title": "Escorpion Margaritas",
+  "desc": "Bring 8 guests to Escorpion & enjoy a FREE pitcher of House Margaritas! ",
+  "type": "ad",
+  "click_action": "show_image"
+}{
+  "app_data": {
+    "lng": "-84.389598",
+    "phone": "404-582-5800",
+    "type": "deals",
+    "hotspot": "W Atlanta-Downtown",
+    "address": "45 Ivan Allen Jr Blvd Atlanta, GA 30308",
+    "lat": "33.765627"
+  },
+  "banner_image": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/a48695e3-29f4-4876-bd1d-a4bd9fb298ae",
+  "click_url": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/a48695e3-29f4-4876-bd1d-a4bd9fb298ae",
+  "title": "W Atlanta-Downtown Insider Rate",
+  "desc": "Book now to enjoy rates up to 40% off.  ",
+  "type": "ad",
+  "click_action": "show_image"
+}{
+  "app_data": {
+    "lng": "-84.376817",
+    "phone": "404-343-4404",
+    "type": "deals",
+    "hotspot": "Edgewood Speakeasy",
+    "address": "327 Edgewood Ave SE Atlanta, GA 30312",
+    "lat": "33.75603"
+  },
+  "banner_image": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/a93c3ebd-5e1f-4dfc-a958-c913c672dfa2",
+  "click_url": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/a93c3ebd-5e1f-4dfc-a958-c913c672dfa2",
+  "title": "Speakeasy Cocktails",
+  "desc": "Try the VIP Boiler Maker or a W Insider Gangster Cocktail for $8",
+  "type": "ad",
+  "click_action": "show_image"
+}{
+  "app_data": {
+    "lng": "-84.384534",
+    "phone": "678-666-5198",
+    "type": "deals",
+    "hotspot": "Escorpion",
+    "address": "800 Peachtree St NE Atlanta, GA 30308",
+    "lat": "33.776936"
+  },
+  "banner_image": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/3010349b-cb90-4268-8551-bc95990ce177",
+  "click_url": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/3010349b-cb90-4268-8551-bc95990ce177",
+  "title": "Escorpion - Tacos",
+  "desc": "Enjoy $2 Tacos all day Monday or the 2 tacos & 2 sides lunch for $8.",
+  "type": "ad",
+  "click_action": "show_image"
+}{
+  "app_data": {
+    "lng": "-84.392774",
+    "phone": "404-524-0444",
+    "type": "deals",
+    "hotspot": "Park Bar",
+    "address": "150 Walton St                Atlanta, GA 30303",
+    "lat": "33.759134"
+  },
+  "banner_image": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/d55f7705-1e45-425c-94d8-d33e79e19419",
+  "click_url": "https:\/\/d1hy4bonc5c7qk.cloudfront.net\/d55f7705-1e45-425c-94d8-d33e79e19419",
+  "title": "Park Bar - Home of the 3-2-1",
+  "desc": "Ask for the W321. Three shots for the price of two in one cool glass. ",
+  "type": "ad",
+  "click_action": "show_image"
+}

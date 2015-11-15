@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registration_bg" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_registration" />
+
+    <RelativeLayout
+        android:id="@+id/rlTopPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:layout_marginTop="1dp"
+        android:background="@color/list_background"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:id="@+id/tvVehicleDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="4. VEHICLE DETAILS"
+            android:textColor="@color/textview_selected"
+            android:textSize="@dimen/heading_textsize"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivRegister4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/register4" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvNext"
+        android:layout_below="@+id/rlTopPoint" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rlVechicleRegistrationNo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+
+                <TextView
+                    android:id="@+id/tvVechicleRegistrationNoData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="VEHICLE REGISTRATION NO."
+                    android:textColor="@color/textview_selected"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlVechicleRegistrationNoData"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlVechicleRegistrationNo" >
+
+                <com.android.cabapp.view.CustomEditText
+                    android:id="@+id/etVechicleRegistrationNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@android:color/black" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llMake"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlVechicleRegistrationNoData"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/tvMake"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="MAKE"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="MODEL"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMakeData"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/llMake"
+                android:background="@android:color/white"
+                android:weightSum="1" >
+
+                <com.android.cabapp.view.CustomEditText
+                    android:id="@+id/etMake"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@android:color/black" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="2dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divider_color" />
+
+                <com.android.cabapp.view.CustomEditText
+                    android:id="@+id/etModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llColorPassenger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llMakeData"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <RelativeLayout
+                    android:id="@+id/rlColorParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            android:id="@+id/tvColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:paddingBottom="10dp"
+                            android:text="COLOUR"
+                            android:textColor="@color/textview_selected"
+                            android:textSize="@dimen/subheading_textsize"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlColorData"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/rlColor"
+                        android:background="@android:color/white" >
+
+                        <Spinner
+                            android:id="@+id/spinnerColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/white"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:prompt="@string/select_color"
+                            android:textColor="@android:color/black" />
+
+                        <ImageView
+                            android:id="@+id/ivDropDownColor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/downarrow" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlMaxPassengerParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlMaxPassengers"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            android:id="@+id/tvMaxPassengers"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:paddingBottom="10dp"
+                            android:text="MAX. PASSENGERS"
+                            android:textColor="@color/textview_selected"
+                            android:textSize="@dimen/subheading_textsize"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlMaxPassengersData"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/rlMaxPassengers"
+                        android:background="@android:color/white" >
+
+                        <Spinner
+                            android:id="@+id/spinnerPassengers"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/white"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textColor="@android:color/black" />
+
+                        <ImageView
+                            android:id="@+id/ivDropDownPassengers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/downarrow" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlWheelChair"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/llColorPassenger"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/wheelchair_selector"
+                android:clickable="false"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+
+                <ImageView
+                    android:id="@+id/ivWheelChair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/wheelchair" />
+
+                <TextView
+                    android:id="@+id/tvWheelChairAccess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivWheelChair"
+                    android:text="Wheelchair Access"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/heading_textsize"
+                    android:textStyle="normal" />
+
+                <ToggleButton
+                    android:id="@+id/toogleWheelChair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/wheelchair_selector"
+                    android:padding="2dp"
+                    android:textColor="@color/textview_selected"
+                    android:textOff="NO"
+                    android:textOn="YES"
+                    android:textSize="@dimen/heading_textsize" />
+                <!-- android:button="@drawable/checkbox_selector" -->
+            </RelativeLayout>
+
+            <!-- this is special case just for ireland country we ask for vechicle license no STARTS -->
+
+            <RelativeLayout
+                android:id="@+id/rlVechicleLicenseNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/rlWheelChair"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvVechicleLicenseNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:paddingBottom="10dp"
+                    android:text="VEHICLE LICENSE NO."
+                    android:textColor="@color/textview_selected"
+                    android:textSize="@dimen/subheading_textsize"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlVechicleLicenseNumberData"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlVechicleLicenseNumber" >
+
+                <com.android.cabapp.view.CustomEditText
+                    android:id="@+id/etVechicleLicenseNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <!-- this is special case just for ireland country we ask for vechicle license no ENDS -->
+
+            <TextView
+                android:id="@+id/tvHiddenNext"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlWheelChair"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Next"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvNext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

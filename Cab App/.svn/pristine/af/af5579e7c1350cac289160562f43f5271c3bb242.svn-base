@@ -1,0 +1,18 @@
+developmentAppKey = yv65eWSETC6lTF2U5YY2iA
+developmentAppSecret = viuN0YtOQQ6srJjpJu7GxQ
+#productionAppKey = yv65eWSETC6lTF2U5YY2iA
+#productionAppSecret = viuN0YtOQQ6srJjpJu7GxQ
+
+productionAppKey = AmcZWKEWSvmlXEMfsirWeg
+productionAppSecret = nV6sOgZcT1-81AbfWEEPhg
+
+#transport, only gcm is supported for now
+transport = gcm
+
+gcmSender = 620053630363
+inProduction = false
+
+# LogLevel is "VERBOSE", "DEBUG", "INFO", "WARN", "ERROR" or "ASSERT"
+developmentLogLevel = DEBUG
+productionLogLevel = ERROR
+minSdkVersion = 4

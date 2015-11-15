@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <RelativeLayout
+            android:id="@+id/rlParkOutsideHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".60" >
+
+            <RelativeLayout
+                android:id="@+id/rlBanner"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/ivParkImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/qeop_placeholder"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/llWelcomeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="100dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvWelcomeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="0.60"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:minLines="3"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="@string/welcome_text"
+                        android:textColor="@android:color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40" />
+                </LinearLayout>
+
+                <co.uk.android.lldc.custom.CustomTextView_HelveticaNeue_Regular
+                    android:id="@+id/tvExploreThePark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/llNotification"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/explore_bg"
+                    android:gravity="left|center_vertical"
+                    android:paddingEnd="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingStart="20dp"
+                    android:text="@string/explore_the_park"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/llNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_above="@+id/ivImgOver"
+                    android:layout_marginBottom="7dp"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:id="@+id/viewEmpty"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.7"
+                        android:background="@android:color/transparent" />
+
+                    <co.uk.android.lldc.custom.CustomTextView_RobotoItalic
+                        android:id="@+id/tvParkMinorNotice"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.3"
+                        android:background="@color/white_transparent"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:gravity="center_vertical|left|center_horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/stadium_close_text"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivImgOver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ivParkImage"
+                    android:layout_alignLeft="@+id/ivParkImage"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/ivParkImage"
+                    android:layout_marginBottom="-4dp"
+                    android:layout_marginLeft="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_over" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="100dp"
+            android:layout_weight="0.40"
+            android:background="@android:color/white" >
+
+            <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                android:id="@+id/tvWhatOnPark"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical|start|left"
+                android:paddingEnd="0dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="0dp"
+                android:paddingStart="3dp"
+                android:text="@string/whats_on_park"
+                android:textColor="@color/black_heading"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/hsvWhatsOnPark"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/tvWhatOnPark"
+                android:background="@android:color/transparent"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:id="@+id/llParkTaskList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/android:empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:text="No events available"
+                android:textColor="@color/black_heading"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relSearchWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/ivSearchBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/sesrch_btn" />
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:text="SEARCH"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

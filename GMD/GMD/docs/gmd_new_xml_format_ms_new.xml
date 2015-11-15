@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<callback xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+	<head>
+		<status>1</status>
+	</head>
+	<body>
+		<user_details>
+			<reassigned>false</reassigned>
+			<engineer_id>21</engineer_id>
+			<username>ronbutler</username>
+			<password>e10adc3949ba59abbe56e057f20f883e</password>
+		</user_details>
+		<project>
+			<report_id>3</report_id>
+			<site_name>Copper Mine</site_name>
+			<report_details>
+				<customer>Mining Co</customer>
+				<site>Copper Mine</site>
+				<country>Argentina</country>
+				<customer_rep>John Smith</customer_rep>
+				<list_of_distribution>
+					<item>
+						<location>ttt</location>
+						<dept_loc>rrrrr</dept_loc>
+						<surname>ttttt</surname>
+						<remarks>oooooooo</remarks>
+					</item>
+				</list_of_distribution>
+				<desc_of_service_performed>
+					<stator>aa</stator>
+					<rotor_poles>yyy</rotor_poles>
+					<motor_auxillaries>ttt</motor_auxillaries>
+					<cyclo_converter>
+						<heading>Select an option</heading>
+						<value/>
+					</cyclo_converter>
+				</desc_of_service_performed>
+				<distribution_to_customer>null</distribution_to_customer>
+				<reports>
+					<mill id="3">
+						<plant>Plant 1</plant>
+						<plant_type_gmd>true</plant_type_gmd>
+						<plant_type_transformer>false</plant_type_transformer>
+						<plant_type_ehouse>false</plant_type_ehouse>
+						<plant_type_drive>false</plant_type_drive>
+						<plant_type_cyclo>false</plant_type_cyclo>
+						<plant_type_motor>false</plant_type_motor>
+						<unit>20555</unit>
+						<system_machine>Motor</system_machine>
+						<type>WAZ 1380/100/72</type>
+						<serial_no>GOB 0014</serial_no>
+						<year_of_delivery>2003/2004</year_of_delivery>
+						<operating_hours>39030</operating_hours>
+						<service_information>
+							<service_type>
+								<new_plant>true</new_plant>
+								<upgrade>false</upgrade>
+								<troubleshooting>false</troubleshooting>
+								<others>false</others>
+								<first_installation>false</first_installation>
+								<minor_inspection>true</minor_inspection>
+								<major_overhaul>false</major_overhaul>
+							</service_type>
+							<service_tasks>
+								<installation>false</installation>
+								<comissioning>false</comissioning>
+								<test_assessment>false</test_assessment>
+								<others_service_task>false</others_service_task>
+								<overhaul_works>true</overhaul_works>
+								<re_comissioning>false</re_comissioning>
+								<diagnostics>false</diagnostics>
+								<factory_insp>false</factory_insp>
+								<repair>true</repair>
+								<investigation>false</investigation>
+								<inspection>false</inspection>
+								<motor_insp_inside>false</motor_insp_inside>
+								<motor_insp_external>false</motor_insp_external>
+							</service_tasks>
+						</service_information>
+					</mill>
+					<mill id="4">
+						<plant>Plant 1</plant>
+						<plant_type_gmd>true</plant_type_gmd>
+						<plant_type_transformer>false</plant_type_transformer>
+						<plant_type_ehouse>false</plant_type_ehouse>
+						<plant_type_drive>false</plant_type_drive>
+						<plant_type_cyclo>false</plant_type_cyclo>
+						<plant_type_motor>false</plant_type_motor>
+						<unit>20555</unit>
+						<system_machine>Motor</system_machine>
+						<type>WAZ 1380/100/72</type>
+						<serial_no>GOB 0014</serial_no>
+						<year_of_delivery>2003/2004</year_of_delivery>
+						<operating_hours>39030</operating_hours>
+						<service_information>
+							<service_type>
+								<new_plant>true</new_plant>
+								<upgrade>false</upgrade>
+								<troubleshooting>false</troubleshooting>
+								<others>false</others>
+								<first_installation>false</first_installation>
+								<minor_inspection>true</minor_inspection>
+								<major_overhaul>false</major_overhaul>
+							</service_type>
+							<service_tasks>
+								<installation>false</installation>
+								<comissioning>false</comissioning>
+								<test_assessment>false</test_assessment>
+								<others_service_task>false</others_service_task>
+								<overhaul_works>true</overhaul_works>
+								<re_comissioning>false</re_comissioning>
+								<diagnostics>false</diagnostics>
+								<factory_insp>false</factory_insp>
+								<repair>true</repair>
+								<investigation>false</investigation>
+								<inspection>false</inspection>
+								<motor_insp_inside>false</motor_insp_inside>
+								<motor_insp_external>false</motor_insp_external>
+							</service_tasks>
+						</service_information>
+					</mill>
+				</reports>
+			</report_details>
+			<summary>
+				<summary_of_inspection>
+					<item>nnn</item>
+					<item>ggg</item>
+					<item>wwwww</item>
+					<item>rrr</item>
+				</summary_of_inspection>
+				<service_information>
+					<service_information_item>
+						<service_information_no>ff</service_information_no>
+						<service_information_description>fff</service_information_description>
+						<service_information_from>hnn</service_information_from>
+						<service_information_till>mmn</service_information_till>
+					</service_information_item>
+					<service_information_item>
+						<service_information_no>ddd</service_information_no>
+						<service_information_description>ddd</service_information_description>
+						<service_information_from>yggg</service_information_from>
+						<service_information_till>jjjj</service_information_till>
+					</service_information_item>
+					<service_information_item>
+						<service_information_no>dddww</service_information_no>
+						<service_information_description>www</service_information_description>
+						<service_information_from>yyyyhh</service_information_from>
+						<service_information_till>oooo</service_information_till>
+					</service_information_item>
+					<service_information_item>
+						<service_information_no>aaa</service_information_no>
+						<service_information_description>aaa</service_information_description>
+						<service_information_from>aaa</service_information_from>
+						<service_information_till>aaa</service_information_till>
+					</service_information_item>
+				</service_information>
+				<reports>
+					<mill id="3">
+						<main_difficulties>
+							<item>aaa</item>
+							<item>jaaaaaaaaaa</item>
+						</main_difficulties>
+						<point_of_general_interest>
+							<item>aaaa</item>
+							<item>aaaaao</item>
+						</point_of_general_interest>
+						<recommendations>null</recommendations>
+						<main_motor_data>				
+							<main_motor_data_item>
+								<main_motor_data_no>1</main_motor_data_no>
+								<main_motor_data_description>Serial Number</main_motor_data_description>
+								<main_motor_data_data>15 MW</main_motor_data_data>
+								<main_motor_data_remarks>Good</main_motor_data_remarks>
+							</main_motor_data_item>
+							<main_motor_data_item>
+								<main_motor_data_no>2</main_motor_data_no>
+								<main_motor_data_description>Rated Current</main_motor_data_description>
+								<main_motor_data_data>392 V</main_motor_data_data>
+								<main_motor_data_remarks>Very Good</main_motor_data_remarks>
+							</main_motor_data_item>
+						</main_motor_data>
+						<specific_motor_data>
+							<specific_motor_data_item>
+								<specific_motor_data_no>1</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data>only data</specific_motor_data_data>
+								<specific_motor_data_qty/>
+								<specific_motor_data_size/>
+								<specific_motor_data_nm/>
+								<specific_motor_data_type/>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>2</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data>only data</specific_motor_data_data>
+								<specific_motor_data_qty/>
+								<specific_motor_data_size/>
+								<specific_motor_data_nm/>
+								<specific_motor_data_type/>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+						</specific_motor_data>
+					</mill>
+					<mill id="4">
+						<main_difficulties>
+							<item>bbbbba</item>
+						</main_difficulties>
+						<point_of_general_interest>
+							<item>bbbb</item>
+						</point_of_general_interest>
+						<recommendations>null</recommendations>
+						<main_motor_data>				
+							<main_motor_data_item>
+								<main_motor_data_no>1</main_motor_data_no>
+								<main_motor_data_description>Rated Active Power</main_motor_data_description>
+								<main_motor_data_data>100 V</main_motor_data_data>
+								<main_motor_data_remarks>Very Good</main_motor_data_remarks>
+							</main_motor_data_item>
+							<main_motor_data_item>
+								<main_motor_data_no>2</main_motor_data_no>
+								<main_motor_data_description>Rated Current</main_motor_data_description>
+								<main_motor_data_data>392 V</main_motor_data_data>
+								<main_motor_data_remarks>Very Good</main_motor_data_remarks>
+							</main_motor_data_item>
+						</main_motor_data>
+						<specific_motor_data>
+							<specific_motor_data_item>
+								<specific_motor_data_no>1</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data>only data</specific_motor_data_data>
+								<specific_motor_data_qty/>
+								<specific_motor_data_size/>
+								<specific_motor_data_nm/>
+								<specific_motor_data_type/>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>2</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data>only data</specific_motor_data_data>
+								<specific_motor_data_qty/>
+								<specific_motor_data_size/>
+								<specific_motor_data_nm/>
+								<specific_motor_data_type/>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>3</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data/>
+								<specific_motor_data_qty>QTY</specific_motor_data_qty>
+								<specific_motor_data_size>SIZE</specific_motor_data_size>
+								<specific_motor_data_nm>NM</specific_motor_data_nm>
+								<specific_motor_data_type/>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>4</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data/>
+								<specific_motor_data_qty>QTY</specific_motor_data_qty>
+								<specific_motor_data_size>SIZE</specific_motor_data_size>
+								<specific_motor_data_nm>NM</specific_motor_data_nm>
+								<specific_motor_data_type/>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>5</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data/>
+								<specific_motor_data_qty>QTY</specific_motor_data_qty>
+								<specific_motor_data_size>SIZE</specific_motor_data_size>
+								<specific_motor_data_nm/>
+								<specific_motor_data_type/>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>6</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data/>
+								<specific_motor_data_qty>QTY</specific_motor_data_qty>
+								<specific_motor_data_size>SIZE</specific_motor_data_size>
+								<specific_motor_data_nm>NM</specific_motor_data_nm>
+								<specific_motor_data_type/>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>7</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data/>
+								<specific_motor_data_qty>QTY</specific_motor_data_qty>
+								<specific_motor_data_size/>
+								<specific_motor_data_nm/>
+								<specific_motor_data_type>TYPE</specific_motor_data_type>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>8</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data/>
+								<specific_motor_data_qty>QTY</specific_motor_data_qty>
+								<specific_motor_data_size/>
+								<specific_motor_data_nm/>
+								<specific_motor_data_type>TYPE</specific_motor_data_type>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>9</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data/>
+								<specific_motor_data_qty>QTY</specific_motor_data_qty>
+								<specific_motor_data_size>SIZE</specific_motor_data_size>
+								<specific_motor_data_nm/>
+								<specific_motor_data_type>TYPE</specific_motor_data_type>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>10</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data/>
+								<specific_motor_data_qty>QTY</specific_motor_data_qty>
+								<specific_motor_data_size>SIZE</specific_motor_data_size>
+								<specific_motor_data_nm/>
+								<specific_motor_data_type>TYPE</specific_motor_data_type>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+							<specific_motor_data_item>
+								<specific_motor_data_no>11</specific_motor_data_no>
+								<specific_motor_data_description/>
+								<specific_motor_data_data/>
+								<specific_motor_data_qty>QTY</specific_motor_data_qty>
+								<specific_motor_data_size>SIZE</specific_motor_data_size>
+								<specific_motor_data_nm/>
+								<specific_motor_data_type>TYPE</specific_motor_data_type>
+								<specific_motor_data_remarks>REMARKS</specific_motor_data_remarks>
+							</specific_motor_data_item>
+						</specific_motor_data>
+					</mill>
+				</reports>
+			</summary>
+			<service_checklist>
+				<mill>
+					<mill_id>3</mill_id>
+					<mill_name>Mill A</mill_name>
+					<gmd_type>Pedestal</gmd_type>
+					<services>
+						<item>
+							<id>1</id>
+							<parent_id>0</parent_id>
+							<name>Stator</name>
+							<services>
+								<item>
+									<id>2</id>
+									<parent_id>1</parent_id>
+									<name>Stator foundation and frame</name>
+									<services>
+										<item>
+											<id>3</id>
+											<parent_id>2</parent_id>
+											<name>Corrosion - check &amp; describe</name>
+											<tasks>
+												<work_scope>To be done</work_scope>
+												<work_scope_comments>null</work_scope_comments>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+												<comments>null</comments>
+												<special_type>null</special_type>
+												<special_type_tag>null</special_type_tag>
+											</tasks>
+										</item>
+									</services>
+								</item>
+							</services>
+						</item>
+					</services>
+				</mill>
+				<mill>
+					<mill_id>4</mill_id>
+					<mill_name>Mill B</mill_name>
+					<gmd_type>Foot Mounted</gmd_type>
+					<services>
+						<item>
+							<id>1</id>
+							<parent_id>0</parent_id>
+							<name>Stator</name>
+							<services>
+								<item>
+									<id>2</id>
+									<parent_id>1</parent_id>
+									<name>Stator foundation and frame</name>
+									<services>
+										<item>
+											<id>6</id>
+											<parent_id>2</parent_id>
+											<name>Cracks - check &amp; describe</name>
+											<tasks>
+												<work_scope>To be done</work_scope>
+												<work_scope_comments>null</work_scope_comments>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+												<comments>null</comments>
+												<special_type>null</special_type>
+												<special_type_tag>null</special_type_tag>
+											</tasks>
+										</item>
+									</services>
+								</item>
+							</services>
+						</item>
+					</services>
+				</mill>
+			</service_checklist>
+
+		</project>
+	</body>
+</callback>

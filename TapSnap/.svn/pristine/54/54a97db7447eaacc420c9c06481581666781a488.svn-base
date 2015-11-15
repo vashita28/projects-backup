@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coudriet.snapnshare.android"
+    android:versionCode="2"
+    android:versionName="1.3" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+ 
+	<!--
+  	IMPORTANT: Change "com.coudriet.snapnshare.android.permission.C2D_MESSAGE" in the lines below
+  	to match your app's package name + ".permission.C2D_MESSAGE".
+	-->
+	
+	<permission android:protectionLevel="signature"
+    	android:name="com.coudriet.snapnshare.android.permission.C2D_MESSAGE" />
+	<uses-permission android:name="com.coudriet.snapnshare.android.permission.C2D_MESSAGE" />
+    
+	<uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="MainApplicationStartup"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Customactionbar" >
+        <activity
+            android:name="com.coudriet.snapnshare.android.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coudriet.snapnshare.android.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.coudriet.snapnshare.android.PasswordResetActivity"
+            android:label="@string/title_activity_password_reset"
+            android:parentActivityName="com.coudriet.snapnshare.android.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.coudriet.snapnshare.android.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName="com.coudriet.snapnshare.android.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.coudriet.snapnshare.android.EditFriendsActivity"
+            android:label="@string/title_activity_edit_friends"
+            android:parentActivityName="com.coudriet.snapnshare.android.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.snapnshare.android.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.snapnshare.android.RecipientsActivity"
+            android:label="@string/title_activity_recipients"
+            android:parentActivityName="com.coudriet.snapnshare.android.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.snapnshare.android.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.snapnshare.android.ViewImageActivity"
+            android:label="@string/title_activity_view_image"
+            android:parentActivityName="com.coudriet.snapnshare.android.MainActivity" 
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.snapnshare.android.MainActivity" />
+        </activity>
+        
+        <service android:name="com.parse.PushService" />
+		<receiver android:name="com.parse.ParseBroadcastReceiver">
+  			<intent-filter>
+    			<action android:name="android.intent.action.BOOT_COMPLETED" />
+    			<action android:name="android.intent.action.USER_PRESENT" />
+  			</intent-filter>
+		</receiver>
+		<receiver android:name="com.parse.GcmBroadcastReceiver"
+    		android:permission="com.google.android.c2dm.permission.SEND">
+  		<intent-filter>
+    	  <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+    	  <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+			
+			<!--
+      			IMPORTANT: Change "com.coudriet.snapnshare.android" to match your app's package name.
+    		-->
+    		
+    		<category android:name="com.coudriet.snapnshare.android" />
+  		  </intent-filter>
+		</receiver>
+		
+		
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+		
+		<activity android:name="com.facebook.LoginActivity"
+		    android:label="@string/app_name" />
+		
+    </application>
+</manifest>

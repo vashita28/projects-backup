@@ -1,0 +1,1592 @@
+<callback xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+	<service_checklist>
+<mill>
+	<mill_id>7</mill_id>
+	<mill_name>mumbai 3</mill_name>
+	<gmd_type>Pedestal</gmd_type>
+	<services>
+<item>
+						<id>3</id>
+						<parent_id>2</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = ""></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jjgh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>4</id>
+						<parent_id>2</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = ""></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">hjhjh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>5</id>
+						<parent_id>2</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = ""></special_type>
+							<work_carried_out task_completed = "true">No Access</work_carried_out>
+							<conditions task_completed = "true">Retight Partially</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">good</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>6</id>
+						<parent_id>2</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = ""></special_type>
+							<work_carried_out task_completed = "true">Inspected</work_carried_out>
+							<conditions task_completed = "true">Good Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">gjcjvhgi6gyjjgv</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>7</id>
+						<parent_id>2</parent_id>
+						<name>Check stator frame</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = ""></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">huyj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>8</id>
+						<parent_id>2</parent_id>
+						<name>Check stator bolts and pins</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = ""></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">,om8mom</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>9</id>
+						<parent_id>2</parent_id>
+						<name>Check stator feet</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = ""></special_type>
+							<work_carried_out task_completed = "true">Inspected</work_carried_out>
+							<conditions task_completed = "true">Good Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">,gotogltvtgt</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>10</id>
+						<parent_id>2</parent_id>
+						<name>Check foundation anchors</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = ""></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Out Of Service</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">ihy7bt6</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>11</id>
+						<parent_id>2</parent_id>
+						<name>Check foundation stop blocks</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = ""></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Out Of Service</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">h76gihvg7hbjkho</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>12</id>
+						<parent_id>2</parent_id>
+						<name>Check air gap</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Not Inspected</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">good work</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>13</id>
+						<parent_id>2</parent_id>
+						<name>Check sole plate clearance</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Very good cond.</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">hjji8</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>14</id>
+						<parent_id>2</parent_id>
+						<name>Check covers (including fixings)</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 3y.</recommendations>
+							<comments task_completed = "true">jfirngivigngj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>16</id>
+						<parent_id>15</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">jgghohouguifuyffjvikhboubuooub</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>17</id>
+						<parent_id>15</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">g9od</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>18</id>
+						<parent_id>15</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">ghgyf</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>19</id>
+						<parent_id>15</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">abc</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>20</id>
+						<parent_id>15</parent_id>
+						<name>Check joints</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To monitor daily</recommendations>
+							<comments task_completed = "true">hjjj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>22</id>
+						<parent_id>21</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">jojo</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>23</id>
+						<parent_id>21</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">okkoki</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>24</id>
+						<parent_id>21</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Retight Partially</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">jbjhih</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>25</id>
+						<parent_id>21</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">hjbjh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>26</id>
+						<parent_id>21</parent_id>
+						<name>Core bolts &amp; pressing system</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">good</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>27</id>
+						<parent_id>21</parent_id>
+						<name>Check lamination</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">jkjkkn</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>28</id>
+						<parent_id>21</parent_id>
+						<name>Check core lamination stop blocks</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">jj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>29</id>
+						<parent_id>21</parent_id>
+						<name>Check core partition</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">ihjhj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>30</id>
+						<parent_id>21</parent_id>
+						<name>Check press fingers - Feeder side</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Good Condition</conditions>
+							<recommendations task_completed = "true">Reworked</recommendations>
+							<comments task_completed = "true">jgit7i48tr</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>31</id>
+						<parent_id>21</parent_id>
+						<name>Check press fingers - Discharge side</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">irirjfjfjfijf</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>32</id>
+						<parent_id>21</parent_id>
+						<name>Check key bars</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">bouv6oviyuovyvovyovyo</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>33</id>
+						<parent_id>21</parent_id>
+						<name>Check key bar holding plates</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Damage</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">iyi5fu5fu5ff5ivyv</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>34</id>
+						<parent_id>21</parent_id>
+						<name>Check core bolt insulation</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">ihhibiuhouhouuho</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>35</id>
+						<parent_id>21</parent_id>
+						<name>Check key bar stop blocks</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">hi hkbhibou</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>37</id>
+						<parent_id>36</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Need quick action</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">hjghghv</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>38</id>
+						<parent_id>36</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">ffgffy</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>39</id>
+						<parent_id>36</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">goood</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>40</id>
+						<parent_id>36</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Good Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">njhjji</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>41</id>
+						<parent_id>36</parent_id>
+						<name>Wear of outer and inner lip seal</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">iuvyivhiigo</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>42</id>
+						<parent_id>36</parent_id>
+						<name>Spring &amp; holding plate segments</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Good Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 3y.</recommendations>
+							<comments task_completed = "true">gigiygiygiguihi</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>43</id>
+						<parent_id>36</parent_id>
+						<name>Check seal-wear alarm signal</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jfjfitt</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>44</id>
+						<parent_id>36</parent_id>
+						<name>Installed to standard</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">giygyigyiviuhou</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>45</id>
+						<parent_id>36</parent_id>
+						<name>Check for worn or damaged parts</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Good Condition</conditions>
+							<recommendations task_completed = "true">To monitor weekly</recommendations>
+							<comments task_completed = "true">ftt</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>47</id>
+						<parent_id>46</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">good</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>48</id>
+						<parent_id>46</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">bkhviuvuivyivyivouboubouhpiph7h7ppj8</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>49</id>
+						<parent_id>46</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">good</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>50</id>
+						<parent_id>46</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">uyuhihuh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>51</id>
+						<parent_id>46</parent_id>
+						<name>Check bars in slot</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">kjkjk</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>52</id>
+						<parent_id>46</parent_id>
+						<name>Check bar ends non connection side</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">uguggu</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>53</id>
+						<parent_id>46</parent_id>
+						<name>Check bar ends connection side</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">fggfg</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>54</id>
+						<parent_id>46</parent_id>
+						<name>Check bar and interconnection</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">hjyvjub</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>55</id>
+						<parent_id>46</parent_id>
+						<name>Check slot wedges</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To rework</recommendations>
+							<comments task_completed = "true">hihhi</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>56</id>
+						<parent_id>46</parent_id>
+						<name>Check all winding fixing parts</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To monitor daily</recommendations>
+							<comments task_completed = "true">jjjj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>57</id>
+						<parent_id>46</parent_id>
+						<name>Check main cablings and supports</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">guhg</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>58</id>
+						<parent_id>46</parent_id>
+						<name>Check winding insulation resistance</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">hghgh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>60</id>
+						<parent_id>59</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jhuh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>61</id>
+						<parent_id>59</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">hhjh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>62</id>
+						<parent_id>59</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">hh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>63</id>
+						<parent_id>59</parent_id>
+						<name>Air gap sensor measurement</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">ghg</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>66</id>
+						<parent_id>65</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To monitor weekly</recommendations>
+							<comments task_completed = "true">hyfuyfugygcu</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>67</id>
+						<parent_id>65</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Out Of Service</conditions>
+							<recommendations task_completed = "true">To inspect in 3y.</recommendations>
+							<comments task_completed = "true">hibu</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>68</id>
+						<parent_id>65</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Damage</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">huyuh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>69</id>
+						<parent_id>65</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">ihihi</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>70</id>
+						<parent_id>65</parent_id>
+						<name>Check pole coils and insulation</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">gcgfft</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>71</id>
+						<parent_id>65</parent_id>
+						<name>Check locking of terminals</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">gyyh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>72</id>
+						<parent_id>65</parent_id>
+						<name>Check rotor cover fixings</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">8ihhuobjobojnjo</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>73</id>
+						<parent_id>65</parent_id>
+						<name>Check coil supports</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Inspected</work_carried_out>
+							<conditions task_completed = "true">Good Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">ygh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>75</id>
+						<parent_id>74</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Good Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">kuvkuvviufi5if5kvhkv</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>76</id>
+						<parent_id>74</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">biubkjbjkbuooug6giviyvhj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>77</id>
+						<parent_id>74</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Very good cond.</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">viuubhihk jkbouohbuonoio0i</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>78</id>
+						<parent_id>74</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 3y.</recommendations>
+							<comments task_completed = "true">tdffy gyyhuhjj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>79</id>
+						<parent_id>74</parent_id>
+						<name>Installed to standard</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Inspected</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To rework</recommendations>
+							<comments task_completed = "true">bhibinjohy7yv6vy6b7hu7inoo9m9ok</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>82</id>
+						<parent_id>81</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">gyg</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>83</id>
+						<parent_id>81</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">khkh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>84</id>
+						<parent_id>81</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jhgjg</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>85</id>
+						<parent_id>81</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">tugyv</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>86</id>
+						<parent_id>81</parent_id>
+						<name>Installed to standard</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">gjhjh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>87</id>
+						<parent_id>81</parent_id>
+						<name>Check spring pressure</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Inspected</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To monitor weekly</recommendations>
+							<comments task_completed = "true">nkjjk</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>88</id>
+						<parent_id>81</parent_id>
+						<name>Check holder clearance</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jhhjj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>90</id>
+						<parent_id>89</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To monitor weekly</recommendations>
+							<comments task_completed = "true">knnknk</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>91</id>
+						<parent_id>89</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jhjh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>92</id>
+						<parent_id>89</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">hhjh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>93</id>
+						<parent_id>89</parent_id>
+						<name>Installed to standard</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">khjn</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>94</id>
+						<parent_id>89</parent_id>
+						<name>Check brush wear</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">bjbj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>96</id>
+						<parent_id>95</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 3y.</recommendations>
+							<comments task_completed = "true">fyfyf</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>97</id>
+						<parent_id>95</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Inspected</work_carried_out>
+							<conditions task_completed = "true">Good Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">ghg</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>98</id>
+						<parent_id>95</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">njnn</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>99</id>
+						<parent_id>95</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jjji</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>100</id>
+						<parent_id>95</parent_id>
+						<name>Slip ring joins - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jhhhh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>101</id>
+						<parent_id>95</parent_id>
+						<name>Installed to standard</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">hn</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>102</id>
+						<parent_id>95</parent_id>
+						<name>Slip ring condition</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">knjn</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>103</id>
+						<parent_id>95</parent_id>
+						<name>Slip ring insulation</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Good Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 3y.</recommendations>
+							<comments task_completed = "true">fdfdd</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>105</id>
+						<parent_id>104</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To rework</recommendations>
+							<comments task_completed = "true">rfgf</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>106</id>
+						<parent_id>104</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Out Of Service</conditions>
+							<recommendations task_completed = "true">To inspect in 1m.</recommendations>
+							<comments task_completed = "true">ghggh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>107</id>
+						<parent_id>104</parent_id>
+						<name>Leakage - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">jgghg</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>108</id>
+						<parent_id>104</parent_id>
+						<name>Check heat exchangers</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">Reworked</recommendations>
+							<comments task_completed = "true">ghuggj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>109</id>
+						<parent_id>104</parent_id>
+						<name>Clean heat exchangers</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jjj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>110</id>
+						<parent_id>104</parent_id>
+						<name>Water flow check</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jjj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>112</id>
+						<parent_id>111</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jjjj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>113</id>
+						<parent_id>111</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jhjhhi</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>114</id>
+						<parent_id>111</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">immi</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>115</id>
+						<parent_id>111</parent_id>
+						<name>Check filter damage</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">kjkj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>116</id>
+						<parent_id>111</parent_id>
+						<name>Clean  or  replace filters</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">kjkjnk</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>118</id>
+						<parent_id>117</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To monitor weekly</recommendations>
+							<comments task_completed = "true">abcd</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>119</id>
+						<parent_id>117</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">hjhj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>120</id>
+						<parent_id>117</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To monitor daily</recommendations>
+							<comments task_completed = "true">njhjh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>121</id>
+						<parent_id>117</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Retighted</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">kjkj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>123</id>
+						<parent_id>122</parent_id>
+						<name>Check manual operation</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 3y.</recommendations>
+							<comments task_completed = "true">jhbhj</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>124</id>
+						<parent_id>122</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Reworked</work_carried_out>
+							<conditions task_completed = "true">Out Of Service</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jknk</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>125</id>
+						<parent_id>122</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">mn</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>126</id>
+						<parent_id>122</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Bad Condition</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">knn</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>127</id>
+						<parent_id>122</parent_id>
+						<name>Cracks - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 6m.</recommendations>
+							<comments task_completed = "true">hbvbvhg</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>129</id>
+						<parent_id>128</parent_id>
+						<name>Check manual operation</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">khknnm</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>130</id>
+						<parent_id>128</parent_id>
+						<name>Corrosion - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">tygfgf</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>131</id>
+						<parent_id>128</parent_id>
+						<name>Cleanliness - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">jghgh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>132</id>
+						<parent_id>128</parent_id>
+						<name>Discoloration - check &amp; describe</name>
+						<tasks>
+							<work_scope task_completed = "true">To be done</work_scope>
+							<special_type task_completed = "true"></special_type>
+							<work_carried_out task_completed = "true">Replaced</work_carried_out>
+							<conditions task_completed = "true">Normal</conditions>
+							<recommendations task_completed = "true">To inspect in 1y.</recommendations>
+							<comments task_completed = "true">hghggh</comments>
+							<photograph task_completed = "true"></photograph>
+							<helpsupport task_completed = "true"></helpsupport>
+						</tasks>
+					</item><item>
+						<id>133</id>
+						<paren

@@ -1,0 +1,235 @@
+package co.uk.android.lldc.fragments;
+
+import java.util.Calendar;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Color;
+import android.net.ParseException;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.text.Html;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import co.uk.android.lldc.LLDCApplication;
+import co.uk.android.lldc.R;
+import co.uk.android.lldc.models.ServerModel;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
+
+public class EventOverviewFragment extends Fragment {
+
+	TextView txt_eventname, txt_eventvenue, txt_eventdate, txt_eventdetails;
+
+	ImageView img_imagedetls;
+
+	String _id, tableName;
+
+	// Button btn_calendar;
+	RelativeLayout rlCalender;
+	TextView tvCalender;
+	ImageView ivCalenderEvent;
+
+	ServerModel selectedModel = new ServerModel();
+
+	public EventOverviewFragment(String _id, String tableName) {
+		// TODO Auto-generated constructor stub
+		this._id = _id;
+		this.tableName = tableName;
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		View rootView = inflater.inflate(R.layout.eventdetails_overview,
+				container, false);
+		img_imagedetls = (ImageView) rootView.findViewById(R.id.img_imagedetls);
+		txt_eventname = (TextView) rootView.findViewById(R.id.eventname);
+		txt_eventvenue = (TextView) rootView.findViewById(R.id.eventvenue);
+		txt_eventdate = (TextView) rootView.findViewById(R.id.eventdate);
+		txt_eventdetails = (TextView) rootView
+				.findViewById(R.id.txt_eventdetails);
+
+		rlCalender = (RelativeLayout) rootView.findViewById(R.id.rlCalender);
+
+		tvCalender = (TextView) rootView.findViewById(R.id.tvCalender);
+		ivCalenderEvent = (ImageView) rootView
+				.findViewById(R.id.ivCalenderEvent);
+
+		txt_eventname.setSelected(true);
+		txt_eventvenue.setSelected(true);
+
+		// rlCalender.setOnClickListener(new OnClickListener() {
+		//
+		// @Override
+		// public void onClick(View arg0) {
+		// // TODO Auto-generated method stub
+		// if (tvCalender.getText().toString().contains("I'M GOING")) {
+		// // if (((Button)
+		// // arg0).getText().toString().contains("I'M GOING")) {
+		// LLDCApplication.onShowToastMesssage(getActivity(),
+		// "Event already added...");
+		// } else
+		// onAddCalendarEvent();
+		// }
+		// });
+		onGetDataFromDB();
+		return rootView;
+	}
+
+	void CalenderClickBg() {
+
+		if (!readCalendarEvent(selectedModel.getName())) {
+			rlCalender.setBackgroundColor(getResources().getColor(
+					R.color.calender_bg_unselected));
+			tvCalender.setTextColor(getResources().getColor(
+					R.color.black_heading));
+			ivCalenderEvent.setImageResource(R.drawable.calender_icon);
+			tvCalender.setText("CALENDER");
+
+		} else {
+			rlCalender.setBackgroundColor(getResources().getColor(
+					R.color.calender_bg_selected));
+			tvCalender.setTextColor(getResources().getColor(
+					android.R.color.white));
+			ivCalenderEvent.setImageResource(R.drawable.white_cal);
+			tvCalender.setText("I'M GOING!");
+		}
+
+	}
+
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		// if (readCalendarEvent(selectedModel.getName())) {
+
+		rlCalender.setBackgroundColor(getResources().getColor(
+				R.color.calender_bg_unselected));
+		tvCalender.setTextColor(getResources().getColor(R.color.black_heading));
+		ivCalenderEvent.setImageResource(R.drawable.calender_icon);
+		tvCalender.setText("CALENDER");
+		// CalenderClickBg();
+		// btn_calendar.setBackgroundColor(Color.parseColor("#A00057"));
+		// Drawable image = getActivity().getResources().getDrawable(
+		// R.drawable.white_cal);
+		// image.setBounds(0, 0, 20, 20);
+		// btn_calendar.setCompoundDrawables(image, null, null, null);
+		// btn_calendar.setText("I'M GOING!");
+		// btn_calendar.setTextColor(Color.WHITE);
+		// btn_calendar.setPressed(true);
+		// }
+	}
+
+	@SuppressLint({ "ResourceAsColor", "DefaultLocale" })
+	public void onGetDataFromDB() {
+		try {
+			selectedModel = LLDCApplication.DBHelper.getSingleData(_id,
+					tableName);
+
+			txt_eventname.setText(selectedModel.getName().toString()
+					.toUpperCase());
+			txt_eventvenue.setText(selectedModel.getVenueTitle().toString()
+					.toUpperCase());
+			txt_eventdate.setText(selectedModel.getActiveDays().toString()
+					.toUpperCase());
+			String temp = "<p><b>" + selectedModel.getShortDesc() + "</b></p>"
+					+ "<p>" + selectedModel.getLongDescription() + "</p>";
+
+			txt_eventdetails.setText(Html.fromHtml(temp));
+
+			txt_eventname.setTextColor(Color.parseColor(selectedModel
+					.getColor()));
+			txt_eventvenue.setTextColor(Color.parseColor(selectedModel
+					.getColor()));
+			txt_eventdate.setTextColor(Color.parseColor(selectedModel
+					.getColor()));
+			try {
+				String szImageUrl = selectedModel.getLargeImage();
+				Log.e("ExplorerAdapter", "szImageUrl::> " + szImageUrl);
+				ImageLoader.getInstance().displayImage(szImageUrl,
+						img_imagedetls);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			// if (readCalendarEvent(selectedModel.getName())) {
+
+			// CalenderClickBg();
+			// btn_calendar.setBackgroundColor(Color.parseColor("#A00057"));
+			// Drawable image = getActivity().getResources().getDrawable(
+			// R.drawable.white_cal);
+			// image.setBounds(0, 0, 20, 20);
+			// btn_calendar.setCompoundDrawables(image, null, null, null);
+			// btn_calendar.setText("I'M GOING!");
+			// btn_calendar.setTextColor(Color.WHITE);
+			// btn_calendar.setPressed(true);
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void onAddCalendarEvent() {
+		try {
+			@SuppressWarnings("unused")
+			Calendar cal = Calendar.getInstance();
+			Intent intent = new Intent(Intent.ACTION_INSERT);
+			intent.setType("vnd.android.cursor.item/event");
+			intent.putExtra("beginTime", selectedModel.getStartDateTime());
+			// intent.putExtra("allDay", true);
+			// intent.putExtra("rrule", "FREQ=YEARLY");
+			intent.putExtra("endTime", selectedModel.getEndDateTime());
+			intent.putExtra("title", selectedModel.getName());
+			intent.putExtra("description", selectedModel.getShortDesc());
+			intent.putExtra("eventLocation", "Geolocation");
+			startActivity(intent);
+
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public boolean readCalendarEvent(String eventTitle) {
+		boolean isPresent = false;
+		Cursor cursor = getActivity().getContentResolver()
+				.query(Uri.parse("content://com.android.calendar/events"),
+						new String[] { "calendar_id", "title", "description",
+								"dtstart", "dtend", "eventLocation" }, null,
+						null, null);
+		cursor.moveToFirst();
+		// fetching calendars name
+		String CNames[] = new String[cursor.getCount()];
+
+		// fetching calendars id
+		// ArrayList<String> nameOfEvent = new ArrayList<String>();
+		cursor.moveToFirst();
+		for (int i = 0; i < CNames.length; i++) {
+			if (eventTitle.equals(cursor.getString(1).toString())) {
+				isPresent = true;
+				break;
+			}
+			cursor.moveToNext();
+		}
+
+		return isPresent;
+	}
+
+}

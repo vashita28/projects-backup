@@ -1,0 +1,58 @@
+1st:    NSRange mobValidation = [error.message rangeOfString:@"mobileNumber already in use" options:NSCaseInsensitiveSearch];
+                 NSRange mobInvalid = [error.message rangeOfString:@"invalid mobileNumber" options:NSCaseInsensitiveSearch];
+                  NSRange emailValidation = [error.message rangeOfString:@"email already in use" options:NSCaseInsensitiveSearch];
+                  NSRange emailInvalid = [error.message rangeOfString:@"invalid email" options:NSCaseInsensitiveSearch];
+				  
+				  
+ 2nd :  NSRange usernameValidation = [error.message rangeOfString:@"username already in use" options:NSCaseInsensitiveSearch];
+ 
+ 3rd  NSRange badgeNumValidation = [error.message rangeOfString:@"A driver has been approved with that badge number" options:NSCaseInsensitiveSearch];			
+
+ All ERRORS:
+				'forenameMissing' => 'missing firstname',
+                'surnameMissing' => 'missing surname',
+                'mobileMissing' => 'missing mobileNumber',
+                'mobileInvalid' => 'invalid mobileNumber',
+                'usernameMissing' => 'missing username',
+                'emailMissing' => 'missing email',
+                'paymentTypeMissing' => 'missing paymentType',
+                'paymentTypeInvalid' => 'invalid paymentType',
+                'vehicleModelMissing' => 'missing vehicle model',
+                'vehicleMakeMissing' => 'missing vehicle make',
+                'vehicleColourMissing' => 'missing vehicle colour',
+                'vehicleRegistrationMissing' => 'missing vehicle registration',
+                'badgeExpirationMissing' => 'missing badgeExpiration',
+                'badgeNumberMissing' => 'missing badge number',
+                'badgeColourMissing' => 'missing badgeColour',
+                'passwordMissing' => 'missing password',
+                'passwordInvalid' => 'invalid password - must be 6 characters or more',
+                'emailInvalid' => 'invalid email',
+                'badgeExpirationInvalid' => 'invalid badgeExpiration',
+                'mobileInUse' => 'mobileNumber already in use',
+                'emailInUse' => 'email already in use',
+                'usernameInUse' => 'username already in use',
+                'expirationDatePast' => 'Badge expiration date cannot be in the past',
+				'badgeNumberExists' => 'A driver has been approved with that badge number',
+                'driverIdMissing' => '"Driver ID" is a required field',
+                'driverIdExists' => 'A driver has been approved with that driver ID',
+                'driverLicenceMissing' => '"Licence document / image" is a required field',
+                'wheelchairAccessMissing' => 'missing wheelchair access setting',
+
+
+				'workingCityMissing' => 'missing working city',
+				'workingCityInvalid' => 'invalid working city',
+                
+				'sectorMissing' => 'missing sector',
+    
+				'sortCodeInvalid' => 'invalid sort code',
+				'sortCodeMissing' => 'missing sort code',
+				'accountNumberInvalid' => 'invalid account number',
+				'accountNumberMissing' => 'missing account number',
+				'ibanInvalid' => 'invalid iban',
+				'ibanMissing' => 'missing iban',
+				'vehicleLicenseNoMissing' => 'missing vehicle license number',
+				'vehicleLicenseNoInvalid' => 'invalid vehicle license number',
+				'bankNameMissing' => 'missing bank name',
+				'bankAccountNameMissing' => 'missing bank account name',
+                'maximumPassengersInvalid' => 'maximum number of passengers exceeds limits for selected city',
+                'maximumPassengersMissing' => 'missing maximum number of passengers',

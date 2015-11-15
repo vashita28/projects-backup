@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/messageIcon"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/camera" />
+
+    <RelativeLayout
+        android:id="@+id/rlText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/messageIcon"
+        android:paddingTop="4dp" >
+
+        <TextView
+            android:id="@+id/messageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp"
+            android:paddingBottom="4dp"
+            android:text="Sat Mar 1 02:44 AM"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/senderstatus_textcolor"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/messageTime"
+            android:background="@color/senderlabel_textcolor" />
+
+        <TextView
+            android:id="@+id/senderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="chris"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/senderlabel_textcolor"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

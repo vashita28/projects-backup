@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/killreport"
+        android:icon="@drawable/kill"
+        android:title="Kill Report"/>
+    <!-- <item -->
+    <!-- android:id="@+id/choosemill" -->
+    <!-- android:icon="@drawable/choose" -->
+    <!-- android:title="Select Mill"/> -->
+
+</menu>

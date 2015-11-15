@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_divider" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/common_top_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlbottombarFareCalculator"
+        android:layout_below="@+id/header"
+        android:background="@color/list_divider" >
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvPickUpPoint"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/list_background"
+                android:drawableLeft="@drawable/pickup_point"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Pick-up "
+                android:textColor="@color/textview_unselected"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/llPickUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPickUpPoint"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/list_background"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <RelativeLayout
+                    android:id="@+id/rlPickUpAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3" >
+
+                    <com.android.cabapp.util.CustomAutoCompleteTextView
+                        android:id="@+id/autoCompleteTextPickUpAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@android:color/white"
+                        android:hint="Address "
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/etPickupPincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/autoCompleteTextPickUpAddress"
+                        android:background="@android:color/white"
+                        android:hint="Postcode"
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvPickUpLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/track_gray"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="23dp"
+                    android:text="Location"
+                    android:textColor="@color/textcolor_grey"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDropOffPoint"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/llPickUp"
+                android:layout_marginTop="1dp"
+                android:background="@color/list_background"
+                android:drawableLeft="@drawable/drop_point"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Drop off "
+                android:textColor="@color/textview_unselected"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/llDropOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDropOffPoint"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/list_background"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <RelativeLayout
+                    android:id="@+id/rlDropOffAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:visibility="visible" >
+
+                    <com.android.cabapp.util.CustomAutoCompleteTextView
+                        android:id="@+id/autoCompleteTextDropOffAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@android:color/white"
+                        android:hint="Address "
+                        android:imeOptions="actionNext"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true" />
+
+                    <EditText
+                        android:id="@+id/etDropOffPinCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/autoCompleteTextDropOffAddress"
+                        android:background="@android:color/white"
+                        android:hint="Postcode"
+                        android:imeOptions="actionDone"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvDropOffLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/track_gray"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="23dp"
+                    android:text="Location"
+                    android:textColor="@color/textcolor_grey"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/llDropOff"
+                android:background="@drawable/registration_btn_selector" >
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/registration_btn_selector"
+                    android:clickable="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Calculate"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTotalAmtDistance"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_below="@+id/rlTvTotal"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:id="@+id/tvTotalAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal|bottom"
+                    android:text="0.00"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rlDistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tvTotalAmount"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/tvDistanceHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:text="Distance "
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/distance_textsize" />
+
+                    <TextView
+                        android:id="@+id/tvDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/tvDistanceHeading"
+                        android:text=" "
+                        android:textColor="@color/textview_selected"
+                        android:textSize="@dimen/distance_textsize" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlHiddenCabPay"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlTotalAmtDistance"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvHiddenCabPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/registration_btn_selector"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/card2new"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="Cab:Pay"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/bottom_tab_textsize"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlbottombarFareCalculator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/tvCabPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:clickable="false"
+            android:drawableLeft="@drawable/card2new"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Cab:Pay"
+            android:textColor="@color/textview_unselected"
+            android:textSize="@dimen/heading_textsize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlFareCalculatorOverlayHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/overlay_bg"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlFareCalculatorOverlayBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="200dp"
+        android:background="@color/overlay_bg"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvFareCalculatorOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvForLongerOverlay"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingTop="20dp"
+            android:text="FARE CALCULATOR"
+            android:textColor="@color/textview_selected"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvForLongerOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlFareCalculatorOkyGotIt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="70dp"
+            android:gravity="center_horizontal"
+            android:text="For longer journeys select pick \n up and drop off, press &apos;Calculate&apos; \n to see estimated fare and take \n payment up front with Cab:Pay"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlFareCalculatorOkyGotIt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/registration_button"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tvOkGotItFareCalculator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="OKAY GOT IT!"
+                android:textColor="@color/textview_selected"
+                android:textSize="25sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

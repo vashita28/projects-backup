@@ -1,0 +1,21 @@
+{
+  "success": "true",
+  "declinationsAllowedWithinPeriod": 5,
+  "hoursInInbox": 5,
+  "minimumCreditPurchase": "15",
+  "preBookingsAllowedWithinPeriod": 50,
+  "preBookingThreshold": 60,
+  "name": "london",
+  "costPerCredit": "0.75",
+  "creditCostForBooking": "1",
+  "currencySymbol": "\u00a3",
+  "currencyCode": "GBP",
+  "autoTopupMinimum": null,
+  "cardPaymentMinimumAmount": "0.35",
+  "cardPaymentFeePaidBy": "passenger",
+  "cardPaymentPercentageFee": "3.900",
+  "pricepermiles": "2.85",
+  "maximumPassengers": 6,
+  "cityId": "1",
+  "availability": "false"
+}

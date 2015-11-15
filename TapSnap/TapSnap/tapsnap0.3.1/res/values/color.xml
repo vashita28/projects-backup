@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="edittext_hintcolor">#606060</color>
+    <color name="header_bgcolor">#507fb6</color>
+    <color name="senderlabel_textcolor">#000000</color>
+    <color name="senderstatus_textcolor">#8e9596</color>
+    <color name="bgcolor">#f4f9fa</color>
+    <color name="settings_grey">#efeff4</color>
+    <color name="setting_item_clicked">#E6E6E6</color>
+    <color name="settings_heading_textcolor">#6e6e73</color>
+    <color name="menu_bg_color">#2C3E50</color>
+    <color name="edit_pic_transparent_color">#883B5998</color>
+
+</resources>

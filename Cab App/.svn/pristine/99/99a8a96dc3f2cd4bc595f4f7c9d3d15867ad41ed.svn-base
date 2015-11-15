@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlJobsOverlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlJobsOverlayParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rlJobsOverlayHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/overlay_bg"
+            android:visibility="visible" >
+
+            <View
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+        </RelativeLayout>
+
+        <com.android.cabapp.view.OverlayRectangle
+            android:id="@+id/overlayJobsRectangle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:id="@+id/rlJobsOverlayContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/overlayJobsRectangle"
+            android:background="@color/overlay_bg"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/tvJobOverlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="NOW OR PRE-BOOK JOBS"
+                android:textColor="@color/textview_selected"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTabOnJobs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvJobOverlay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:text="Tap on job to reveal distance \n to pick up and drop off address. \n You decide-accept or reject?"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlJobsOkyGotIt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/registration_button"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/tvOkGotItJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="OKAY GOT IT!"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,522 @@
+package co.uk.android.lldc;
+
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Typeface;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import co.uk.android.lldc.fragments.WelcomeFragment;
+import co.uk.android.lldc.service.LLDC_Sync_Servcie;
+import co.uk.android.util.Constants;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+
+@SuppressLint("ResourceAsColor")
+public class HomeActivity extends FragmentActivity implements
+		ConnectionCallbacks, OnConnectionFailedListener, LocationListener {
+	private static final String TAG = HomeActivity.class.getSimpleName();
+
+	Context mContext;
+	RelativeLayout relMenu, relSearch, rlHeadingOfFooter, rlRelaxTab,
+			rlEntertainTab, rlActiveTab, rlbac_dim_layout;
+	LinearLayout llElementsOfFooter;
+	TextView tvHeaderTitle, tvFooterTitle;
+	View viewUnderline, viewFooterBlur;
+
+	FragmentManager mFragmentManager;
+	boolean isMenuActivityCalled = false;
+
+	int nLastSelected = -1;
+	public boolean bIsFooterOpen = false;
+
+	LocationManager locationManager;
+	String provider;
+
+	boolean bUserIsInSidePark;
+
+	private GoogleApiClient mGoogleApiClient;
+
+	private static final LocationRequest REQUEST = LocationRequest.create()
+			.setInterval(5000) // 5 seconds
+			.setFastestInterval(16) // 16ms = 60fps
+			.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
+	// DashboardModel dashboardModel = new DashboardModel();
+
+	public static Handler mHomeActivityHandler = null;
+
+	ProgressDialog dialog = null;
+
+	@SuppressLint("HandlerLeak")
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.activity_home);
+
+		mGoogleApiClient = new GoogleApiClient.Builder(this)
+				.addApi(LocationServices.API).addConnectionCallbacks(this)
+				.addOnConnectionFailedListener(this).build();
+
+		bUserIsInSidePark = LLDCApplication.isInsideThePark;
+
+		mHomeActivityHandler = new Handler() {
+			public void handleMessage(Message message) {
+
+				if (message.what == 1003) {
+
+					try {
+						mFragmentManager = getSupportFragmentManager();
+						Fragment f = mFragmentManager
+								.findFragmentById(R.id.frame_container);
+						if (f instanceof WelcomeFragment) {
+							((WelcomeFragment) f).onSetServerData();
+						}
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+				} else if (message.what == 1005) {
+					// mFragmentManager = getSupportFragmentManager();
+					// Fragment f = mFragmentManager
+					// .findFragmentById(R.id.frame_container);
+					// if (f != null) {
+					displayView(Constants.WELCOME_FRAGMENT);
+					if (dialog != null && dialog.isShowing())
+						dialog.dismiss();
+					// }
+					mHomeActivityHandler.sendEmptyMessageDelayed(1006, 1800000);
+					// if(WelcomeFragment.welComeFragHandler != null)
+					// WelcomeFragment.welComeFragHandler.sendEmptyMessage(1004);
+				} else if (message.what == 1006) {
+					try {
+						Intent msgIntent = new Intent(HomeActivity.this,
+								LLDC_Sync_Servcie.class);
+						startService(msgIntent);
+					} catch (Exception e) {
+						// TODO: handle exception
+						LLDCApplication.onShowLogCat(
+								"HomeActivity",
+								"onInitiateApplication exception is "
+										+ e.toString());
+					}
+				}
+
+			};
+		};
+
+		mContext = this;
+
+		dialog = new ProgressDialog(HomeActivity.this);
+		dialog.setCanceledOnTouchOutside(false);
+		relMenu = (RelativeLayout) findViewById(R.id.relMenu);
+
+		ImageView ivMenu = (ImageView) findViewById(R.id.ivMenu);
+
+		ivMenu.setVisibility(View.VISIBLE);
+
+		relSearch = (RelativeLayout) findViewById(R.id.relSearch);
+
+		ImageView ivSerach = (ImageView) findViewById(R.id.ivSearch);
+		ivSerach.setVisibility(View.VISIBLE);
+
+		rlbac_dim_layout = (RelativeLayout) findViewById(R.id.bac_dim_layout);
+		rlHeadingOfFooter = (RelativeLayout) findViewById(R.id.rlHeadingOfFooter);
+		llElementsOfFooter = (LinearLayout) findViewById(R.id.llElementsOfFooter);
+		tvHeaderTitle = (TextView) findViewById(R.id.tvPageTitle);
+		tvFooterTitle = (TextView) findViewById(R.id.tvFooterTitle);
+		viewUnderline = (View) findViewById(R.id.viewUnderline);
+		rlRelaxTab = (RelativeLayout) findViewById(R.id.rlRelaxTab);
+		rlEntertainTab = (RelativeLayout) findViewById(R.id.rlEntertainTab);
+		rlActiveTab = (RelativeLayout) findViewById(R.id.rlActiveTab);
+		viewFooterBlur = (View) findViewById(R.id.footerblur);
+		relMenu.setOnClickListener(new OnitemClickListener());
+		relSearch.setOnClickListener(new OnitemClickListener());
+		rlHeadingOfFooter.setOnClickListener(new OnitemClickListener());
+		rlRelaxTab.setOnClickListener(new OnitemClickListener());
+		rlEntertainTab.setOnClickListener(new OnitemClickListener());
+		rlActiveTab.setOnClickListener(new OnitemClickListener());
+		viewFooterBlur.setOnClickListener(new OnitemClickListener());
+
+		/* by default set welcome fragment */
+		// displayView(Constants.WELCOME_FRAGMENT);
+
+		Location location = LocationServices.FusedLocationApi
+				.getLastLocation(mGoogleApiClient);
+
+		if (location != null)
+			onLocationChanged(location);
+//		else
+//			LLDCApplication.onShowToastMesssage(getApplicationContext(),
+//					"Unable to retrive location...");
+		onLoadServerData();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		mGoogleApiClient.connect();
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		mGoogleApiClient.disconnect();
+	}
+
+	public void onLoadServerData() {
+		try {
+			dialog.setMessage("Loading...");
+			dialog.show();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		try {
+			mHomeActivityHandler.removeMessages(1006);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	class OnitemClickListener implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			Intent intent = null;
+			switch (v.getId()) {
+
+			case R.id.relMenu:
+				final Handler handler = new Handler();
+
+				final Runnable r = new Runnable() {
+					public void run() {
+						rlbac_dim_layout.setVisibility(View.VISIBLE);
+					}
+				};
+				handler.postDelayed(r, 100);
+				if (!isMenuActivityCalled) {
+					isMenuActivityCalled = true;
+					intent = new Intent(HomeActivity.this, MenuActivity.class);
+					intent.putExtra(Constants.SELECTED_FRAGMENT_NUMBER,
+							nLastSelected);
+					startActivityForResult(intent, 0);
+					overridePendingTransition(R.anim.right_out, R.anim.left_in);
+				}
+				break;
+
+			case R.id.relSearch:
+
+				break;
+
+			case R.id.rlHeadingOfFooter:
+				try {
+					mFragmentManager = getSupportFragmentManager();
+					Fragment f = mFragmentManager
+							.findFragmentById(R.id.frame_container);
+					if (f instanceof WelcomeFragment) {
+						viewFooterBlur.setVisibility(View.GONE);
+					} else {
+						switchFooter(bIsFooterOpen);
+					}
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+
+			case R.id.rlRelaxTab:
+				rlHeadingOfFooter.performClick();
+				intent = new Intent(HomeActivity.this,
+						RecommendationListingActivity.class);
+				intent.putExtra("PAGETITLE", "relax");
+				HomeActivity.this.startActivity(intent);
+				break;
+
+			case R.id.rlEntertainTab:
+				rlHeadingOfFooter.performClick();
+				intent = new Intent(HomeActivity.this,
+						RecommendationListingActivity.class);
+				intent.putExtra("PAGETITLE", "entertain");
+				HomeActivity.this.startActivity(intent);
+				break;
+
+			case R.id.rlActiveTab:
+				rlHeadingOfFooter.performClick();
+				intent = new Intent(HomeActivity.this,
+						RecommendationListingActivity.class);
+				intent.putExtra("PAGETITLE", "active");
+				HomeActivity.this.startActivity(intent);
+				break;
+			case R.id.footerblur:
+				switchFooter(bIsFooterOpen);
+				break;
+			}
+		}
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		isMenuActivityCalled = false;
+		rlbac_dim_layout.setVisibility(View.GONE);
+		if (Constants.isDebug)
+			Log.e(TAG, "onActivityResult" + resultCode);
+
+		if (resultCode == Constants.MENU) {
+
+		} else if (resultCode == Constants.WELCOME_FRAGMENT) {
+			showFooterData();
+		} else if (resultCode == Constants.MAP_FRAGMENT) {
+			hideFooterData();
+		} else if (resultCode == Constants.EXPLORE_FRAGMENT) {
+			hideFooterData();
+		} else if (resultCode == Constants.EVENTS_FRAGMENT) {
+			hideFooterData();
+		} else if (resultCode == Constants.THE_PARK_FRAGMENT) {
+			hideFooterData();
+		}
+		displayView(resultCode);
+
+	}
+
+	void hideFooterData() {
+		viewUnderline.setVisibility(View.GONE);
+		llElementsOfFooter.setVisibility(View.GONE);
+		tvFooterTitle.setText("WHAT ARE YOU HERE TO DO?");
+		tvFooterTitle.setTypeface(null, Typeface.BOLD);
+		tvFooterTitle.setTextColor(getResources().getColor(
+				R.color.black_heading));
+		rlHeadingOfFooter.setBackgroundColor(getResources().getColor(
+				R.color.common_footer));
+	}
+
+	void showFooterData() {
+		viewUnderline.setVisibility(View.VISIBLE);
+		llElementsOfFooter.setVisibility(View.VISIBLE);
+		tvFooterTitle.setTypeface(null, Typeface.NORMAL);
+		tvFooterTitle.setText("WHAT ARE YOU LOOKING TO DO?");
+		tvFooterTitle.setTextColor(R.color.textcolor_grey);
+		rlHeadingOfFooter.setBackgroundColor(getResources().getColor(
+				android.R.color.white));
+	}
+
+	void switchFooter(boolean isFooterOpen) {
+		if (isFooterOpen) {
+			bIsFooterOpen = false;
+			llElementsOfFooter.setVisibility(View.GONE);
+			viewFooterBlur.setVisibility(View.GONE);
+			rlHeadingOfFooter.setBackgroundColor(getResources().getColor(
+					R.color.common_footer));
+		} else {
+			bIsFooterOpen = true;
+			llElementsOfFooter.setVisibility(View.VISIBLE);
+			viewFooterBlur.setVisibility(View.VISIBLE);
+			rlHeadingOfFooter.setBackgroundColor(getResources().getColor(
+					android.R.color.white));
+		}
+	}
+
+	/**
+	 * Diplaying fragment view for selected tab in MenuActivity
+	 * */
+	private void displayView(int position) {
+
+		Fragment fragment = null;
+		switch (position) {
+		case Constants.WELCOME_FRAGMENT:
+			Location location = LocationServices.FusedLocationApi
+					.getLastLocation(mGoogleApiClient);
+			if (location != null)
+				onLocationChanged(location);
+//			else
+//				LLDCApplication.onShowToastMesssage(getApplicationContext(),
+//						"Unable to retrive location...");
+			fragment = new co.uk.android.lldc.fragments.WelcomeFragment();
+			if (LLDCApplication.isInsideThePark) {
+				tvHeaderTitle.setText("Welcome");
+			} else {
+				tvHeaderTitle.setText("");
+			}
+			break;
+
+		case Constants.MAP_FRAGMENT:
+			fragment = new co.uk.android.lldc.fragments.MapFragment();
+			tvHeaderTitle.setText("Map");
+			break;
+
+		case Constants.EXPLORE_FRAGMENT:
+			fragment = new co.uk.android.lldc.fragments.ExploreFragment();
+			tvHeaderTitle.setText("Explore");
+			break;
+
+		case Constants.EVENTS_FRAGMENT:
+			fragment = new co.uk.android.lldc.fragments.EventsFragment();
+			tvHeaderTitle.setText("Events");
+			break;
+
+		case Constants.THE_PARK_FRAGMENT:
+			fragment = new co.uk.android.lldc.fragments.TheParkFragment();
+			tvHeaderTitle.setText("The Park");
+			break;
+
+		default:
+			break;
+		}
+
+		try {
+			if (fragment != null && nLastSelected != position) {
+				mFragmentManager = getSupportFragmentManager();
+				mFragmentManager
+						.beginTransaction()
+						.replace(R.id.frame_container, fragment)
+						.setTransition(
+								FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+						.commit();
+
+				// update selected item and title, then close the drawer
+				nLastSelected = position;
+			} else {
+				// error in creating fragment
+				Log.e(TAG, "Error in creating fragment");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * A placeholder fragment containing a simple view.
+	 */
+	/*
+	 * public static class PlaceholderFragment extends Fragment {
+	 * 
+	 * public PlaceholderFragment() { }
+	 * 
+	 * @Override public View onCreateView(LayoutInflater inflater, ViewGroup
+	 * container, Bundle savedInstanceState) { View rootView =
+	 * inflater.inflate(R.layout.fragment_home, container, false); return
+	 * rootView; } }
+	 */
+
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		// super.onBackPressed();
+		if (bIsFooterOpen) {
+			switchFooter(bIsFooterOpen);
+		} else
+			showQuitDialog();
+	}
+
+	void showQuitDialog() {
+		AlertDialog quitAlertDialog = new AlertDialog.Builder(HomeActivity.this)
+				.setTitle("Exit")
+				.setMessage("Confirm exit?")
+				.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface argDialog, int argWhich) {
+						finish();
+					}
+				})
+				.setNegativeButton("Cancel",
+						new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface argDialog,
+									int argWhich) {
+							}
+						}).create();
+		quitAlertDialog.setCanceledOnTouchOutside(false);
+		quitAlertDialog.show();
+		return;
+	}
+
+	@Override
+	public void onLocationChanged(Location arg0) {
+		// TODO Auto-generated method stub
+		float[] results = new float[1];
+		Location.distanceBetween(LLDCApplication.parkCenter.getLatitude(),
+				LLDCApplication.parkCenter.getLongitude(), arg0.getLatitude(),
+				arg0.getLongitude(), results);
+
+		if (results[0] > 100) {
+			bUserIsInSidePark = false;
+		} else {
+			bUserIsInSidePark = true;
+		}
+
+		if (LLDCApplication.isInsideThePark != bUserIsInSidePark) {
+			LLDCApplication.isInsideThePark = bUserIsInSidePark;
+			try {
+				mFragmentManager = getSupportFragmentManager();
+				Fragment f = mFragmentManager
+						.findFragmentById(R.id.frame_container);
+				if (f instanceof WelcomeFragment) {
+					((WelcomeFragment) f).onSetServerData();
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
+	}
+
+	@Override
+	public void onConnectionFailed(ConnectionResult arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onConnected(Bundle arg0) {
+		// TODO Auto-generated method stub
+		LocationServices.FusedLocationApi.requestLocationUpdates(
+				mGoogleApiClient, REQUEST, this);
+	}
+
+	@Override
+	public void onConnectionSuspended(int arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

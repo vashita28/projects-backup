@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/venue_eventlist_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/imgnt_placeholder" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:paddingBottom="5dp"
+        android:paddingLeft="7dp"
+        android:paddingStart="7dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="5dp" >
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/venue_eventlist_eventname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#86bc25"
+            android:ellipsize="end"
+            android:lines="2"
+            android:maxLines="2"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <co.uk.android.lldc.custom.CustomTextView_HelveticaNeue_Italic
+            android:id="@+id/venue_eventlist_venuename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/venue_eventlist_eventname"
+            android:layout_alignStart="@id/venue_eventlist_eventname"
+            android:layout_below="@id/venue_eventlist_eventname"
+            android:textColor="#444444"
+            android:textSize="12sp" />
+
+        <co.uk.android.lldc.custom.CustomTextView_HelveticaNeue_Regular
+            android:id="@+id/venue_eventlist_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:lines="2"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:maxLines="2"
+            android:textColor="#444444"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+
+</LinearLayout>

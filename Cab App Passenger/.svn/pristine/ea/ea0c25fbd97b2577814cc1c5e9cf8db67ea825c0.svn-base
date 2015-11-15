@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_maps" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar"
+        android:background="#191918" >
+
+        <TextView
+            android:id="@+id/tvsendcode"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/registration_btn_selector"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Send Code"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_registerd_emailaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_toptext"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="45dp"
+            android:text="@string/country"
+            android:textColor="#f36a02"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rel_mobileno"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_registerd_emailaddress"
+            android:layout_marginTop="5dp"
+            android:background="#fff" >
+
+            <Spinner
+                android:id="@+id/spinner_countrycode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_personaltitledrodown"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/downarrow"
+                android:clickable="false"
+                android:text="" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_mobileno"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/rel_mobileno"
+            android:layout_toRightOf="@+id/rel_mobileno"
+            android:background="#fff"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="5dp"
+            android:textSize="18sp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_mobileno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rel_mobileno"
+            android:layout_alignRight="@+id/tv_toptext"
+            android:layout_marginRight="45dp"
+            android:text="@string/mobile"
+            android:textColor="#f36a02"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_tandctext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvsendcode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_toptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="Please enter your mobile number below and we will send you a 4 digit code to activate your account"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.uk.pocketapp.gmd"
+    android:versionName="1.2" >
+
+    <supports-screens
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".GMDApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+        <provider
+            android:name="co.uk.pocketapp.gmd.db.GMDContentProvider"
+            android:authorities="co.uk.pocketapp.gmd.db.GMDContentProvider"
+            android:exported="false"
+            android:multiprocess="true" />
+
+        <activity
+            android:name=".ui.SplashScreen"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan|adjustResize|stateVisible" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.Activity_login"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.ParentActivity"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.ForgotPassword"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Report_Details"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Summary"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Service_Checklist"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Service_CheckList_New"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Service_CheckList_Without_Swipe"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Photographs"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Photo_Page"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Photo_Details"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Site_Conditions"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Archive_Reports"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Sync_With_Server"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Report_A_Problem"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Review_Photo"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Report_A_Problem_ReviewImage"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Photographs_Camera_Activity"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Photo_Details_Entry"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Define_The_Solution"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.VideoPlayer"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.KillReport"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.LeafPhotograph"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Key_Bars"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Sole_Plate"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Air_Gap"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Pressfinger_feeder"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Pressfinger_Discharge"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Magnetic_Centering"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Holding_Plates"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Core_Partitions"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Brushwear"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Bolt_Torque"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.Activity_Bolt_Insulation"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+
+        <!-- custom file explorer activity -->
+        <activity
+            android:name="com.uk.pocketapp.fragments.FileBrowserActivity"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorLandscape" >
+        </activity>
+        
+        <activity
+            android:name="com.uk.pocketapp.fragments.HelpSupportFiles"
+            android:configChanges="navigation|screenLayout|keyboard|orientation"
+            android:label="@string/app_name" >
+        </activity>
+
+        <receiver android:name=".receiver.NetworkBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="b036e1a2b9053cad6e31d932f62d5a7cc94831e9" />
+    </application>
+
+</manifest>

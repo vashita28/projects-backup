@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlCabPayOverlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlCabAppOverlayHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_bg"
+        android:visibility="gone" >
+
+        <View
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/tvFakeSelectPaymentMethod"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/emptyView"
+            android:layout_marginTop="1dp"
+            android:background="@color/tab_unselected"
+            android:drawableLeft="@drawable/paymentmethodsmall"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="Select Payment Method"
+            android:textColor="@color/textview_unselected"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlFakeSelectPayment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tvFakeSelectPaymentMethod"
+            android:background="@color/textview_unselected"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tvFakeSelectPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/textview_unselected"
+                android:paddingLeft="30dp"
+                android:text="Card"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/downarrow" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvFakeCabPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlFakeSelectPayment"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingTop="30dp"
+            android:text="CAB PAY"
+            android:textColor="@color/textview_selected"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvProcessMajor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFakeCabPay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="false"
+            android:text="Process major debit and credit cards for walk up jobs. You can even send your passenger a text or email receipt for cash jobs"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCabPayOkyGotIt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/registration_button"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvOkGotItCabPay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="OKAY GOT IT!"
+            android:textColor="@color/textview_selected"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

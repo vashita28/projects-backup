@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottomTab"
+        android:layout_alignParentTop="true" >
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
+
+        <include
+            android:id="@+id/headerOutsidePark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            layout="@layout/header_outsidepark"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/footerblur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/closerpopup_bg"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlBottomTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white" >
+
+        <RelativeLayout
+            android:id="@+id/rlHeadingOfFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:id="@+id/tvFooterTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="5dp"
+                android:text="@string/what_Are_you_looking"
+                android:textColor="@color/textcolor_grey" />
+
+            <View
+                android:id="@+id/viewUnderline"
+                android:layout_width="60dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvFooterTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:background="#b3b3b3" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llElementsOfFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlHeadingOfFooter"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="7dp" >
+
+            <RelativeLayout
+                android:id="@+id/rlRelaxTab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:paddingTop="2dp" >
+
+                <ImageView
+                    android:id="@+id/ivRelax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/relax_icon" />
+
+                <TextView
+                    android:id="@+id/tvRelax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivRelax"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="3dp"
+                    android:text="@string/relax"
+                    android:textColor="@color/black_heading" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEntertainTab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:paddingTop="2dp" >
+
+                <ImageView
+                    android:id="@+id/ivEntertain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/entertain_icon" />
+
+                <TextView
+                    android:id="@+id/tvEntertain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivEntertain"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="3dp"
+                    android:text="@string/entertain"
+                    android:textColor="@color/black_heading" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlActiveTab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33"
+                android:paddingTop="2dp" >
+
+                <ImageView
+                    android:id="@+id/ivActive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/active" />
+
+                <TextView
+                    android:id="@+id/tvActive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivActive"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="3dp"
+                    android:text="@string/active"
+                    android:textColor="@color/black_heading" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bac_dim_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_grey"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+</RelativeLayout>

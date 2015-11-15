@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_color"
+    tools:context=".SplashScreen" >
+
+    <!-- <ImageView -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:layout_alignParentTop="true" -->
+    <!-- android:layout_marginRight="6dp" -->
+    <!-- android:layout_marginTop="10dp" -->
+    <!-- android:src="@drawable/abb_logo" /> -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_splash_top"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/splashscreen" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_splash_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="@string/GMD_FIELD_SERVICE_REPORT"
+            android:textColor="@color/GMD_heading_text_color"
+            android:textSize="@dimen/heading_text_size"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="6dp"
+            android:src="@drawable/abb_logo" />
+    </LinearLayout>
+
+</RelativeLayout>

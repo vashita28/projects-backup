@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<callback xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+
+    <head>
+        <status>1</status>
+    </head>
+
+    <body>
+        <user_details>
+            <reassigned>true</reassigned>
+            <engineer_id>19</engineer_id>
+            <username>amol</username>
+            <password>5f4dcc3b5aa765d61d8327deb882cf99</password>
+            <rejection_comments report_id="166" mill_id="13">Test</rejection_comments>
+            <rejection_comments report_id="167" mill_id="29">Test Comments 2</rejection_comments>
+        </user_details>
+        <project>
+            <report_id>117</report_id>
+            <site_name>Reliance Mum</site_name>
+            <report_details>
+                <customer>Reliance</customer>
+                <site>Reliance Mum</site>
+                <country>Australia</country>
+                <customer_rep>CRRM</customer_rep>
+                <list_of_distribution/>
+                <distribution_to_customer/>
+                <desc_of_service_performed>
+                    <stator>null</stator>
+                    <rotor_poles>null</rotor_poles>
+                    <motor_auxillaries>null</motor_auxillaries>
+                    <cyclo_converter>null</cyclo_converter>
+                </desc_of_service_performed>
+                <reports>
+                    <mill id="13">
+                        <plant>plant 1</plant>
+                        <plant_type_gmd>false</plant_type_gmd>
+                        <plant_type_transformer>false</plant_type_transformer>
+                        <plant_type_ehouse>false</plant_type_ehouse>
+                        <plant_type_drive>false</plant_type_drive>
+                        <plant_type_cyclo>true</plant_type_cyclo>
+                        <plant_type_motor>false</plant_type_motor>
+                        <unit>null</unit>
+                        <system_machine>null</system_machine>
+                        <type>null</type>
+                        <serial_no>null</serial_no>
+                        <year_of_delivery>null</year_of_delivery>
+                        <operating_hours>null</operating_hours>
+                        <service_information>
+                            <service_type>
+                                <new_plant>false</new_plant>
+                                <upgrade>false</upgrade>
+                                <troubleshooting>false</troubleshooting>
+                                <others>false</others>
+                                <first_installation>false</first_installation>
+                                <minor_inspection>true</minor_inspection>
+                                <major_overhaul>false</major_overhaul>
+                            </service_type>
+                            <service_tasks>
+                                <installation>false</installation>
+                                <comissioning>false</comissioning>
+                                <test_assessment>false</test_assessment>
+                                <others_service_task>false</others_service_task>
+                                <overhaul_works>false</overhaul_works>
+                                <re_comissioning>false</re_comissioning>
+                                <diagnostics>false</diagnostics>
+                                <factory_insp>false</factory_insp>
+                                <repair>false</repair>
+                                <investigation>false</investigation>
+                                <inspection>false</inspection>
+                                <motor_insp_inside>false</motor_insp_inside>
+                                <motor_insp_external>true</motor_insp_external>
+                            </service_tasks>
+                        </service_information>
+                    </mill>
+                    <mill id="29">
+                        <plant>plant second</plant>
+                        <plant_type_gmd>false</plant_type_gmd>
+                        <plant_type_transformer>false</plant_type_transformer>
+                        <plant_type_ehouse>false</plant_type_ehouse>
+                        <plant_type_drive>false</plant_type_drive>
+                        <plant_type_cyclo>true</plant_type_cyclo>
+                        <plant_type_motor>false</plant_type_motor>
+                        <unit>null</unit>
+                        <system_machine>null</system_machine>
+                        <type>null</type>
+                        <serial_no>null</serial_no>
+                        <year_of_delivery>null</year_of_delivery>
+                        <operating_hours>null</operating_hours>
+                        <service_information>
+                            <service_type>
+                                <new_plant>false</new_plant>
+                                <upgrade>false</upgrade>
+                                <troubleshooting>false</troubleshooting>
+                                <others>false</others>
+                                <first_installation>true</first_installation>
+                                <minor_inspection>false</minor_inspection>
+                                <major_overhaul>false</major_overhaul>
+                            </service_type>
+                            <service_tasks>
+                                <installation>false</installation>
+                                <comissioning>false</comissioning>
+                                <test_assessment>false</test_assessment>
+                                <others_service_task>false</others_service_task>
+                                <overhaul_works>true</overhaul_works>
+                                <re_comissioning>false</re_comissioning>
+                                <diagnostics>false</diagnostics>
+                                <factory_insp>false</factory_insp>
+                                <repair>false</repair>
+                                <investigation>false</investigation>
+                                <inspection>false</inspection>
+                                <motor_insp_inside>false</motor_insp_inside>
+                                <motor_insp_external>false</motor_insp_external>
+                            </service_tasks>
+                        </service_information>
+                    </mill>
+                </reports>
+            </report_details>
+            <summary>
+                <summary_of_inspection>null</summary_of_inspection>
+                <service_information>null</service_information>
+                <reports>
+                    <mill id="13">
+                        <main_difficulties>null</main_difficulties>
+                        <point_of_general_interest>null</point_of_general_interest>
+                        <recommendations>null</recommendations>
+                        <main_motor_data>
+                            <main_motor_data_item>
+                                <main_motor_data_no>1</main_motor_data_no>
+                                <main_motor_data_description>Type</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>2</main_motor_data_no>
+                                <main_motor_data_description>Serial Number</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>3</main_motor_data_no>
+                                <main_motor_data_description>Rated Apparent Power</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>4</main_motor_data_no>
+                                <main_motor_data_description>Rated Active Power</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>5</main_motor_data_no>
+                                <main_motor_data_description>Rated Speed</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>6</main_motor_data_no>
+                                <main_motor_data_description>Max. Speed</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>7</main_motor_data_no>
+                                <main_motor_data_description>Rated Cos phi</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>8</main_motor_data_no>
+                                <main_motor_data_description>Rated Frequency</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>9</main_motor_data_no>
+                                <main_motor_data_description>Rated Voltage</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>10</main_motor_data_no>
+                                <main_motor_data_description>Rated Current</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>11</main_motor_data_no>
+                                <main_motor_data_description>Excit. Current at rated speed</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>12</main_motor_data_no>
+                                <main_motor_data_description>Excit. Voltage at rated speed</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>13</main_motor_data_no>
+                                <main_motor_data_description>Excit. Current at Start-up</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>14</main_motor_data_no>
+                                <main_motor_data_description>Excit. Voltage at Start-up</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>15</main_motor_data_no>
+                                <main_motor_data_description>Cooling type</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>16</main_motor_data_no>
+                                <main_motor_data_description>Altitude above sea level</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>17</main_motor_data_no>
+                                <main_motor_data_description>Air gap (nominal)</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>18</main_motor_data_no>
+                                <main_motor_data_description>Type of winding</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                        </main_motor_data>
+                        <specific_motor_data>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>1</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity of stator winding slots</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>2</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity of Stator key bars</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>3</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; torque of pressing bolts</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>4</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; torque of foundation bolts</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>5</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity &amp; size of dowel pins</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>6</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; torque of partition bolts</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>7</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity &amp; Type of brushes</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>8</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity &amp; Type of earthing brushes</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>9</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; Type of dust seal</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>10</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; Type of flat springs</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>11</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; Type of pressure springs</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                        </specific_motor_data>
+                    </mill>
+                    <mill id="29">
+                        <main_difficulties>null</main_difficulties>
+                        <point_of_general_interest>null</point_of_general_interest>
+                        <recommendations>null</recommendations>
+                        <main_motor_data>
+                            <main_motor_data_item>
+                                <main_motor_data_no>1</main_motor_data_no>
+                                <main_motor_data_description>Type</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>2</main_motor_data_no>
+                                <main_motor_data_description>Serial Number</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>3</main_motor_data_no>
+                                <main_motor_data_description>Rated Apparent Power</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>4</main_motor_data_no>
+                                <main_motor_data_description>Rated Active Power</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>5</main_motor_data_no>
+                                <main_motor_data_description>Rated Speed</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>6</main_motor_data_no>
+                                <main_motor_data_description>Max. Speed</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>7</main_motor_data_no>
+                                <main_motor_data_description>Rated Cos phi</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>8</main_motor_data_no>
+                                <main_motor_data_description>Rated Frequency</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>9</main_motor_data_no>
+                                <main_motor_data_description>Rated Voltage</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>10</main_motor_data_no>
+                                <main_motor_data_description>Rated Current</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>11</main_motor_data_no>
+                                <main_motor_data_description>Excit. Current at rated speed</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>12</main_motor_data_no>
+                                <main_motor_data_description>Excit. Voltage at rated speed</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>13</main_motor_data_no>
+                                <main_motor_data_description>Excit. Current at Start-up</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>14</main_motor_data_no>
+                                <main_motor_data_description>Excit. Voltage at Start-up</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>15</main_motor_data_no>
+                                <main_motor_data_description>Cooling type</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>16</main_motor_data_no>
+                                <main_motor_data_description>Altitude above sea level</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>17</main_motor_data_no>
+                                <main_motor_data_description>Air gap (nominal)</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                            <main_motor_data_item>
+                                <main_motor_data_no>18</main_motor_data_no>
+                                <main_motor_data_description>Type of winding</main_motor_data_description>
+                                <main_motor_data_data></main_motor_data_data>
+                                <main_motor_data_remarks></main_motor_data_remarks>
+                            </main_motor_data_item>
+                        </main_motor_data>
+                        <specific_motor_data>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>1</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity of stator winding slots</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>2</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity of Stator key bars</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>3</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; torque of pressing bolts</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>4</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; torque of foundation bolts</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>5</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity &amp; size of dowel pins</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>6</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; torque of partition bolts</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>7</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity &amp; Type of brushes</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>8</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity &amp; Type of earthing brushes</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>9</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; Type of dust seal</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>10</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; Type of flat springs</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                            <specific_motor_data_item>
+                                <specific_motor_data_no>11</specific_motor_data_no>
+                                <specific_motor_data_description>Quantity, size &amp; Type of pressure springs</specific_motor_data_description>
+                                <specific_motor_data_data></specific_motor_data_data>
+                                <specific_motor_data_qty></specific_motor_data_qty>
+                                <specific_motor_data_size></specific_motor_data_size>
+                                <specific_motor_data_nm></specific_motor_data_nm>
+                                <specific_motor_data_type></specific_motor_data_type>
+                                <specific_motor_data_remarks></specific_motor_data_remarks>
+                            </specific_motor_data_item>
+                        </specific_motor_data>
+                    </mill>
+                </reports>
+            </summary>
+            <service_checklist>
+                <mill>
+                    <mill_id>13</mill_id>
+                    <mill_name>Reliance Mill mum</mill_name>
+                    <gmd_type>Pedestal</gmd_type>
+                    <services>
+                        <item>
+                            <id>1</id>
+                            <parent_id>0</parent_id>
+                            <name>Stator</name>
+                            <services>
+                                <item>
+                                    <id>2</id>
+                                    <parent_id>1</parent_id>
+                                    <name>Stator foundation and frame</name>
+                                    <services>
+                                        <item>
+                                            <id>3</id>
+                                            <parent_id>2</parent_id>
+                                            <name>Corrosion - check &amp; describe</name>
+                                            <tasks>
+                                                <work_scope task_completed="true">To be done</work_scope>
+                                                <work_scope_comments>null</work_scope_comments>
+                                                <work_carried_out task_completed="true">Replaced</work_carried_out>
+                                                <conditions task_completed="true">Out Of Service</conditions>
+                                                <recommendations task_completed="false">To inspect in 1y.</recommendations>
+                                                <comments task_completed="false">bjhjbih</comments>
+                                                <special_type task_completed="true">null</special_type>
+                                                <special_type_tag>null</special_type_tag>
+                                            </tasks>
+                                        </item>
+                                    </services>
+                                </item>
+                            </services>
+                        </item>
+                    </services>
+                </mill>
+                <mill>
+                    <mill_id>29</mill_id>
+                    <mill_name>mill second</mill_name>
+                    <gmd_type>Pedestal</gmd_type>
+                    <services>
+                        <item>
+                            <id>80</id>
+                            <parent_id>0</parent_id>
+                            <name>Motor Auxiliaries</name>
+                            <services>
+                                <item>
+                                    <id>128</id>
+                                    <parent_id>80</parent_id>
+                                    <name>Rotor knife switch</name>
+                                    <services>
+                                        <item>
+                                            <id>133</id>
+                                            <parent_id>128</parent_id>
+                                            <name>Cracks - check &amp; describe</name>
+                                            <tasks>
+                                                <work_scope task_completed="false">To be done</work_scope>
+                                                <work_scope_comments>null</work_scope_comments>
+                                                <work_carried_out task_completed="false">Retighted</work_carried_out>
+                                                <conditions task_completed="true">Normal</conditions>
+                                                <recommendations task_completed="true">To inspect in 3y.</recommendations>
+                                                <comments task_completed="true">ooioioi</comments>
+                                                <special_type task_completed="true">null</special_type>
+                                                <special_type_tag>null</special_type_tag>
+                                            </tasks>
+                                        </item>
+                                    </services>
+                                </item>
+                            </services>
+                        </item>
+                    </services>
+                </mill>
+            </service_checklist>
+        </project>
+    </body>
+</callback>

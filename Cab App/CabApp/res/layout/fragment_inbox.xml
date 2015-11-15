@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/common_top_bar" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/header"
+        android:background="@color/list_divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewDivider"
+        android:background="@color/list_background" >
+
+        <ListView
+            android:id="@+id/lvMessagesList"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/list_background"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:paddingBottom="10dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:visibility="gone" >
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/inboxProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/android:empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="No Messages"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/heading_textsize"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlEmpty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/ivTaxiIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/dchat" />
+
+            <TextView
+                android:id="@+id/tvNoMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivTaxiIcon"
+                android:gravity="center_horizontal"
+                android:text="You have no messages"
+                android:textColor="@android:color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTryAgainLater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvNoMessages"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Please try again later"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

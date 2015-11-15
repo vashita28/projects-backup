@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Peeki</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="app_id">515738058461322</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Show selection</item>
+        <item>Block images</item>
+        <item>View tutorial</item>
+        <item>Terms &amp; conditions</item>
+        <item>Share</item>
+        <item>Change passcode</item>
+        <item>Refresh images</item>
+    </string-array>
+
+    <!-- Fragment:change passcode -->
+    <string name="please_enter_old_passcode">Please enter your old passcode</string>
+    <string name="please_enter_new_passcode">Please enter your new passcode</string>
+    <string name="confirm_new_passcode">Please confirm your new passcode</string>
+    <string name="hint_passcode">Passcode</string>
+    <string name="confirm">Confirm</string>
+    <string name="alert_passcode">Make sure you select something you \nwill remember. If you forgot your \npasscode it will be unretrievable.</string>
+    <string name="terms_and_conditions"><Data><![CDATA[ <b>Terms &amp; Conditions</b> ]]></Data></string>
+    <string name="terms_data"><Data>
+<![CDATA[
+ <b>1. GENERAL</b>
+<p> 1.1. By installing the Application also referred to as the &quot;Peeki, App, app&quot;, you agree to be bound by these terms of
+use (&quot; Appterms &quot;). Please review them carefully before installation and/or acceptance. The user shall purchase and
+download the Application subject to the terms and conditions set out by Peeki.</p>
+<p>1.2. Peeki may amend the Application Terms and Conditions at any time at its sole discretion. Peeki will notify users
+of and/or publicly announce such amendment in the reasonable manner as determined by Peeki.</p>
+<p>1.3. Except otherwise specified by Peeki, user&#39;s continued use of the Application one week after the receipt of such
+notice by user or such Peeki&#39;s announcement, whichever comes first will reaffirm its agreement to be bound and to
+abide by the Application Terms and Conditions as amended.</p>
+
+<b>2. PASSWORD PROTECTION</b>
+<p>2.1. The user will have sole control over the password. The user can change the password at any time using the
+change password feature in the app menu. If the user forgets the password they will not be able access certain app
+functions. Peeki does not store or collect passwords and is not responsible for the user password.</p>
+<p>2.2. Peeki will not be able to retrieve the user&#39;s password if the user forgets it.</p>
+<p>2.3. User will be solely responsible for storing of the password and the downloaded Application.</p>
+
+<b>3. DATA PROTECTION</b>
+<p>3.1. The Application does not store or collect any personal data from the user. The app is an offline app and once
+downloaded the app will be fully functional offline and no online server connection will be required.</p>
+<p>3.2. The user can share images using the share Facebook feature. Peeki will not be responsible or accountable for
+any images shared through the share feature.</p>
+<p>3.3. Any personal information you supply to Peeki when using the Application will only be used by Peeki or Third
+Parties to (i) identify the user so that we can (ii) resolve a genuine query or service problem regarding the Application.</p>
+<p>3.4. Peeki is committed to protecting your privacy, and takes its responsibilities regarding the security of customer
+information very seriously.</p>
+
+<b>4. CONDITIONS OF USE</b>
+<p>4.1. You agree not to violate, nor allow third parties on your behalf to make and distribute copies of the Application
+attempt to copy, reproduce, alter, modify, reverse engineer, disassemble, decompile, transfer, exchange or translate
+the Application; or tamper with any element of the security framework/code, or to attempt or assist another person to
+do so, or create derivative works of the Application of any kind whatsoever.</p>
+<p>4.2. Peeki grants you the non-exclusive, non-transferable, limited right and license to install and use this Application
+solely and exclusively for your personal use.</p>
+<p>4.3. Peeki may without any prior notice to users, update, add, or change the Application or suspend or terminate the
+provision of the Application.</p>
+<p>4.4. You acknowledge that the terms of agreement with your respective mobile network provider ( &#39;Mobile Provider &#39;)
+will continue to apply when downloading the Application. As a result, you may be charged by the Mobile Provider for
+access to network connection services for the duration of the connection while downloading the Application. You
+accept responsibility for any such charges that arise from downloading the Application.</p>
+<p>4.5. If you are not the bill payer for the mobile telephone or handheld device being used to download the Application,
+you will be assumed to have received permission from the bill payer for downloading the Application.</p>
+
+<b>5. PROPRIETARY RIGHTS AND LICENCE</b>
+<p>&quot;Intellectual Property Rights&quot; means any and all rights existing from time to time under patent law, copyright law,
+trade secret law, remove, obscure, or alter the Application or any third party&#39;s copyright notices, trademarks, design,
+app code or other proprietary rights notices affixed to or contained within or accessed in conjunction with or through
+the Application.</p>
+<p>5.1. All trademarks, copyright, database rights and other intellectual property rights of any nature in the Application
+together with the underlying software code are owned either directly by Peeki or by third parties that own such rights.</p>
+<p>5.2. Peeki hereby grants you a worldwide, non-exclusive, royalty-free revocable licence to use the Application for
+your personal use in accordance with these app terms.</p>
+<p>5.3. The Application shall not be transferrable to any third parties.</p>
+<p>5.4. You acknowledge that (a) the Application contains proprietary and confidential information that is protected by
+applicable intellectual property and other laws, and (b) Peeki and/or third parties own all right, title and interest in and
+to the Application and content, excluding content provided by you, that may be presented or accessed through the
+Application, including without limitation all Intellectual Property Rights therein and thereto trademark law, unfair
+competition law, and any and all other proprietary rights, and any and all Applications, renewals, extensions and
+restorations thereof, now or hereafter in force and effect worldwide.</p>
+
+<b>6. AVAILABILITY</b>
+<p>6.1. This Application is available to handheld mobile devices running Apple iOS and Android OS Operating Systems.
+Peeki will use reasonable efforts to make the Application available at all times. However you acknowledge the
+Application is provided over the internet and mobile networks and so the quality and availability of the Application
+may be affected by factors outside Peeki&#39;s reasonable control.</p>
+<p>6.2. Peeki and its third party developers do not accept any responsibility whatsoever for unavailability of the
+Application, or any difficulty or inability to download or access content or any other communication system failure
+which may result in the Application being unavailable.</p>
+<p>6.3. Once you have downloaded the Application we will not be responsible for any support or maintenance for the
+Application as it will be an offline Application. However we encourage user feedback and will constantly strive
+towards perfecting our Application to create the best in user experience.</p>
+<p>6.4. The Application Software contains source code owned by Peeki and its developers and cannot copied, altered,
+distributed without a granted license approved by Peeki or its developers / third parties ("Third party software
+developers").</p>
+
+<b>7. SYSTEM REQUIREMENTS</b>
+<p>7.1. In order to use the Application, you are required to have a compatible mobile telephone or handheld device and
+the necessary minimum specifications (&#39;Software Requirements&#39;).</p>
+<p>7.2. The Application is designed for Apple iOS devices and Android OS devices, Language: English.</p>
+<p>7.3. The version of the Application software may be upgraded from time to time to add support for new functions and
+services.</p>
+<p>7.4. New app versions or upgrade app versions will require the user to uninstall the previous version of the app and
+download the new app version or app upgrade.</p>
+<p>7.5. The user will be charged for any upgrades in accordance with the standard Application download/upgrade
+purchase fee. Before any Application download/upgrade is possible the user will have to approve the purchase fee
+through one of our approved affiliates.</p>
+
+<b>8. TERMINATION</b>
+<p>8.1. Peeki may terminate use of the Application or Application upgrades at any time without giving prior notice of
+termination to you.</p>
+<p>8.2. Upon any termination, (a) the rights and licenses granted to you herein shall terminate; (b) you must cease all
+use of the Software;</p>
+
+<b>9. LIMITATION OF LIABILITY</b>
+<p>9.1. In no event will Peeki be liable for any direct, indirect, special, punitive, exemplary or consequential losses or
+damages of whatsoever kind arising out of your use or access to the Application, including loss of profit or the like
+whether or not in the contemplation of the parties, whether based on breach of contract, tort (including negligence),
+product liability or otherwise.</p>
+<p>9.2. Peeki is not liable to you for any damage or alteration to your equipment including but not limited to computer
+equipment, handheld device or mobile telephones as a result of the installation or use of the Application.</p>
+<p>9.3. Nothing in these Appterms shall exclude or limit Peeki&#39;s liability for death or personal injury caused by negligence
+or for fraud or fraudulent misrepresentation or any other liability which cannot be excluded or limited under applicable
+law.</p>
+
+<b>10. DISCLAIMER OF WARRANTIES</b>
+<p>10.1. You expressly understand and agree that your use of the application is at your sole discretion and risk and that
+the application is provided as is and as available without warranty of any kind.</p>
+<p>10.2. You are solely responsible for any damage to your mobile device, or other device, or loss of data that results
+from such use.</p>
+<p>10.3. The company further expressly disclaims all warranties and conditions of any kind, whether express or implied,
+including, but not limited to the implied warranties and conditions of merchantability, fitness for a particular purpose
+and non-infringement, with respect to the application.</p>
+
+]]>
+</Data></string>
+
+</resources>

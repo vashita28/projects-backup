@@ -1,0 +1,268 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_color"
+    android:orientation="vertical" >
+
+    <!-- Header -->
+
+    <include
+        android:id="@+id/view_report_a_problem_top_bar"
+        layout="@layout/header" />
+    <!-- Content -->
+
+
+    <!-- Page Heading -->
+
+    <TextView
+        android:id="@+id/page_heading_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_report_a_problem_top_bar"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="@string/PLEASE_DEFINE_PROBLEM_BELOW"
+        android:textColor="@color/page_heading_text_color"
+        android:textSize="@dimen/normal_text_size" />
+
+    <LinearLayout
+        android:id="@+id/ll_whatisproblem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/page_heading_middle"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt_what_is_the_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_weight="0.65"
+                android:gravity="left"
+                android:text="@string/WHAT_IS_THE_PROBLEM"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <EditText
+                android:id="@+id/et_what_is_the_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="120dp"
+                android:layout_weight="0.35"
+                android:background="@color/editText_bg_text_color"
+                android:hint="@string/ENTER_TEXT_HERE"
+                android:inputType="textNoSuggestions|textFilter|none"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="7dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/line" />
+    </LinearLayout>
+
+    <!-- where is problem -->
+
+    <LinearLayout
+        android:id="@+id/ll_whereisproblem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_whatisproblem"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt_where_is_the_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_weight="0.65"
+                android:gravity="left"
+                android:text="@string/WHERE_IS_THE_PROBLEM"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <EditText
+                android:id="@+id/et_where_is_the_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="120dp"
+                android:layout_weight="0.35"
+                android:background="@color/editText_bg_text_color"
+                android:ems="10"
+                android:hint="@string/ENTER_TEXT_HERE"
+                android:inputType="textNoSuggestions|textFilter|none"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" >
+            </EditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_whyisproblem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_whereisproblem"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt_why_is_it_a_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_weight="0.65"
+                android:gravity="left"
+                android:text="@string/WHY_IS_IT_A_PROBLEM"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <EditText
+                android:id="@+id/et_why_is_it_a_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="120dp"
+                android:layout_weight="0.35"
+                android:background="@color/editText_bg_text_color"
+                android:ems="10"
+                android:hint="@string/ENTER_TEXT_HERE"
+                android:inputType="textNoSuggestions|textFilter|none"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" >
+            </EditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/line" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_whyisproblem"
+        android:layout_marginLeft="120dp"
+        android:gravity="left"
+        android:text="                                         "
+        android:textColor="@color/textview_text_color"
+        android:textSize="@dimen/normal_text_size" />
+
+    <EditText
+        android:id="@+id/et_please_add_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_whyisproblem"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="170dp"
+        android:layout_toRightOf="@+id/txt_image"
+        android:background="@color/editText_bg_text_color"
+        android:enabled="false"
+        android:hint="@string/PLEASE_ADD_PHOTO"
+        android:inputType="textNoSuggestions|textFilter|none"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/textview_text_color"
+        android:textSize="@dimen/normal_text_size" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="7dp"
+        android:layout_below="@+id/et_please_add_image"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/imageview_camera"
+        android:background="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/imageview_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ll_whyisproblem"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/camera_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_orange"
+            android:text="@string/CANCEL"
+            android:textColor="@color/title_bar_data_text_color"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_green"
+            android:text="@string/NEXT"
+            android:textColor="@color/title_bar_data_text_color"
+            android:textSize="@dimen/button_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

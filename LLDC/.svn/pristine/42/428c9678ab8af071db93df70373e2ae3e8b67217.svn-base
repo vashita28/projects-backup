@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/headerView"
+        android:background="@color/explorer_bg" />
+
+    <ListView
+        android:id="@+id/recommendations_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="100"
+        android:divider="#f2f2f2"
+        android:dividerHeight="5dp" />
+    
+    <TextView
+        android:id="@+id/list_empty_text"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="100"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:textColor="@android:color/black"
+        android:text="No data found..."/>
+
+</LinearLayout>

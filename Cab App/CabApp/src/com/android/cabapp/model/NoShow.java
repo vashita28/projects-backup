@@ -1,0 +1,77 @@
+package com.android.cabapp.model;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.content.Context;
+import android.util.Log;
+
+import com.android.cabapp.util.Connection;
+import com.android.cabapp.util.Constants;
+import com.android.cabapp.util.Util;
+
+public class NoShow {
+	Connection connection;
+	List<NameValuePair> nameValuePairs;
+	Context mContext;
+	String jobId;
+
+	public NoShow(String jobID, Context context) {
+		// TODO Auto-generated constructor stub
+		mContext = context;
+		connection = new Connection(mContext);
+		nameValuePairs = new ArrayList<NameValuePair>();
+		this.jobId = jobID;
+	}
+
+	public String NoShowCall() {
+
+		nameValuePairs.add(new BasicNameValuePair("data[bookingId]", jobId));
+
+		if (Util.getLocation(mContext) != null) {
+			nameValuePairs.add(new BasicNameValuePair("data[latitude]", String
+					.valueOf(Util.getLocation(mContext).getLatitude())));
+			nameValuePairs.add(new BasicNameValuePair("data[longitude]", String
+					.valueOf(Util.getLocation(mContext).getLongitude())));
+		} else if (Util.mContext != null
+				&& Util.getLocation(Util.mContext) != null) {
+			nameValuePairs.add(new BasicNameValuePair("data[latitude]", String
+					.valueOf(Util.getLocation(Util.mContext).getLatitude())));
+			nameValuePairs.add(new BasicNameValuePair("data[longitude]", String
+					.valueOf(Util.getLocation(Util.mContext).getLongitude())));
+		}
+		connection.prepareConnection(nameValuePairs);
+		connection.connect(Constants.NO_SHOW);
+
+		String noShowResponse = "";
+
+		if (connection.mInputStream != null) {
+			try {
+				{
+					noShowResponse = connection.inputStreamToString(
+							connection.mInputStream).toString();
+					Log.e("NoShow", "NoShowResponse " + noShowResponse);
+					JSONObject jObject = new JSONObject(noShowResponse);
+
+					if (jObject.has("error")) {
+						noShowResponse = jObject.getString("message");
+						return noShowResponse;
+					}
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return noShowResponse;
+	}
+}

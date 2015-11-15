@@ -1,0 +1,38 @@
+*, *:after, *:before {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+.clearfix:before, .clearfix:after {content:""; display:table;}
+.clearfix:after {clear:both;}
+.clearfix {zoom:1;}
+
+@font-face {
+    font-family: 'Helvetica Neue Light Std';
+    src: url('HELVETICANEUELTSTD-ULTLT.OTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+   2. Prevents iOS text size adjust after orientation change, without disabling user zoom */
+html {font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */}
+html:focus{outline:0;}
+html,body{min-height:100%; width: 100%}
+body{font-size:100%; color:#a3a3a3; font-family: Helvetica Neue Light, Helvetica, sans-serif; font-weight:normal; line-height:normal; background:#191917; padding:0; margin:0 auto}
+.wrapper {width:94%; /*max-width:640px;*/ margin:0 auto; padding:0; display:table;font-size:13px; line-height:18px;}
+.logo {text-align: center; margin:30px auto 20px; padding: 0;}
+.logo img {width:50%; max-width: 427px;}
+h1{font-size:20px; color:#1e1e1c; padding:15px 15px; font-weight:normal;}
+h2{font-size:13px; color:#fff; padding:2em 0 0.7em; margin:0; font-weight:bold; text-transform: uppercase; text-align:center}
+h3{font-size:15px; color:#fd6f01; padding:15px 0 0; margin:0px; font-weight:bold; text-align:center}
+.title{background:#000 url(icon_title.png) no-repeat 22px 50%; margin:1px auto;  color:#fff; padding-left:60px; padding-top:20px;  font-weight:bold; font-size:20px;text-transform:none; font-family: Helvetica Neue Light Std}
+ul{padding:7px 0 0 10px;}
+ol{padding:7px 0 0 10px; font-weight:bold;}
+ol ol{font-weight:normal;}
+li{padding:5px 0;}
+.fontnormal{font-weight:normal;}
+.spst{padding-top:10px;}
+.spst2{padding-top:25px;}
+img{max-width:100%; height:auto; border:0}
+p{padding:0.5em 0; font-size:13px; text-align: center; margin: 0}
+a{color:#da6307; font-weight:bold;}
+hr.small {width:120px; height: 3px; background: #fff; padding: 0; margin: 0.5em auto}

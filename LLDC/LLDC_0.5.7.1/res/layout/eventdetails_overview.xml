@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <RelativeLayout
+        android:id="@+id/rlBanner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="45" >
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/img_imagedetls"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/ivImgOver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_imagedetls"
+            android:layout_alignEnd="@+id/img_imagedetls"
+            android:layout_alignLeft="@+id/img_imagedetls"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/img_imagedetls"
+            android:layout_alignStart="@+id/img_imagedetls"
+            android:layout_marginBottom="-4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_over" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="55"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/dynamic_innerlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8.5"
+            android:orientation="horizontal"
+            android:paddingTop="7dp"
+            android:weightSum="9" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/eventname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|start"
+                        android:maxLines="2"
+                        android:minLines="1"
+                        android:textColor="#e6007d"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlCalender"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.35"
+                    android:background="@color/app_background"
+                    android:clickable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="7dp" >
+
+                    <TextView
+                        android:id="@+id/tvCalender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="CALENDER"
+                        android:textColor="@color/black_heading"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/ivCalenderEvent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/tvCalender"
+                        android:src="@drawable/calender_icon" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/eventvenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|start"
+            android:maxLines="2"
+            android:minLines="1"
+            android:text="text2"
+            android:textColor="#791542"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoBoldItalic
+            android:id="@+id/eventdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:gravity="start|center_vertical"
+            android:maxLines="2"
+            android:minLines="1"
+            android:text="4th October 2014"
+            android:textColor="#791542"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:scrollbars="vertical" >
+
+            <org.sufficientlysecure.htmltextview.HtmlTextView
+                android:id="@+id/txt_eventdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="20dp"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

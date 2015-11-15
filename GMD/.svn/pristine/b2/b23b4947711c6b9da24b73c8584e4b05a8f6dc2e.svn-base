@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_color"
+    android:orientation="vertical" >
+
+    <!-- Header -->
+
+    <include
+        android:id="@+id/view_photograhs_header"
+        layout="@layout/header" />
+
+    <!-- Content -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/view_photograhs_header"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/cameraBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/btn_from_gallery"
+                android:text="@string/TAKE_PHOTO"
+                android:textColor="@color/title_bar_data_text_color"
+                android:textSize="@dimen/button_text_size" />
+
+            <Button
+                android:id="@+id/galleryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/btn_from_gallery"
+                android:text="@string/FROM_GALLERY"
+                android:textColor="@color/title_bar_data_text_color"
+                android:textSize="@dimen/button_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textview_existingphotos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="@string/EXISTING_PHOTOGRAPHS"
+            android:textColor="@color/textview_text_color"
+            android:textSize="@dimen/bold_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/plain_line" />
+
+        <GridView
+            android:id="@+id/grid_photographs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:numColumns="3"
+            android:stretchMode="columnWidth" >
+        </GridView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_photographs"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp" />
+
+</RelativeLayout>

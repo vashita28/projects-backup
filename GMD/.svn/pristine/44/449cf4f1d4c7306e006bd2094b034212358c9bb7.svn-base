@@ -1,0 +1,762 @@
+<resources>
+
+    <string name="unknown">Unknown</string>
+    <string name="empty_comment">This is what I want to say.</string>
+    <string name="item_name">Selected item name</string>
+    <string name="open">OPEN</string>
+    <string name="play1">PLAY</string>
+    <string name="no">NO</string>
+    <color name="dblack" >#ff333333</color>
+    <color name="bgwhite" >#ffffffff</color>
+    <color name="dcolor" >#ff666666</color>
+    
+    <string name="app_name">GMD</string>
+    <string name="GMD_Heading">GMD Field Service Report</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="passwordText">To gain access to your account please call the number below:</string>
+    <string name="prompt_text">Select a option</string>
+    <string name="country_prompt">Choose a country</string>
+    <string name="img_desc">icon</string>
+
+    <string-array name="country_arrays">
+        <item>Select an option</item>
+        <item>Afghanistan</item>
+        <item>Akrotiri</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>American Samoa</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Anguilla</item>
+        <item>Antarctica</item>
+        <item>Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Aruba</item>
+        <item>Ashmore and Cartier Islands</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>Bahamas</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Bassas da India</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bermuda</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Bouvet Island</item>
+        <item>Brazil</item>
+        <item>British Indian Ocean Territory</item>
+        <item>British Virgin Islands</item>
+        <item>Brunei</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burma</item>
+        <item>Burundi</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Cape Verde</item>
+        <item>Cayman Islands</item>
+        <item>Central African Republic</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Christmas Island</item>
+        <item>Clipperton Island</item>
+        <item>Cocos (Keeling) Islands</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Congo, Democratic Republic of the</item>
+        <item>Congo, Republic of the</item>
+        <item>Cook Islands</item>
+        <item>Coral Sea Islands</item>
+        <item>Costa Rica</item>
+        <item>Cote d Ivoire</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Denmark</item>
+        <item>Dhekelia</item>
+        <item>Djibouti</item>
+        <item>Dominica</item>
+        <item>Dominican Republic</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Ethiopia</item>
+        <item>Europa Island</item>
+        <item>Falkland Islands (Islas Malvinas)</item>
+        <item>Faroe Islands</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>French Guian</item>
+        <item>French Polynesia</item>
+        <item>French Southern and Antarctic Lands</item>
+        <item>Gabon</item>
+        <item>Gambia, The</item>
+        <item>Gaza Strip</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Gibraltar</item>
+        <item>Glorioso Islands</item>
+        <item>Greece</item>
+        <item>Greenland</item>
+        <item>Grenada</item>
+        <item>Guadeloupe</item>
+        <item>Guam</item>
+        <item>Guatemala</item>
+        <item>Guernsey</item>
+        <item>Guinea</item>
+        <item>Guinea-Bissau</item>
+        <item>Guyana</item>
+        <item>Haiti</item>
+        <item>Heard Island and McDonald Islands</item>
+        <item>Holy See (Vatican City)</item>
+        <item>Honduras</item>
+        <item>Hong Kong</item>
+        <item>Hungary</item>
+        <item>Iceland</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Ireland</item>
+        <item>Isle of Man</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Jamaica</item>
+        <item>Jan Mayen</item>
+        <item>Japan</item>
+        <item>Jersey</item>
+        <item>Jordan</item>
+        <item>Juan de Nova Island</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kiribati</item>
+        <item>Korea, North</item>
+        <item>Korea, South</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>Laos</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Macau</item>
+        <item>Macedonia</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Martinique</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mayotte</item>
+        <item>Mexico</item>
+        <item>Micronesia, Federated States of</item>
+        <item>Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montserrat</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Navassa Island</item>
+        <item>Nepal</item>
+        <item>Netherlands</item>
+        <item>Netherlands Antilles</item>
+        <item>New Caledonia</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>Niue</item>
+        <item>Norfolk Island</item>
+        <item>Northern Mariana Islands</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paracel Islands</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Pitcairn Islands</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Puerto Rico</item>
+        <item>Qatar</item>
+        <item>Reunion</item>
+        <item>Romania</item>
+        <item>Russia</item>
+        <item>Rwanda</item>
+        <item>Saint Helena</item>
+        <item>Saint Kitts and Nevis</item>
+        <item>Saint Lucia</item>
+        <item>Saint Pierre and Miquelon</item>
+        <item>Saint Vincent and the Grenadines</item>
+        <item>Samoa</item>
+        <item>San Marino</item>
+        <item>Sao Tome and Principe</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia and Montenegro</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>South Georgia and the South Sandwich Islands</item>
+        <item>Spain</item>
+        <item>Spratly Islands</item>
+        <item>Sri Lanka</item>
+        <item>Sudan</item>
+        <item>Suriname</item>
+        <item>Svalbard</item>
+        <item>Swaziland</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syria</item>
+        <item>Taiwan</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>Timor-Leste</item>
+        <item>Togo</item>
+        <item>Tokelau</item>
+        <item>Tonga</item>
+        <item>Trinidad and Tobago</item>
+        <item>Tromelin Island</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Turks and Caicos Islands</item>
+        <item>Tuvalu</item>
+        <item>Uganda</item>
+        <item>Ukraine</item>
+        <item>United Arab Emirates</item>
+        <item>United Kingdom</item>
+        <item>United States</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Virgin Islands</item>
+        <item>Wake Island</item>
+        <item>Wallis and Futuna</item>
+        <item>West Bank</item>
+        <item>Western Sahara</item>
+        <item>Yemen</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+    </string-array>
+
+    <string name="plant_type_prompt">Choose a plant type</string>
+
+    <string-array name="plant_type_array">
+        <item>Select an option</item>
+        <item>GMD</item>
+        <item>Drive</item>
+        <item>Transformer</item>
+        <item>Cyclo</item>
+        <item>E-House</item>
+        <item>Motor</item>
+    </string-array>
+    <string-array name="cyclo_convertor_array">
+        <item>Select an option</item>
+        <item>Cyclo Converter</item>
+        <item>Spare parts &amp; tools</item>
+    </string-array>
+
+    <string name="material_prompt">Select an option</string>
+
+    <string-array name="material_array">
+        <item>Select an option</item>
+        <item>Material Category #1</item>
+        <item>Material Category #2</item>
+        <item>Material Category #3</item>
+        <item>Material Category #4</item>
+        <item>Material Category #5</item>
+        <item>Material Category #6</item>
+    </string-array>
+
+    <string name="time_frame_prompt">Please select an option</string>
+
+    <string-array name="time_frame_array">
+        <item>Please select an option</item>
+        <item>Hours</item>
+        <item>1 day</item>
+        <item>2 day</item>
+        <item>1 month</item>
+        <item>2 month</item>
+        <item>1 year</item>
+        <item>TBD</item>
+    </string-array>
+
+    <string name="location_prompt">Please select an option</string>
+
+    <string-array name="location_array">
+        <item>Please select an option</item>
+        <item>Feed side</item>
+        <item>Discharge side</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="position_prompt">Please select an option</string>
+
+    <string-array name="position_array">
+        <item>Please select an option</item>
+        <item>1 o\'clock</item>
+        <item>2 o\'clock</item>
+        <item>3 o\'clock</item>
+        <item>4 o\'clock</item>
+        <item>5 o\'clock</item>
+        <item>6 o\'clock</item>
+        <item>7 o\'clock</item>
+        <item>8 o\'clock</item>
+        <item>9 o\'clock</item>
+        <item>10 o\'clock</item>
+        <item>11 o\'clock</item>
+        <item>12 o\'clock</item>
+    </string-array>
+
+    <string name="motorpart_prompt">Please select an option</string>
+    <string name="kill_report">Kill Report</string>
+    <string name="view_rejection_comments">View Rejection Comments</string>
+
+    <string-array name="motorpart_array">
+        <item>Please select an option</item>
+        <item>Core Segments</item>
+        <item>Winding</item>
+        <item>Connections</item>
+        <item>Middle Pole Plate</item>
+        <item>Press Plate</item>
+        <item>Bolts</item>
+        <item>Fixation Bolt</item>
+        <item>Eccentric Bushings (2 Positions)</item>
+        <item>Washer</item>
+        <item>Round Nut</item>
+        <item>Mill Flange</item>
+
+        <!-- <item></item> -->
+        <item>Stator Frame</item>
+        <item>Retaining Plate</item>
+        <item>Stator Key Bar</item>
+        <item>Stator Core / Laminations</item>
+        <item>Core Press System</item>
+        <item>Sealing System</item>
+        <item>Stator Cover</item>
+        <item>Joint Seal</item>
+        <item>Rotor Cover</item>
+        <item>Stator Bars /Coils</item>
+        <item>End Cap (if bars)</item>
+        <item>Winding Connections</item>
+        <item>Winding Fixation Cord</item>
+        <item>Rotor Pole Winding</item>
+        <item>Air Gap</item>
+        <item>Brush Assembly</item>
+        <item>Slip Ring</item>
+        <item>Pole Laminations</item>
+        <item>Pole Press Plate</item>
+        <item>Pole Eccentric Brushing</item>
+        <item>Pole Fixation Bolt</item>
+        <item>Pole Fixation Washer</item>
+        <item>Pole Fixation Nut</item>
+    </string-array>
+
+    <string name="list_of_material_prompt">Select an option</string>
+
+    <string-array name="list_of_material_array">
+        <item>Select an option</item>
+        <item>Material 1</item>
+        <item>Material 2</item>
+        <item>Material 3</item>
+        <item>Material 4</item>
+        <item>Material 5</item>
+        <item>Material 6</item>
+    </string-array>
+
+    <string name="list_of_tools_prompt">Select an option</string>
+
+    <string-array name="tools_array">
+        <item>Select an option</item>
+        <item>Tool 1</item>
+        <item>Tool 2</item>
+        <item>Tool 3</item>
+        <item>Tool 4</item>
+        <item>Tool 5</item>
+        <item>Tool 6</item>
+    </string-array>
+
+    <string name="saveandcomplete">Save &amp; Complete</string>
+    <string name="close">Close</string>
+    <string name="video_player">Video Player</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="status">Status</string>
+    <string name="empty_message">00:00</string>
+
+    <string-array name="work_carried_out">
+        <item>Select an option</item>
+        <item>Inspected</item>
+        <item>Reworked</item>
+        <item>Replaced</item>
+        <item>Retighted</item>
+        <item>Not Inspected</item>
+        <item>No Access</item>
+        <item>See Comments</item>
+    </string-array>
+    <string-array name="conditions">
+        <item>Select an option</item>
+        <item>Very good cond.</item>
+        <item>Good Condition</item>
+        <item>Normal</item>
+        <item>Bad Condition</item>
+        <item>Out Of Service</item>
+        <item>Damage</item>
+        <item>Retight Partially</item>
+        <item>Need quick action</item>
+        <item>See Comments</item>
+    </string-array>
+    <string-array name="recommendations">
+        <item>Select an option</item>
+        <item>Reworked</item>
+        <item>To inspect in 3y.</item>
+        <item>To inspect in 1y.</item>
+        <item>To inspect in 6m.</item>
+        <item>To inspect in 1m.</item>
+        <item>To monitor weekly</item>
+        <item>To monitor daily</item>
+        <item>To rework</item>
+        <item>See Comments</item>
+        <item>None</item>
+    </string-array>
+    <string-array name="site_storage_conditions_checked">
+        <item>Checked</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string name="SELECT_CHECKED">Checked</string>
+
+    <!-- log in page text -->
+    <string name="GMD_FIELD_SERVICE_REPORT">GMD Field Service Report</string>
+    <string name="LG_CENTER_HEADING">Please enter your login details below</string>
+    <string name="REPORT_LOG_IN">Report Log In</string>
+    <string name="USERNAME">Username</string>
+    <string name="PASSWORD">Password</string>
+    <string name="LOG_IN">Log In</string>
+
+    <!-- Forget password page text -->
+    <string name="FORGOTTEN_PASSWORD">Forgotten Password</string>
+    <string name="FP_CENTER_HEADING">To gain access to your account please call the number below:</string>
+    <string name="CANCEL">Cancel</string>
+
+    <!-- Report Details  page text -->
+    <string name="PAGE_TITLE">Page Title</string>
+    <string name="SITE_NAME">Site Name</string>
+    <string name="MILL_NAME">Mill Name</string>
+    <string name="REPORT_DETAILS">Report Details</string>
+    <string name="LOGOUT">Log out</string>
+    <string name="RD_CENTER_HEADING">Please enter the details of the report below</string>
+    <string name="ENTER_TEXT_HERE">Enter text here</string>
+    <string name="CUSTOMER">Customer</string>
+    <string name="SITE">Site</string>
+    <string name="COUNTRY_NAME">Country Name</string>
+    <string name="SELECT_AN_OPTION">Select an option</string>
+    <string name="CUSTOMRE_REP">Customer Rep</string>
+    <string name="PLANT_NAME">Plant Name</string>
+    <string name="PLANT_TYPE">Plant Type</string>
+    <string name="UNIT">Unit</string>
+    <string name="SYSTEM_MACHINE">System/Machine</string>
+    <string name="TYPE">Type</string>
+    <string name="SERIAL_NO">Serial No</string>
+    <string name="YEAR_OF_DELIVERY">Year of Delivery</string>
+    <string name="OPERAING_HOURS">Operating Hours</string>
+    <string name="SERVICE_INFORMATION">SERVICE INFORMATION</string>
+    <string name="SERVICE_TYPE">Service Type</string>
+    <string name="NEW_PLANT">New Plant</string>
+    <string name="UPGRADE">Upgrade</string>
+    <string name="TROUBLESHOOTIG">Troubleshooting</string>
+    <string name="OTHERS">Others</string>
+    <string name="FIRST_INSTALLATION">First Installation</string>
+    <string name="MINOR_INSPECTION">Minor Inspection</string>
+    <string name="MAJOR_OVERHAUL">Major Overhaul</string>
+    <string name="SERVICE_TASK">Service Task</string>
+    <string name="INSTALLATION">Installation</string>
+    <string name="COMISSIONING">Comissioning</string>
+    <string name="TEST_ASSESSMENT">Test/Assessment</string>
+    <string name="OVERALLWORKS">Overall Works</string>
+    <string name="RE_COMISSIONING">Re-Comissioning</string>
+    <string name="DIAGNOSTICS">Diagnostics</string>
+    <string name="FACTORY_INSP">Factory Insp.</string>
+    <string name="REPAIR">Repair</string>
+    <string name="INVESTIGATION">Investigation</string>
+    <string name="INSPECTION">Inspection</string>
+    <string name="MOTOR_INSP_INSIDE">Motor Insp. Inside</string>
+    <string name="MOTOR_INSP_EXTERNAL">Motor Insp. External</string>
+    <string name="DESCRIPTION_OF_SERVICE_PERFORMED">DESCRIPTION OF SERVICE PERFORMED</string>
+    <string name="STATOR">Stator</string>
+    <string name="ROTOR_POLES">Rotor Poles</string>
+    <string name="MOTOR_AUXILLARIES">Motor Auxiliaries</string>
+    <string name="CYCLO_CONVERTER">Cyclo Converter</string>
+    <string name="LIST_OF_DISTRIBUTION">LIST OF DISTRIBUTION</string>
+    <string name="LOCATION">Location</string>
+    <string name="DEPT_LOC">Dept/Loc.</string>
+    <string name="SURNAME_NAME">Surname, Name</string>
+    <string name="REMARKS">Remarks</string>
+    <string name="DISTRIBUTION_TO_CUSTOMER">DISTRIBUTION TO CUSTOMER</string>
+    <string name="SEND_BY">Send By</string>
+    <string name="TO">TO</string>
+    <string name="DATE">Date</string>
+    <string name="CUSTOMER_COMMENTS">Customer Comments</string>
+    <string name="COMMENTS_INTEGRATED">Comments Integrated</string>
+    <string name="SAVE_CHANGES">Save Changes</string>
+    <string name="ADD_NEW_ITEM">Add new item</string>
+    <string name="ENTER_TEXT">Enter text</string>
+    <string name="CURRENTLY_NO_DATA_FOUND">Currently no data found. Please Sync with Server.</string>
+    <string name="PERSONNEL_INVOLVED_FROM_ABB">PERSONNEL INVOLVED FROM ABB</string>
+    <string name="PI_N">N \u00B0</string>
+    <string name="PI_SURNAME">Surname, Name</string>
+    <string name="PI_CAT">Cat</string>
+    <string name="PI_FUNCTION">Function</string>
+    <string name="PI_ARRIVAL_DATE">Arrival date</string>
+    <string name="PI_DEPARTURE_DATE">Departure date</string>
+    <string name="PI_DEPT_LOC">Dept./Loc.</string>
+    <string name="PERSONNEL_INVOLVE_FROM_CLIENT">PERSONNEL INVOLVED FROM CLIENT AND/OR CONSULTANT</string>
+    <string name="PI_FROM">from</string>
+    <string name="PI_TILL">till</string>
+
+    <!-- Summary  page text -->
+    <string name="SUMMARY">Summary</string>
+    <string name="SUMMARY_OF_INSPECTION">SUMMARY OF INSPECTION-WORK PERFORMED DURING SHUTDOWN</string>
+    <string name="AUTO_GENERATED">Auto generated text from rest of the report</string>
+    <string name="MAIN_DIFFICULTIES">MAIN DIFFICULTIES</string>
+    <string name="RECOMMENDATIONS">RECOMMENDATIONS</string>
+    <string name="POINT_OF_GENERAL_INTEREST">"POINT OF GENERAL INTEREST"</string>
+    <string name="SERVICE_INFORMATION_SUMMARY_PAGE">SERVICE INFORMATION</string>
+    <string name="MAIN_MOTOR_DATAS">MAIN MOTOR DATA\'S</string>
+    <string name="SPECIFIC_MOTOR_DATAS">SPECIFIC MOTOR DATA\'S</string>
+    <string name="DESCRIPTION">Description</string>
+    <string name="DATA">Data</string>
+
+    <!-- Service Checklist  page text -->
+    <string name="SERVICE_CHECKLIST">Servic Checklist</string>
+    <string name="FILL_IN_DETAILS_TO_COMPLETE_TASK">Fill in details below to complete task</string>
+    <string name="ITEM_MOVEMENTS">ITEM MOVEMENTS(mm)</string>
+    <string name="NOT_MEASURED">Not Measured</string>
+    <string name="BACK_TO_TOP">Back to top</string>
+    <string name="WORK_SCOPE">Work scope</string>
+    <string name="CLOSE">Close</string>
+    <string name="WORK_CARRIED_OUT">Work carried out</string>
+    <string name="SAVE_AND_COMPLETE">Save &amp; Complete</string>
+    <string name="CONDITIONS">Conditions</string>
+    <string name="COMMENTS">Comments</string>
+    <string name="PHOTOGRAPH">Photograph</string>
+    <string name="HELP_SUPPORT">Help/Support</string>
+    <string name="PLEASE_SELECT_AN_OPTION_BELOW">Please select an option below</string>
+    <string name="PDF">PDF</string>
+    <string name="VIDEO">Video</string>
+    <string name="LIBRARY">Library</string>
+    <string name="REPORT_A_PROBLEM">Report a problem</string>
+    <string name="SAVE">SAVE</string>
+
+    <!-- Report problem  page text -->
+    <string name="REVIEW_IMAGE">Review Image</string>
+    <string name="BACK">Back</string>
+    <string name="NEXT">Next</string>
+    <string name="ALERT">Alert</string>
+    <string name="CLICK_ON_IMAGE_TO_REPORT_PROBLEM">Click on image to report problem</string>
+    <string name="OK">Ok</string>
+    <string name="PLEASE_DEFINE_PROBLEM_BELOW">Please define problem below</string>
+    <string name="WHAT_IS_THE_PROBLEM">What is the problem</string>
+    <string name="WHERE_IS_THE_PROBLEM">Where is the problem</string>
+    <string name="WHY_IS_IT_A_PROBLEM">Why is it a problem</string>
+    <string name="PLEASE_ADD_PHOTO">Plase add a photo of the problem</string>
+    <string name="PHOTO_ADDED">Photo added,you may retake by clicking camera</string>
+    <string name="PLEASE_DEFINE_THE_SOLUTION__BELOW">Please define the solution below</string>
+    <string name="HOW_CAN_THIS_BE_FIXED">How can this be fixed?</string>
+    <string name="WHY_FIX_IT">Why fix it?</string>
+    <string name="TIME_FRAME">Time frame to fix</string>
+    <string name="REQUIRED_PERSONNEL">Required personnel</string>
+    <string name="DELETE">Delete</string>
+    <string name="POSITION_FEED_SIDE">Position: Feed Side</string>
+    <!-- <string name="LOCATION_CLOCK">Location: 1 o&apos;clock</string> -->
+    <string name="EXTRA_TEXT">Extra Text</string>
+
+    <!-- Photographs  page text -->
+    <string name="PHOTOGRAPHS">Photographs</string>
+    <string name="TAKE_PHOTO">Take Photo</string>
+    <string name="FROM_GALLERY">From Gallery</string>
+    <string name="EXISTING_PHOTOGRAPHS">EXISTING PHOTOGRAPHS</string>
+    <string name="LOG_A_PROBLEM">Log a Problem</string>
+    <string name="TAKE_AGAIN">Take Again</string>
+    <string name="PHOTO_DETAILS_ENTRY">Photo Details Entry</string>
+    <string name="PDE_CENTER_HEADING">Please enter the photo details below</string>
+    <string name="POSITION">Position (From feedside)</string>
+    <string name="POSITION_ONLY">Position</string>
+    <string name="MOTOR_PART">Motor Part</string>
+    <string name="PLEASE_SELECT_AN_OPTION">Please select an option</string>
+    <string name="ALL_FIELDS_ARE_MANDATORY">All fields are mandatory</string>
+
+    <!-- Site Conditions page text -->
+    <string name="SITE_CONDITIONS">Site Conditions</string>
+    <string name="SITE_STORAGE_CONDITIONS">SITE STORAGE CONDITIONS</string>
+    <string name="STORE_CLEANLINESS">Store cleanliness</string>
+    <string name="YES">Yes</string>
+    <string name="SPARE_PARTS_AT_SITE">SPARE PARTS AT SITE</string>
+    <string name="MATERIAL">Material</string>
+    <string name="QUANTITY">Quantity</string>
+    <string name="TOOLS_INSTRUMENTS">TOOLS/INSTRUMENTS</string>
+    <string name="TOOLS">Tools</string>
+    <string name="MATERIAL_CATEGORY">Material Category</string>
+    <string name="MATERIAL_NAME">Material Name</string>
+
+    <!-- Archive Reports page text -->
+    <string name="ARCHIVE_REPORTS">Archive Reports</string>
+    <string name="REPORT_TITLE">Report Title</string>
+
+    <!-- Sync With Server page text -->
+    <string name="SYNC_WITH_SERVER">Sync with server</string>
+    <string name="SYNC_SUCCESSFULLY">Synced successfully! Please check report details.</string>
+    <string name="DOWNLOADING_REPORT">Downloading report...</string>
+
+    <!-- Kill report page text -->
+    <string name="CALL_FOR_ASSISTANCE">Call 123-123-1234 for assistance</string>
+    <string name="PLEASE_ENTER_PASSWORD">Please enter password</string>
+    <string name="EIGHT_DIGITS">Eight digits</string>
+    <string name="PASSWORD_DID_NOT_MATCH">Password did not match. Try again.</string>
+    <string name="CONFIRM">Confirm</string>
+
+    <!-- Special Data type:KEY BARS page text -->
+    <string name="POSITION_OF_KER_BARS">Position of Core Key Bars</string>
+    <string name="TELFER_GOLD_MINE">TELFER GOLD MINE</string>
+    <string name="MEAUSRED_BY">MEASURED BY: C.Vincliar</string>
+    <string name="ITEM_KEY_BAR">ITEM (Key Bar)</string>
+    <string name="MOVEMENT_MM">MOVEMENT (mm)</string>
+
+    <!-- Special Data type:SOLE PLATE page text -->
+    <string name="SOLE_PLATE_CENTER_HEADING">Clearance at sole plate</string>
+    <string name="POWER">Power</string>
+    <string name="KW">kW</string>
+    <string name="MEASUREMENT_1">Measurement 1</string>
+    <string name="MEASUREMENT_2">Measurement 2</string>
+    <string name="MEASUREMENT_3">Measurement 3</string>
+
+    <!-- Special Data type:AIR GAP MEASUREMENT page text -->
+    <string name="AIR_GAP_CENTER_HEADING">Air Gap Measurement</string>
+    <string name="POSITION_PARTITIONS">Position \n(Partition)</string>
+    <string name="PLANT">PLANT</string>
+    <string name="NUMBERING">NUMBERING</string>
+    <string name="UNIT_UPPERCASE">UNIT</string>
+    <string name="CLOCKWISE_SEND">Clockwise send from Feeder side. No.1: First core bolt clockwise from vertical axis</string>
+    <string name="NOMINAL_AIR_GAP">Nominal air gap</string>
+    <string name="MM">mm</string>
+    <string name="PHYSICAL_MEASUREMENT">Physical Measurement</string>
+    <string name="INFORMATION">INFORMATION</string>
+    <string name="CHECK_PAINT_CONDITION">Check paint condition before application of torque, Provide sample photos of
+        paint conditions, Mark nut before torque check for angle measurement, Repaint nuts and bolts after re-torqueing</string>
+    <string name="AIR_GAP_SENSORS_MEASUREMENT">Air Gap Sensors Measurement</string>
+
+    <!-- Special Data type:CORE PARTITIONS page text -->
+    <string name="CORE_PARTITIONS_CENTER_HEADING">Displacement of end plates at core partitions</string>
+    <string name="FEEDER_SIDE">Feeder side</string>
+    <string name="DISCHARGE_SIDE">Discharge side</string>
+    <string name="WINDING_T">Winding Temperature/ \u2103:</string>
+    <string name="STATOR_T">Stator Temperature/ \u2103:</string>
+    <string name="AMBIANTE_T">Ambient Temperature/ \u2103:</string>
+    <string name="REMARKS_TEXT">If there are large deviations, please report directly to CH. Next step to be agreed
+        together with customer</string>
+
+    <!-- Special Data type:PRESSFINGER FEEDER page text -->
+    <string name="PRESSFINGER_CENTER_HEADING">Displacement of pressfinger plates- Feed side</string>
+    <string name="ITEM_FINGER_PLATE">Item (Finger plate)</string>
+    <string name="FEED_SIDE">Feed side</string>
+    <string name="IN_OUT_OUTWARDS">In / or outwards</string>
+    <string name="DISPLACEMENT">Displacement</string>
+
+    <!-- Special Data type:PRESSFINGER DISCHARGE page text -->
+    <string name="PRESSFINGER_DISCHARGE_CENTER_HEADING">Displacement of pressfinger plates- Discharge side</string>
+
+    <!-- Special Data type:MAGNETIC CENTERING page text -->
+    <string name="MAGNETIC_CENTERING_CENTER_HEADING">Axial Position (Magnetic Centering)</string>
+    <string name="POLE_NO">Pole No</string>
+    <string name="CLOCKWISE_SEEN_FROM_FEEDER_SIDE">Clockwise seen from Feeder Side</string>
+    <string name="PHYSICAL_MEASUREMENT_MM">Physical Measurement, mm</string>
+    <string name="DEVIATION">Deviation</string>
+
+    <!-- Special Data type:HOLDING PLATES page text -->
+    <string name="HOLDING_PLATES_CENTER_HEADING">Condition of Holding Plates</string>
+    <string name="HOLDING_PLATE_1">Holding Plate 1</string>
+    <string name="HOLDING_PLATE_2">Holding Plate 2</string>
+    <string name="HOLDING_PLATE_3">Holding Plate 3</string>
+    <string name="CONNECTION_SIDE">Connection Side</string>
+    <string name="CENTER">Center</string>
+    <string name="NON_CONNECTION_SIDE_SIDE">NON Connection Side Side</string>
+
+    <!-- Special Data type:CORE PARTITIONS page text -->
+    <string name="CORE_PARTITION_CENTER_HEADING">Displacement of End plates at Core Partitions</string>
+    <string name="RADIAL_DISPLACEMENT">Radial Displacement</string>
+    <string name="AXIAL_DISPLACEMENT">Axial Displacement</string>
+    <string name="RADIAL_GAP">Radial Gap</string>
+    <string name="AXIAL_GAP">Axial Gap</string>
+    <string name="POSITION_PARTITION">Position (Partition)</string>
+
+    <!-- Special Data type:BRUSH WEAR page text -->
+    <string name="BRUSH_WEAR_CENTER_HEADING">Brush Wear Measurement</string>
+    <string name="INNER_RING">Inner Ring</string>
+    <string name="OUTER_RING">Outer Ring</string>
+    <string name="GROUND">Ground</string>
+    <string name="BRUSH">Brush #</string>
+
+    <!-- Special Data type:BOLT TORQUE CHECK page text -->
+    <string name="BOLT_TORQUE_CENTER_HEADING">Torque of Core Bolts</string>
+    <string name="ITEM">Item</string>
+    <string name="INTIAL_TORQUE">Initial Torque</string>
+    <string name="NUT_ANGLE">Nut Angle</string>
+    <string name="FINAL_TORQUE">Final Torque</string>
+
+    <!-- Special Data type:BOLT INSULATION page text -->
+    <string name="BOLT_INSULATION_CENTER_HEADING">Insulation of Core Bolts</string>
+    <string name="INSULATION_RESISTANCE">Insulation Resistance</string>
+    <string name="MOHMS">Mohms</string>
+
+    <!-- Plant type values -->
+    <string name="PLANT_TYPE_GMD">GMD</string>
+    <string name="PLANT_TYPE_TRANSFORMER">Transformer</string>
+    <string name="PLANT_TYPE_EHOUSE">E-House</string>
+    <string name="PLANT_TYPE_DRIVE">Drive</string>
+    <string name="PLANT_TYPE_CYCLO">Cyclo</string>
+    <string name="PLANT_TYPE_MOTOR">Motor</string>
+
+</resources>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/venuedetails"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@android:color/white" >
+
+    <View
+        android:id="@+id/borderlayout"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/explorer_bg" />
+
+    <LinearLayout
+        android:id="@+id/topbarholder"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/borderlayout"
+        android:baselineAligned="true"
+        android:maxHeight="200dp"
+        android:minHeight="150dp"
+        android:orientation="horizontal"
+        android:paddingEnd="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp" >
+
+        <LinearLayout
+            android:id="@+id/venuetitleholder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:orientation="vertical" >
+
+            <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                android:id="@+id/mapvenuetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="5dp"
+                android:gravity="top"
+                android:singleLine="true"
+                android:textSize="22sp" />
+
+            <co.uk.android.lldc.custom.CustomTextView_RobotoItalic
+                android:id="@+id/venuesubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+                <co.uk.android.lldc.custom.CustomTextView_RobotoLight
+                    android:id="@+id/venuedescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:minLines="2"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:textSize="14sp" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btndirection"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="30"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:src="@drawable/direction_btn" />
+
+            <co.uk.android.lldc.custom.CustomButton_RobotoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:padding="5dp"
+                android:text="Directions"
+                android:textColor="@color/explorer_bg"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBanner"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbarholder"
+        android:layout_weight="100"
+        android:background="@android:color/white"
+        android:paddingTop="20dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/venuelargeimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/imgnt_placeholder" />
+
+        <ImageView
+            android:id="@+id/ivImgOver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/venuelargeimage"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/venuelargeimage"
+            android:layout_alignTop="@+id/venuelargeimage"
+            android:layout_marginTop="-4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_overdown" />
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/tvdiscovemore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/text_bg_rev"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingStart="20dp"
+            android:text="DISCOVER MORE"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

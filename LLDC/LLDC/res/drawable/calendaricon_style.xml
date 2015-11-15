@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_focused="true" android:drawable="@drawable/calender_icon"/>
+<item android:state_pressed="true" android:drawable="@drawable/white_cal" />
+<item android:drawable="@drawable/calender_icon" />  //means normal
+</selector>

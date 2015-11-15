@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registration_bg" >
+
+    <TextView
+        android:id="@+id/tvLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Log in"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvAlreadyRegistered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvLogIn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="15dp"
+        android:text="ALREADY REGISTERED?"
+        android:textColor="@color/textview_selected"
+        android:textSize="@dimen/bottom_tab_textsize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/tvAlreadyRegistered"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Sign Up"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvNewtoCabapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvSignUp"
+        android:layout_alignLeft="@+id/tvAlreadyRegistered"
+        android:layout_marginBottom="8dp"
+        android:text="NEW TO CAB:APP DRIVER?"
+        android:textColor="@color/textview_selected"
+        android:textSize="@dimen/bottom_tab_textsize"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivCabAppIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/cab_app_icon" />
+
+    <TextView
+        android:id="@+id/tvDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivCabAppIcon"
+        android:layout_centerHorizontal="true"
+        android:text="D R I V E R"
+        android:textColor="@color/textview_selected"
+        android:textSize="20sp" />
+
+</RelativeLayout>

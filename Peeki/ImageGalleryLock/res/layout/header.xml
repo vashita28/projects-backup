@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_header"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/header_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rlMenuIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/menu_selector"
+        android:clickable="true"
+        android:paddingRight="3dp"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/menubutton"
+            android:clickable="false" />
+
+        <ImageView
+            android:id="@+id/ivImageGalleryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btnMenu"
+            android:clickable="false"
+            android:src="@drawable/logo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBackIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/rlMenuIcon"
+        android:background="@drawable/menu_selector"
+        android:clickable="true"
+        android:paddingRight="3dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/backbutton"
+            android:clickable="false" />
+
+        <ImageView
+            android:id="@+id/ivImageGalleryIconBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btnBack"
+            android:clickable="false"
+            android:src="@drawable/logo" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvNoSelectedImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/rlBackIcon"
+        android:text=" images selected"
+        android:textColor="@color/textcolor_grey"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivBlocked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/ivPlaySelection"
+        android:src="@drawable/bottombarblockgray" />
+
+    <ImageView
+        android:id="@+id/ivPlaySelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="7dp"
+        android:paddingRight="7dp"
+        android:src="@drawable/playbutton" />
+
+    <TextView
+        android:id="@+id/tvDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:text="DONE"
+        android:textColor="@color/textcolor_blue"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

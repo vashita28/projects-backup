@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/explore_fragment_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp" >
+
+        <RelativeLayout
+            android:id="@+id/rlTopHeaders"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp" >
+
+            <LinearLayout
+                android:id="@+id/llTravelNVenue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/rlTrailsnTours"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/explorer_bg" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvTrailsnTours"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/trails_tours"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlVenuenAttractions"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/venues_attraction_bg" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvVenuenAttractions"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/venues_attractions"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlLondon2012"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/london2012_bg" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvLondon2012"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/london_2012"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlFacilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.25"
+                    android:background="@color/facilities_bg" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvFacilities"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="@string/facilities"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/tvWhatIsThereToSee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTopHeaders"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/what_is_there_to_see"
+            android:textColor="@color/black_heading"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <GridView
+            android:id="@+id/listViewExplore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWhatIsThereToSee"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="10dp"
+            android:divider="@color/explore_fragment_bg"
+            android:dividerHeight="8dp"
+            android:horizontalSpacing="20dp"
+            android:numColumns="2"
+            android:verticalSpacing="20dp" >
+        </GridView>
+    </RelativeLayout>
+
+</RelativeLayout>

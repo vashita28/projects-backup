@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <GridView
+        android:id="@+id/gridViewPhotoGallerySelection"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rlSelect"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginRight="-5dp"
+        android:layout_marginTop="-5dp"
+        android:background="@android:color/white"
+        android:fastScrollEnabled="true"
+        android:horizontalSpacing="1dp"
+        android:numColumns="4"
+        android:smoothScrollbar="true"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp"
+        android:visibility="visible" >
+    </GridView>
+
+    <RelativeLayout
+        android:id="@+id/rlSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/header_bg"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/ivSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/clickbutton" />
+    </RelativeLayout>
+    
+       <TextView
+           android:id="@+id/tvNoImagesToDisplay"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_centerVertical="true"
+           android:text="No image to display."
+           android:textColor="@color/textcolor_grey"
+           android:textSize="18sp"
+           android:visibility="gone" />
+
+</RelativeLayout>

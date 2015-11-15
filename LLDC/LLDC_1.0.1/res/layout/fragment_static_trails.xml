@@ -1,0 +1,147 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/viewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/textcolor_pink" />
+
+    <RelativeLayout
+        android:id="@+id/rel_main"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.5"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:weightSum="96" >
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/place_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:textColor="#e6007d"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/place_title"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:text="2km walk"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/dynamic_innerlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_time"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="90" >
+
+            <TextView
+                android:id="@+id/text_walk"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="30"
+                android:drawableLeft="@drawable/walk"
+                android:drawablePadding="2dp"
+                android:gravity="left|center_vertical"
+                android:text="2km walk"
+                android:textColor="#e6007d" />
+
+            <TextView
+                android:id="@+id/text_duration"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="30"
+                android:drawableLeft="@drawable/duration_icon"
+                android:drawablePadding="2dp"
+                android:gravity="left|center_vertical"
+                android:text="1 hour"
+                android:textColor="#e6007d" />
+
+            <TextView
+                android:id="@+id/text_"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="30"
+                android:drawableLeft="@drawable/disabled"
+                android:drawablePadding="2dp"
+                android:gravity="left|center_vertical"
+                android:text="Accessible"
+                android:textColor="#e6007d" />
+        </LinearLayout>
+
+        <!-- <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/dynamic_innerlayout"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:scrollbars="vertical" > -->
+
+            <WebView
+                android:layout_below="@+id/dynamic_innerlayout"
+                android:id="@+id/txt_eventdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:clickable="true"
+                android:scrollbars="vertical"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black_heading"
+                android:textSize="14sp" />
+        <!-- </ScrollView> -->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBanner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.5"
+        android:visibility="gone" >
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/img_imagedetls"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imgnt_placeholder" />
+
+        <ImageView
+            android:id="@+id/ivImgOver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/img_imagedetls"
+            android:layout_alignStart="@+id/img_imagedetls"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/img_imagedetls"
+            android:layout_alignEnd="@+id/img_imagedetls"
+            android:layout_alignTop="@+id/img_imagedetls"
+            android:layout_marginTop="-3dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_overdown" />
+    </RelativeLayout>
+
+</LinearLayout>

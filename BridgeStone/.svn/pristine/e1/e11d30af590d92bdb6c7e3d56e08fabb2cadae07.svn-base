@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bridgestone TPMS</string>
+    <string name="app_version">1.0</string>
+
+    <!-- Main Activity -->
+    <string name="send">Send</string>
+    <string name="bt_not_enabled">Bluetooth was not enabled.</string>
+    <string name="title_connecting">connecting&#8230;</string>
+    <string name="title_connected_to">connected: </string>
+    <string name="title_not_connected">not connected</string>
+    <string name="sensors">sensors</string>
+    <string name="minimum_sensor_pressure">Minimum sensor pressure:</string>
+    <string name="sensors_captured">sensors captured</string>
+    <string name="sensors_below_min_pressure">sensors below minimum pressure</string>
+    <string name="uploaded">uploaded</string>
+    <string name="btnUploadNow">upload now</string>
+    <string name="btnUploaded">uploaded</string>
+
+    <!-- DeviceListActivity -->
+    <string name="scanning">scanning for devices&#8230;</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="no_device_selected">Please select a valid device from the list</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">Connect a device - Secure</string>
+    <string name="insecure_connect">Connect a device - Insecure</string>
+    <string name="discoverable">Make discoverable</string>
+
+    <!-- Login Activity -->
+    <string name="login">Log in</string>
+    <string name="btnLogin">log in</string>
+    <string name="user">User</string>
+    <string name="enter_user_id">Enter user ID</string>
+    <string name="preferences">Preferences</string>
+    <string name="language">Language</string>
+    <string name="pressuremeasurement">Pressure Measurement</string>
+    <string name="user_id_error">Please enter User ID</string>
+    <string name="user_id_must_contain_alphanumberic">Please enter alpha-numeric User ID</string>
+    <string name="user_id_invalid_length">Please enter alpha-numeric User ID of length 6</string>
+
+    <!-- Setup Activity -->
+    <string name="set_up">set up</string>
+    <string name="current_status">Current status</string>
+    <string name="not_connected">Not connected</string>
+    <string name="connected">Connected</string>
+    <string name="to_a_device">to a device</string>
+    <string name="connect_device">connect device</string>
+    <string name="change_device">change device</string>
+
+    <!-- Sensor Details Activity -->
+    <string name="sensor_details">sensor details</string>
+    <string name="sensor_id">Sensor ID</string>
+    <string name="pressure">Pressure</string>
+    <string name="save">save</string>
+    <string name="input_length_error">Please enter a number</string>
+    <string name="input_number_invalid_error">Please enter a valid number</string>
+    <string name="bar">BAR</string>
+    <string name="psi">PSI</string>
+
+    <!-- Toast messages -->
+    <string name="no_network_error">No network connection. Please try later.</string>
+    <string name="upload_error">Error uploading data. Please try later.</string>
+    <string name="uploading">Uploading&#8230;</string>
+    <string name="connecting">Connecting&#8230;</string>
+
+    <string-array name="languagesArray">
+        <item>English</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Spanish</item>
+        <item>Italian</item>
+        <item>Portuguese</item>
+        <item>Polish</item>
+        <item>Czech</item>
+        <item>Hungarian</item>
+        <!-- <item>Slovak</item> -->
+        <item>Dutch</item>
+    </string-array>
+    <string-array name="pressuremeasurementArray">
+        <item>BAR</item>
+        <item>PSI</item>
+    </string-array>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="exit">Exit</string>
+    <string name="confirm_exit">Confirm exit?</string>
+    <string name="no_results">No Results</string>
+    <string name="bluetooth_not_available">Bluetooth is not available</string>
+    <string name="unable_to_connect_device">Unable to connect device</string>
+    <string name="device_connection_lost">Device connection was lost</string>
+    <string name="network_not_available">Network not available</string>
+
+</resources>

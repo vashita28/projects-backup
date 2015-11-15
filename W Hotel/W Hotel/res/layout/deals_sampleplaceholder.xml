@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/whotel_insider_top_image_bg" >
+
+        <ImageView
+            android:id="@+id/imageview_deals1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY" />
+        <!-- android:src="@drawable/deals1" -->
+
+        <ImageView
+            android:id="@+id/imageview_read_more1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_imgdesc"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/whotel_insider_read_more_icon" />
+
+        <uk.co.pocketapp.whotel.customview.CustomTextView_italicfont
+            android:id="@+id/tv_read_more1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_imgdesc"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="11dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingRight="5dp"
+            android:text="@string/read_more"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_imgdesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/whotel_deals_transparent_extrahigh"
+            android:orientation="vertical" >
+
+            <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+                android:id="@+id/tv_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="CHOCLATE FANTASY"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+
+            <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont
+                android:id="@+id/tv_sub_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Buy one get one free, 50% off on all almonds falvour."
+                android:textColor="@android:color/white"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/whotel_insider_top_2ndimage_bg"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageview_deals2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@color/image_bg_color"
+                android:scaleType="fitXY" />
+            <!-- android:src="@drawable/deals2" -->
+
+            <ImageView
+                android:id="@+id/imageview_read_more2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/whotel_insider_read_more_icon" />
+
+            <uk.co.pocketapp.whotel.customview.CustomTextView_italicfont
+                android:id="@+id/tv_read_more2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="11dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingRight="5dp"
+                android:text="@string/read_more"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/whotel_deals_transparent_extrahigh"
+                android:orientation="vertical" >
+
+                <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="5dp"
+                    android:text="THE SPENCE, SUMMER SWAG"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+                <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:singleLine="true"
+                    android:text="50% off of your meal"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/whotel_insider_top_2ndimage_bg"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageview_deals3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@color/image_bg_color"
+                android:scaleType="fitXY" />
+            <!-- android:src="@drawable/deals3" -->
+
+            <ImageView
+                android:id="@+id/imageview_read_more3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_image2"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/whotel_insider_read_more_icon" />
+
+            <uk.co.pocketapp.whotel.customview.CustomTextView_italicfont
+                android:id="@+id/tv_read_more3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_image2"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="11dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingRight="5dp"
+                android:text="@string/read_more"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_image2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/whotel_deals_transparent_extrahigh"
+                android:orientation="vertical" >
+
+                <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="5dp"
+                    android:text="DAIRY MILK TEMPTATION"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+
+                <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:singleLine="true"
+                    android:text="Beer and a shot for $7"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/agree_continue_page">
+
+    <!-- <RelativeLayout -->
+    <!-- android:id="@+id/rl_agree_continue" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentStart="true" -->
+    <!-- android:layout_marginTop="110dp" -->
+    <!-- android:layout_marginLeft="18dp" -->
+    <!-- android:gravity="center_vertical" -->
+    <!-- android:background="@drawable/whotel_option_centre_body" -->
+    <!-- android:layout_gravity="center_horizontal|center_vertical" -->
+    <!-- > -->
+
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/tv_agree_continue" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_marginLeft="35dp" -->
+    <!-- android:layout_marginTop="35dp" -->
+    <!-- android:textSize="14sp" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:textColor="@color/black" -->
+    <!-- android:text="@string/text_agree_and_continue" -->
+    <!-- /> -->
+
+
+    <!-- &lt;!&ndash;android:text="@string/agree_continue"&ndash;&gt; -->
+
+
+    <!-- <Button -->
+    <!-- android:id="@+id/btn_agree_continue" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_marginTop="10dp" -->
+    <!-- android:padding="10dp" -->
+    <!-- android:textSize="13sp" -->
+    <!-- android:textColor="@color/white" -->
+    <!-- android:layout_marginLeft="0dp" -->
+    <!-- android:text="@string/btn_agree_and_continue" -->
+    <!-- android:textAlignment="center" -->
+    <!-- android:background="@drawable/whotel_option_agree_continue_btn" -->
+    <!-- android:layout_below="@+id/tv_agree_continue" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:layout_marginRight="25dp"/> -->
+    <!-- </RelativeLayout> -->
+
+
+    <!-- <Button -->
+    <!-- android:id="@+id/button_agree_continue" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:background="@android:color/transparent" -->
+    <!-- android:paddingTop="5dp" -->
+    <!-- android:layout_marginLeft="25dp" -->
+    <!-- android:gravity="center_vertical" -->
+    <!-- android:text="@string/btn_agree_and_continue" -->
+    <!-- android:textColor="@android:color/white" -->
+    <!-- android:layout_alignParentLeft="true"/> -->
+
+    <uk.co.pocketapp.whotel.customview.CustomTextView_italicfont
+            android:id="@+id/textview_agree"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/btn_agree_and_continue"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"/>
+
+    <RelativeLayout
+            android:id="@+id/rel_agree"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true">
+    </RelativeLayout>
+
+</RelativeLayout>

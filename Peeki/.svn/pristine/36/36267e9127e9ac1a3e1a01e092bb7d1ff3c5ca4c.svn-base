@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <co.uk.peeki.ui.MyGallery
+        android:id="@+id/gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rlFooter"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:spacing="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlFooter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/header_bg"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/tvSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="SKIP"
+            android:textColor="@color/textcolor_blue"
+            android:textSize="15sp" />
+
+        <!-- This LinearLayout if for the dots -->
+
+        <LinearLayout
+            android:id="@+id/image_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tvNext"
+            android:layout_toRightOf="@+id/tvSkip"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvPosition1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/textshape_selected" />
+
+            <TextView
+                android:id="@+id/tvPosition2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/textshape_unselected" />
+
+            <TextView
+                android:id="@+id/tvPosition3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/textshape_unselected" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="NEXT"
+            android:textColor="@color/textcolor_blue"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_color"
+    android:orientation="vertical" >
+
+    <!-- Header -->
+
+    <include
+        android:id="@+id/view_archive_reports_top_bar"
+        layout="@layout/header" />
+
+    <!-- Content -->
+
+    <LinearLayout
+        android:id="@+id/ll_listview_archivereports"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/view_archive_reports_top_bar"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/archive_Reports_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent" >
+        </ListView>
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No data to display" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_archive_reports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_archive_reports_top_bar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="80dp" />
+
+</RelativeLayout> <!-- <LinearLayout -->
+<!-- android:id="@+id/ll_webview" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="fill_parent" -->
+<!-- android:layout_below="@+id/view_archive_reports_top_bar" -->
+<!-- android:orientation="vertical" -->
+<!-- android:visibility="gone" > -->
+
+
+<!-- <WebView -->
+<!-- android:id="@+id/webview_report" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="match_parent" -->
+<!-- android:layout_marginTop="40dp" /> -->
+<!-- </LinearLayout> -->
+
+
+<!-- Bottom Tab -->
+<!-- <include -->
+<!-- android:id="@+id/footer" -->
+<!-- layout="@layout/bottom_tab" /> -->

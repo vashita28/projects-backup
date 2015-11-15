@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coudriet.tapsnap.android"
+    android:versionCode="2"
+    android:versionName="v0.4int" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!--
+  	IMPORTANT: Change "com.coudriet.snapnshare.android.permission.C2D_MESSAGE" in the lines below
+  	to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+
+    <permission
+        android:name="com.coudriet.tapsnap.android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.coudriet.tapsnap.android.permission.C2D_MESSAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="com.coudriet.tapsnap.android.MainApplicationStartup"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/Theme.Customactionbar" 
+       >
+        <activity
+            android:name="com.coudriet.tapsnap.android.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.MainActivity"
+            android:label="@string/main_activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.ActivityLogIn"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" 
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.PasswordResetActivity"
+            android:label="@string/title_activity_password_reset"
+            android:parentActivityName="com.coudriet.tapsnap.android.ActivityLogIn"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName="com.coudriet.tapsnap.android.ActivityLogIn"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.EditFriendsActivity"
+            android:label="@string/title_activity_edit_friends"
+            android:parentActivityName="com.coudriet.tapsnap.android.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.tapsnap.android.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.RecipientsActivity"
+            android:label="@string/title_activity_recipients"
+            android:parentActivityName="com.coudriet.tapsnap.android.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.tapsnap.android.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.ViewImageActivity"
+            android:label="@string/title_activity_view_image"
+            android:parentActivityName="com.coudriet.tapsnap.android.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.tapsnap.android.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.VideoViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName="com.coudriet.tapsnap.android.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.tapsnap.android.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.EditUsernameActivity"
+            android:label="@string/title_activity_edit_username"
+            android:parentActivityName="com.coudriet.tapsnap.android.SettingsActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.tapsnap.android.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.EditEmailActivity"
+            android:label="@string/title_activity_edit_email"
+            android:parentActivityName="com.coudriet.tapsnap.android.SettingsActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.tapsnap.android.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.EditProfilePictureActivity"
+            android:label="@string/title_activity_edit_profile_picture"
+            android:parentActivityName="com.coudriet.tapsnap.android.SettingsActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.tapsnap.android.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.TermsOfUseActivity"
+            android:label="@string/title_activity_terms_of_use"
+            android:parentActivityName="com.coudriet.tapsnap.android.SettingsActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.tapsnap.android.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.PrivacyPolicyActivity"
+            android:label="@string/title_activity_privacy_policy"
+            android:parentActivityName="com.coudriet.tapsnap.android.SettingsActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.tapsnap.android.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.coudriet.tapsnap.android.GettingStartedActivity"
+            android:label="@string/title_activity_getting_started"
+            android:parentActivityName="com.coudriet.tapsnap.android.SettingsActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coudriet.tapsnap.android.SettingsActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="9c4dca6c4a3ea260a970846cd02186fce9048ee2" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="9c4dca6c4a3ea260a970846cd02186fce9048ee2" />
+
+        <receiver
+            android:name="com.mobileapptracker.Tracker"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+     <!--    <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> -->
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- IMPORTANT: Change "com.coudriet.snapnshare.android" to match your app's package name. -->
+
+                <category android:name="com.coudriet.tapsnap.android" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.coudriet.tapsnap.android.PushReceiver"
+            android:exported="false" >
+            <intent-filter>
+                
+                <action android:name="com.coudriet.tapsnap.android.UPDATE_STATUS" >
+                </action>
+                
+            </intent-filter>
+        </receiver>
+
+        <!--
+             <receiver
+            android:name="com.coudriet.tapsnap.receivers.PushReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <category android:name="com.coudriet.tapsnap.receivers" />
+                <action android:name="com.coudriet.tapsnap.receivers.UPDATE_STATUS" />
+            </intent-filter>
+        </receiver>
+        -->
+
+    </application>
+
+</manifest>

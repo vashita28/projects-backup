@@ -1,0 +1,1016 @@
+package com.android.cabapp.fragments;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
+
+import com.android.cabapp.R;
+import com.android.cabapp.activity.AutoTopUpEditActivity;
+import com.android.cabapp.activity.BillingAddressActivity;
+import com.android.cabapp.activity.DocumentUploadActivity;
+import com.android.cabapp.activity.LogInActivity;
+import com.android.cabapp.activity.MainActivity;
+import com.android.cabapp.activity.SetUpAutoTopUpActivity;
+import com.android.cabapp.activity.SignUp_AboutYou_Activity;
+import com.android.cabapp.activity.SignUp_DriverDetails_Activity;
+import com.android.cabapp.activity.SignUp_Payment_Activity;
+import com.android.cabapp.activity.SignUp_YourAccount_Activity;
+import com.android.cabapp.activity.TutorialActivity;
+import com.android.cabapp.model.AutoTopUpStatus;
+import com.android.cabapp.model.DriverAccountDetails;
+import com.android.cabapp.model.DriverSettingDetails;
+import com.android.cabapp.model.LogOut;
+import com.android.cabapp.model.PayCycle;
+import com.android.cabapp.util.AppValues;
+import com.android.cabapp.util.Constants;
+import com.android.cabapp.util.NetworkUtil;
+import com.android.cabapp.util.Util;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+
+public class MyAccountFragment extends RootFragment {
+
+	private static final String TAG = MyAccountFragment.class.getSimpleName();
+	Context mContext;
+
+	TextView textDriverName, textCurrency, textCredits, textDueDate,
+			textBuyCreditsStatus, tvDeviceID, tvLastTransactionAmt,
+			textAutoTopUpON, textAutoTopUpOFF;
+	ToggleButton toogleDistance;
+	RelativeLayout rlLogout, rlPersonalDetails, rlVehicleLicenseDetails,
+			rlBankDetails, rlViewTutorial, rlBuyCredits, rlDeviceId, rlBtnSave,
+			rlBtnCancel, rlChangePassword, rlBillingAddress, rlDocumentUpload;
+	// rlAutoTopUp;
+
+	// Overlay:
+	RelativeLayout rlOverlayMyAccountHeader, rlOkayGotIt;
+	ScrollView scrollView;
+
+	LinearLayout llMoneyCredits;
+
+	private ProgressDialog dialogMyAccount;
+
+	ProgressDialog progressDialogLogOut;
+
+	EditText etDeviceName;
+
+	String szDueDate = "", szLastTruncatedPan = "", szLastBrand = "";
+	float fTotalAmount = 0, szLastTransactionAmount = 0;
+	int nLastTranCreditCounts = 0;
+
+	// {"totalAmount":279,"duedate":"27\/10\/2014","credits":
+	// {"amount":30,"currencyCode":"GBP","creditCount":30,"purchaseDate":"22 Oct 2014 06:55:34",
+	// "expiryDate":"06\/2018","truncatedPan":"0008","brand":"visa"},"cards":
+	// [{"driverCardId":"11","truncatedPan":"0008","isSelected":"N","brand":"visa"}]}
+
+	MyFiltersFragment myFiltersFragment;
+
+	public MyAccountFragment() {
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		mContext = Util.mContext;
+
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+
+		View rootView = inflater.inflate(R.layout.fragment_myaccount,
+				container, false);
+		super.initWidgets(rootView, this.getClass().getName());
+
+		rlOverlayMyAccountHeader = (RelativeLayout) rootView
+				.findViewById(R.id.rlOverlayMyAccountHeader);
+		rlOkayGotIt = (RelativeLayout) rootView
+				.findViewById(R.id.footerOverlayMyAccount);
+		rlOkayGotIt.setOnClickListener(new TextOnClickListener());
+		scrollView = (ScrollView) rootView.findViewById(R.id.scrollView);
+
+		textDriverName = (TextView) rootView.findViewById(R.id.tvDriverName);
+		textCurrency = (TextView) rootView.findViewById(R.id.tvMoney);
+		textCredits = (TextView) rootView.findViewById(R.id.tvCredits);
+		textDueDate = (TextView) rootView.findViewById(R.id.tvDueDate);
+		textBuyCreditsStatus = (TextView) rootView
+				.findViewById(R.id.textBuyCreditsStatus);
+		toogleDistance = (ToggleButton) rootView
+				.findViewById(R.id.toggleDistance);
+		tvLastTransactionAmt = (TextView) rootView
+				.findViewById(R.id.tvAutoTopUpAmt);
+		textAutoTopUpON = (TextView) rootView
+				.findViewById(R.id.textAutoTopUpON);
+		textAutoTopUpOFF = (TextView) rootView
+				.findViewById(R.id.textAutoTopUpOFF);
+
+		rlLogout = (RelativeLayout) rootView.findViewById(R.id.rlLogout);
+
+		rlChangePassword = (RelativeLayout) rootView
+				.findViewById(R.id.rlChangePassword);
+		rlPersonalDetails = (RelativeLayout) rootView
+				.findViewById(R.id.rlPersonalDetails);
+		rlVehicleLicenseDetails = (RelativeLayout) rootView
+				.findViewById(R.id.rlVehicleLicenseDetails);
+		rlDocumentUpload = (RelativeLayout) rootView
+				.findViewById(R.id.rlDocumentUpload);
+		rlViewTutorial = (RelativeLayout) rootView
+				.findViewById(R.id.rlVTutorial);
+		rlBuyCredits = (RelativeLayout) rootView
+				.findViewById(R.id.rlBuyCredits);
+		rlDeviceId = (RelativeLayout) rootView.findViewById(R.id.rlDeviceId);
+		tvDeviceID = (TextView) rootView.findViewById(R.id.tvDeviceID);
+		rlBankDetails = (RelativeLayout) rootView
+				.findViewById(R.id.rlBankDetails);
+		rlBillingAddress = (RelativeLayout) rootView
+				.findViewById(R.id.rlBillingAddress);
+		llMoneyCredits = (LinearLayout) rootView
+				.findViewById(R.id.llMoneyCredits);
+		// rlAutoTopUp = (RelativeLayout)
+		// rootView.findViewById(R.id.rlAutoTopUp);
+
+		if (!Util.getIsOverlaySeen(getActivity(), TAG)) {
+
+			rlOverlayMyAccountHeader.setVisibility(View.VISIBLE);
+			rlOkayGotIt.setVisibility(View.VISIBLE);
+			scrollView.setOnTouchListener(new OnTouchListener() {
+				@Override
+				public boolean onTouch(View v, MotionEvent event) {
+					return true;
+				}
+			});
+			if (MainActivity.slidingMenu != null)
+				MainActivity.slidingMenu
+						.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
+
+		} else {
+
+			// Set Default auto top up
+			if (AppValues.driverSettings != null) {
+				int isAutoTopUp = AppValues.driverSettings.getIsAutoTopup();
+				if (isAutoTopUp == 0) {
+					textAutoTopUpON.setTextColor(getResources().getColor(
+							R.color.textcolor_grey));
+					textAutoTopUpOFF.setTextColor(getResources().getColor(
+							R.color.textview_selected));
+					AppValues.isAutoTopUpOn = false;
+					Util.setAutoTopUp(mContext, false);
+				} else {
+					textAutoTopUpON.setTextColor(getResources().getColor(
+							R.color.textview_selected));
+					textAutoTopUpOFF.setTextColor(getResources().getColor(
+							R.color.textcolor_grey));
+					AppValues.isAutoTopUpOn = true;
+					Util.setAutoTopUp(mContext, true);
+				}
+			}
+		}
+
+		return rootView;
+	}
+
+	@Override
+	public void onAttach(Activity activity) {
+		// TODO Auto-generated method stub
+		super.onAttach(activity);
+
+		FragmentManager fragmentManager = getFragmentManager();
+		FragmentTransaction fragmentTransaction = fragmentManager
+				.beginTransaction();
+
+		// add MyFilter fragment
+		myFiltersFragment = new MyFiltersFragment();
+		fragmentTransaction.add(R.id.fragment_myFilters, myFiltersFragment);
+		fragmentTransaction.commit();
+
+		// if (myFiltersFragment != null)
+		// myFiltersFragment.updateView();
+
+	}
+
+	public class LogOutTask extends AsyncTask<String, Void, String> {
+
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+			progressDialogLogOut = new ProgressDialog(getActivity());
+			progressDialogLogOut.setMessage("Logging out. Please wait...");
+			progressDialogLogOut.setCancelable(false);
+			progressDialogLogOut.show();
+		}
+
+		@Override
+		protected String doInBackground(String... params) {
+			// TODO Auto-generated method stub
+			LogOut logout = new LogOut(getActivity());
+
+			// {"errors":[{"type":"AuthenticationException","message":"you have not been approved"}]}
+
+			String response = logout.doLogOut();
+			try {
+				JSONObject jObject = new JSONObject(response);
+				if (jObject.has("success")
+						&& jObject.getString("success").equals("true")) {
+					return "success";
+				} else {
+					if (jObject.has("errors")) {
+						JSONArray jErrorsArray = jObject.getJSONArray("errors");
+
+						String errorMessage = jErrorsArray.getJSONObject(0)
+								.getString("message");
+
+						return errorMessage;
+					}
+				}
+
+				// {"errors":[{"type":"AuthenticationException","message":"Incorrect
+				// username and\/or password"}]}
+
+				return "success";
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+
+				e.printStackTrace();
+			}
+
+			return response;
+
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			if (progressDialogLogOut != null)
+				progressDialogLogOut.dismiss();
+
+			if (result != null && result.equals("success")) {
+				Util.setLogOutValues(getActivity());
+				// Util.clearSharePRef(getActivity());
+
+				Intent loginIntent = new Intent(getActivity(),
+						LogInActivity.class);
+				startActivity(loginIntent);
+				getActivity().finish();
+			}
+		}
+	}
+
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+
+		if (Util.getAutoTopUp(mContext))
+			textBuyCreditsStatus.setText("ON");
+		else
+			textBuyCreditsStatus.setText("OFF");
+
+		if (Util.getIsOverlaySeen(mContext, TAG)) {
+
+			mMainBundle = this.getArguments();
+			if (mMainBundle != null) {
+				String totalValue = mMainBundle.getString("totalvalue");
+				if (Constants.isDebug)
+					Log.d("MyAccountFragment", "Total value:: " + totalValue);
+			}
+
+			// rlPaymentTaken.setOnTouchListener(new TextTouchListener());
+
+			if (tvDeviceID.getText().toString().trim().isEmpty())
+				tvDeviceID.setVisibility(View.GONE);
+			if (!Util.getPOSDeviceName(mContext).equals("")) {
+				tvDeviceID.setText(Util.getPOSDeviceName(mContext));
+				tvDeviceID.setVisibility(View.VISIBLE);
+			}
+
+			progressDialogLogOut = new ProgressDialog(mContext);
+			progressDialogLogOut.setMessage("Loading...");
+			progressDialogLogOut.setCancelable(false);
+			progressDialogLogOut.show();
+
+			PayCycleTask payCycleTask = new PayCycleTask();
+			payCycleTask.execute();
+
+			// for getting Driver Details
+			// dialogMyAccount = new ProgressDialog(getActivity());
+			// dialogMyAccount.setMessage("Loading...");
+			// dialogMyAccount.setCancelable(false);
+			// dialogMyAccount.show();
+			// DriverDetailsTask driverDetailsTask = new DriverDetailsTask();
+			// driverDetailsTask.execute();
+			if (AppValues.driverDetails != null) {
+				textDriverName.setText(AppValues.driverDetails.getFirstname());
+				// String szDriverDetailsResponse = Util
+				// .getDriverDetails(getActivity());
+				// DriverDetails driverDetailsResponse = null;
+				// Gson gson = new Gson();
+				// if (szDriverDetailsResponse != null
+				// && !szDriverDetailsResponse.equals("")) {
+				// driverDetailsResponse =
+				// gson.fromJson(szDriverDetailsResponse,
+				// DriverDetails.class);
+				// AppValues.driverDetails = driverDetailsResponse;
+				// }
+
+			}
+
+			rlChangePassword.setOnClickListener(new TextOnClickListener());
+			rlPersonalDetails.setOnClickListener(new TextOnClickListener());
+			rlVehicleLicenseDetails
+					.setOnClickListener(new TextOnClickListener());
+			rlDocumentUpload.setOnClickListener(new TextOnClickListener());
+			rlViewTutorial.setOnClickListener(new TextOnClickListener());
+			rlBuyCredits.setOnClickListener(new TextOnClickListener());
+			rlDeviceId.setOnClickListener(new TextOnClickListener());
+			rlBankDetails.setOnClickListener(new TextOnClickListener());
+			rlBillingAddress.setOnClickListener(new TextOnClickListener());
+			llMoneyCredits.setOnClickListener(new TextOnClickListener());
+			// rlAutoTopUp.setOnClickListener(new TextOnClickListener());
+			tvLastTransactionAmt.setOnClickListener(new TextOnClickListener());
+			textAutoTopUpON.setOnClickListener(new TextOnClickListener());
+			textAutoTopUpOFF.setOnClickListener(new TextOnClickListener());
+
+			// Locale loc = new Locale("en", "UK");
+			// if (loc.getCountry().equals("UK")) {
+			// loc = new Locale(loc.getLanguage(), "GB");
+			// }
+			// Currency currency = Currency.getInstance(loc);
+			// String symbol = currency.getSymbol();
+			// textCurrency.setText(symbol + " 22.50");
+
+			if (mContext != null) {
+				if (Util.getDistanceFormat(mContext).equals("km")) {
+					toogleDistance.setChecked(false);
+				} else {
+					toogleDistance.setChecked(true);
+				}
+			}
+
+			rlLogout.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					LogOutDialog();
+				}
+			});
+
+			toogleDistance
+					.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+						@Override
+						public void onCheckedChanged(CompoundButton buttonView,
+								boolean isChecked) {
+							// TODO Auto-generated method stub
+							if (isChecked) {
+								Util.setDistanceFormat(getActivity(), "miles");
+							} else {
+								Util.setDistanceFormat(getActivity(), "km");
+							}
+						}
+					});
+
+		}
+	}
+
+	void setLastTransactionAmount() {
+
+		if (AppValues.driverSettings != null) {
+			tvLastTransactionAmt.setText(AppValues.driverSettings
+					.getCurrencySymbol()
+					+ ""
+					+ String.format(Locale.ENGLISH, "%.2f",
+							szLastTransactionAmount));
+		} else {
+			tvLastTransactionAmt.setText(String.format(Locale.ENGLISH, "%.2f",
+					szLastTransactionAmount));
+
+		}
+	}
+
+	class TextOnClickListener implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+
+			case R.id.rlPaymentHasBeenTaken:
+
+				break;
+
+			case R.id.rlChangePassword:
+
+				Bundle bundleChangePassword = new Bundle();
+				bundleChangePassword.putBoolean(
+						Constants.FROM_EDIT_MY_ACC_PERSONAL_DETAILS, true);
+
+				Intent intentChangePassword = new Intent(getActivity(),
+						SignUp_YourAccount_Activity.class);
+				intentChangePassword.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				intentChangePassword.putExtras(bundleChangePassword);
+				startActivity(intentChangePassword);
+
+				break;
+
+			case R.id.rlPersonalDetails:
+
+				Bundle bundle = new Bundle();
+				bundle.putBoolean(Constants.FROM_EDIT_MY_ACC_PERSONAL_DETAILS,
+						true);
+
+				Intent intent = new Intent(getActivity(),
+						SignUp_AboutYou_Activity.class);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				intent.putExtras(bundle);
+				startActivity(intent);
+				break;
+
+			case R.id.rlVehicleLicenseDetails:
+
+				Bundle bundleVechileDetails = new Bundle();
+				bundleVechileDetails.putBoolean(
+						Constants.FROM_EDIT_MY_ACC_VECHILE_DETAILS, true);
+
+				Intent intentDriverDetails = new Intent(getActivity(),
+						SignUp_DriverDetails_Activity.class);
+				intentDriverDetails.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				intentDriverDetails.putExtras(bundleVechileDetails);
+				startActivity(intentDriverDetails);
+
+				break;
+
+			case R.id.rlDocumentUpload:
+
+				Bundle bundleDocumentUpload = new Bundle();
+				bundleDocumentUpload.putBoolean(
+						Constants.FROM_EDIT_MY_ACC_VECHILE_DETAILS, true);
+
+				Intent intentDocumentUpload = new Intent(getActivity(),
+						DocumentUploadActivity.class);
+				intentDocumentUpload.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				intentDocumentUpload.putExtras(bundleDocumentUpload);
+				startActivity(intentDocumentUpload);
+
+				break;
+
+			case R.id.rlBillingAddress:
+				Bundle bundleBillingAdd = new Bundle();
+				bundleBillingAdd.putBoolean(
+						Constants.FROM_EDIT_MY_ACC_VECHILE_DETAILS, true);
+
+				Intent intentBillingAdd = new Intent(getActivity(),
+						BillingAddressActivity.class);
+				intentBillingAdd.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				intentBillingAdd.putExtras(bundleBillingAdd);
+				startActivity(intentBillingAdd);
+
+				break;
+
+			case R.id.rlVTutorial:
+				Bundle bundleTutorial = new Bundle();
+				bundleTutorial.putBoolean("isFromMyAccount", true);
+				Intent intentTutorials = new Intent(getActivity(),
+						TutorialActivity.class);
+				intentTutorials.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				intentTutorials.putExtras(bundleTutorial);
+				startActivity(intentTutorials);
+
+				break;
+
+			case R.id.rlBuyCredits:
+				Fragment fragmentBuyAddCredit = new com.android.cabapp.fragments.BuyAddCreditsFragment();
+				if (fragmentBuyAddCredit != null) {
+					((MainActivity) getActivity()).replaceFragment(
+							fragmentBuyAddCredit, false);
+					// ((MainActivity) getActivity()).replaceFragment(
+					// fragmentBuyAddCredit, false);
+				}
+				break;
+
+			// case R.id.rlAutoTopUp:
+			// Intent intentBuyCredits = new Intent(getActivity(),
+			// BuyCreditsConfirmActivity.class);
+			// intentBuyCredits.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			// startActivity(intentBuyCredits);
+			// break;
+
+			case R.id.rlDeviceId:
+				// showDialog();
+				break;
+
+			case R.id.rlBankDetails:
+				Bundle bundleBankDetails = new Bundle();
+				bundleBankDetails.putBoolean(
+						Constants.FROM_EDIT_MY_ACC_VECHILE_DETAILS, true);
+
+				Intent intentBankDetails = new Intent(getActivity(),
+						SignUp_Payment_Activity.class);
+				intentBankDetails.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				intentBankDetails.putExtras(bundleBankDetails);
+				startActivity(intentBankDetails);
+				break;
+
+			case R.id.llMoneyCredits:
+				Bundle bundleMyAcc = new Bundle();
+				bundleMyAcc.putBoolean(Constants.FROM_EDIT_ACCOUNT, true);
+
+				Fragment fragmentMyJobs = new com.android.cabapp.fragments.MyJobsFragment();
+				if (fragmentMyJobs != null) {
+					fragmentMyJobs.setArguments(bundleMyAcc);
+					((MainActivity) Util.mContext)
+							.setSlidingMenuPosition(Constants.MY_JOBS_FRAGMENT);
+					((MainActivity) Util.mContext).replaceFragment(
+							fragmentMyJobs, false);
+				}
+				break;
+
+			case R.id.tvAutoTopUpAmt:
+				if (szLastTransactionAmount == 0) {
+
+					AlertDialog NoCreditsDialog = new AlertDialog.Builder(
+							getActivity())
+							.setMessage(
+									"You have not purchased any credits now.")
+							.setPositiveButton("OK",
+									new DialogInterface.OnClickListener() {
+										@Override
+										public void onClick(
+												DialogInterface argDialog,
+												int argWhich) {
+										}
+									}).create();
+					NoCreditsDialog.setCanceledOnTouchOutside(false);
+					NoCreditsDialog.show();
+				} else {
+					Intent intentAutoTopUpEdit = new Intent(getActivity(),
+							AutoTopUpEditActivity.class);
+					intentAutoTopUpEdit.putExtras(mMainBundle);
+					startActivity(intentAutoTopUpEdit);
+				}
+
+				break;
+
+			case R.id.textAutoTopUpON:
+
+				if (NetworkUtil.isNetworkOn(Util.mContext)) {
+					progressDialogLogOut = new ProgressDialog(mContext);
+					progressDialogLogOut.setMessage("Loading...");
+					progressDialogLogOut.setCancelable(false);
+					progressDialogLogOut.show();
+
+					AutoTopUpTask autoTopUpTask = new AutoTopUpTask();
+					autoTopUpTask.iIsAutoTopUp = 1;
+					autoTopUpTask.execute();
+				} else {
+					Util.showToastMessage(
+							mContext,
+							getResources().getString(R.string.no_network_error),
+							Toast.LENGTH_LONG);
+				}
+
+				break;
+
+			case R.id.textAutoTopUpOFF:
+
+				if (NetworkUtil.isNetworkOn(Util.mContext)) {
+					progressDialogLogOut = new ProgressDialog(mContext);
+					progressDialogLogOut.setMessage("Loading...");
+					progressDialogLogOut.setCancelable(false);
+					progressDialogLogOut.show();
+
+					AutoTopUpTask autoTopUpTask = new AutoTopUpTask();
+					autoTopUpTask.iIsAutoTopUp = 0;
+					autoTopUpTask.execute();
+				} else {
+					Util.showToastMessage(
+							mContext,
+							getResources().getString(R.string.no_network_error),
+							Toast.LENGTH_LONG);
+				}
+				break;
+
+			case R.id.footerOverlayMyAccount:
+				Util.setIsOverlaySeen(getActivity(), true, TAG);
+				rlOverlayMyAccountHeader.setVisibility(View.GONE);
+				rlOkayGotIt.setVisibility(View.GONE);
+				scrollView.setOnTouchListener(null);
+				if (MainActivity.slidingMenu != null)
+					MainActivity.slidingMenu
+							.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+
+				if (myFiltersFragment != null)
+					myFiltersFragment.enableClick();
+
+				progressDialogLogOut = new ProgressDialog(mContext);
+				progressDialogLogOut.setMessage("Loading...");
+				progressDialogLogOut.setCancelable(false);
+				progressDialogLogOut.show();
+				PayCycleTask payCycleTask = new PayCycleTask();
+				payCycleTask.execute();
+
+				break;
+
+			}
+		}
+	}
+
+	void LogOutDialog() {
+
+		final AlertDialog logOutDialog = new AlertDialog.Builder(mContext)
+				.setTitle("Logout")
+				.setMessage("Are you sure you want to logout?")
+				.setNegativeButton("Yes",
+						new DialogInterface.OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								// TODO Auto-generated
+								if (NetworkUtil.isNetworkOn(Util.mContext)) {
+									LogOutTask logoutTask = new LogOutTask();
+									logoutTask.execute();
+								} else {
+									Util.showToastMessage(
+											getActivity(),
+											getResources().getString(
+													R.string.no_network_error),
+											Toast.LENGTH_LONG);
+								}
+							}
+						})
+				.setPositiveButton("No", new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface argDialog, int argWhich) {
+
+						// TODO Auto-generated
+					}
+				}).create();
+		logOutDialog.setCanceledOnTouchOutside(false);
+		logOutDialog.show();
+	}
+
+	void showDialog() {
+
+		final Dialog dialog = new Dialog(mContext);
+		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		dialog.setContentView(R.layout.device_id_dialog);
+		dialog.setCanceledOnTouchOutside(false);
+		dialog.setCancelable(false);
+
+		etDeviceName = (EditText) dialog.findViewById(R.id.etDeviceName);
+		rlBtnSave = (RelativeLayout) dialog.findViewById(R.id.rlbtnSave);
+		rlBtnCancel = (RelativeLayout) dialog.findViewById(R.id.rlbtnCancel);
+
+		if (!Util.getPOSDeviceName(mContext).equals(""))
+			etDeviceName.setText(Util.getPOSDeviceName(mContext));
+		etDeviceName.setSelection(etDeviceName.getText().length());
+
+		// dialog.setTitle("Please enter Serial number");
+		rlBtnSave.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				String szDeviceName = etDeviceName.getText().toString().trim();
+				if (szDeviceName.isEmpty()) {
+					Util.showToastMessage(mContext,
+							"Field cannot be left empty!", Toast.LENGTH_LONG);
+				} else if (szDeviceName.length() < 11) {
+					Util.showToastMessage(mContext,
+							"Serial number cannot be less than 10!",
+							Toast.LENGTH_LONG);
+				} else {
+					Util.setPOSDeviceName(mContext, szDeviceName);
+					tvDeviceID.setVisibility(View.VISIBLE);
+					tvDeviceID.setText(Util.getPOSDeviceName(mContext));
+					Util.hideSoftKeyBoard(mContext, rlBtnSave);
+					dialog.dismiss();
+
+				}
+
+			}
+		});
+
+		rlBtnCancel.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Util.hideSoftKeyBoard(mContext, v);
+				dialog.dismiss();
+			}
+		});
+		dialog.show();
+
+	}
+
+	public class PayCycleTask extends AsyncTask<String, Void, String> {
+
+		@Override
+		protected String doInBackground(String... params) {
+			// TODO Auto-generated method stub
+			PayCycle payCycle = new PayCycle(mContext);
+			String response = payCycle.getPayCycle();
+
+			// if credits null
+			// {"totalAmount":0,"credits":null}
+			// OR
+			// PaycycleTask response::>
+			// {"totalAmount":279,"duedate":"27\/10\/2014","credits":
+			// {"amount":30,"currencyCode":"GBP","creditCount":30,"purchaseDate":"22 Oct 2014 06:55:34",
+			// "expiryDate":"06\/2018","truncatedPan":"0008","brand":"visa"},"cards":
+			// [{"driverCardId":"11","truncatedPan":"0008","isSelected":"N","brand":"visa"}]}
+
+			if (Constants.isDebug)
+				Log.e(TAG, "PaycycleTask response::> " + response);
+			try {
+				JSONObject jObject = new JSONObject(response);
+				JSONObject jCreditsObj = new JSONObject();
+
+				if (jObject.has("totalAmount")) {
+
+					if (mMainBundle == null)
+						mMainBundle = new Bundle();
+
+					if (jObject.getDouble("totalAmount") != 0)
+						fTotalAmount = Float.valueOf(jObject
+								.getLong("totalAmount"));
+
+					if (Util.mContext != null) {
+						DriverAccountDetails driverAccount = new DriverAccountDetails(
+								Util.mContext);
+						driverAccount.retriveAccountDetails(Util.mContext);
+						DriverSettingDetails driverSettings = new DriverSettingDetails(
+								Util.mContext);
+						driverSettings.retriveDriverSettings(Util.mContext);
+					}
+
+					if (jObject.has("duedate")) {
+						szDueDate = jObject.getString("duedate");
+					}
+
+					if (jObject.has("credits")
+							&& !jObject.getString("credits").equals("null")
+							&& jObject.getJSONObject("credits") != null) {
+						jCreditsObj = jObject.getJSONObject("credits");
+
+						if (jCreditsObj.has("amount"))
+							szLastTransactionAmount = Float.valueOf(jCreditsObj
+									.getInt("amount"));
+
+						if (jCreditsObj.has("creditCount"))
+							nLastTranCreditCounts = jCreditsObj
+									.getInt("creditCount");
+
+						if (jCreditsObj.has("brand"))
+							szLastBrand = jCreditsObj.getString("brand");
+
+						if (jCreditsObj.has("truncatedPan"))
+							szLastTruncatedPan = jCreditsObj
+									.getString("truncatedPan");
+
+						mMainBundle.putFloat(Constants.AUTOTOPUP_LASTTRAN_AMT,
+								szLastTransactionAmount);
+						mMainBundle.putInt(
+								Constants.AUTOTOPUP_LASTTRAN_CREDITCOUNT,
+								nLastTranCreditCounts);
+						mMainBundle
+								.putString(Constants.AUTOTOPUP_LASTTRAN_BRAND,
+										szLastBrand);
+						mMainBundle.putString(
+								Constants.AUTOTOPUP_LASTTRAN_TRUNCATEDPAN,
+								szLastTruncatedPan);
+
+					}
+
+					return "success";
+				} else {
+					if (Constants.isDebug)
+						Log.e(TAG, "PaycycleTask error::> " + response);
+
+					if (jObject.has("errors")) {
+						JSONArray jErrorsArray = jObject.getJSONArray("errors");
+
+						String errorMessage = jErrorsArray.getJSONObject(0)
+								.getString("message");
+						return errorMessage;
+					}
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			return response;
+
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+
+			if (progressDialogLogOut != null)
+				progressDialogLogOut.dismiss();
+
+			if (result.equals("success")) {
+
+				// set Last transaction amount
+				setLastTransactionAmount();
+
+				// Set Total credits
+				if (String.valueOf(Util.getNumberOfCredits(getActivity())) != null)
+					textCredits.setText(String.valueOf(Util
+							.getNumberOfCredits(getActivity())));
+
+				String szFormattedDueDate = "-";
+				if (AppValues.driverSettings != null) {
+					textCurrency.setText(AppValues.driverSettings
+							.getCurrencySymbol()
+							+ " "
+							+ String.format(Locale.ENGLISH, "%.2f",
+									fTotalAmount));
+
+					textDriverName.setText(AppValues.driverDetails
+							.getFirstname());
+					if (String.valueOf(Util.getNumberOfCredits(getActivity())) != null)
+						textCredits.setText(String.valueOf(Util
+								.getNumberOfCredits(getActivity())));
+				} else {
+					textCurrency.setText(String.format(Locale.ENGLISH, "%.2f",
+							fTotalAmount));
+				}
+				if (!szDueDate.isEmpty()) {
+					SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+					SimpleDateFormat df2 = new SimpleDateFormat("dd MMM yyyy");
+					Date dueDate = null;
+					try {
+						dueDate = df.parse(szDueDate);
+						szFormattedDueDate = df2.format(dueDate);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+				// String dueDateText =
+				// "<font color=#191918>Due </font> <font color=#fd6f01>"
+				// + szFormattedDueDate + " </font>";
+				// textDueDate.setText(Html.fromHtml(dueDateText));
+
+			} else {
+				Util.showToastMessage(mContext, result, Toast.LENGTH_LONG);
+			}
+
+		}
+	}
+
+	public class AutoTopUpTask extends AsyncTask<String, Void, String> {
+		public int iIsAutoTopUp;
+
+		@Override
+		protected String doInBackground(String... params) {
+			// TODO Auto-generated method stub
+			AutoTopUpStatus autoTopUp = new AutoTopUpStatus(mContext, iIsAutoTopUp);
+			String response = autoTopUp.UpdateAutoTopUp();
+
+			if (Constants.isDebug)
+				Log.e(TAG, "AutoTopUpTask response::> " + response);
+
+			// {"success":false,"error":"You must buy credits manually prior using this functionality"}
+
+			try {
+				JSONObject jObject = new JSONObject(response);
+				String errorMessage = "";
+				if (jObject.has("success")
+						&& jObject.getString("success").equals("true")) {
+
+					DriverAccountDetails driverAccount = new DriverAccountDetails(
+							Util.mContext);
+					driverAccount.retriveAccountDetails(Util.mContext);
+
+					DriverSettingDetails driverSettings = new DriverSettingDetails(
+							Util.mContext);
+					driverSettings.retriveDriverSettings(Util.mContext);
+
+					return "success";
+				} else if (jObject.has("success")
+						&& jObject.getString("success").equals("false")) {
+					errorMessage = jObject.getString("error");
+					return errorMessage;
+				} else {
+					if (jObject.has("errors")) {
+						JSONArray jErrorsArray = jObject.getJSONArray("errors");
+
+						errorMessage = jErrorsArray.getJSONObject(0).getString(
+								"message");
+						return errorMessage;
+					}
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			return response;
+
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+
+			if (progressDialogLogOut != null) {
+				progressDialogLogOut.dismiss();
+				progressDialogLogOut = null;
+			}
+
+			if (result.equals("success")) {
+				if (iIsAutoTopUp == 0) {
+					textAutoTopUpON.setTextColor(getResources().getColor(
+							R.color.textcolor_grey));
+					textAutoTopUpOFF.setTextColor(getResources().getColor(
+							R.color.textview_selected));
+					AppValues.isAutoTopUpOn = false;
+					Util.setAutoTopUp(mContext, false);
+				} else {
+					textAutoTopUpON.setTextColor(getResources().getColor(
+							R.color.textview_selected));
+					textAutoTopUpOFF.setTextColor(getResources().getColor(
+							R.color.textcolor_grey));
+					AppValues.isAutoTopUpOn = true;
+					Util.setAutoTopUp(mContext, true);
+				}
+
+			} else if (result
+					.equals("You must buy credits manually prior using this functionality")) {
+
+				final AlertDialog AutoTopUpOFFDialog = new AlertDialog.Builder(
+						getActivity())
+						.setMessage(
+								"You have not purchased any credits. Would you like to add credits?")
+						.setPositiveButton("YES",
+								new DialogInterface.OnClickListener() {
+									@Override
+									public void onClick(
+											DialogInterface argDialog,
+											int argWhich) {
+										Intent intentSetUpAutoTopUp = new Intent(
+												Util.mContext,
+												SetUpAutoTopUpActivity.class);
+										startActivity(intentSetUpAutoTopUp);
+									}
+								})
+						.setNegativeButton("NO",
+								new DialogInterface.OnClickListener() {
+									@Override
+									public void onClick(
+											DialogInterface argDialog,
+											int argWhich) {
+									}
+								}).create();
+				AutoTopUpOFFDialog.setCanceledOnTouchOutside(false);
+				AutoTopUpOFFDialog.show();
+
+			} else {
+				Util.showToastMessage(mContext, result, Toast.LENGTH_LONG);
+			}
+
+		}
+
+	}
+}

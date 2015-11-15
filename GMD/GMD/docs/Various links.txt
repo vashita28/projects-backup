@@ -1,0 +1,34 @@
+http://dev.pocketapp.co.uk/dev/gmd/api.php?access_token=83DF627CB93B8437&action=login&username=vashita&password=vashita
+
+http://dev.pocketapp.co.uk/dev/gmd/api.php?access_token=83DF627CB93B8437&action=forgotpwd
+
+XML Download:
+
+http://dev.pocketapp.co.uk/dev/gmd/api.php?access_token=83DF627CB93B8437&action=xml_download&engineer_id=1   ---- old
+
+http://dev.pocketapp.co.uk/dev/gmd/api.php?action=download_xml&access_token=83DF627CB93B8437&engineer_id=1
+   ---- new
+
+http://dev.pocketapp.co.uk/dev/gmd/api.php?action=download_service_checklists&access_token=83DF627CB93B8437&report_id=3
+
+
+return on image upload:
+{"head":{"status":"1"},"body":{"image_path":"FSR-1-1368006063.jpg"}}
+
+
+//Report details link:
+http://dev.pocketapp.co.uk/dev/gmd/gmd_check_report.xml
+
+//Summary link:
+http://dev.pocketapp.co.uk/dev/gmd/gmd_summary.xml
+
+Server side:
+http://dev.pocketapp.co.uk/dev/gmd/
+Log in :
+username --> admin
+password --> admin
+
+
+
+
+SLIDE ANIMATION: 210 to 211 svn rev

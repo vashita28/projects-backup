@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent_bg_jobs"
+    android:clickable="true"
+    android:visibility="visible" >
+
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/tab_unselected" >
+
+        <TextView
+            android:id="@+id/textDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Payment enter the details below \n to send the receipt "
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etDetails"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/textDetails"
+            android:background="@android:color/white"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:id="@+id/llSendCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etDetails"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:id="@+id/textSend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.50"
+                android:drawableLeft="@drawable/buy"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:text="Send"
+                android:textColor="@color/textview_unselected" />
+
+            <TextView
+                android:id="@+id/textCancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.50"
+                android:drawableLeft="@drawable/cancel"
+                android:gravity="center_vertical"
+                android:paddingLeft="30dp"
+                android:text="Cancel"
+                android:textColor="@color/textview_unselected" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cabapppassenger"
+    android:versionName="0.7.1RC" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <permission
+        android:name="com.javapapers.android.maps.path.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- REQUIRED PERMISSIONS (for Urban Airship GCM) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.intent.action.CALL_PRIVILEGED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- This app has permission to register with GCM and receive message -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- MODIFICATION REQUIRED - Replace "com.urbanairship.push.sample" with your package name -->
+    <permission
+        android:name="com.example.cabapppassenger.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- REQUIRED for C2DM -->
+    <!-- Only this application can receive the messages and registration result -->
+
+    <uses-permission android:name="com.example.cabapppassenger.permission.C2D_MESSAGE" />
+    <!-- The two elements above ensure that only this application can receive the messages and registration result -->
+    <!-- END Urban Airship Required Permissions -->
+
+
+    <!-- OPTIONAL Urban Airship Settings -->
+    <!-- REQUIRED FOR LOCATION -->
+    <!-- Use ACCESS_COARSE_LOCATION if GPS access is not necessary -->
+    <!-- uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" / -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- OPTIONAL - This permission is only necessary if your app has multiple processes -->
+    <!-- <uses-permission android:name="android.permission.BROADCAST_STICKY" /> -->
+    <!-- END OPTIONAL Urban Airship Settings -->
+    <!-- MODIFICATION REQUIRED - Replace "com.urbanairship.push.sample.MyApplication" with your package name -->
+
+    <application
+        android:name="com.example.cabapppassenger.util.MyApplication"
+        android:icon="@drawable/launcher_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.cabapppassenger.activity.SplashActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.cabapppassenger.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.example.cabapppassenger.activity.MainFragmentActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.cabapppassenger.activity.LandingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.example.cabapppassenger.activity.SignupActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.example.cabapppassenger.activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.cabapppassenger.activity.MobileNoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.cabapppassenger.activity.TermsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.cabapppassenger.activity.VerificationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.cabapppassenger.activity.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.example.cabapppassenger.activity.ViewTutorialActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+
+        <provider
+            android:name="com.urbanairship.UrbanAirshipProvider"
+            android:authorities="com.example.cabapppassenger.urbanairship.provider"
+            android:exported="true"
+            android:multiprocess="true"
+            android:permission="PACKAGE_NAME.permission.UA_DATA" />
+
+        <!-- Required for Push -->
+        <service android:name="com.urbanairship.push.PushService" />
+
+        <receiver android:name="com.urbanairship.CoreReceiver" />
+        <receiver
+            android:name="com.urbanairship.push.GCMPushReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.cabapppassenger" />
+            </intent-filter>
+
+            <!-- Required for detecting when the application is upgraded so it can request a new GCM ID -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.cabapppassenger.receivers.IntentReceiver" >
+        </receiver>
+        <receiver android:name="com.example.cabapppassenger.receivers.NetworkBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.urbanairship.analytics.EventService" />
+
+        <!-- Required for Rich Push -->
+        <service android:name="com.urbanairship.richpush.RichPushUpdateService" />
+
+        <!-- Required for Actions -->
+        <activity android:name="com.urbanairship.actions.ActionActivity" />
+
+        <service android:name="com.urbanairship.actions.ActionService" />
+        <!-- Required for Landing Page Action -->
+        <activity
+            android:name="com.urbanairship.actions.LandingPageActivity"
+            android:exported="false"
+            android:parentActivityName="PACKAGE_NAME.MainActivity" >
+
+            <!-- MODIFICATION REQUIRED set or remove the parent activity -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cabapppassenger.SplashActivity" />
+
+            <intent-filter>
+                <action android:name="com.urbanairship.actions.SHOW_LANDING_PAGE_INTENT_ACTION" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyC0RdD_sHoIKRIustNiHIK7p9eMxDCBoA0" />
+        <!-- android:value="AIzaSyC0RdD_sHoIKRIustNiHIK7p9eMxDCBoA0" /> -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="9c4dca6c4a3ea260a970846cd02186fce9048ee2" />
+    </application>
+
+</manifest>

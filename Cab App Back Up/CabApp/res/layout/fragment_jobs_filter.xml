@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/llFilterRow1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/homeicon"
+            android:gravity="center_horizontal"
+            android:text="Home"
+            android:textColor="@color/textcolor_filter" />
+
+        <TextView
+            android:id="@+id/tvComingIn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cominginicon"
+            android:gravity="center_horizontal"
+            android:text="Coming in"
+            android:textColor="@color/textcolor_filter" />
+
+        <TextView
+            android:id="@+id/tvGoingTo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/goingtoicon"
+            android:gravity="center_horizontal"
+            android:text="Going to"
+            android:textColor="@color/textcolor_filter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFilterRow2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/llFilterRow1"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvCashOnly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cashonlyicon"
+            android:gravity="center_horizontal"
+            android:text="Cash Only"
+            android:textColor="@color/textcolor_filter" />
+
+        <TextView
+            android:id="@+id/tvAroundMe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/arroundmeicon"
+            android:gravity="center_horizontal"
+            android:text="Around Me"
+            android:textColor="@color/textcolor_filter" />
+
+        <TextView
+            android:id="@+id/tvEditFilters"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/editfiltersicon"
+            android:gravity="center_horizontal"
+            android:text="Edit Filters"
+            android:textColor="@color/textcolor_filter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFilterRow3"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvCash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/cashonlyiconselected"
+            android:gravity="center_horizontal"
+            android:text="Cash only"
+            android:textColor="@color/textview_selected" />
+
+        <TextView
+            android:id="@+id/tvCashCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/allpaymentunselected"
+            android:gravity="center_horizontal"
+            android:text="Cash &amp; Card"
+            android:textColor="@color/textcolor_filter" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<callback xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+	<head>
+		<status>1</status>
+	</head>
+	<body>
+		<user_details>
+			<username>tomm</username>
+			<password>5872e6f5506ca52fd48e3d242217b7cc</password>
+		</user_details>
+		<reports>
+			<report_id>15</report_id>
+			<site_name>Deep Mine</site_name>
+			<report_details>
+				<customer>Mining Co</customer>
+				<site>Deep Mine</site>
+				<country>Australia</country>
+				<customer_rep>Bob Smith</customer_rep>
+				<plant>plan temp</plant>
+				<plant_type_gmd>false</plant_type_gmd>
+				<plant_type_transformer>false</plant_type_transformer>
+				<plant_type_ehouse>false</plant_type_ehouse>
+				<plant_type_drive>false</plant_type_drive>
+				<plant_type_cyclo>false</plant_type_cyclo>
+				<plant_type_motor>false</plant_type_motor>
+				<unit/>
+				<system_machine/>
+				<type/>
+				<serial_no/>
+				<year_of_delivery/>
+				<operating_hours/>
+				<service_information>
+					<service_type>
+						<new_plant>false</new_plant>
+						<upgrade>false</upgrade>
+						<troubleshooting>false</troubleshooting>
+						<others>false</others>
+						<first_installation>true</first_installation>
+						<minor_inspection>false</minor_inspection>
+						<major_overhaul>false</major_overhaul>
+					</service_type>
+					<service_tasks>
+						<installation>false</installation>
+						<comissioning>false</comissioning>
+						<test_assessment>false</test_assessment>
+						<others_service_task>false</others_service_task>
+						<overhaul_works>false</overhaul_works>
+						<re_comissioning>false</re_comissioning>
+						<diagnostics>false</diagnostics>
+						<factory_insp>false</factory_insp>
+						<repair>false</repair>
+						<investigation>false</investigation>
+						<inspection>false</inspection>
+						<motor_insp_inside>false</motor_insp_inside>
+						<motor_insp_external>false</motor_insp_external>
+					</service_tasks>
+				</service_information>
+				<desc_of_service_performed>
+					<stator/>
+					<rotor_poles/>
+					<motor_auxillaries/>
+					<cyclo_converter/>
+				</desc_of_service_performed>
+				<list_of_distribution>null</list_of_distribution>
+				<distribution_to_customer>null</distribution_to_customer>
+			</report_details>
+			<summary>
+
+
+				<recommendations>null</recommendations>
+
+				<summary_of_inspection>
+					<item/>
+				</summary_of_inspection>
+				<main_difficulties>
+					<item/>
+				</main_difficulties>
+				<point_of_general_interest>
+					<item/>
+				</point_of_general_interest>
+			</summary>
+			<service_checklist>
+				<mill>
+					<mill_id>4</mill_id>
+					<mill_name>Mill B</mill_name>
+					<gmd_type>Foot Mounted</gmd_type>
+					<services>
+						<item>
+							<id>1</id>
+							<parent_id>0</parent_id>
+							<name>Stator</name>
+							<services>
+								<item>
+									<id>4</id>
+									<parent_id>1</parent_id>
+									<name>Stator foundation &amp; Stator frame</name>
+									<services>
+										<item>
+											<id>20</id>
+											<parent_id>4</parent_id>
+											<name>Check &amp; Describe presence of corrosion</name>
+											<tasks>
+												<work_scope>To be done</work_scope>
+												<work_scope_comments>null</work_scope_comments>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+												<comments>null</comments>
+												<special_type>null</special_type>
+												<special_type_tag>null</special_type_tag>
+											</tasks>
+										</item>
+									</services>
+								</item>
+								<item>
+									<id>7</id>
+									<parent_id>1</parent_id>
+									<name>Sealing system</name>
+									<services>
+										<item>
+											<id>46</id>
+											<parent_id>7</parent_id>
+											<name>Check &amp; Describe presence of Corrosion</name>
+											<tasks>
+												<work_scope>To be done</work_scope>
+												<work_scope_comments>null</work_scope_comments>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+												<comments>null</comments>
+												<special_type>null</special_type>
+												<special_type_tag>null</special_type_tag>
+											</tasks>
+										</item>
+									</services>
+								</item>
+							</services>
+						</item>
+					</services>
+				</mill>
+			</service_checklist>
+		</reports>
+	</body>
+</callback>

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:staggered="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.felipecsl.asymmetricgridview.library.widget.AsymmetricGridView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:divider="@android:color/white"
+        android:dividerHeight="3dp"
+        android:fadingEdge="none"
+        android:focusable="false"
+        android:gravity="center"
+        android:listSelector="#00000000" />
+
+    <!--
+         <com.origamilabs.library.views.StaggeredGridView
+        android:id="@+id/listView"
+        xmlns:staggered="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        staggered:drawSelectorOnTop="true"
+        android:background="@android:color/white"
+        android:divider="@android:color/white"
+        android:dividerHeight="3dp"
+        android:fadingEdge="none"
+        android:focusable="false"
+        staggered:numColumns="2" />
+    -->
+
+    <TextView
+        android:id="@+id/tvnoMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No media available"
+        android:textColor="@color/black_heading"
+        android:textSize="16sp" />
+
+</RelativeLayout>

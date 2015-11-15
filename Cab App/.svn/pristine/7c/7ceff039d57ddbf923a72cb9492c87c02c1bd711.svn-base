@@ -1,0 +1,804 @@
+package com.android.cabapp.fragments;
+
+import java.util.HashMap;
+import java.util.Locale;
+
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.graphics.Rect;
+import android.location.Location;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.telephony.SmsManager;
+import android.text.Editable;
+import android.text.Html;
+import android.text.InputType;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.cabapp.R;
+import com.android.cabapp.activity.MainActivity;
+import com.android.cabapp.async.GetAddressTask;
+import com.android.cabapp.async.GetAutoPlacesTask;
+import com.android.cabapp.async.GetPincodeTask;
+import com.android.cabapp.async.SendReceiptTask;
+import com.android.cabapp.util.AppValues;
+import com.android.cabapp.util.Constants;
+import com.android.cabapp.util.NetworkUtil;
+import com.android.cabapp.util.Util;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+
+public class CabPayReceiptFragment extends RootFragment {
+	private static final String TAG = CabPayReceiptFragment.class
+			.getSimpleName();
+
+	private static boolean isEmailSelected = true, isSMSselected = false,
+			isPickUpLocationClick = false, isDropOffLocationclicked = false;
+	RelativeLayout rlEmail, rlSMS, rlSendReceipt, rlHiddenSendReceipt;
+	TextView textSMS, textEmail, textTotal, textTotalAmount,
+			textPickUpLocation, textDropOffLocation;
+	EditText etEmailOrNumber, etPickupPincode, etDropOffPinCode;
+	AutoCompleteTextView acTextPickUpAddress, acTextDropOffAddress;
+	GetPincodeTask pincodeTask;
+	GetAutoPlacesTask placesTask;
+	Location currentLocation;
+	Handler mHandler, mPincodeHandler;
+
+	String placeId = "", szPickUpLat, szPickUpLng, szDropOffLat, szDropOffLng,
+			szPassengerInternationalCode = "";
+	private ProgressDialog dialogSendReceipt;
+
+	boolean bIsFromHistoryJobs = false;
+
+	View activityRootView;
+
+	// Handler receiptSuccessHandler;
+
+	public CabPayReceiptFragment() {
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+
+		View rootView = inflater.inflate(R.layout.cab_pay_cash_receipt,
+				container, false);
+		super.initWidgets(rootView, this.getClass().getName());
+
+		getActivity().getWindow().setSoftInputMode(
+				WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE
+						| WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+
+		activityRootView = rootView.findViewById(R.id.relMain);
+		rlEmail = (RelativeLayout) rootView.findViewById(R.id.rlEmail);
+		rlSMS = (RelativeLayout) rootView.findViewById(R.id.rlSMS);
+		textEmail = (TextView) rootView.findViewById(R.id.textEmail);
+		textSMS = (TextView) rootView.findViewById(R.id.textSMS);
+		rlSendReceipt = (RelativeLayout) rootView
+				.findViewById(R.id.rlSendReceipt);
+		rlHiddenSendReceipt = (RelativeLayout) rootView
+				.findViewById(R.id.rlHiddenSendReceipt);
+		textTotal = (TextView) rootView.findViewById(R.id.tvTotal);
+		textTotalAmount = (TextView) rootView.findViewById(R.id.tvTotalAmount);
+		etEmailOrNumber = (EditText) rootView
+				.findViewById(R.id.etEmailOrCellNumber);
+		etEmailOrNumber
+				.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+		acTextPickUpAddress = (AutoCompleteTextView) rootView
+				.findViewById(R.id.autoCompleteTextPickUpAddress);
+		etPickupPincode = (EditText) rootView
+				.findViewById(R.id.etPickupPincode);
+		acTextDropOffAddress = (AutoCompleteTextView) rootView
+				.findViewById(R.id.autoCompleteTextDropOffAddress);
+		etDropOffPinCode = (EditText) rootView
+				.findViewById(R.id.etDropOffPinCode);
+		textPickUpLocation = (TextView) rootView
+				.findViewById(R.id.tvPickUpLocation);
+		textDropOffLocation = (TextView) rootView
+				.findViewById(R.id.tvDropOffLocation);
+
+		String totalText = "<font color=#fd6f01>= </font> <font color=#f5f5f5> Total</font>";
+		textTotal.setText(Html.fromHtml(totalText));
+
+		rlEmail.setOnClickListener(new TextClickListener());
+		rlSMS.setOnClickListener(new TextClickListener());
+		rlSendReceipt.setOnClickListener(new TextClickListener());
+		rlHiddenSendReceipt.setOnClickListener(new TextClickListener());
+		textPickUpLocation.setOnClickListener(new TextClickListener());
+		textDropOffLocation.setOnClickListener(new TextClickListener());
+
+		activityRootView.getViewTreeObserver().addOnGlobalLayoutListener(
+				new OnGlobalLayoutListener() {
+					@Override
+					public void onGlobalLayout() {
+						Rect r = new Rect();
+						// r will be populated with the coordinates of your view
+						// that area still visible.
+						activityRootView.getWindowVisibleDisplayFrame(r);
+
+						int heightDiff = activityRootView.getRootView()
+								.getHeight() - (r.bottom - r.top);
+						if (heightDiff > 100) {
+							rlHiddenSendReceipt.setVisibility(View.VISIBLE);
+							rlSendReceipt.setVisibility(View.GONE);
+						} else {
+
+							rlHiddenSendReceipt.setVisibility(View.GONE);
+							rlSendReceipt.setVisibility(View.VISIBLE);
+						}
+					}
+				});
+
+		/* AutoTextView for pickup point location */
+		acTextPickUpAddress.setOnItemClickListener(new OnItemClickListener() {
+
+			@SuppressWarnings("unchecked")
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				isPickUpLocationClick = true;
+				isDropOffLocationclicked = false;
+				HashMap<String, String> selected = (HashMap<String, String>) parent
+						.getItemAtPosition(position);
+				String addressDesc = selected.get("description");
+				placeId = selected.get("placeId");
+				pincodeTask = new GetPincodeTask(Util.mContext, placeId,
+						"atvPickUpPlaces");
+				pincodeTask.mHandler = mPincodeHandler;
+				pincodeTask.execute();
+				etPickupPincode.setText("");
+
+			}
+
+		});
+		acTextPickUpAddress.addTextChangedListener(new TextWatcher() {
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+
+				/* atvAdapterResult.updateList(new List()); */
+				GetAutoPlacesTask placesTask = new GetAutoPlacesTask(
+						Util.mContext);
+				placesTask.execute(s.toString());
+
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+
+			}
+		});
+
+		/* AutoTextView for drop off point location */
+		acTextDropOffAddress.setOnItemClickListener(new OnItemClickListener() {
+
+			@SuppressWarnings("unchecked")
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				isPickUpLocationClick = false;
+				isDropOffLocationclicked = true;
+				HashMap<String, String> selected = (HashMap<String, String>) parent
+						.getItemAtPosition(position);
+				placeId = selected.get("placeId");
+				GetPincodeTask pincodeTask = new GetPincodeTask(Util.mContext,
+						placeId, "atvDropOffPlaces");
+				pincodeTask.mHandler = mPincodeHandler;
+				pincodeTask.execute();
+				etDropOffPinCode.setText("");
+
+			}
+
+		});
+
+		acTextDropOffAddress.addTextChangedListener(new TextWatcher() {
+
+			@Override
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+
+				GetAutoPlacesTask placesTask = new GetAutoPlacesTask(
+						Util.mContext);
+				placesTask.execute(s.toString());
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void afterTextChanged(Editable s) {
+
+			}
+
+		});
+
+		mHandler = new Handler() {
+			@Override
+			public void handleMessage(Message msg) {
+				if (msg != null && msg.peekData() != null) {
+					String country = "";
+					Bundle bundle = (Bundle) msg.obj;
+					if (bundle.containsKey("Country")) {
+						country = bundle.getString("Country");
+
+						if (isPickUpLocationClick) {
+
+							acTextPickUpAddress.setText(bundle
+									.getString("currentaddress"));
+							etPickupPincode.setText(bundle
+									.getString("currentpincode"));
+						}
+						if (isDropOffLocationclicked) {
+
+							acTextDropOffAddress.setText(bundle
+									.getString("currentaddress"));
+							etDropOffPinCode.setText(bundle
+									.getString("currentpincode"));
+						}
+
+					}
+				}
+
+			}
+
+		};
+		mPincodeHandler = new Handler() {
+			@Override
+			public void handleMessage(Message msg) {
+				if (msg != null && msg.peekData() != null) {
+					Bundle bundle = (Bundle) msg.obj;
+					if (bundle.containsKey("pincode")) {
+						if (isPickUpLocationClick) {
+							szPickUpLat = bundle.getString("selectedlat");
+							szPickUpLng = bundle.getString("selectedLng");
+
+						}
+						if (isDropOffLocationclicked) {
+							szDropOffLat = bundle.getString("selectedlat");
+							szDropOffLng = bundle.getString("selectedLng");
+
+						}
+
+					}
+				}
+
+			}
+
+		};
+		acTextPickUpAddress
+				.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+					@Override
+					public void onFocusChange(View v, boolean hasFocus) {
+						if (hasFocus) {
+							locationUnselected(textPickUpLocation);
+						}
+					}
+				});
+
+		acTextDropOffAddress
+				.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+					@Override
+					public void onFocusChange(View v, boolean hasFocus) {
+						if (hasFocus) {
+							locationUnselected(textDropOffLocation);
+						}
+					}
+				});
+
+		etPickupPincode
+				.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+					@Override
+					public void onFocusChange(View v, boolean hasFocus) {
+						if (hasFocus) {
+							locationUnselected(textPickUpLocation);
+						}
+					}
+				});
+
+		etDropOffPinCode
+				.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+					@Override
+					public void onFocusChange(View v, boolean hasFocus) {
+						if (hasFocus) {
+							locationUnselected(textDropOffLocation);
+						}
+					}
+				});
+
+		return rootView;
+	}
+
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		mMainBundle = this.getArguments();
+		if (mMainBundle != null) {
+
+			if (Constants.isDebug)
+				Log.e(TAG, "mMainBundle: " + mMainBundle.toString());
+
+			if (mMainBundle.containsKey("isFromHistoryJobs"))
+				bIsFromHistoryJobs = mMainBundle
+						.getBoolean("isFromHistoryJobs");
+
+			if (mMainBundle.containsKey(Constants.IS_FROM_FARE_CALCULATOR)) {
+				acTextPickUpAddress.setText(mMainBundle
+						.getString(Constants.FC_PICKUP_ADDRESS));
+				etPickupPincode.setText(mMainBundle
+						.getString(Constants.FC_PICKUP_PINCODE));
+				acTextDropOffAddress.setText(mMainBundle
+						.getString(Constants.FC_DROPOFF_ADDRESS));
+				etDropOffPinCode.setText(mMainBundle
+						.getString(Constants.FC_DROPOFF_PINCODE));
+			}
+			if (mMainBundle.containsKey(Constants.PICK_UP_ADDRESS)) {
+				acTextPickUpAddress.setText(mMainBundle
+						.getString(Constants.PICK_UP_ADDRESS));
+				etPickupPincode.setText(mMainBundle
+						.getString(Constants.PICK_UP_PINCODE));
+				acTextDropOffAddress.setText(mMainBundle
+						.getString(Constants.DROP_ADDRESS));
+				etDropOffPinCode.setText(mMainBundle
+						.getString(Constants.DROP_OFF_PINCODE));
+			}
+			if (mMainBundle.getString(Constants.TOTAL_VALUE) != null) {
+				float totalValue = Float.valueOf(mMainBundle
+						.getString(Constants.TOTAL_VALUE));
+				if (AppValues.driverSettings != null) {
+					textTotalAmount
+							.setText(AppValues.driverSettings
+									.getCurrencySymbol()
+									+ String.format(Locale.ENGLISH, "%.2f",
+											totalValue));
+				} else
+					textTotalAmount.setText(String.format(Locale.ENGLISH,
+							"%.2f", totalValue));
+			}
+
+			// If coming from History
+			if (mMainBundle.containsKey(Constants.AMOUNT)) {
+				float amt = Float.valueOf(mMainBundle
+						.getString(Constants.AMOUNT));
+				if (AppValues.driverSettings != null)
+					textTotalAmount.setText(AppValues.driverSettings
+							.getCurrencySymbol()
+							+ String.format(Locale.ENGLISH, "%.2f", amt));
+				else
+					textTotalAmount.setText(String.format(Locale.ENGLISH,
+							"%.2f", amt));
+			}
+
+			// If email address found else set mobile number
+			if (mMainBundle.containsKey(Constants.EMAIL_ADDRESS)
+					&& mMainBundle.get(Constants.EMAIL_ADDRESS) != null) {
+				setEmail();
+			} else if (mMainBundle.containsKey(Constants.PASSENGER_NUMBER)
+					&& mMainBundle.get(Constants.PASSENGER_NUMBER) != null) {
+				setPhoneNumber();
+			}
+
+		}
+
+		// receiptSuccessHandler = new Handler() {
+		// @Override
+		// public void handleMessage(Message message) {
+		// super.handleMessage(message);
+		// // Success
+		// if (dialogSendReceipt != null)
+		// dialogSendReceipt.dismiss();
+		//
+		// Fragment fragment = null;
+		// fragment = new com.android.cabapp.fragments.JobsFragment();
+		// ((MainActivity) mContext)
+		// .setSlidingMenuPosition(Constants.JOBS_FRAGMENT);
+		// if (fragment != null)
+		// ((MainActivity) mContext).replaceFragment(fragment, true);
+		// }
+		// };
+
+		if (MainActivity.slidingMenu != null)
+			MainActivity.slidingMenu
+					.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
+	}
+
+	void setEmail() {
+		etEmailOrNumber.setText(mMainBundle.get(Constants.EMAIL_ADDRESS)
+				.toString());
+		toogleReceiptMethod(textEmail);
+		etEmailOrNumber
+				.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+		isEmailSelected = true;
+		isSMSselected = false;
+	}
+
+	void setPhoneNumber() {
+		szPassengerInternationalCode = mMainBundle
+				.getString(Constants.PASSENGER_INTERNATIONAL_CODE);
+		etEmailOrNumber.setText(mMainBundle
+				.getString(Constants.PASSENGER_INTERNATIONAL_CODE)
+				+ mMainBundle.get(Constants.PASSENGER_NUMBER).toString());
+		toogleReceiptMethod(textSMS);
+		etEmailOrNumber.setInputType(InputType.TYPE_CLASS_PHONE);
+		isEmailSelected = false;
+		isSMSselected = true;
+	}
+
+	class TextClickListener implements OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+
+			switch (v.getId()) {
+			case R.id.rlEmail:
+				if (mMainBundle.containsKey(Constants.EMAIL_ADDRESS)
+						&& mMainBundle.get(Constants.EMAIL_ADDRESS) != null) {
+					setEmail();
+				} else {
+					etEmailOrNumber.setText("");
+					toogleReceiptMethod(textEmail);
+					etEmailOrNumber
+							.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+					isEmailSelected = true;
+					isSMSselected = false;
+				}
+				break;
+
+			case R.id.rlSMS:
+				if (mMainBundle.containsKey(Constants.PASSENGER_NUMBER)
+						&& mMainBundle.get(Constants.PASSENGER_NUMBER) != null) {
+					setPhoneNumber();
+				} else {
+					etEmailOrNumber.setText("");
+					toogleReceiptMethod(textSMS);
+					etEmailOrNumber.setInputType(InputType.TYPE_CLASS_PHONE);
+					isEmailSelected = false;
+					isSMSselected = true;
+				}
+				break;
+
+			case R.id.rlSendReceipt:
+				sendReceiptCall();
+
+				break;
+
+			case R.id.rlHiddenSendReceipt:
+				sendReceiptCall();
+
+				break;
+
+			case R.id.tvPickUpLocation:
+
+				isPickUpLocationClick = true;
+				isDropOffLocationclicked = false;
+				locationSelected(textPickUpLocation);
+				getCurrentLocation();
+				break;
+
+			case R.id.tvDropOffLocation:
+				isDropOffLocationclicked = true;
+				isPickUpLocationClick = false;
+				locationSelected(textDropOffLocation);
+				getCurrentLocation();
+				break;
+			case R.id.tvTotal:
+				break;
+
+			}
+		}
+	}
+
+	void locationSelected(TextView tv) {
+		tv.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.track, 0, 0);
+		tv.setTextColor(getResources().getColor((R.color.textview_selected)));
+	}
+
+	void locationUnselected(TextView tv) {
+		tv.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.track_gray, 0,
+				0);
+		tv.setTextColor(getResources().getColor((R.color.textcolor_grey)));
+	}
+
+	void sendReceiptCall() {
+		Util.hideSoftKeyBoard(Util.mContext, rlSendReceipt);
+		String szEmailPhoneNumber = etEmailOrNumber.getText().toString().trim();
+		Log.e("SendReceipt", "Email Or Number:: " + szEmailPhoneNumber);
+		if (szEmailPhoneNumber.isEmpty()) {
+			if (isEmailSelected) {
+				Util.showToastMessage(Util.mContext,
+						"Please enter email address", Toast.LENGTH_LONG);
+			} else if (isSMSselected) {
+				Util.showToastMessage(Util.mContext,
+						"Please enter mobile number for SMS", Toast.LENGTH_LONG);
+			}
+		} else {
+			if (isEmailSelected
+					&& !szEmailPhoneNumber.matches(Constants.EMAIL_PATTERN)) {
+				Util.showToastMessage(Util.mContext,
+						"Please enter a valid email address", Toast.LENGTH_LONG);
+			} else if (isSMSselected && szEmailPhoneNumber.length() < 10) {
+				Util.showToastMessage(Util.mContext,
+						"Please enter a valid mobile number", Toast.LENGTH_LONG);
+			} else {
+				String szType = "";
+				if (isEmailSelected) {
+					// SendEmail(szTotalAmt);
+					szType = "email";
+				} else if (isSMSselected) {
+					// SendSMS(szTotalAmt);
+					szType = "sms";
+				} else {
+					szType = "none";
+				}
+				if (NetworkUtil.isNetworkOn(Util.mContext)) {
+					if (mMainBundle != null) {
+
+						SendReceiptTask sendReceiptTask = new SendReceiptTask();
+						sendReceiptTask.mContext = Util.mContext;
+						if (mMainBundle.containsKey(Constants.JOB_ID)
+								&& !mMainBundle.get(Constants.JOB_ID)
+										.equals("")) {
+							sendReceiptTask.szJobID = mMainBundle
+									.getString(Constants.JOB_ID);
+							sendReceiptTask.szFee = mMainBundle
+									.getString(Constants.CARD_FEE_VALUE);
+							sendReceiptTask.bIsFromHistoryJobs = bIsFromHistoryJobs;
+						}
+						if (isSMSselected) {
+							sendReceiptTask.szMobile = szEmailPhoneNumber;
+							sendReceiptTask.szEmail = "";
+							sendReceiptTask.szInternationalCode = szPassengerInternationalCode;
+						} else {
+							sendReceiptTask.szEmail = szEmailPhoneNumber;
+							sendReceiptTask.szMobile = "";
+							sendReceiptTask.szInternationalCode = "";
+						}
+
+						sendReceiptTask.szPaymentType = mMainBundle
+								.getString(Constants.CABPAY_PAYMENT_TYPE);
+						if (mMainBundle.containsKey(Constants.PICK_UP_ADDRESS)) {
+							sendReceiptTask.szPU = mMainBundle
+									.getString(Constants.PICK_UP_ADDRESS);
+							sendReceiptTask.szDO = mMainBundle
+									.getString(Constants.DROP_ADDRESS);
+						} else {
+							String szPickUpAddress = "", szDropOffAddress = "";
+							String sPickUpAdd = acTextPickUpAddress.getText()
+									.toString().trim();
+							String sPickUpPincode = etPickupPincode.getText()
+									.toString().trim();
+							if (!sPickUpAdd.isEmpty()
+									|| !sPickUpPincode.isEmpty())
+								szPickUpAddress = sPickUpAdd + " , "
+										+ sPickUpPincode;
+
+							String sDropOffAdd = acTextDropOffAddress.getText()
+									.toString().trim();
+							String sDropOffPinCode = etDropOffPinCode.getText()
+									.toString().trim();
+							if (!sDropOffAdd.isEmpty()
+									|| !sDropOffPinCode.isEmpty())
+								szDropOffAddress = sDropOffAdd + " , "
+										+ sDropOffPinCode;
+
+							sendReceiptTask.szPU = szPickUpAddress;
+							sendReceiptTask.szDO = szDropOffAddress;
+						}
+
+						sendReceiptTask.szType = szType;
+						sendReceiptTask.szAmount = mMainBundle
+								.getString(Constants.TOTAL_VALUE);
+						sendReceiptTask.szTip = mMainBundle
+								.getString(Constants.TIP_VALUE);
+
+						sendReceiptTask.execute();
+
+					}
+				} else {
+					Util.showToastMessage(Util.mContext, getResources()
+							.getString(R.string.no_network_error),
+							Toast.LENGTH_LONG);
+				}
+			}
+		}
+	}
+
+	void toogleReceiptMethod(TextView textViewSelected) {
+		textEmail.setCompoundDrawablesWithIntrinsicBounds(
+				R.drawable.email_grey, 0, 0, 0);
+		textSMS.setCompoundDrawablesWithIntrinsicBounds(R.drawable.sms_grey, 0,
+				0, 0);
+
+		textEmail.setTextColor(getResources().getColor(R.color.textcolor_grey));
+		textSMS.setTextColor(getResources().getColor(R.color.textcolor_grey));
+
+		if (textViewSelected == textEmail)
+			textViewSelected.setCompoundDrawablesWithIntrinsicBounds(
+					R.drawable.email, 0, 0, 0);
+		else if (textViewSelected == textSMS)
+			textViewSelected.setCompoundDrawablesWithIntrinsicBounds(
+					R.drawable.sms, 0, 0, 0);
+
+		textViewSelected.setTextColor(getResources().getColor(
+				R.color.textview_selected));
+
+	}
+
+	private void getCurrentLocation() {
+		if (NetworkUtil.isNetworkOn(Util.mContext)) {
+			if (Util.getLocation(Util.mContext) != null)
+				currentLocation = Util.getLocation(Util.mContext);
+			if (currentLocation != null) {
+				GetAddressTask task = new GetAddressTask(Util.mContext);
+				task.latitude = currentLocation.getLatitude();
+				task.longitude = currentLocation.getLongitude();
+				if (isPickUpLocationClick) {
+					szPickUpLat = String.valueOf(currentLocation.getLatitude());
+					szPickUpLng = String
+							.valueOf(currentLocation.getLongitude());
+				}
+				if (isDropOffLocationclicked) {
+					szDropOffLat = String
+							.valueOf(currentLocation.getLatitude());
+					szDropOffLng = String.valueOf(currentLocation
+							.getLongitude());
+				}
+				task.mHandler = mHandler;
+				task.execute("");
+			} else {
+				Util.showToastMessage(Util.mContext,
+						"Unable to get current location.Please try again",
+						Toast.LENGTH_LONG);
+			}
+
+		} else {
+
+			Util.showToastMessage(Util.mContext, "No network connection",
+					Toast.LENGTH_LONG);
+		}
+	}
+
+	void SendSMS(String totalAmt) {
+
+		String szPhoneNumber = etEmailOrNumber.getText().toString().trim();
+		if (szPhoneNumber.length() == 0 || szPhoneNumber.isEmpty()
+				|| etEmailOrNumber.equals("") || szPhoneNumber.length() < 10) {
+			Util.showToastMessage(Util.mContext,
+					"Please enter a valid mobile number", Toast.LENGTH_LONG);
+		} else {
+			String szPickUpAddress = acTextPickUpAddress.getText().toString()
+					.trim()
+					+ " , " + etPickupPincode.getText().toString().trim();
+			String szDropOffAddress = acTextDropOffAddress.getText().toString()
+					.trim()
+					+ " , " + etDropOffPinCode.getText().toString().trim();
+			String szTotalAmt = totalAmt;
+			String sms = "Cab App payment receipt." + "\n" + "Pick Up Point: "
+					+ szPickUpAddress + "\n" + "Drop off Point: "
+					+ szDropOffAddress + "\n" + "Total Amount: " + szTotalAmt;
+
+			try {
+				SmsManager smsManager = SmsManager.getDefault();
+				smsManager
+						.sendTextMessage(szPhoneNumber, null, sms, null, null);
+				Util.showToastMessage(Util.mContext, "SMS Sent!",
+						Toast.LENGTH_LONG);
+			} catch (Exception e) {
+				Util.showToastMessage(Util.mContext,
+						"SMS failed, please try again later!",
+						Toast.LENGTH_LONG);
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	void SendEmail(String totalAmt) {
+		String email = etEmailOrNumber.getText().toString().trim();
+		String szPickUpAddress = acTextPickUpAddress.getText().toString()
+				.trim()
+				+ " , " + etPickupPincode.getText().toString().trim();
+		String szDropOffAddress = acTextDropOffAddress.getText().toString()
+				.trim()
+				+ " , " + etDropOffPinCode.getText().toString().trim();
+		String szTotalAmt = totalAmt;
+
+		if (email.isEmpty()) {
+			Util.showToastMessage(Util.mContext,
+					"Please enter an email address", Toast.LENGTH_LONG);
+		} else if (!email.matches(Constants.EMAIL_PATTERN)) {
+			Util.showToastMessage(Util.mContext,
+					"Please enter a valid email address", Toast.LENGTH_LONG);
+
+		} else {
+			Intent i = new Intent(Intent.ACTION_SEND);
+			i.setType("message/rfc822");
+			i.putExtra(Intent.EXTRA_EMAIL, new String[] { email });
+			i.putExtra(Intent.EXTRA_SUBJECT, "Receipt");
+			if (!(szPickUpAddress.length() < 1)
+					|| !(szDropOffAddress.length() < 1)) {
+				i.putExtra(Intent.EXTRA_TEXT, "Cab App payment receipt.  "
+						+ "\n" + "Pick Up Point: " + szPickUpAddress + "\n"
+						+ "Drop Off Point:  " + szDropOffAddress + "\n"
+						+ "Total Amount: " + szTotalAmt);
+			} else {
+				i.putExtra(Intent.EXTRA_TEXT, "Cab App payment receipt.");
+			}
+			try {
+				startActivity(Intent.createChooser(i, "Send Receipt"));
+			} catch (android.content.ActivityNotFoundException ex) {
+				Util.showToastMessage(Util.mContext,
+						"There are no email clients installed",
+						Toast.LENGTH_SHORT);
+			}
+		}
+
+	}
+
+	// void fetchDriverDetailsData() {
+	// Thread networkThread = new Thread(new Runnable() {
+	//
+	// @Override
+	// public void run() {
+	// // TODO Auto-generated method stub
+	// AppValues.clearAllJobsList();
+	//
+	// DriverAccountDetails driverAccount = new DriverAccountDetails(
+	// mContext);
+	// if (driverAccount.retriveAccountDetails(mContext) != null)
+	// AppValues.driverDetails = driverAccount
+	// .retriveAccountDetails(mContext);
+	//
+	// DriverSettingDetails driverSettings = new DriverSettingDetails(
+	// mContext);
+	// if (driverSettings.retriveDriverSettings(mContext) != null)
+	// AppValues.driverSettings = driverSettings
+	// .retriveDriverSettings(mContext);
+	//
+	// receiptSuccessHandler.sendEmptyMessage(0);
+	//
+	// }
+	// });
+	//
+	// if (NetworkUtil.isNetworkOn(mContext)) {
+	// networkThread.start();
+	// } else {
+	// Util.showToastMessage(mContext,
+	// getResources().getString(R.string.no_network_error),
+	// Toast.LENGTH_LONG);
+	// }
+	// }
+
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		isEmailSelected = true;
+		isSMSselected = false;
+	}
+}

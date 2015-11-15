@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_maps" />
+
+    <RelativeLayout
+        android:id="@+id/rel_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar"
+        android:background="#191918" >
+
+        <TextView
+            android:id="@+id/tv_toptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:text="@string/justsendyou4"
+            android:textColor="#d2d2d1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_digitcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_toptext"
+            android:layout_centerHorizontal="true"
+            android:text="@string/fourdigitcode"
+            android:textColor="#f36a02"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rel_digitcode"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/tv_digitcode"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:paddingBottom="10dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="38dp"
+            android:paddingTop="10dp" >
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/et_first_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boxtypecolorborders"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="1"
+                    android:nextFocusDown="@+id/et_second_code"
+                    android:textSize="30sp" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/et_second_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boxtypecolorborders"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:maxLength="1"
+                    android:nextFocusDown="@+id/et_third_code"
+                    android:textSize="30sp" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/et_third_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boxtypecolorborders"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:maxLength="1"
+                    android:nextFocusDown="@+id/et_fourthcode"
+                    android:textSize="30sp" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/et_fourthcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boxtypecolorborders"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="1"
+                    android:textSize="30sp" >
+                </EditText>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvdone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/rel_digitcode"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/registration_btn_selector"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Done"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_bottomtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvresend"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/notreceivedcode"
+            android:textColor="#d2d2d1"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvresend"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/registration_btn_selector"
+            android:clickable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Re-send code"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

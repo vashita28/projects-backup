@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/chat_bg">
+
+    <ImageView
+        android:id="@+id/splashIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/splashTextImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splashIconImageView"
+        android:layout_centerInParent="true"
+        android:src="@drawable/splashtext" >
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/splashtextview"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dip"
+        android:background="@color/textview_selected"
+        android:gravity="center"
+        android:text="@string/nointernet"
+        android:textColor="@color/darkorange"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+</RelativeLayout>

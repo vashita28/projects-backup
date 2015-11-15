@@ -1,0 +1,12 @@
+  $isauthorized=false;
+  
+  if ($driver!="" && (! ($driver->getBadgeExpiration() && $driver->getBadgeExpiration()->equals($badgeExpiration))
+   || ! $driver->isBadgeValid()
+   || (isset($data['sector']) && $driver->getSector() != $data['sector'])
+   || ($driver->getBadgeNumber() != $data['badgeNumber'])
+   || $driver->getBadgeColour() != $data['badgeColour']
+   || $driver->getForename() != $data['forename']
+   || $driver->getSurname() != $data['surname']
+  )) {
+   $isauthorized = true;
+}

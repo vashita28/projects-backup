@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_bg" >
+
+    <include
+        android:id="@+id/supportTopBar"
+        layout="@layout/common_top_bar" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/supportTopBar"
+        android:layout_marginTop="1dp"
+        android:background="@color/tab_unselected"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/contact_support"
+        android:textColor="#fff"
+        android:textSize="@dimen/heading_textsize"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relSend"
+        android:layout_below="@+id/title"
+        android:background="@android:color/white"
+        android:gravity="top"
+        android:hint="Enter your message here"
+        android:inputType="textMultiLine|textCapSentences"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:singleLine="false"
+        android:textSize="24sp" />
+
+    <RelativeLayout
+        android:id="@+id/relSend"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/rlSendaIncident"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/send" />
+
+            <TextView
+                android:id="@+id/tvSend"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:gravity="left|center_vertical"
+                android:text="Send"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSendaIncident"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relReportAIncident"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp" >
+
+        <ImageView
+            android:id="@+id/ivCabIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cab" />
+
+        <TextView
+            android:id="@+id/tvSeenACab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ivCabIcon"
+            android:text="@string/send_a_cab"
+            android:textColor="@color/textcolor_grey"
+            android:textSize="@dimen/subheading_textsize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relReportAIncident"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/tvReportAnIncident"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left"
+            android:gravity="left|center_vertical"
+            android:text="Report an incident"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/contactProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlOverlayContact"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/relSend"
+        android:background="@color/overlay_bg"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvContactAndReportincident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvContactTheCab"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="CONTACT US  \n &amp; REPORT INCIDENT"
+            android:textColor="@color/textview_selected"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvContactTheCab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/whiteCurve"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="false"
+            android:text="Contact the cab:app team if you need help or have any questions"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/whiteCurve"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/halfshape" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlOverlayBottomContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relSend"
+        android:background="@color/overlay_bg"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/llBottomButtons"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/registration_button"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvSkipOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="SKIP"
+                android:textColor="@color/textcolor_grey"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvNextOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="NEXT"
+                android:textColor="@color/textview_selected"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlOverlayReportaProblem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_bg"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvContactAndReportincidenttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvReportIncidentText"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="CONTACT US  \n &amp; REPORT INCIDENT"
+            android:textColor="@color/textview_selected"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvReportIncidentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ivGreyArc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="false"
+            android:text="Use &apos;Report Incident&apos; to direclty inform your local licensing authority of any cab related issues e.g. touting (add a picture or video as evidence)"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/ivGreyArc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvReportAnIncidentOverlay"
+            android:scaleType="fitXY"
+            android:src="@drawable/greyarc" />
+
+        <TextView
+            android:id="@+id/tvReportAnIncidentOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_above="@+id/rlOkGotIt"
+            android:background="#80676766"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Report an incident"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlOkGotIt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/registration_button_transparent" >
+
+            <TextView
+                android:id="@+id/tvOkGotIt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#191917"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="OKAY GOT IT!"
+                android:textColor="@color/textview_selected"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LLDC</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- menu tags -->
+    <string name="menu">Menu</string>
+    <string name="welcome">WELCOME</string>
+    <string name="map">MAP</string>
+    <string name="explore">EXPLORE</string>
+    <string name="events">EVENTS</string>
+    <string name="the_park">THE PARK</string>
+    <string name="explore_the_park">EXPLORE THE PARK</string>
+    <string name="welcome_text">WELCOME TO \nQUEEN  ELIZABETH \nOLYMPIC  PARK</string>
+    <string name="stadium_close_text">THE STADIUM IS CURRENTLY CLOSED UNTIL 2016</string>
+    <string name="whats_on_park">WHAT\'S ON AT THE PARK</string>
+    <string name="what_Are_you_looking">WHAT ARE YOU LOOKING TO DO?</string>
+
+    <!-- Bottom tabs -->
+    <string name="relax">RELAX</string>
+    <string name="entertain">ENTERTAIN</string>
+    <string name="active">ACTIVE</string>
+
+    <!-- Explore page -->
+    <string name="trails_tours">TRAILS &amp;\n TOURS</string>
+    <string name="venues_attractions">VENUES &amp;\n ATTRACTIONS</string>
+    <string name="london_2012">LONDON 2012</string>
+    <string name="facilities">FACILITIES</string>
+    <string name="what_is_there_to_see">WHAT IS THERE TO SEE?</string>
+
+</resources>

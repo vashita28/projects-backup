@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/even_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/tvDate_Time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp"
+        android:text="TODAY @12:50"
+        android:textColor="@color/textview_selected"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlDriver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDate_Time"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="10dp"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rlImageDriver"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp" >
+
+            <ImageView
+                android:id="@+id/imageViewDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:src="@drawable/driver_chat" />
+
+            <ImageView
+                android:id="@+id/imageViewArrowLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrowleft" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/chatTextDriver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/rlImageDriver"
+            android:background="@android:color/white"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="false"
+            android:text="chat box passenger "
+            android:textColor="@android:color/black"
+            android:textSize="16dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPassenger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDate_Time"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="10dp"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rlImage"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp" >
+
+            <ImageView
+                android:id="@+id/imageViewArrowRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrowright" />
+
+            <ImageView
+                android:id="@+id/imageViewPassenger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="10dp"
+                android:src="@drawable/passengers_chat" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/chatTextPassenger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/rlImage"
+            android:background="@android:color/white"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="false"
+            android:text="chat box driver "
+            android:textColor="@android:color/black"
+            android:textSize="16dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

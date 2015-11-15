@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/rlBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <TextView
+            android:id="@+id/tvEnterOldPasscode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/please_enter_old_passcode"
+            android:textColor="@color/textcolor_grey"
+            android:textSize="17sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlEnterPasscodeOld"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEnterOldPasscode"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/textfield" >
+
+            <ImageView
+                android:id="@+id/lock1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/passcode" />
+
+            <EditText
+                android:id="@+id/etEnterPasscodeOld"
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/lock1"
+                android:background="@android:color/transparent"
+                android:hint="@string/hint_passcode"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvEnterNewPasscode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlEnterPasscodeOld"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/please_enter_new_passcode"
+            android:textColor="@color/textcolor_grey"
+            android:textSize="17sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlEnterPasscodeNew"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEnterNewPasscode"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/textfield" >
+
+            <ImageView
+                android:id="@+id/lock2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/passcode" />
+
+            <EditText
+                android:id="@+id/etEnterPasscodeNew"
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/lock2"
+                android:background="@android:color/transparent"
+                android:hint="@string/hint_passcode"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvConfirmNewPasscode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlEnterPasscodeNew"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/confirm_new_passcode"
+            android:textColor="@color/textcolor_grey"
+            android:textSize="17sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlConfirmNewPasscode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvConfirmNewPasscode"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/textfield" >
+
+            <ImageView
+                android:id="@+id/lock3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/passcode" />
+
+            <EditText
+                android:id="@+id/etEnterPasscodeConfirm"
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/lock3"
+                android:background="@android:color/transparent"
+                android:hint="@string/hint_passcode"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textSize="15dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlBody"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_selector"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/confirm"
+            android:textColor="@android:color/background_light" />
+    </RelativeLayout>
+
+</RelativeLayout>

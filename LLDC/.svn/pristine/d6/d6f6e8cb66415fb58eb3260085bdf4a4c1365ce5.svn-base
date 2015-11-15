@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="100dp"
+    android:background="#ebebeb"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <ListView
+        android:id="@+id/lvVenuesAndAttractions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.60"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/white"
+        android:paddingTop="25dp" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/bbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.40"
+        android:background="#ebebeb"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        android:weightSum="1" >
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/tvSetThePark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingTop="25dp"
+            android:text="SEE THE PARK FROM A DIFFERENT VIEW"
+            android:textColor="@color/black_heading"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llHeadAndcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvSetThePark"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:visibility="visible"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:id="@+id/llBottomRow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:background="#ebebeb"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:visibility="visible"
+                android:weightSum="2" >
+
+                <RelativeLayout
+                    android:id="@+id/rlGuidedTours"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/guidedtoursbtn_style"
+                    android:gravity="center|center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/ivGuidedTours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="13dp"
+                        android:src="@drawable/guided_tours" />
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvGuidedTrails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivGuidedTours"
+                        android:layout_centerHorizontal="true"
+                        android:text="GUIDED TOURS"
+                        android:textColor="@color/black_heading"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlBoatTrails"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/guidedtoursbtn_style"
+                    android:gravity="center|center_vertical" >
+
+                    <ImageView
+                        android:id="@+id/ivBoatTrails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="13dp"
+                        android:src="@drawable/anchor" />
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvBoatTrails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivBoatTrails"
+                        android:layout_centerHorizontal="true"
+                        android:text="BOAT TOURS"
+                        android:textColor="@color/black_heading"
+                        android:textSize="17sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewEmpty"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.cabapp"
+    android:versionName="@string/app_version" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" /> -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <!-- Required for the Urban Airship library -->
+ <!--    <permission
+        android:name="com.android.cabapp.permission.UA_DATA"
+        android:protectionLevel="signature" /> -->
+
+    <uses-permission android:name="com.android.cabapp.permission.UA_DATA" />
+
+    <!-- Required for Push -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- This app has permission to register with GCM and receive message -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+   <!-- <permission
+        android:name="com.android.cabapp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+     <uses-permission android:name="com.android.cabapp.permission.C2D_MESSAGE" /> -->
+
+    <!-- Required only for location -->
+    <!-- Use ACCESS_COARSE_LOCATION if GPS access is not necessary -->
+    <!-- uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" / -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- OPTIONAL - This permission is only necessary if your app has multiple processes -->
+    <!-- <uses-permission android:name="android.permission.BROADCAST_STICKY" /> -->
+
+    <application
+        android:name="com.android.cabapp.activity.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <receiver android:name="com.android.cabapp.receiver.NetworkChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.android.cabapp.activity.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.LandingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.LogInActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.TakePaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.AddCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.SignUp_AboutYou_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.SignUp_YourAccount_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.SignUp_VehicleDetails_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.SignUp_DriverDetails_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.SignUp_Payment_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.DocumentUploadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.TermsAndConditions_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.TutorialActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.BillingAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.AutoTopUpCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.NowJobsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.ChatActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.ReportAnIncidentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.ShowFullImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.BuyCreditsCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.BuyCreditsConfirmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.SetUpAutoTopUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.AutoTopUpEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.AutoTopUpConfirmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.MyJobsOverlayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.ScanCardActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.AddScanCardJobsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.SuburbanSectorsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.PaymentWithUrlActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.android.cabapp.activity.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/select_device"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBOmuDJ1xrLYVOBo2YV_SAuGWrQI99OjA0" />
+        <!-- pramodkey = "AIzaSyAlnjm0jNq8PpbqBr4AlohE45awtRpSPdE" -->
+        <!-- vashita'skey=  AIzaSyBYdfCcKAUaEoHeIL4ROxbpblW3cdWxxic -->
+        <!-- new key from sangam's account=  AIzaSyAqXAKdsqy5XeIUwDaXmChzWowqLdCT4PA -->
+        <!-- new key from cabapp account = AIzaSyBOmuDJ1xrLYVOBo2YV_SAuGWrQI99OjA0 -->
+
+
+        <!--
+             <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        -->
+        <!--
+             <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="9c4dca6c4a3ea260a970846cd02186fce9048ee2" />
+        -->
+
+
+        <!-- Required for the library -->
+        <provider
+            android:name="com.urbanairship.UrbanAirshipProvider"
+            android:authorities="com.android.cabapp.urbanairship.provider"
+            android:exported="true"
+            android:multiprocess="true"
+            android:permission="com.android.cabapp.permission.UA_DATA" />
+
+        <!-- Required for Push -->
+        <service android:name="com.urbanairship.push.PushService" />
+
+        <receiver android:name="com.android.cabapp.receiver.IntentReceiver" />
+        <receiver android:name="com.urbanairship.CoreReceiver" />
+        <receiver
+            android:name="com.urbanairship.push.GCMPushReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.android.cabapp" />
+            </intent-filter>
+
+            <!-- Required for detecting when the application is upgraded so it can request a new GCM ID -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required for analytics -->
+        <service android:name="com.urbanairship.analytics.EventService" />
+
+        <!-- Required for Rich Push -->
+        <service android:name="com.urbanairship.richpush.RichPushUpdateService" />
+
+        <!-- Required for Actions -->
+        <activity android:name="com.urbanairship.actions.ActionActivity" />
+
+        <service android:name="com.urbanairship.actions.ActionService" />
+        <service
+            android:name="com.mobile.connect.service.PWConnectService"
+            android:exported="false" >
+        </service>
+
+        <!-- Required for Landing Page Action -->
+
+        <activity
+            android:name="com.urbanairship.actions.LandingPageActivity"
+            android:exported="false"
+            android:parentActivityName="com.android.cabapp.activity.MainActivity" >
+
+            <!-- MODIFICATION REQUIRED set or remove the parent activity -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.cabapp.MainActivity" />
+
+            <intent-filter>
+                <action android:name="com.urbanairship.actions.SHOW_LANDING_PAGE_INTENT_ACTION" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:name="io.card.payment.DataEntryActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="io.mpos.comlinks.bluetooth.background.BluetoothConnectionService"
+            android:enabled="true"
+            android:label="Bluetooth Connection Service" />
+    </application>
+
+</manifest>

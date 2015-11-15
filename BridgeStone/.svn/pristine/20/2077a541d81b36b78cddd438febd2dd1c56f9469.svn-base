@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bridgestone</string>
+
+    <!-- Main Activity -->
+    <string name="send">Wysłano</string>
+    <string name="bt_not_enabled">Bluetooth nie był włączony.</string>
+    <string name="title_connecting">Łączenie&#8230;</string>
+    <string name="title_connected_to">Połączono: </string>
+    <string name="title_not_connected">brak połączenia</string>
+    <string name="sensors">czujniki</string>
+    <string name="minimum_sensor_pressure">Minimalne ciśnienie czujnika:</string>
+    <string name="sensors_captured">wykryte czujniki</string>
+    <string name="sensors_below_min_pressure">Minimalne ciśnienie czujnika</string>
+    <string name="uploaded">wprowadzono</string>
+    <string name="btnUploadNow">wprowadzenie</string>
+    <string name="btnUploaded">wprowadzono</string>
+
+    <!-- DeviceListActivity -->
+    <string name="scanning">wyszukiwanie urządzeń&#8230;</string>
+    <string name="select_device">wybierz urządzenie do podłączenia</string>
+    <string name="none_paired">Żadne urządzenie nie zostało podłączone</string>
+    <string name="none_found">Nie znaleziono urządzeń</string>
+    <string name="title_paired_devices">Podłączone urządzenia</string>
+    <string name="title_other_devices">Inne dostępne urządzenia</string>
+    <string name="button_scan">Wyszukiwanie urządzeń</string>
+    <string name="no_device_selected">Proszę wybierz urządzenie z listy</string>
+
+    <!-- Options Menu -->
+    <string name="secure_connect">Połączenie urządzenia - zabezpieczone</string>
+    <string name="insecure_connect">Połączenie urządzenia - nie zabezpieczone</string>
+    <string name="discoverable">Zrób widoczny</string>
+
+    <!-- Login Activity -->
+    <string name="login">Zaloguj</string>
+    <string name="btnLogin">Zaloguj</string>
+    <string name="user">Użytkownik</string>
+    <string name="enter_user_id">Wprowadź ID użytkownika</string>
+    <string name="preferences">Wybór</string>
+    <string name="language">Język</string>
+    <string name="pressuremeasurement">Pomiar ciśnienia</string>
+    <string name="user_id_error">Wprowadź ID użytkownika</string>
+    <string name="user_id_must_contain_alphanumberic">Wprowadź alfanumeryczny ID użytkownika</string>
+    <string name="user_id_invalid_length">Wprowadź alfanumeryczny ID użytkownika – 6 znaków</string>
+
+    <!-- Setup Activity -->
+    <string name="set_up">Ustawienie</string>
+    <string name="current_status">Status</string>
+    <string name="not_connected">Nie podłączony</string>
+    <string name="connected">podłączony</string>
+    <string name="to_a_device">do urządzenia</string>
+    <string name="connect_device">podłączenie urządzenia</string>
+    <string name="change_device">zmiana urządzenia</string>
+
+    <!-- Sensor Details Activity -->
+    <string name="sensor_details">Szczegóły czujnika</string>
+    <string name="sensor_id">czujnika</string>
+    <string name="pressure">Ciśnienie</string>
+    <string name="save">Zapisz</string>
+    <string name="input_length_error">Wprowadź numer</string>
+    <string name="input_number_invalid_error">Wprowadź ważny numer</string>
+    <string name="bar">BAR</string>
+    <string name="psi">PSI</string>
+
+    <!-- Toast messages -->
+    <string name="no_network_error">Brak połączenia. Spróbuj ponownie.</string>
+    <string name="upload_error">Błąd ładowania danych. Spróbuj ponownie.</string>
+    <string name="uploading">Ładowanie&#8230;</string>
+    <string name="connecting">Łączenie&#8230;</string>
+
+    <string-array name="languagesArray">
+        <item>English</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Spanish</item>
+        <item>Italians</item>
+        <item>Portugeus</item>
+        <item>Polski</item>
+        <item>Czech</item>
+        <item>Hungarian</item>
+        <!-- <item>Slovak</item> -->
+        <item>Holenderski</item>
+    </string-array>
+    <string-array name="pressuremeasurementArray">
+        <item>BAR</item>
+        <item>PSI</item>
+    </string-array>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Anuluj</string>
+    <string name="exit">zjazd</string>
+    <string name="confirm_exit">potwierdzić zjazd?</string>
+    <string name="no_results">nie wynik</string>
+    <string name="bluetooth_not_available">Bluetooth is not available</string>
+    <string name="unable_to_connect_device">Unable to connect device</string>
+    <string name="device_connection_lost">Device connection was lost</string>
+    <string name="network_not_available">Network not available</string>
+
+</resources>

@@ -1,0 +1,767 @@
+<callback xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+	<service_checklist>
+		<mill>
+			<mill_id>5</mill_id>
+			<mill_name>Mill C</mill_name>
+			<gmd_type>Pedestal</gmd_type>
+			<services>
+				<item>
+					<id>28</id>
+					<parent_id>5</parent_id>
+					<name>Check &amp; Describe presence of Corrosion</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>29</id>
+					<parent_id>5</parent_id>
+					<name>Check &amp; Describe Cleanliness level</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>30</id>
+					<parent_id>5</parent_id>
+					<name>Check &amp; Describe presence of eventual Discoloration</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>31</id>
+					<parent_id>5</parent_id>
+					<name>Check &amp; Describe presence of eventual cracks</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>32</id>
+					<parent_id>5</parent_id>
+					<name>Check bolts partition elongation</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>46</id>
+					<parent_id>7</parent_id>
+					<name>Check &amp; Describe presence of Corrosion</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>47</id>
+					<parent_id>7</parent_id>
+					<name>Check &amp; Describe Cleanliness level</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>48</id>
+					<parent_id>7</parent_id>
+					<name>Check &amp; Describe presence of eventual Discoloration</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>49</id>
+					<parent_id>7</parent_id>
+					<name>Check &amp; Describe presence of eventual cracks</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>50</id>
+					<parent_id>7</parent_id>
+					<name>Check wear of outer and inner lip seal</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>51</id>
+					<parent_id>7</parent_id>
+					<name>Check spring &amp; holding plate segments</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>52</id>
+					<parent_id>7</parent_id>
+					<name>Replacement of Sealing Segments and Lip Sealing</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>53</id>
+					<parent_id>7</parent_id>
+					<name>Check functionality of seal-wear alarm signal</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>54</id>
+					<parent_id>7</parent_id>
+					<name>Installed according drawings</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>55</id>
+					<parent_id>7</parent_id>
+					<name>Check for worn or damaged parts</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>56</id>
+					<parent_id>8</parent_id>
+					<name>Check &amp; Describe Cleanliness level</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>57</id>
+					<parent_id>8</parent_id>
+					<name>Check &amp; Describe presence of eventual Discoloration</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>58</id>
+					<parent_id>8</parent_id>
+					<name>Check &amp; Describe presence of eventual cracks</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>59</id>
+					<parent_id>8</parent_id>
+					<name>Check bars for visible damages</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>60</id>
+					<parent_id>8</parent_id>
+					<name>Check bar ends non connection side</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>61</id>
+					<parent_id>8</parent_id>
+					<name>Check bar ends connection side</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>62</id>
+					<parent_id>8</parent_id>
+					<name>Check bar and  interconnection</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>63</id>
+					<parent_id>8</parent_id>
+					<name>Check slot wedges</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>64</id>
+					<parent_id>8</parent_id>
+					<name>Check all winding fixation parts</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>65</id>
+					<parent_id>8</parent_id>
+					<name>Check Stator winding insulation resistance</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>66</id>
+					<parent_id>9</parent_id>
+					<name>Check for brittle parts and damages</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>67</id>
+					<parent_id>9</parent_id>
+					<name>Check &amp; Describe Cleanliness level</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>68</id>
+					<parent_id>9</parent_id>
+					<name>Check air gap sensors coneection plugs</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>69</id>
+					<parent_id>10</parent_id>
+					<name>Fixing bolts</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>70</id>
+					<parent_id>10</parent_id>
+					<name>Check &amp; Describe sealing between poles</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>71</id>
+					<parent_id>10</parent_id>
+					<name>Check &amp; Describe state of corrosion protection applied</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>72</id>
+					<parent_id>10</parent_id>
+					<name>Check &amp; Describe presence of Corrosion</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>73</id>
+					<parent_id>10</parent_id>
+					<name>Check &amp; Describe Cleanliness level</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>74</id>
+					<parent_id>10</parent_id>
+					<name>Check &amp; Describe presence of eventual Discoloration</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>75</id>
+					<parent_id>10</parent_id>
+					<name>Check &amp; Describe presence of eventual cracks</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>76</id>
+					<parent_id>10</parent_id>
+					<name>Check pole winding and insulation</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>77</id>
+					<parent_id>10</parent_id>
+					<name>Check locking plates of pole to pole connections</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>78</id>
+					<parent_id>10</parent_id>
+					<name>Check the rotor cover fixation</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>79</id>
+					<parent_id>10</parent_id>
+					<name>Check pole flange and core</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>80</id>
+					<parent_id>11</parent_id>
+					<name>Check &amp; Describe Cleanliness level</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>81</id>
+					<parent_id>11</parent_id>
+					<name>Check for damages at the cable surface</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>82</id>
+					<parent_id>11</parent_id>
+					<name>Check fixation of cables</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>83</id>
+					<parent_id>11</parent_id>
+					<name>Check connection at slip rings</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>84</id>
+					<parent_id>11</parent_id>
+					<name>Installed according drawing</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>104</id>
+					<parent_id>15</parent_id>
+					<name>Check &amp; Describe presence of Corrosion</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>105</id>
+					<parent_id>15</parent_id>
+					<name>Check &amp; Describe Cleanliness level</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>106</id>
+					<parent_id>15</parent_id>
+					<name>Check &amp; Describe presence of eventual leaks</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>107</id>
+					<parent_id>15</parent_id>
+					<name>Clean heat exchangers if needed</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>122</id>
+					<parent_id>19</parent_id>
+					<name>Check &amp; Describe presence of Corrosion</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>123</id>
+					<parent_id>19</parent_id>
+					<name>Check &amp; Describe Cleanliness level</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>124</id>
+					<parent_id>19</parent_id>
+					<name>Check &amp; Describe presence of eventual Discoloration</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>125</id>
+					<parent_id>19</parent_id>
+					<name>Check &amp; Describe presence of eventual cracks</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>126</id>
+					<parent_id>19</parent_id>
+					<name>Check for mechanical damages</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+				<item>
+					<id>127</id>
+					<parent_id>19</parent_id>
+					<name>Check condition of main cablings and supports at stator</name>
+					<tasks>
+						<work_scope task_completed = "false">Acc Time</work_scope>
+						<work_carried_out task_completed = "false"/>
+						<conditions task_completed = "false"/>
+						<recommendations task_completed = "false"/>
+						<comments task_completed = "false"/>
+						<photograph task_completed = "false">This is a task</photograph>
+						<helpsupport task_completed = "false"/>
+					</tasks>
+				</item>
+			</services>
+		</mill>
+	</service_checklist>
+</callback>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/placeholderportrait"
+        android:maxHeight="160dp"
+        android:maxWidth="160dp"
+        android:scaleType="centerCrop" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/imageViewSelect"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/onclicked"
+        android:maxHeight="160dp"
+        android:maxWidth="160dp"
+        android:scaleType="fitXY"
+        android:visibility="visible" />
+
+</RelativeLayout>

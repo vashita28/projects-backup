@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <RelativeLayout
+        android:id="@+id/rel_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" >
+
+        <ImageView
+            android:id="@+id/imageview_top_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/whotel_insider_top_pink" />
+
+        <!-- <TextView -->
+
+        <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+            android:id="@+id/textview_header_pink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/hotel_title"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/book_now"
+        android:layout_below="@+id/rel_header"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/whotel_hotelinformation_centre_bg" >
+
+        <uk.co.pocketapp.whotel.customview.RecyclingImageView
+            android:id="@+id/imageview_deals_header"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@android:color/darker_gray" />
+
+        <ProgressBar
+            android:id="@+id/progress_hotelinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp" />
+
+        <!-- <TextView -->
+
+        <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+            android:id="@+id/textview_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/imageview_deals_header"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+        <!-- android:text="W-ATLANTA DOWNTOWN" -->
+
+
+        <!-- <TextView -->
+
+        <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont
+            android:id="@+id/textview_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textview_category"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:singleLine="false"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+        <!-- android:text="45,Ivan allen,Jr.Boulevard,NY,Atlanta,Georgia,30308,United States.Phone (404) 582-5800" -->
+
+        <ImageView
+            android:id="@+id/imageview_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/whotel_hotelinformation_centre_vertical_line" />
+
+        <!-- <TextView -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imageview_divider"
+            android:layout_marginBottom="3dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+                    android:id="@+id/textview_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="35dp"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+                <!-- android:text="COME PLAY IN STYLE" -->
+
+
+                <!-- <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont -->
+
+                <TextView
+                    android:id="@+id/textview_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textview_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="35dp"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+                <!-- android:text="@string/insider_title" -->
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/book_now"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/viewBottomMargin"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/whotel_hotelinformation_book_now_btn_bg"
+        android:paddingLeft="100dp"
+        android:text="@string/book_now"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/viewBottomMargin"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_alignParentBottom="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/bottom_right_black" />
+
+</RelativeLayout>

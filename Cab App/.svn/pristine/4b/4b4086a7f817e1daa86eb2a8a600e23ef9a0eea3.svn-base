@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_selected" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar_maps" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlConfirm"
+        android:layout_below="@+id/topbar"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rlContext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textPaymentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tab_unselected"
+                android:drawableLeft="@drawable/cabpayicon"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="Payment Details"
+                android:textColor="@color/textview_unselected"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlPaymentData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textPaymentDetails"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:id="@+id/textPaymentMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:text="PAYMENT METHOD"
+                    android:textColor="@color/textview_selected"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textPaymentMethodData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textPaymentMethod"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Visa Debit"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/llMeterTip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textPaymentMethodData"
+                    android:layout_marginBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="METER AMOUNT"
+                        android:textColor="@color/textview_selected"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="TIP"
+                        android:textColor="@color/textview_selected"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMeterTipData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llMeterTip"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:id="@+id/textMeterAmtData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:hint="0.00"
+                        android:paddingRight="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textTipData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCardFeeTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llMeterTipData"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:id="@+id/textCardFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:text="CARD FEE"
+                        android:textColor="@color/textview_selected"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="TOTAL"
+                        android:textColor="@color/textview_selected"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llCardFeeTotalData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llCardFeeTotal"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:id="@+id/textCardFeeData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:hint="0.00"
+                        android:paddingRight="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textTotalData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:hint="0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCabPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlPaymentData" >
+
+                <TextView
+                    android:id="@+id/textPassengerCabPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/tab_unselected"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Passenger&apos;s cab:PIN"
+                    android:textColor="@color/textview_unselected"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/llCapPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/textPassengerCabPin"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/etCabPin1"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_weight="0.5"
+                        android:background="@android:color/white"
+                        android:gravity="center"
+                        android:hint="000"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:nextFocusRight="@+id/etCabPin2"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+
+                    <!--
+                     <EditText
+                    android:id="@+id/etCabPin2"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:hint="00"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />                    -->
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <TextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/registration_btn_selector"
+            android:drawableLeft="@drawable/buy"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Confirm"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

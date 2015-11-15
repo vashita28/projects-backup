@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.handpoint.headstart">
+    
+    <uses-sdk minSdkVersion="7" />
+    
+    <application 
+    	android:icon="@drawable/icon" 
+    	android:label="@string/app_name"
+    >
+		<activity android:name="com.handpoint.headstart.android.ui.ConnectionProgressActivity"
+				android:theme="@android:style/Theme.Dialog"
+				android:launchMode="singleTop"
+		>
+            <intent-filter>
+                <action android:name="com.handpoint.headstart.hal.ACTION_CONNECTION_PROGRESS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>				
+		</activity>
+		<activity android:name="com.handpoint.headstart.android.ui.FTProgressActivity"
+				android:theme="@android:style/Theme.Dialog"
+				android:launchMode="singleTop"
+		>
+            <intent-filter>
+                <action android:name="com.handpoint.headstart.hal.ACTION_FT_PROGRESS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>				
+		</activity>
+		
+		<activity android:name="com.handpoint.headstart.android.ui.SignatureDialogActivity"
+				android:theme="@android:style/Theme.Dialog"
+				android:launchMode="singleTask"				
+		>
+            <intent-filter>
+                <action android:name="com.handpoint.headstart.hal.ACTION_VERIFY_SIGNATURE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>				
+		</activity>
+		
+		<activity android:name="com.handpoint.headstart.android.ui.DeviceListActivity"
+				android:label="@string/select_device"
+				android:theme="@android:style/Theme.Dialog"
+				android:screenOrientation="portrait"
+		/>
+<!--     
+				<activity android:name=".android.ui.BluetoothDialogActivity"
+				android:theme="@android:style/Theme.Dialog"
+				android:screenOrientation="portrait"
+		>
+            <intent-filter>
+                <action android:name="com.handpoint.headstart.hal.ACTION_BLUETOOTH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>		
+		</activity>
+		<activity android:name=".android.ui.ConnectionDialogActivity"
+				android:theme="@android:style/Theme.Dialog"
+				android:screenOrientation="portrait"
+				android:launchMode="singleTop"
+		>
+            <intent-filter>
+                <action android:name="com.handpoint.headstart.hal.ACTION_CONNECTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>				
+		</activity>
+		
+		
+ -->		
+		<service android:name=".android.HeadstartService"/>
+    
+    </application>
+    
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.INTERNET"/>
+    
+</manifest>

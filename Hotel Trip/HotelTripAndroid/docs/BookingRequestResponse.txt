@@ -1,0 +1,242 @@
+{
+    "Cat1": {
+        "bftype": "RO",
+        "check_out": "2014-03-22",
+        "check_in": "2014-03-21",
+        "category_id": "WSMA05110039",
+        "category_name": "STANDARD",
+        "RoomType": [{
+            "type_name": "Triple",
+            "RoomInfo": [{
+                "seq": 1,
+                "adultnum": 3,
+                "RoomPrice": "4700.00",
+                "person_info": {
+                    "3": "kanad,Mr.",
+                    "2": "kanad,Mr.",
+                    "1": "kanad,Mr."
+                },
+                "childages": {
+                    "ChildAge1": "11",
+                    "ChildAge2": "8"
+                }
+            }, {
+                "seq": 2,
+                "adultnum": 2,
+                "RoomPrice": "4050.00",
+                "person_info": {
+                    "2": "kanad,Mr.",
+                    "1": "kanad,Mr."
+                },
+                "childages": {
+                    "ChildAge1": "4",
+                    "ChildAge2": "3"
+                }
+            }],
+            "price": "8750.00"
+        }]
+    }
+}
+
+{
+    "BookHotel_Response": {
+        "Error": {
+            "ErrorDescription": "[0019] Error PaxPassport, Please change your passport code(). Our system didn't have this passport"
+        }
+    }
+}
+
+
+{
+    "BookHotel_Response": {
+        "ResNo": "HTMBMA140200008",
+        "CompleteService": {
+            "HBookId": {
+                "@attributes": {
+                    "CanAmend": "Y",
+                    "Id": "HBMA1402000008",
+                    "VoucherNo": "VBMA1402000008",
+                    "VoucherDt": "2014-02-17",
+                    "Status": "CONF",
+                    "InternalCode": "CL098"
+                },
+                "HotelId": "WSMA0511000174",
+                "Period": {
+                    "@attributes": {
+                        "FromDt": "2014-03-21",
+                        "ToDt": "2014-03-22"
+                    }
+                },
+                "RoomCatgInfo": {
+                    "RoomCatg": {
+                        "@attributes": {
+                            "CatgId": "WSMA05110039",
+                            "CatgName": "STANDARD",
+                            "Market": "World Wide",
+                            "Avail": "Y",
+                            "BFType": "RO"
+                        },
+                        "Room": {
+                            "SeqRoom": [{
+                                "@attributes": {
+                                    "ServiceNo": "MA1402000011",
+                                    "RoomType": "Triple",
+                                    "SeqNo": "1",
+                                    "AdultNum": "3",
+                                    "ChildAge1": "11",
+                                    "ChildAge2": "8"
+                                },
+                                "PriceInfomation": {
+                                    "NightPrice": {
+                                        "@attributes": {
+                                            "Offset": "0"
+                                        },
+                                        "Accom": {
+                                            "@attributes": {
+                                                "Price": "4700.00"
+                                            }
+                                        },
+                                        "Child": {
+                                            "@attributes": {
+                                                "MinAge": "0",
+                                                "MaxAge": "12",
+                                                "Info": ""
+                                            }
+                                        },
+                                        "Minstay": {
+                                            "@attributes": {
+                                                "MSDay": "0.00",
+                                                "MSType": "NONE",
+                                                "MSRate": "0.00",
+                                                "MSPrice": "0.00"
+                                            }
+                                        },
+                                        "Compulsory": {
+                                            "@attributes": {
+                                                "Name": "NONE",
+                                                "Price": "0.00"
+                                            }
+                                        },
+                                        "Supplement": {
+                                            "@attributes": {
+                                                "Name": "NONE",
+                                                "Price": "0.00"
+                                            }
+                                        },
+                                        "Promotion": {
+                                            "@attributes": {
+                                                "Name": "NONE",
+                                                "Value": "False",
+                                                "BFPrice": "0",
+                                                "PromoCode": ""
+                                            }
+                                        },
+                                        "EarlyBird": {
+                                            "@attributes": {
+                                                "EBType": "NONE",
+                                                "EBRate": "0.00",
+                                                "EBPrice": "0.00"
+                                            }
+                                        },
+                                        "Commission": {
+                                            "@attributes": {
+                                                "CommType": "NONE",
+                                                "CommRate": "0.00",
+                                                "CommPrice": "0.00"
+                                            }
+                                        }
+                                    }
+                                },
+                                "TotalPrice": "4700.00",
+                                "CommissionPrice": "0.00",
+                                "NetPrice": "4700.00",
+                                "PaxInformation": {
+                                    "GuestName": [" kanad, Mr.", " kanad, Mr.", " kanad, Mr."]
+                                }
+                            }, {
+                                "@attributes": {
+                                    "ServiceNo": "MA1402000012",
+                                    "RoomType": "Triple",
+                                    "SeqNo": "2",
+                                    "AdultNum": "2",
+                                    "ChildAge1": "4",
+                                    "ChildAge2": "3"
+                                },
+                                "PriceInfomation": {
+                                    "NightPrice": {
+                                        "@attributes": {
+                                            "Offset": "0"
+                                        },
+                                        "Accom": {
+                                            "@attributes": {
+                                                "Price": "4050.00"
+                                            }
+                                        },
+                                        "Child": {
+                                            "@attributes": {
+                                                "MinAge": "0",
+                                                "MaxAge": "12",
+                                                "Info": ""
+                                            }
+                                        },
+                                        "Minstay": {
+                                            "@attributes": {
+                                                "MSDay": "0.00",
+                                                "MSType": "NONE",
+                                                "MSRate": "0.00",
+                                                "MSPrice": "0.00"
+                                            }
+                                        },
+                                        "Compulsory": {
+                                            "@attributes": {
+                                                "Name": "NONE",
+                                                "Price": "0.00"
+                                            }
+                                        },
+                                        "Supplement": {
+                                            "@attributes": {
+                                                "Name": "NONE",
+                                                "Price": "0.00"
+                                            }
+                                        },
+                                        "Promotion": {
+                                            "@attributes": {
+                                                "Name": "NONE",
+                                                "Value": "False",
+                                                "BFPrice": "0",
+                                                "PromoCode": ""
+                                            }
+                                        },
+                                        "EarlyBird": {
+                                            "@attributes": {
+                                                "EBType": "NONE",
+                                                "EBRate": "0.00",
+                                                "EBPrice": "0.00"
+                                            }
+                                        },
+                                        "Commission": {
+                                            "@attributes": {
+                                                "CommType": "NONE",
+                                                "CommRate": "0.00",
+                                                "CommPrice": "0.00"
+                                            }
+                                        }
+                                    }
+                                },
+                                "TotalPrice": "4050.00",
+                                "CommissionPrice": "0.00",
+                                "NetPrice": "4050.00",
+                                "PaxInformation": {
+                                    "GuestName": [" kanad, Mr.", " kanad, Mr.", " kanad, Mr."]
+                                }
+                            }]
+                        }
+                    }
+                },
+                "RequestDes": {},
+                "Message": {}
+            }
+        },
+        "UnCompleteService": {}
+    }
+}

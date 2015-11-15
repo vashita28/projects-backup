@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/viewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/explorer_bg" />
+    <!-- event_topbar -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewHeader"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/highLiteList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.35"
+            android:orientation="vertical" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:visibility="visible" >
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/llIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignBottom="@+id/view_pager"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="0dp"
+                android:orientation="horizontal" >
+
+                <View
+                    android:id="@+id/emptyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.30" />
+                <!-- <co.uk.android.lldc.custom.CirclePageIndicator -->
+
+                <com.viewpagerindicator.UnderlinePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.70"
+                    android:alpha="0.6"
+                    android:background="@drawable/progress_drawable" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/events_list"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.65"
+            android:numColumns="1"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="#f2f2f2"
+            android:dividerHeight="5dp" />
+    </LinearLayout>
+
+</RelativeLayout>

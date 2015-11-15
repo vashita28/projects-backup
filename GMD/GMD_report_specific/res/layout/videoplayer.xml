@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <VideoView
+        android:id="@+id/surface_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true" >
+    </VideoView>
+
+    <ProgressBar
+        android:id="@+id/progress_video"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateOnly="true" />
+
+    <SeekBar
+        android:id="@+id/seekbar_video"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:id="@+id/prevButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@id/seekbar_video"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@id/seekbar_video"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="20dp" >
+    </Button>
+
+    <Button
+        android:layout_alignParentTop="true"
+        android:id="@+id/rePlayButton"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_above="@id/nextButton">
+    </Button>
+
+</RelativeLayout>

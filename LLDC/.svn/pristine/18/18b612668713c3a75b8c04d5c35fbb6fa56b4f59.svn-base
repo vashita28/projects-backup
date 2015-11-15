@@ -1,0 +1,144 @@
+package co.uk.android.lldc;
+
+import java.io.File;
+
+import android.app.Application;
+import android.content.Context;
+import android.graphics.Bitmap.CompressFormat;
+import android.graphics.Bitmap;
+import android.graphics.Typeface;
+import android.location.Location;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.util.Log;
+import android.widget.Toast;
+import co.uk.android.lldc.database.LLDCDataBaseHelper;
+import co.uk.android.lldc.models.BoatTrailsModel;
+import co.uk.android.lldc.models.ServerModel;
+import co.uk.android.lldc.models.UrgentClosureModel;
+
+import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.utils.StorageUtils;
+
+public class LLDCApplication extends Application {
+
+	public static boolean isDebug = true;
+
+	public static boolean isInsideThePark = false;
+
+	// 1 for event, 2 for venue, 3 for facilities, 4 for Trails
+
+	public static int EVENT = 1, VENUE = 2, FACILITIES = 3, TRAILS = 4;
+
+	public static String FLAG_NORMAL = "1", FLAG_HIGHLIGHT = "2";
+
+	public static ServerModel selectedModel = new ServerModel();
+
+	public static BoatTrailsModel boatTrails = new BoatTrailsModel();
+
+	public static BoatTrailsModel guidedTrails = new BoatTrailsModel();
+
+	public static Location parkLocation = null;
+	
+	public static boolean isMajorNotificationShown = false;
+
+//	public Typeface font_CalibriBold, font_helveticaNeueItalic,
+//			font_helveticaneue;
+
+	public void onCreate() {
+		super.onCreate();
+
+//		font_CalibriBold = Typeface.createFromAsset(getAssets(),
+//				"Calibri_Bold.ttf");
+//		font_helveticaNeueItalic = Typeface.createFromAsset(getAssets(),
+//				"ROBOTO-ITALIC.TTF");
+//		font_helveticaneue = Typeface.createFromAsset(getAssets(),
+//				"HELVETICANEUE.TTF");
+
+		File cacheDir = StorageUtils.getCacheDirectory(getApplicationContext());
+		
+		@SuppressWarnings("deprecation")
+		DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
+		.cacheInMemory(true).cacheOnDisc(true)
+		.showStubImage(R.drawable.imgnt_placeholder)
+		.bitmapConfig(Bitmap.Config.RGB_565)
+		.imageScaleType(ImageScaleType.EXACTLY).build();
+		
+		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
+				getApplicationContext())
+				.threadPriority(Thread.NORM_PRIORITY - 1)
+				.memoryCacheSize(2 * 1024 * 1024)
+				.memoryCache(new LruMemoryCache(2 * 1024 * 1024))
+				.discCacheExtraOptions(400, 480, CompressFormat.JPEG, 100, null)
+				.defaultDisplayImageOptions(defaultOptions).threadPoolSize(1)
+				// extra
+				.denyCacheImageMultipleSizesInMemory()
+				.discCacheFileNameGenerator(new Md5FileNameGenerator())
+				.tasksProcessingOrder(QueueProcessingType.LIFO)
+				.discCache(new UnlimitedDiscCache(cacheDir))
+				.discCacheSize(50 * 1024 * 1024).discCacheFileCount(100)
+//				.defaultDisplayImageOptions(DisplayImageOptions.createSimple())
+				.writeDebugLogs().build();
+//		ImageLoader.getInstance().init(config);
+
+
+//		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
+//				getApplicationContext())
+//				.defaultDisplayImageOptions(defaultOptions).threadPoolSize(1)
+//				// .writeDebugLogs()
+//				.build();
+
+		ImageLoader.getInstance().init(config);
+
+	};
+
+	public static LLDCDataBaseHelper DBHelper = null;
+
+	public static Location parkCenter = new Location("");
+
+	/********** Initialize database *********/
+	public static void init(Context context) {
+		if (DBHelper == null) {
+			DBHelper = new LLDCDataBaseHelper(context);
+		}
+	}
+
+	public static final int SPLASH_TIME_OUT = 2000;
+
+	// public static DashboardModel dashBoardData = new DashboardModel();
+
+	public static UrgentClosureModel urgentClosureModel = new UrgentClosureModel();
+
+	public static void onShowLogCat(String tag, String msg) {
+		if (!LLDCApplication.isDebug) {
+			return;
+		}
+		Log.v(tag, msg);
+	}
+
+	public static void onShowToastMesssage(Context context, String msg) {
+		Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+	}
+
+	public static boolean isConnectingToInternet(Context _context) {
+		ConnectivityManager connectivity = (ConnectivityManager) _context
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		if (connectivity != null) {
+			NetworkInfo[] info = connectivity.getAllNetworkInfo();
+			if (info != null)
+				for (int i = 0; i < info.length; i++)
+					if (info[i].getState() == NetworkInfo.State.CONNECTED) {
+						return true;
+					}
+		}
+		return false;
+	}
+	
+}

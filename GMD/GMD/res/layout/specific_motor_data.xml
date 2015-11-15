@@ -1,0 +1,2589 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- Content -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <!-- Specific motor data -->
+
+        <LinearLayout
+            android:id="@+id/ll_specific_motor_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- Heading -->
+            <!-- <LinearLayout -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="12dp" -->
+            <!-- android:layout_marginRight="12dp" -->
+            <!-- android:layout_marginTop="10dp" -->
+            <!-- android:orientation="horizontal" -->
+            <!-- android:weightSum="1"> -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/ll_n_degree_main_motor_data" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginRight="7dp" -->
+            <!-- android:layout_weight="0.31" -->
+            <!-- android:orientation="vertical"> -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/et_n_degree_specific_motor_data" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="5dp" -->
+            <!-- android:layout_marginRight="5dp" -->
+            <!-- android:background="@color/editText_bg_text_color" -->
+            <!-- android:ems="10" -->
+            <!-- android:gravity="center" -->
+            <!-- android:paddingLeft="5dp" -->
+            <!-- android:text="@string/PI_N" -->
+            <!-- android:singleLine="true" -->
+            <!-- android:textColor="@color/textview_text_color" -->
+            <!-- android:textSize="@dimen/normal_text_size"/> -->
+
+
+            <!-- <View -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="8dp" -->
+            <!-- android:layout_gravity="center_horizontal" -->
+            <!-- android:layout_marginBottom="1dp" -->
+            <!-- android:background="@drawable/below_line_0"/> -->
+            <!-- </LinearLayout> -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/ll_desc_main_motor_data" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginRight="7dp" -->
+            <!-- android:layout_weight="0.20" -->
+            <!-- android:orientation="vertical"> -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/et_description_specific_motor_data" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="5dp" -->
+            <!-- android:layout_marginRight="5dp" -->
+            <!-- android:background="@color/editText_bg_text_color" -->
+            <!-- android:gravity="left" -->
+            <!-- android:text="@string/DESCRIPTION" -->
+            <!-- android:paddingLeft="3dp" -->
+            <!-- android:singleLine="true" -->
+            <!-- android:textColor="@color/textview_text_color" -->
+            <!-- android:textSize="@dimen/normal_text_size"/> -->
+
+
+            <!-- <View -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="8dp" -->
+            <!-- android:layout_gravity="center_horizontal" -->
+            <!-- android:layout_marginBottom="1dp" -->
+            <!-- android:background="@drawable/below_line_3"/> -->
+            <!-- </LinearLayout> -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/ll_data" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginRight="7dp" -->
+            <!-- android:layout_weight="0.22" -->
+            <!-- android:orientation="vertical"> -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/et_data_specific_motor_data" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="5dp" -->
+            <!-- android:layout_marginRight="5dp" -->
+            <!-- android:background="@color/editText_bg_text_color" -->
+            <!-- android:ems="10" -->
+            <!-- android:gravity="left" -->
+            <!-- android:text="@string/DATA" -->
+            <!-- android:paddingLeft="5dp" -->
+            <!-- android:singleLine="true" -->
+            <!-- android:textColor="@color/textview_text_color" -->
+            <!-- android:textSize="@dimen/normal_text_size"/> -->
+
+
+            <!-- <View -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="8dp" -->
+            <!-- android:layout_gravity="center_horizontal" -->
+            <!-- android:layout_marginBottom="1dp" -->
+            <!-- android:background="@drawable/below_line_2"/> -->
+            <!-- </LinearLayout> -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/ll_remarks" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_weight="0.27" -->
+            <!-- android:orientation="vertical"> -->
+
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/et_remarks_specific_motor_data" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="5dp" -->
+            <!-- android:layout_marginRight="5dp" -->
+            <!-- android:background="@color/editText_bg_text_color" -->
+            <!-- android:ems="10" -->
+            <!-- android:gravity="left" -->
+            <!-- android:text="@string/REMARKS" -->
+            <!-- android:paddingLeft="5dp" -->
+            <!-- android:singleLine="true" -->
+            <!-- android:textColor="@color/textview_text_color" -->
+            <!-- android:textSize="@dimen/normal_text_size"/> -->
+
+
+            <!-- <View -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="8dp" -->
+            <!-- android:layout_gravity="center_horizontal" -->
+            <!-- android:layout_marginBottom="1dp" -->
+            <!-- android:background="@drawable/below_line_2"/> -->
+            <!-- </LinearLayout> -->
+
+
+            <!-- </LinearLayout> -->
+
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <!-- row 1 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="1"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity of stator winding slots"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_data_specific_motor_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DATA"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <!-- row 2 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="2"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity of stator key bars"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_data_specific_motor_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DATA"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <!-- row 3 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="3"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity, size &amp; torque of pressing blots"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_qty_specific_motor_data3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Qty"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_size_specific_motor_data3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Size"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_nm_specific_motor_data3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Nm"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <!-- row 4 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="4"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity, size &amp; torque of foundation blots"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_qty_specific_motor_data4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Qty"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_size_specific_motor_data4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Size"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_nm_specific_motor_data4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Nm"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <!-- row 5 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="5"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity &amp; size of dowel pins"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.50"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_qty_specific_motor_data5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Qty"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.50"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_size_specific_motor_data5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Size"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <!-- row 6 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="6"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity, size &amp; torque of partition bolts"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_qty_specific_motor_data6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Qty"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_size_specific_motor_data6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Size"
+                                    android:paddingLeft="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_nm_specific_motor_data6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Nm"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <!-- row 7 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="7"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity &amp; type of brushes"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.50"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_qty_specific_motor_data7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Qty"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.50"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_type_specific_motor_data7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Type"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <!-- row 8 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="8"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity, size &amp; type of earthing brushes"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.50"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_qty_specific_motor_data8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Qty"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.50"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_type_specific_motor_data8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.50"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Type"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <!-- row 9 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="9"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity, size &amp; type of dust seal"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_qty_specific_motor_data9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Qty"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_size_specific_motor_data9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Size"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_type_specific_motor_data9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Type"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <!-- row 10 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:singleLine="true"
+                            android:text="10"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity, size &amp; type of flat springs"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_qty_specific_motor_data10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Qty"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_size_specific_motor_data10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Size"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_type_specific_motor_data10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Type"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+
+            <!-- row 11 -->
+
+            <LinearLayout
+                android:id="@+id/ll_specific_motor_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_n_degree_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.31"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/et_n_degree_specific_motor_data11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:hint="@string/PI_N"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="11"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/normal_text_size" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_desc_main_motor_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.20"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_description_specific_motor_data11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/DESCRIPTION"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:text="Quantity, size &amp; type of pressure springs"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="0.22"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_qty_specific_motor_data11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Qty"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="7dp"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_size_specific_motor_data11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Size"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_desc_main_motor_data"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.33"
+                            android:orientation="vertical" >
+
+                            <HorizontalScrollView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent" >
+
+                                <TextView
+                                    android:id="@+id/et_type_specific_motor_data11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/editText_bg_text_color"
+                                    android:gravity="left"
+                                    android:hint="Type"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/textview_text_color"
+                                    android:textSize="@dimen/normal_text_size" />
+                            </HorizontalScrollView>
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/below_line_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.27"
+                        android:orientation="vertical" >
+
+                        <HorizontalScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <TextView
+                                android:id="@+id/et_remarks_specific_motor_data11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@color/editText_bg_text_color"
+                                android:gravity="left"
+                                android:hint="@string/REMARKS"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/textview_text_color"
+                                android:textSize="@dimen/normal_text_size" />
+                        </HorizontalScrollView>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- seperator -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+https://pocketapp.basecamphq.com/projects/11592685-cab-app/posts/85647515/comments
+For the passenger app: 
+https://projects.invisionapp.com/share/RKJPL3YW#/screens
+For the driver app:
+http://invis.io/JEKHITTA
+
+API documents:
+https://pocketapp.basecamphq.com/projects/11592685/file/170605756/cabapp-demo.sql
+https://pocketapp.basecamphq.com/projects/11592685/file/170605757/CabApp-APIPhase2Stage2working.docx
+
+
+CMS url is: http://cms.cabapp.f.rippleffect.com/
+Username: dstewart39@googlemail.com
+Password: derek1
+APK Link : https://www.dropbox.com/s/apx77m6ey8yx41v/TestCabApp.apk
+To receive jobs you need to have Urban-ariship integrated 
+App Key : yv65eWSETC6lTF2U5YY2iA
+
+
+
+
+
+
+Login details for drivers are given below:
+
+Username           Password		AccessToken
+
+testAndroid1       testAndroid1 	F7F75C10711EF9D068BD4003D495574F5DD1A7BB
+devAndroid1        devAndroid1		BFA12692551097D9501C55719B9DD80717EBE66C
+devIOS1            devIOS1
+testIOS1           testIOS1
+
+
+
+
+Login details for passengers
+
+Email                              ClientKey					AccessToken
+passenger1@gmail.com       ED9D3BE9563149ABCE4590A98F44A7DA3AA5C03E 		E2231B2902C2E2775AD4228075C4DB723E58A9B6
+passenger2@gmail.com       2538EFCE62B0BA73932F5FF05FDE733C5F56EFD1		F793EB551CE7E313B34A7D491A82A1B3044398B7
+passenger3@gmail.com       25BCD31AEC53F07214C02DE30A1FC54BAAE51829		ACF7F0ABDF814F138A7B983FBAD7914DA93E5FB2
+passenger4@gmail.com       0BAFB21F953DA22FB7F2874F457CF6119EFAD40B
+passenger5@gmail.com       AD95802E8011520A9FC0E12EF0A32A2F6976168C
+passenger6@gmail.com       26D1AB2906E9864D4BB1177D800EA05F6A5784E3
+passenger7@gmail.com       97EC5BDDF9AD182F8BADE24D8F85D40D95038D2F
+passenger8@gmail.com       654D4094F59B63C019352388795730548D00DC0C
+passenger9@gmail.com       FEF35B45160431F1F1BE9CEA3C9183B46B7E6395
+passenger10@gmail.com      B800247B073CEDA19764B79543740D05B6A2B24A		67EAA0598970F30A5844691DA9FEA71C2B2AAAD7
+
+
+
+https://www.getpostman.com/collections/a74f71fe46c23847a894
+https://www.getpostman.com/collections/46772c89dd95c794af20
+https://www.getpostman.com/collections/9ee013adeb165552f6ea
+https://www.getpostman.com/collections/e5ff0f203f826d9a2087
+
+https://www.getpostman.com/collections/bae701c755e84c4a5aa6  - Driver v2
+https://www.getpostman.com/collections/d3a4c3289dce78a49f37  - Driver
+https://www.getpostman.com/collections/978f795701a5e553f8c5  - Passenger v2
+https://www.getpostman.com/collections/72763c1194ac21b1974c  - Passenger
+
+http://www.findlatitudeandlongitude.com/
+
+
+
+to approve driver:
+cms:http://54.76.145.113/
+login: mukesh@gmail.com
+password: mukesh
+
+http://cabappcms.dev.pocketapp.co.uk/
+
+
+Authorisation result:
+pending:pn, approved:ap, declined:dc, suspended:sp, deleted:dl
+
+
+https://www.dropbox.com/s/kymi2cnmitxwqcw/CabApp-APIPhase2Stage2working_v1.docx
+
+
+invision:now jobs:
+https://projects.invisionapp.com/share/2G13MTH5X#/screens/30570179?maintainScrollPosition=false
+
+invision other:
+https://projects.invisionapp.com/share/JEKHITTA#/screens/12964081?maintainScrollPosition=false
+

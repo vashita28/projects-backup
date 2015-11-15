@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_divider" >
+
+    <include
+        android:id="@+id/inc_header"
+        layout="@layout/common_top_bar_maps" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_done"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/inc_header"
+        android:layout_centerVertical="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_top_left"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/list_background"
+                android:drawableLeft="@drawable/taxi"
+                android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                android:gravity="center_vertical"
+                android:padding="@dimen/list_padding"
+                android:text="@string/booking_details"
+                android:textColor="@color/textview_unselected"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignRight="@id/tv_top_left"
+                android:layout_marginRight="@dimen/prebook_rightdrawablepadding"
+                android:layout_marginTop="1dp"
+                android:background="@color/list_background"
+                android:drawableLeft="@drawable/edit"
+                android:drawablePadding="@dimen/prebook_rightdrawablepadding"
+                android:gravity="center_vertical"
+                android:padding="@dimen/list_padding"
+                android:text="@string/edit"
+                android:textColor="@color/textview_unselected"
+                android:textSize="18sp" />
+
+            <include
+                android:id="@+id/inc_row_mybookings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_top_left"
+                layout="@layout/row_mybookings" />
+
+            <LinearLayout
+                android:id="@+id/ll_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inc_row_mybookings"
+                android:background="@color/list_background"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_cash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/cashselected"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/cash"
+                    android:textColor="@color/textview_selected" />
+
+                <TextView
+                    android:id="@+id/tv_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/card2"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/card"
+                    android:textColor="@color/textcolor_grey" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_main_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_payment"
+                android:layout_marginTop="20dp"
+                android:background="@color/tab_unselected"
+                android:clickable="true"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_selectcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/tv_selectcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/iv_selectcard"
+                        android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                        android:text="@string/selectcard"
+                        android:textColor="@color/textview_unselected"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_selectcard"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/card2selected" />
+                </RelativeLayout>
+
+                <Spinner
+                    android:id="@+id/sp_carddetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/rl_selectcard"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#fff"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textSize="18sp"
+                    android:visibility="gone" >
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/tv_carddetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/sp_carddetails"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#fff"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="18dp"
+                    android:singleLine="true"
+                    android:text="No card added"
+                    android:textSize="18sp" >
+                </TextView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_addcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tv_carddetails"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/tab_unselected"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/tv_addcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/iv_addcard"
+                        android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                        android:text="@string/addnewcard"
+                        android:textColor="@color/textview_unselected"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_addcard"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/addicon" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_spinneritems"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/downarrow_gray"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="1dp"
+            android:drawableLeft="@drawable/yes"
+            android:drawablePadding="12dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="@dimen/list_padding"
+            android:text="@string/done"
+            android:textColor="@color/textview_unselected"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

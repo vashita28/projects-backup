@@ -1,0 +1,89 @@
+package co.uk.android.lldc.fragments.parent;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import co.uk.android.lldc.R;
+import co.uk.android.lldc.tablet.HomeActivityTablet;
+
+public class TheParkParentFragmentTablet extends Fragment {
+
+	private ViewGroup mTheParkFragment;
+	private View mView;
+	private FragmentManager mFragmentManager;
+
+	public static TheParkParentFragmentTablet sParkParentFragmentTablet;
+
+	public TheParkParentFragmentTablet() {
+		// android framework need that
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+
+		super.onCreate(savedInstanceState);
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+
+		mView = inflater.inflate(R.layout.parent_fragment_tablet, container,
+				false);
+		mTheParkFragment = (ViewGroup) mView
+				.findViewById(R.id.frame_container_parent);
+		showSubfragments(0, "TheParkFragment");
+
+		((HomeActivityTablet) getActivity()).hideBackButton();
+		return mView;
+
+	}
+
+	public void showSubfragments(int position, String tagName) {
+		Fragment fragment = null;
+		mFragmentManager = this.getChildFragmentManager();
+		FragmentTransaction fragtrans = mFragmentManager.beginTransaction();
+		switch (position) {
+		case 0:
+			fragment = new co.uk.android.lldc.fragments.TheParkFragment();
+			break;
+
+		}
+
+		if (fragment != null) {
+			fragtrans.replace(R.id.frame_container_parent, fragment, tagName);
+			fragtrans.commit();
+		}
+
+	}
+
+	@Override
+	public void onAttach(Activity activity) {
+		sParkParentFragmentTablet = this;
+		super.onAttach(activity);
+	}
+
+	@Override
+	public void onDetach() {
+		sParkParentFragmentTablet = null;
+		super.onDetach();
+	}
+
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+
+		((HomeActivityTablet) getActivity()).tvThePark
+				.setTextColor(getResources().getColor(R.color.textcolor_pink));
+		((HomeActivityTablet) getActivity()).ivThePark
+				.setImageResource(R.drawable.park_tab_selc);
+	}
+
+}

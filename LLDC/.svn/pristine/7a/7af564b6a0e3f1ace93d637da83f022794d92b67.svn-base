@@ -1,0 +1,106 @@
+package co.uk.android.lldc.adapters;
+
+import java.util.ArrayList;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+import co.uk.android.lldc.R;
+import co.uk.android.lldc.models.TheParkModel;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
+
+public class ParkGridAdapter extends BaseAdapter {
+
+	Context context;
+	LayoutInflater inflater;
+	String szImageUrl = "";
+
+	ArrayList<TheParkModel> theParkList;
+
+	public ParkGridAdapter(Context _context, ArrayList<TheParkModel> _listPark) {
+		this.context = _context;
+		this.theParkList = _listPark;
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return theParkList.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return theParkList.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@SuppressLint("DefaultLocale")
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		final ViewHolder holder;
+		if (convertView == null) {
+			holder = new ViewHolder();
+			if (inflater == null)
+				inflater = (LayoutInflater) context
+						.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			if (convertView == null)
+				convertView = inflater.inflate(R.layout.parklist_row_tablet,
+						null);
+
+			holder.parklist_image = (ImageView) convertView
+					.findViewById(R.id.parklist_image);
+			holder.parklist_header = (TextView) convertView
+					.findViewById(R.id.parklist_header);
+			holder.parklist_normal = (TextView) convertView
+					.findViewById(R.id.parklist_normal);
+			convertView.setTag(holder);
+		} else {
+			holder = (ViewHolder) convertView.getTag();
+		}
+		szImageUrl = theParkList.get(position).getImageUrl();
+		// + "&width=" + 50
+		// + "&height="// 0.08f
+		// + 50 + "&crop-to-fit";
+
+		// Log.e("ParkGridAdapter", "szImageUrl:: " + position
+		// + "     ::>           " + szImageUrl);
+
+		ImageLoader.getInstance().displayImage(szImageUrl,
+				holder.parklist_image);
+
+		// holder.parklist_image.setImageUrl(szImageUrl, ImageCacheManager
+		// .getInstance().getImageLoader());
+		//
+		// holder.parklist_header.setText(theParkList.get(position).getTitle()
+		// .toString().toUpperCase());
+		// holder.parklist_normal.setText(theParkList.get(position).getSubTitle()
+		// .toString().toUpperCase());
+
+		if (theParkList.get(position).getSubTitle().toString().toUpperCase()
+				.isEmpty()) {
+			holder.parklist_normal.setVisibility(View.GONE);
+		}
+
+		return convertView;
+	}
+
+	class ViewHolder {
+		ImageView parklist_image;
+		TextView parklist_header, parklist_normal;
+
+	}
+
+}

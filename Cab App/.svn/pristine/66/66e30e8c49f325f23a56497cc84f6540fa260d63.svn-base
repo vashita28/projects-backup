@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filters"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_divider" >
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/common_top_bar"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlHomeComingIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvHome"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/list_background"
+            android:drawableLeft="@drawable/homesmall"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Home"
+            android:textColor="@color/textview_unselected"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlHomeAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tvHome"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/white" >
+
+            <EditText
+                android:id="@+id/etHome"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:clickable="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Address 1"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/textEditHomeAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:text="Edit" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvComing_In"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rlHomeAddress"
+            android:layout_marginTop="1dp"
+            android:background="@color/list_background"
+            android:drawableLeft="@drawable/cominginsmall"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Coming In"
+            android:textColor="@color/textview_unselected"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlComingInAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tvComing_In"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/white" >
+
+            <EditText
+                android:id="@+id/etComingIn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                android:clickable="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Address 1"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/textEditComingInAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:text="Edit" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/topBar"
+        android:layout_marginTop="1dp"
+        android:background="@color/list_background"
+        android:drawableLeft="@drawable/cabpayicon"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="Payment Method"
+        android:textColor="@color/textview_unselected"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/rlPaymentMethods"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/tvPaymentMethod"
+        android:layout_marginTop="1dp"
+        android:background="@color/list_background"
+        android:clickable="true"
+        android:weightSum="1" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvCashOnlyFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/cashonlyiconselected"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:text="Cash only"
+                android:textColor="@color/textview_selected" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tvCashAndCardFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/allpaymentunselected"
+                android:gravity="center_horizontal"
+                android:text="Cash &amp; Card"
+                android:textColor="@color/textcolor_filter" />
+        </RelativeLayout>
+
+        <!--
+             <TextView
+            android:id="@+id/tvCardFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.50"
+            android:drawableTop="@drawable/cardunselectedfilter"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="Card"
+            android:textColor="@color/textcolor_grey" />
+
+        <TextView
+            android:id="@+id/tvCashFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.50"
+            android:drawableTop="@drawable/pound_selected"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="Cash"
+            android:textColor="@color/textview_selected" />
+        -->
+
+        <TextView
+            android:id="@+id/tvAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="18dp"
+            android:layout_weight="0.33"
+            android:drawableTop="@drawable/account"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Account"
+            android:textColor="@color/textcolor_grey"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

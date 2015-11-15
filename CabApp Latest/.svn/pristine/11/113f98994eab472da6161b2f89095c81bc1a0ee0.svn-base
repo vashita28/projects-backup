@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_selected" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:layout_marginBottom="50dp"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_SelectPaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tab_unselected"
+                android:drawableLeft="@drawable/paymentmethodsmall"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="Select Payment Method"
+                android:textColor="@color/textview_unselected"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_selectPayment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_SelectPaymentMethod"
+                android:background="@color/textview_unselected"
+                android:paddingRight="10dp" >
+
+                <Spinner
+                    android:id="@+id/spinner_selectPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@color/textview_unselected"
+                    android:paddingLeft="15dp"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/downarrow" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_MeterAmtAndTip"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rl_selectPayment"
+                android:layout_marginTop="15dp"
+                android:background="@color/tab_unselected"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/tv_MeterAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:drawableLeft="@drawable/taxi_icon"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="15dp"
+                    android:text="Meter Amount"
+                    android:textColor="@color/textview_unselected"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_Tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_weight="0.55"
+                    android:drawableLeft="@drawable/tip"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="1dp"
+                    android:text="Tip"
+                    android:textColor="@color/textview_unselected"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_MeterAmtAndTipValue"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/rl_MeterAmtAndTip"
+                android:background="@color/textview_unselected"
+                android:gravity="center_vertical"
+                android:paddingLeft="22dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:orientation="horizontal"
+                    android:paddingRight="20dp" >
+
+                    <TextView
+                        android:id="@+id/txtMeterSymbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:text="Rs"
+                        android:textSize="26sp" />
+
+                    <EditText
+                        android:id="@+id/etMeterAmountValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/textview_unselected"
+                        android:gravity="center_vertical|left"
+                        android:hint="0.00"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:textColor="@android:color/black"
+                        android:textSize="26sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="2dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/divider_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.55"
+                    android:orientation="horizontal"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:id="@+id/txtTipSymbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingRight="5dp"
+                        android:text="Rs"
+                        android:textSize="26sp" />
+
+                    <EditText
+                        android:id="@+id/etTipValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/textview_unselected"
+                        android:gravity="center_vertical"
+                        android:hint="0.00"
+                        android:inputType="numberDecimal"
+                        android:paddingRight="7dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="26sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_AdditionalCardFees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_MeterAmtAndTipValue"
+                android:gravity="center_vertical|center_horizontal"
+                android:maxLines="2"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text=""
+                android:textColor="@color/textview_unselected"
+                android:textSize="20sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_Total"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_AdditionalCardFees"
+                android:background="@color/tab_unselected"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="=Total"
+                android:textColor="@color/textview_unselected"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/tv_Total"
+                android:layout_marginBottom="10dp"
+                android:background="@color/textview_unselected" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtTotalSymbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingRight="8dp"
+                        android:text="Rs"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:hint="0.00"
+                        android:textColor="@android:color/black"
+                        android:textSize="26sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlTakePaymentBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/ivTakePayment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:src="@drawable/buy" />
+
+        <TextView
+            android:id="@+id/tvTakePayment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ivTakePayment"
+            android:clickable="false"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="Take Payment"
+            android:textColor="@color/textview_unselected"
+            android:textSize="@dimen/heading_textsize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCashReceiptBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/ivCashReceipt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:src="@drawable/send_receipt" />
+
+        <TextView
+            android:id="@+id/tvCashReceipt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ivCashReceipt"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="Cash Receipt"
+            android:textColor="@color/textview_unselected"
+            android:textSize="@dimen/heading_textsize" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/overlayCabPay"
+        layout="@layout/fragment_cabpay_overlay" />
+
+</RelativeLayout>

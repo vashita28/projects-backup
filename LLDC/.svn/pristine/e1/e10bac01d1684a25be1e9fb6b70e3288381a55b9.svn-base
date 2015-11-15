@@ -1,0 +1,297 @@
+package co.uk.android.lldc.fragments;
+
+import java.util.ArrayList;
+
+import android.content.Context;
+import android.graphics.Color;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.widget.TextView;
+import android.widget.Toast;
+import co.uk.android.lldc.LLDCApplication;
+import co.uk.android.lldc.R;
+import co.uk.android.lldc.models.ServerModel;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
+import com.google.android.gms.maps.GoogleMap.OnInfoWindowClickListener;
+import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class MapFragment extends Fragment implements OnMarkerClickListener {
+	MapView mapView;
+
+	LocationManager locationManager;
+
+	LatLng CENTER;
+
+	GoogleMap map;
+
+	ArrayList<ServerModel> venueList;
+
+	ArrayList<LatLng> markerPoints = new ArrayList<LatLng>();
+
+	private Bundle mBundle;
+
+	View infoview;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		mBundle = savedInstanceState;
+	}
+
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View rootView = inflater.inflate(R.layout.fragment_map, container,
+				false);
+
+		mapView = (MapView) rootView.findViewById(R.id.mapView);
+		mapView.onCreate(savedInstanceState);
+
+		try {
+			MapsInitializer.initialize(getActivity());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		mapView.onCreate(mBundle);
+		setUpMapIfNeeded(rootView);
+
+		setMapView();
+
+		// Get the button view
+		// View locationButton = ((View) mapView.findViewById(1).getParent())
+		// .findViewById(2);
+		//
+		// // and next place it, for exemple, on bottom right (as Google Maps
+		// app)
+		// RelativeLayout.LayoutParams rlp = (RelativeLayout.LayoutParams)
+		// locationButton
+		// .getLayoutParams();
+		// // position on right bottom
+		// rlp.addRule(RelativeLayout.ALIGN_PARENT_TOP, 0);
+		// rlp.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+		// rlp.setMargins(0, 0, 30, 30);
+		onLoadMarkers();
+		return rootView;
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		mapView.onResume();
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		mapView.onPause();
+	}
+
+	@Override
+	public void onDestroy() {
+		mapView.onDestroy();
+		super.onDestroy();
+	}
+
+	private void setUpMapIfNeeded(View inflatedView) {
+		if (map == null) {
+			map = ((MapView) inflatedView.findViewById(R.id.mapView)).getMap();
+			if (map != null) {
+				setMapView();
+			}
+		}
+	}
+
+	private void setMapView() {
+		try {
+			MapsInitializer.initialize(getActivity());
+
+			switch (GooglePlayServicesUtil
+					.isGooglePlayServicesAvailable(getActivity())) {
+			case ConnectionResult.SUCCESS:
+				// Toast.makeText(getActivity(), "SUCCESS", Toast.LENGTH_SHORT)
+				// .show();
+
+				// Gets to GoogleMap from the MapView and does initialization
+				// stuff
+				if (mapView != null) {
+
+					locationManager = ((LocationManager) getActivity()
+							.getSystemService(Context.LOCATION_SERVICE));
+
+					Boolean localBoolean = Boolean.valueOf(locationManager
+							.isProviderEnabled("network"));
+
+					if (localBoolean.booleanValue()) {
+
+						CENTER = new LatLng(
+								LLDCApplication.parkCenter.getLatitude(),
+								LLDCApplication.parkCenter.getLongitude());
+
+					} else {
+
+					}
+					map = mapView.getMap();
+					if (map == null) {
+
+						Log.d("", "Map Fragment Not Found or no Map in it!!");
+
+					}
+
+					map.clear();
+					// map.setOnMarkerClickListener(this);
+					map.setIndoorEnabled(true);
+					map.setMyLocationEnabled(true);
+					map.moveCamera(CameraUpdateFactory.zoomTo(15));
+					map.getUiSettings().setMapToolbarEnabled(false);
+					// if (CENTER != null) {
+					// map.animateCamera(
+					// CameraUpdateFactory.newLatLng(CENTER), 1750,
+					// null);
+					// }
+					// add circle
+					// CircleOptions circle = new CircleOptions();
+					// circle.center(CENTER).fillColor(Color.BLUE).radius(10);
+					// map.addCircle(circle);
+					map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+					map.setInfoWindowAdapter(new InfoWindowAdapter() {
+						public View getInfoWindow(Marker marker) {
+							// inflating layout
+							View v = getActivity().getLayoutInflater().inflate(
+									R.layout.mapcentre, null);
+
+							TextView venueName = (TextView) v
+									.findViewById(R.id.venueTitle);
+							TextView venueCount = (TextView) v
+									.findViewById(R.id.eventcount);
+
+							venueName.setText(marker.getTitle());
+							venueCount.setText(marker.getSnippet().split(",")[0]);
+
+							if (marker.getSnippet().split(",")[1].equals("1")) {
+								venueName.setTextColor(Color.WHITE);
+								venueName
+										.setBackgroundResource(R.drawable.roundedinfowindow_selected);
+								venueCount.setVisibility(View.VISIBLE);
+								marker.setSnippet(marker.getSnippet().split(",")[0]+",0");
+							}
+
+							return v;
+						}
+
+						public View getInfoContents(Marker arg0) {
+
+							return null;
+						}
+					});
+
+					map.setOnInfoWindowClickListener(new OnInfoWindowClickListener() {
+
+						@Override
+						public void onInfoWindowClick(Marker arg0) {
+							// TODO Auto-generated method stub
+							arg0.setSnippet(arg0.getSnippet().split(",")[0]
+									+ ",1");
+							arg0.hideInfoWindow();
+							arg0.showInfoWindow();
+						}
+					});
+
+				}
+				break;
+			case ConnectionResult.SERVICE_MISSING:
+
+				break;
+			case ConnectionResult.SERVICE_VERSION_UPDATE_REQUIRED:
+
+				break;
+			default:
+
+			}
+		} catch (Exception e) {
+
+		}
+
+	}
+
+	private void onLoadMarkers() {
+		try {
+			venueList = LLDCApplication.DBHelper.onGetVenueData("");
+
+			if (mapView.getViewTreeObserver().isAlive()) {
+				mapView.getViewTreeObserver().addOnGlobalLayoutListener(
+						new OnGlobalLayoutListener() {
+
+							@Override
+							public void onGlobalLayout() {
+								// TODO Auto-generated method stub
+								LatLngBounds.Builder bld = new LatLngBounds.Builder();
+								for (int i = 0; i < venueList.size(); i++) {
+									LatLng latlng = new LatLng(Double
+											.parseDouble(venueList.get(i)
+													.getLatitude().toString()
+													.trim()), Double
+											.parseDouble(venueList.get(i)
+													.getLongitude().toString()
+													.trim()));
+									markerPoints.add(latlng);
+									bld.include(latlng);
+									MarkerOptions markerOptions = new MarkerOptions().icon(BitmapDescriptorFactory
+											.fromResource(R.drawable.locationpin));
+									// Setting the position of the marker
+									markerOptions.position(latlng);
+									markerOptions.title(venueList.get(i)
+											.getName());
+									markerOptions.snippet(venueList.get(i)
+											.getVenueId()+",0");
+									// Add new marker to the Google Map Android
+									// API V2
+									map.addMarker(markerOptions);
+								}
+
+								LatLngBounds bounds = bld.build();
+								map.moveCamera(CameraUpdateFactory
+										.newLatLngBounds(bounds, 15));
+
+							}
+						});
+			}
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public boolean onMarkerClick(Marker arg0) {
+		// TODO Auto-generated method stub
+		// map.getUiSettings().setAllGesturesEnabled(false);
+		Toast.makeText(getActivity(),
+				"Marker cliked " + arg0.getTitle() + " / " + arg0.getSnippet(),
+				Toast.LENGTH_SHORT).show();
+
+		return true;
+	}
+
+}

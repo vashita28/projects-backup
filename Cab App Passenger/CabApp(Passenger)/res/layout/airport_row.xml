@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rel_favsrow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/iv_cab"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/cabflyicon" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_airport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_price"
+            android:layout_toRightOf="@+id/iv_cab"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:clickable="false"
+            android:gravity="left"
+            android:text=""
+            android:textColor="#f36a02"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/rel_favsrow"
+        android:layout_marginTop="1dp"
+        android:background="#727272"
+        android:clickable="false" />
+
+</RelativeLayout>

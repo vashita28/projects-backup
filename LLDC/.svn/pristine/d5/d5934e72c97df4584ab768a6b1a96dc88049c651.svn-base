@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <RelativeLayout
+        android:id="@+id/rlBanner"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="55" >
+
+       <ImageView
+            android:id="@+id/img_imagedetls"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/ivImgOver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_imagedetls"
+            android:layout_alignLeft="@+id/img_imagedetls"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/img_imagedetls"
+            android:layout_marginBottom="-4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_over" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dynamic_innerlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="45"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal"
+            android:weightSum="10" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6.5"
+                android:orientation="vertical"
+                android:paddingBottom="3dp" >
+
+                <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                    android:id="@+id/eventname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="2"
+                    android:minLines="1"
+                    android:text="LONDON AQUATICS CENTRE"
+                    android:textColor="#41c1f0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <co.uk.android.lldc.custom.CustomTextView_RobotoMediumItalic
+                    android:id="@+id/eventdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="2"
+                    android:minLines="1"
+                    android:text="MON - SUN"
+                    android:textColor="#3e8295"
+                    android:textSize="12sp"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/venue_feature_wrapper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:gravity="top|right"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <co.uk.android.lldc.custom.CustomTextView_VenueFacilityFont
+                    android:id="@+id/venue_feature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:minLines="1"
+                    android:textSize="26sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|top"
+            android:orientation="vertical"
+            android:scrollbars="vertical" >
+
+            <org.sufficientlysecure.htmltextview.HtmlTextView
+                android:id="@+id/txt_eventdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/black_heading"
+                android:textSize="14sp" />
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

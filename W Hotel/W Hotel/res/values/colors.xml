@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="search_font_color">#7b7977</color>
+    <color name="image_bg_color">#252525</color>
+    <color name="list_item_bg_color">#fbfbfb</color>
+    <color name="map_path">#0000FF</color>
+    <color name="list_selector_color">#ff0078</color>
+    <color name="textcolor_pink">#ff0078</color>
+
+</resources>

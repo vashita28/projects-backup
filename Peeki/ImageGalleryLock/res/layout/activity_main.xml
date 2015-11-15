@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/header_bg"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:visibility="visible" >
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_header"
+        android:background="@color/divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bodySliding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_view"
+        android:visibility="visible" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/sliding_drawer" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_fragmentBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+</RelativeLayout>

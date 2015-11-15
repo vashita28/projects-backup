@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:paddingBottom="25dp"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp" >
+
+    <View
+        android:id="@+id/viewLeftColor"
+        android:layout_width="4dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:background="@color/explorer_bg"
+        android:clickable="false" />
+
+    <LinearLayout
+        android:id="@+id/llRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/viewLeftColor"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <RelativeLayout
+            android:id="@+id/ivholder"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:clickable="false"
+            android:orientation="vertical" >
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imgnt_placeholder" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:paddingBottom="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp" >
+
+            <RelativeLayout
+                android:id="@+id/rlHeadingTime"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@android:color/white"
+                android:clickable="false" >
+
+                <LinearLayout
+                    android:id="@+id/llHeader"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.5"
+                        android:ellipsize="marquee"
+                        android:gravity="left|center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:paddingLeft="15dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="HEADING"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/rlTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:layout_weight="0.5"
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:paddingLeft="7dp"
+                        android:paddingTop="5dp" >
+
+                        <ImageView
+                            android:id="@+id/ivTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/duration_icon" />
+
+                        <co.uk.android.lldc.custom.CustomTextView_RobotoRegular
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="TIME"
+                            android:textColor="@color/black_heading"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/white"
+                android:clickable="false"
+                android:paddingLeft="15dp"
+                android:paddingTop="7dp" >
+
+                <co.uk.android.lldc.custom.CustomTextView_RobotoLight
+                    android:id="@+id/tvDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:minLines="1"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+                    android:textColor="@color/black_heading" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

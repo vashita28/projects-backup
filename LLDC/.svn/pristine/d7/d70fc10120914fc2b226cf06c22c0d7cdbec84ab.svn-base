@@ -1,0 +1,114 @@
+package co.uk.android.lldc.models;
+
+public class DashboardModel {
+
+	String welcomeMsgIn = "", welcomeMsgOut = "", welcomeImageIn = "",
+			welcomeImageOut = "", minorNotice = "", majorNotice = "",
+			todaysDate = "";
+
+	/**
+	 * @return the welcomMsg
+	 */
+	public String getWelcomeMsgIn() {
+		return welcomeMsgIn;
+	}
+
+	/**
+	 * @param welcomMsg
+	 *            the welcomMsg to set
+	 */
+	public void setWelcomeMsgIn(String welcomeMsg) {
+		this.welcomeMsgIn = welcomeMsg;
+	}
+
+	/**
+	 * @return the welcomeMsgOut
+	 */
+	public String getWelcomeMsgOut() {
+		return welcomeMsgOut;
+	}
+
+	/**
+	 * @param welcomeMsgOut
+	 *            the welcomeMsgOut to set
+	 */
+	public void setWelcomeMsgOut(String welcomeMsgOut) {
+		this.welcomeMsgOut = welcomeMsgOut;
+	}
+
+	/**
+	 * @return the welcomeImageIn
+	 */
+	public String getWelcomeImageIn() {
+		return welcomeImageIn;
+	}
+
+	/**
+	 * @param welcomeImageIn
+	 *            the welcomeImageIn to set
+	 */
+	public void setWelcomeImageIn(String welcomeImageIn) {
+		this.welcomeImageIn = welcomeImageIn;
+	}
+
+	/**
+	 * @return the welcomeImageOut
+	 */
+	public String getWelcomeImageOut() {
+		return welcomeImageOut;
+	}
+
+	/**
+	 * @param welcomeImageOut
+	 *            the welcomeImageOut to set
+	 */
+	public void setWelcomeImageOut(String welcomeImageOut) {
+		this.welcomeImageOut = welcomeImageOut;
+	}
+
+	/**
+	 * @return the minorNotice
+	 */
+	public String getMinorNotice() {
+		return minorNotice;
+	}
+
+	/**
+	 * @param minorNotice
+	 *            the minorNotice to set
+	 */
+	public void setMinorNotice(String minorNotice) {
+		this.minorNotice = minorNotice;
+	}
+
+	/**
+	 * @return the majorNotice
+	 */
+	public String getMajorNotice() {
+		return majorNotice;
+	}
+
+	/**
+	 * @param majorNotice
+	 *            the majorNotice to set
+	 */
+	public void setMajorNotice(String majorNotice) {
+		this.majorNotice = majorNotice;
+	}
+
+	/**
+	 * @return the todaysDate
+	 */
+	public String getTodaysDate() {
+		return todaysDate;
+	}
+
+	/**
+	 * @param todaysDate
+	 *            the todaysDate to set
+	 */
+	public void setTodaysDate(String todaysDate) {
+		this.todaysDate = todaysDate;
+	}
+
+}

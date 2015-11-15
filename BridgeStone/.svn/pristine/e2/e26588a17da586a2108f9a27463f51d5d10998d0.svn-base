@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="item_bgcolor">#474C51</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="not_connected">#DB0000</color>
+    <color name="connected">#3FAE30</color>
+    <color name="list_item_bg_dark">#E6E6E6</color>
+    <color name="button_bg">#E64C4C</color>
+    <color name="button_bg_uploaded">#3FAE30</color>
+
+</resources>

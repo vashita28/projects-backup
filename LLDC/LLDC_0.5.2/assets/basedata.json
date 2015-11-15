@@ -1,0 +1,3577 @@
+{
+
+    "welcomeMsg": "Welcome To Queen Elizabeth Olympic Park ",
+    "welcomeImageIn": "http://dev.pocketapp.co.uk/dev/lldc/uploads/statics/hero_img2.png",
+    "welcomeImageOut": "http://dev.pocketapp.co.uk/dev/lldc/uploads/statics/hero_img.png",
+    "parkLat": "18.93619",
+    "parkLong": "72.83422",
+    "guidedTours": 
+
+{
+
+    "title": "guided Tours",
+    "description": "Drag and drop the map to broad location. 2. Zoom in for greater accuracy. 3. Drag and drop the marker to pinpoint the place. The coordinates are refreshed at the end of each move. ",
+    "image": ""
+
+},
+"boatTrails":
+{
+
+    "title": "boat Trails",
+    "description": "Drag and drop the map to broad location. 2. Zoom in for greater accuracy. 3. Drag and drop the marker to pinpoint the place. The coordinates are refreshed at the end of each move. ",
+    "image": ""
+
+},
+"todaysDate": 1426703958,
+"majorNotification": " Drag and drop the map to broad location. 2. Zoom in for greater accuracy. 3. Drag and drop the marker to pinpoint the place. The coordinates are refreshed at the end of each move. \n This is major notification 2 \n This is major notification 3 \n",
+"minorNotification": " Drag and drop the map to broad location. \t This is minor notification 2 \t This is minor notification 3 \t ",
+"event":
+[
+
+{
+
+    "id": "4",
+    "name": "African arts and crafts market",
+    "shortDesc": "Unfortunately, due to the severe weather this event will no longer be taking place today.Come alo...",
+    "longDescription": "Unfortunately, due to the severe weather this event will no longer be taking place today.Come along to&nbsp;an exciting mini-market showcasing the very best in artefacts and pieces for sale from four African countries. Have a go at African drumming wit",
+    "venueId": 1,
+    "venueTitle": "This is title 1",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1382943600,
+    "endDateTime": -57600,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 1,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "6",
+    "name": "Break London Radio half term take over",
+    "shortDesc": "Come and enjoy one of east London's leading online radio stations.There'll be some amazing local ...",
+    "longDescription": "Come and enjoy one of east London's leading online radio stations.There'll be some amazing local talent live from Timber Lodge, as well as chat, competitions, music, dance performances and more. Running from 12pm to 4pm - everyone welcome!",
+    "venueId": 2,
+    "venueTitle": "This is title 2",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1383462000,
+    "endDateTime": 1383462000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 2,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "7",
+    "name": "Championship boxing",
+    "shortDesc": "Dereck Chisora & Billy Joe Saunders headline Rock The Box 2 at the Copper Box Arena.The current c...",
+    "longDescription": "Dereck Chisora & Billy Joe Saunders headline Rock The Box 2 at the Copper Box Arena.The current card is below, for further information follow the links below:\n- Dereck Chisora v Ondrej Pala - The European Heavyweight Championship- Billy Joe ",
+    "venueId": 3,
+    "venueTitle": "This is title 3",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1385798400,
+    "endDateTime": 1385798400,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 3,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "8",
+    "name": "Childrens Halloween Fun",
+    "shortDesc": "Activities aimed at 7 to 11 year olds. Entry is £5 and must be pre-registered.Enjoy a range of s...",
+    "longDescription": "Activities aimed at 7 to 11 year olds. Entry is £5 and must be pre-registered.Enjoy a range of scarily entertaining and exciting activities for children aged 7-11, including arts and crafts and drama workshops.&nbsp;Activities run from 10am to 4pm.",
+    "venueId": 4,
+    "venueTitle": "This is title 4",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1383202800,
+    "endDateTime": 1383202800,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 4,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "9",
+    "name": "Childrens Halloween Fun (2)",
+    "shortDesc": "Activities aimed at 7-11 year olds. Entry is £5 and must be pre-registered.Enjoy a range of scar...",
+    "longDescription": "Activities aimed at 7-11 year olds. Entry is £5 and must be pre-registered.Enjoy a range of scarily entertaining and exciting activities for children aged 7-11, including arts and crafts and drama workshops. All places must be pre-registered via email ",
+    "venueId": 5,
+    "venueTitle": "This is title 5",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1383289200,
+    "endDateTime": 1383289200,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 5,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "10",
+    "name": "Growing Links Community Fun Day",
+    "shortDesc": "Come along to Queen Elizabeth Olympic Park and celebrate the Growing Links project, from 12 noon ...",
+    "longDescription": "Come along to Queen Elizabeth Olympic Park and celebrate the Growing Links project, from 12 noon to 4pm.There will be a range of activities for the whole family to get involved with, including: - Build a bird feeder to take home- Bug Hunt -",
+    "venueId": 6,
+    "venueTitle": "This is title 6",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1382252400,
+    "endDateTime": 1382252400,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 6,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "11",
+    "name": "Half term sports sessions",
+    "shortDesc": "Keep the children entertained and active this half term at the Copper Box Arena. There will be lo...",
+    "longDescription": "Keep the children entertained and active this half term at the Copper Box Arena. There will be lots of different sports drop in sessions and challenges available for all ages and abilities.Sports include:\r\n\r\n Basketball\r\n Ten",
+    "venueId": 7,
+    "venueTitle": "This is title 7",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1382943600,
+    "endDateTime": 1383289200,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 7,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "12",
+    "name": "Healthy food is fun",
+    "shortDesc": "The New Food Project at Community Links will be running a free session teaching about healthy eat...",
+    "longDescription": "The New Food Project at Community Links will be running a free session teaching about healthy eating through interactive games, quizzes and arts and craft for the whole family.Activities will include:\n\nWhat's healthy, what's not?\nT",
+    "venueId": 8,
+    "venueTitle": "This is title 8",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1383375600,
+    "endDateTime": 1383375600,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 8,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "13",
+    "name": "Holiday Play Scheme",
+    "shortDesc": "Keep the children entertained this half term at the Copper Box Arena’s week long holiday play s...",
+    "longDescription": "Keep the children entertained this half term at the Copper Box Arena’s week long holiday play scheme.This half term there will be lots of opportunities for your child to try out&nbsp;new sports and&nbsp;make new friends whilst having lots of fun! The w",
+    "venueId": 9,
+    "venueTitle": "This is title 9",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1382943600,
+    "endDateTime": 1383289200,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 9,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "14",
+    "name": "Knowledge is fun",
+    "shortDesc": "Due to the severe weather this event is unfortunately cancelled. Schola Tuition invites children ...",
+    "longDescription": "Due to the severe weather this event is unfortunately cancelled. Schola Tuition invites children and families of all ages to take part in a series of fun challenges including:\r\n- Nature craft: best bark boats or aeroplanes\r\n- Handicraft: ",
+    "venueId": 10,
+    "venueTitle": "This is title 10",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1383030000,
+    "endDateTime": 1383030000,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 10,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "15",
+    "name": "Sport Relief 2014",
+    "shortDesc": "The first ever Sainsbury's Sport Relief Games will be taking place at venues all across the count...",
+    "longDescription": "The first ever Sainsbury's Sport Relief Games will be taking place at venues all across the country - including landmark events at Queen Elizabeth Olympic Park.Sport Relief 2014 is your once-in-a-lifetime chance to take part in&nbsp;one of three events",
+    "venueId": 11,
+    "venueTitle": "This is title 11",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1395558000,
+    "endDateTime": 1395558000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 11,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "16",
+    "name": "test",
+    "shortDesc": "...",
+    "longDescription": "",
+    "venueId": 1,
+    "venueTitle": "This is title 1",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1382684400,
+    "endDateTime": 1382684400,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 12,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "17",
+    "name": "Zumba taster session",
+    "shortDesc": "Try a free Zumba session from 2pm to 3pm.Come and try a free Zumba session with qualified instruc...",
+    "longDescription": "Try a free Zumba session from 2pm to 3pm.Come and try a free Zumba session with qualified instructor Jessica Constantine. Children are also welcome to join in!",
+    "venueId": 2,
+    "venueTitle": "This is title 2",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1383202800,
+    "endDateTime": 1383202800,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 13,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "18",
+    "name": "Zumba taster sessions",
+    "shortDesc": "Two free Zumba sessions to come and try.Come and try a free Zumba session with qualified instruct...",
+    "longDescription": "Two free Zumba sessions to come and try.Come and try a free Zumba session with qualified instructor Jessica Constantine. Children are also welcome to join in! Sessions run from 12noon to 1pm and 2pm to 3pm.",
+    "venueId": 3,
+    "venueTitle": "This is title 3",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1383289200,
+    "endDateTime": 1383289200,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 14,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "19",
+    "name": "Bike jumble at The ViewTube",
+    "shortDesc": "Bike jumble at The View Tube this Sunday 11am - 3pmAre you a bike fanatic? Pop along to The View ...",
+    "longDescription": "Bike jumble at The View Tube this Sunday 11am - 3pmAre you a bike fanatic? Pop along to The View Tube this Sunday 11am - 3pm where there will be a wide range of second hand bikes and bike parts for sale.",
+    "venueId": 4,
+    "venueTitle": "This is title 4",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1385884800,
+    "endDateTime": 1385884800,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 15,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "20",
+    "name": "Handball returns to the Copper Box Arena",
+    "shortDesc": "Handball is back at the Copper Box Arena for the 2013/2014 season!London GD Handball Club, founde...",
+    "longDescription": "Handball is back at the Copper Box Arena for the 2013/2014 season!London GD Handball Club, founded in 1976 as Great Dane Handball Club, is one of the UK’s oldest and most successful handball clubs. The men and women’s team have won both the English Lea",
+    "venueId": 5,
+    "venueTitle": "This is title 5",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1385193600,
+    "endDateTime": 1385193600,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 16,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "21",
+    "name": "London GD Handball club",
+    "shortDesc": "Handball is back at the Copper Box Arena for the 2013/2014 season!London GD Handball Club, foun...",
+    "longDescription": "Handball is back at the Copper Box Arena for the 2013/2014 season!London GD Handball Club, founded in 1976 as Great Dane Handball Club, is one of the UK’s oldest and most successful handball clubs.&nbsp; The&nbsp;men and women’s team have won both the ",
+    "venueId": 6,
+    "venueTitle": "This is title 6",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1383462000,
+    "endDateTime": 1383462000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 17,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "22",
+    "name": "Christmas holiday activities",
+    "shortDesc": "Following on from the hugely popular half term events, the Copper Box Arena will be running a sup...",
+    "longDescription": "Following on from the hugely popular half term events, the Copper Box Arena will be running a supervised holiday play scheme on various dates across the festive season.Highly qualified staff will be running a variety of engaging sports activities for c",
+    "venueId": 7,
+    "venueTitle": "This is title 7",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1386403200,
+    "endDateTime": 1388822400,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 18,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "23",
+    "name": "England v New Zealand Netball",
+    "shortDesc": "This event has been cancelledDue to damage to the floor of the Copper Box Arena following a mass-...",
+    "longDescription": "This event has been cancelledDue to damage to the floor of the Copper Box Arena following a mass-participation sports event at the weekend, it has been deemed to not be of a sufficient quality for elite level netball. Unfortunately because of this, the",
+    "venueId": 8,
+    "venueTitle": "This is title 8",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1390204800,
+    "endDateTime": 1390204800,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 19,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "24",
+    "name": "Group tours of the Park",
+    "shortDesc": "Guided tours of the Queen Elizabeth Olympic Park for groups of 35 people or more, coach operators...",
+    "longDescription": "Guided tours of the Queen Elizabeth Olympic Park for groups of 35 people or more, coach operators and tour operators.Delivered by City &amp; Village Tours using Blue Badge guides - there are many tours and itineraries to choose from, of varying walking",
+    "venueId": 9,
+    "venueTitle": "This is title 9",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1388563200,
+    "endDateTime": 1398841200,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 20,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "25",
+    "name": "London Lions Vs Cheshire Phoenix",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 10,
+    "venueTitle": "This is title 10",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1395990000,
+    "endDateTime": 1395990000,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 21,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "26",
+    "name": "London Lions Vs Durham Wildcats",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 11,
+    "venueTitle": "This is title 11",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1391673600,
+    "endDateTime": 1391673600,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 22,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "27",
+    "name": "London Lions Vs Durham Wildcats 260114",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 1,
+    "venueTitle": "This is title 1",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1390723200,
+    "endDateTime": 1390723200,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 23,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "28",
+    "name": "London Lions Vs Glasgow Rocks",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 2,
+    "venueTitle": "This is title 2",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1388736000,
+    "endDateTime": 1388736000,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 24,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "29",
+    "name": "London Lions Vs Leicester Riders",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 3,
+    "venueTitle": "This is title 3",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1393574400,
+    "endDateTime": 1393574400,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 25,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "30",
+    "name": "London Lions Vs Manchester Giants",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 4,
+    "venueTitle": "This is title 4",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1394352000,
+    "endDateTime": 1394352000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 26,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "31",
+    "name": "London Lions Vs Newcastle Eagles",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 5,
+    "venueTitle": "This is title 5",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1388304000,
+    "endDateTime": 1388304000,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 27,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "32",
+    "name": "London Lions Vs Plymouth Raiders",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 6,
+    "venueTitle": "This is title 6",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1397804400,
+    "endDateTime": 1397804400,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 28,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "33",
+    "name": "London Lions Vs Surrey Heat",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 7,
+    "venueTitle": "This is title 7",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1395471600,
+    "endDateTime": 1395471600,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 29,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "34",
+    "name": "London Lions Vs Worcester Wolves 020214",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 8,
+    "venueTitle": "This is title 8",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1391328000,
+    "endDateTime": 1391328000,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 30,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "35",
+    "name": "London Lions Vs Worcester Wolves 100414",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box ...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box ArenaThe Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Olym",
+    "venueId": 9,
+    "venueTitle": "This is title 9",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1397113200,
+    "endDateTime": 1397113200,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 31,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "36",
+    "name": "The NEC Wheelchair Tennis Masters",
+    "shortDesc": "The International Tennis Federation’s year-end singles championship will be held at the Lee Val...",
+    "longDescription": "The International Tennis Federation’s year-end singles championship will be held at the Lee Valley Hockey and Tennis Centre 24-30 November 2014.The Tennis Foundation were awarded the rights to host the event from 2014 until 2016. An elite field will fe",
+    "venueId": 10,
+    "venueTitle": "This is title 10",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1416816000,
+    "endDateTime": 1417334400,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 32,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "37",
+    "name": "Badminton London Grand Prix",
+    "shortDesc": "Badminton’s highly anticipated London Grand Prix, in partnership with adidas, will be taking pl...",
+    "longDescription": "Badminton’s highly anticipated London Grand Prix, in partnership with adidas, will be taking place at the Copper Box Arena on Queen Elizabeth Olympic Park from 1-6 October 2013.This event is very much part of the Olympic Legacy and we would love for yo",
+    "venueId": 11,
+    "venueTitle": "This is title 11",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1380610800,
+    "endDateTime": 1381042800,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 33,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "38",
+    "name": "Championship Boxing Billy Joe Saunders vs John Ryder",
+    "shortDesc": "It’s your chance to see some of the most anticipated contests in Britain in September, as Frank...",
+    "longDescription": "It’s your chance to see some of the most anticipated contests in Britain in September, as Frank Warren presents a night of boxing at the Copper Box Arena.The event will feature:\r\n\r\nThe British Middleweight Championship: Billy Joe Saunders v",
+    "venueId": 1,
+    "venueTitle": "This is title 1",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1379746800,
+    "endDateTime": 1379746800,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 34,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "39",
+    "name": "Disability Sport",
+    "shortDesc": "Celebrate the first anniversary of the London 2012 Paralympic Games on  Saturday 7 September wit...",
+    "longDescription": "Celebrate the first anniversary of the London 2012 Paralympic Games on  Saturday 7 September with the very best of disability sports and arts at Queen Elizabeth Olympic Park. National Paralympic Day featuring the Mayor of London’s Liberty Festival is a",
+    "venueId": 2,
+    "venueTitle": "This is title 2",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1378537200,
+    "endDateTime": 1378537200,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 35,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "40",
+    "name": "European Hockey Championships",
+    "shortDesc": "...",
+    "longDescription": "",
+    "venueId": 3,
+    "venueTitle": "This is title 3",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1438412400,
+    "endDateTime": 1438412400,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 36,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "41",
+    "name": "IAAF World Athletics Championships",
+    "shortDesc": "Full details of the event will be available shortly....",
+    "longDescription": "Full details of the event will be available shortly.",
+    "venueId": 4,
+    "venueTitle": "This is title 4",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1501570800,
+    "endDateTime": 1501570800,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 37,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "42",
+    "name": "IPC World Championships",
+    "shortDesc": "Full details of the event will be available shortly....",
+    "longDescription": "Full details of the event will be available shortly.",
+    "venueId": 5,
+    "venueTitle": "This is title 5",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1498892400,
+    "endDateTime": 1498892400,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 38,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "43",
+    "name": "Rugby World Cup France vs Europe 2",
+    "shortDesc": "For full details of the event and to book tickets please visit http://www.rugbyworldcup.com/ticke...",
+    "longDescription": "For full details of the event and to book tickets please visit http://www.rugbyworldcup.com/tickets/index.html",
+    "venueId": 6,
+    "venueTitle": "This is title 6",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1442991600,
+    "endDateTime": 1442991600,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 39,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "44",
+    "name": "Rugby World Cup Ireland vs Italy",
+    "shortDesc": "For full details of the event and to book tickets please visit http://www.rugbyworldcup.com/ticke...",
+    "longDescription": "For full details of the event and to book tickets please visit http://www.rugbyworldcup.com/tickets/index.html",
+    "venueId": 7,
+    "venueTitle": "This is title 7",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1443942000,
+    "endDateTime": 1443942000,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 40,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "45",
+    "name": "Rugby World Cup Loser Semi Final 1 vs Loser Semi Final 2",
+    "shortDesc": "For full details of the event and to book tickets please visit http://www.rugbyworldcup.com/ticke...",
+    "longDescription": "For full details of the event and to book tickets please visit http://www.rugbyworldcup.com/tickets/index.html",
+    "venueId": 8,
+    "venueTitle": "This is title 8",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1446188400,
+    "endDateTime": 1446188400,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 41,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "46",
+    "name": "Rugby World Cup New Zealand vs Africa 1",
+    "shortDesc": "For full details of the event and to book tickets please visit http://www.rugbyworldcup.com/ticke...",
+    "longDescription": "For full details of the event and to book tickets please visit http://www.rugbyworldcup.com/tickets/index.html",
+    "venueId": 9,
+    "venueTitle": "This is title 9",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1443078000,
+    "endDateTime": 1443078000,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 42,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "47",
+    "name": "Rugby World Cup South Africa vs Americas 2",
+    "shortDesc": "For full details of the event and to book tickets please visit http://www.rugbyworldcup.com/ticke...",
+    "longDescription": "For full details of the event and to book tickets please visit http://www.rugbyworldcup.com/tickets/index.html",
+    "venueId": 10,
+    "venueTitle": "This is title 10",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1444201200,
+    "endDateTime": 1444201200,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 43,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "48",
+    "name": "Hoops Aid fundraiser",
+    "shortDesc": "The first ever Hoops Aid will take place on Sunday 15th September 2013 at the Copper Box Arena on...",
+    "longDescription": "The first ever Hoops Aid will take place on Sunday 15th September 2013 at the Copper Box Arena on the recently re-developed Queen Elizabeth Olympic Park in London.The event will see celebrities, sporting personalities, Olympi",
+    "venueId": 11,
+    "venueTitle": "This is title 11",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1379228400,
+    "endDateTime": 1379228400,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 44,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "49",
+    "name": "International Handball Cup",
+    "shortDesc": "Featuring an array of stars from the GB Olympic handball teams, back at the Copper Box Arena for ...",
+    "longDescription": "Featuring an array of stars from the GB Olympic handball teams, back at the Copper Box Arena for the first time since 2012.Competitive handball returns to Queen Elizabeth Olympic Park for the first time since 2012.&nbsp; Featuring an array of stars fro",
+    "venueId": 1,
+    "venueTitle": "This is title 1",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1378623600,
+    "endDateTime": 1378623600,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 45,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "50",
+    "name": "London Lions Basketball Season",
+    "shortDesc": "London Lions v Manchester GiantsThe 7,500 seat Copper Box Arena was known as the \"box that rocks\"...",
+    "longDescription": "London Lions v Manchester GiantsThe 7,500 seat Copper Box Arena was known as the \"box that rocks\" during the London Olympics and looks set to become one of the leading indoor sporting venues in the country. It is now the home base for the London Lions,",
+    "venueId": 2,
+    "venueTitle": "This is title 2",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1380265200,
+    "endDateTime": 1380265200,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 46,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "51",
+    "name": "Queen Elizabeth Olympic Park Walks",
+    "shortDesc": "New Guided Walks of Queen Elizabeth Olympic Park.  Join THE Queen Elizabeth Olympic Park Walk wh...",
+    "longDescription": "New Guided Walks of Queen Elizabeth Olympic Park.  Join THE Queen Elizabeth Olympic Park Walk which takes you into the Northern Park in the company of a Blue Badge Tourist Guide. You’ll get great views of the Stadium, Aquatics Centre, Copperbox and Vel",
+    "venueId": 3,
+    "venueTitle": "This is title 3",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1388563200,
+    "endDateTime": 1395990000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 47,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "52",
+    "name": "Unity Kitchen Cafe and Events",
+    "shortDesc": "Unity Kitchen Cafe & Events is now open every day in the new North Park from 8.00am to 8.00 pm. T...",
+    "longDescription": "Unity Kitchen Cafe & Events is now open every day in the new North Park from 8.00am to 8.00 pm. There's lots to do, so join us for festivals, classes, workshops and activities. Everyone welcome !\r\nWHATS ON ?",
+    "venueId": 4,
+    "venueTitle": "This is title 4",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1375340400,
+    "endDateTime": 1376895600,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 48,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "53",
+    "name": "By The River",
+    "shortDesc": "As the summer draws to a close, make the best of the great outdoors with this amazing weekend for...",
+    "longDescription": "As the summer draws to a close, make the best of the great outdoors with this amazing weekend for all ages!Friday 13 September is all about dance. From 2pm to 8pm, there'll be an elegant afternoon tea dance with instructors, followed by the chance to d",
+    "venueId": 5,
+    "venueTitle": "This is title 5",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1379055600,
+    "endDateTime": 1379228400,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 49,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "54",
+    "name": "By The River Sunday Sessions",
+    "shortDesc": "The first of our By The River Sunday Sessions kicks off with a celebration of all things Latino!R...",
+    "longDescription": "The first of our By The River Sunday Sessions kicks off with a celebration of all things Latino!Running from 12noon to 5pm, the first of our Autumn Sunday Sessions will aim to capture a carnival spirit by celebrating all things Latino.\r\nThe Lati",
+    "venueId": 6,
+    "venueTitle": "This is title 6",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1379833200,
+    "endDateTime": 1379833200,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 50,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "55",
+    "name": "By The River Sunday Sessions 2",
+    "shortDesc": "Enjoy beautiful folk music in the north part of Queen Elizabeth Olympic Park, from 12noon to 5pm....",
+    "longDescription": "Enjoy beautiful folk music in the north part of Queen Elizabeth Olympic Park, from 12noon to 5pm.The second in our series of Sunday Sessions will focus on folk music.\r\nBands include:\r\n- Cut A Shine, a London-based group of traditional mus",
+    "venueId": 7,
+    "venueTitle": "This is title 7",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1380438000,
+    "endDateTime": 1380438000,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 51,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "56",
+    "name": "By The River Sunday Sessions 3",
+    "shortDesc": "The last in our autumn Sunday Sessions will be an African Adventure.Come along between 12noon and...",
+    "longDescription": "The last in our autumn Sunday Sessions will be an African Adventure.Come along between 12noon and 5pm to enjoy a range of events and activities, including:\r\n- Yaye Dib Sabar Workshop and Parade. The YDS Dance Company was founded in 2008 by Diene",
+    "venueId": 8,
+    "venueTitle": "This is title 8",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1381042800,
+    "endDateTime": 1381042800,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 52,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "57",
+    "name": "Light Nights",
+    "shortDesc": "A stunning celebration of light, based on the theme of Diwali. Daily from 4pm to 9pm.Come along t...",
+    "longDescription": "A stunning celebration of light, based on the theme of Diwali. Daily from 4pm to 9pm.Come along to this free event suitable for all the family and explore the north of the Park in its illuminated glory at night. You&rsquo;ll be able to walk the Tumblin",
+    "venueId": 9,
+    "venueTitle": "This is title 9",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1383289200,
+    "endDateTime": 1383462000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 53,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "58",
+    "name": "LL vs SH",
+    "shortDesc": "...",
+    "longDescription": "",
+    "venueId": 10,
+    "venueTitle": "This is title 10",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1380524400,
+    "endDateTime": 1380524400,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 54,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "59",
+    "name": "LL vs SS",
+    "shortDesc": "...",
+    "longDescription": "",
+    "venueId": 11,
+    "venueTitle": "This is title 11",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1380524400,
+    "endDateTime": 1380524400,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 55,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "60",
+    "name": "London Lions vs Birmingham Knights",
+    "shortDesc": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box A...",
+    "longDescription": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box Arena is now the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth",
+    "venueId": 1,
+    "venueTitle": "This is title 1",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1386489600,
+    "endDateTime": 1386489600,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 56,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "61",
+    "name": "London Lions vs Glasgow Rocks",
+    "shortDesc": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box A...",
+    "longDescription": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box Arena is now the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth",
+    "venueId": 2,
+    "venueTitle": "This is title 2",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1382857200,
+    "endDateTime": 1382857200,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 57,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "62",
+    "name": "London Lions vs Manchester Giants",
+    "shortDesc": "...",
+    "longDescription": "",
+    "venueId": 3,
+    "venueTitle": "This is title 3",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1379660400,
+    "endDateTime": 1379660400,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 58,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "63",
+    "name": "London Lions vs Newcastle Eagles",
+    "shortDesc": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box A...",
+    "longDescription": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box Arena is now the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth",
+    "venueId": 4,
+    "venueTitle": "This is title 4",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1388304000,
+    "endDateTime": 1388304000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 59,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "64",
+    "name": "London Lions vs Plymouth Raiders",
+    "shortDesc": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box A...",
+    "longDescription": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box Arena is now the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth",
+    "venueId": 5,
+    "venueTitle": "This is title 5",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1382684400,
+    "endDateTime": 1382684400,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 60,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "65",
+    "name": "London Lions vs Sheffield Sharks",
+    "shortDesc": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box A...",
+    "longDescription": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box Arena is now the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth",
+    "venueId": 6,
+    "venueTitle": "This is title 6",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1384502400,
+    "endDateTime": 1384502400,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 61,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "66",
+    "name": "London Lions vs Surrey Heat",
+    "shortDesc": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box A...",
+    "longDescription": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box Arena is now the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth",
+    "venueId": 7,
+    "venueTitle": "This is title 7",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1385280000,
+    "endDateTime": 1385280000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 62,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "67",
+    "name": "London Lions vs Worcester Wolves",
+    "shortDesc": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box ...",
+    "longDescription": "See London's only professional basketball team in action at the Copper Box Arena.The Copper Box Arena is now the home match and training base for the London Lions professional basketball team -&nbsp;the first legacy team to take residence on Queen Eliz",
+    "venueId": 8,
+    "venueTitle": "This is title 8",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1381388400,
+    "endDateTime": 1381388400,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 63,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "68",
+    "name": "Public boxing workout",
+    "shortDesc": "3pm - boxing stars Billy Joe Saunders, Dereck Chisora, Frank Buglioni, Mitchell Smith, Bradley Sk...",
+    "longDescription": "3pm - boxing stars Billy Joe Saunders, Dereck Chisora, Frank Buglioni, Mitchell Smith, Bradley Skeete and Georgie Kean will perform a free-to-watch public work-out at the Copper Box Arena for fans and media.All the boxers will go through a power packed",
+    "venueId": 9,
+    "venueTitle": "This is title 9",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1378969200,
+    "endDateTime": 1378969200,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 64,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "69",
+    "name": "Spiegel Junior art installation",
+    "shortDesc": "Visitors to the Park this autumn might be startled to discover three large silver spheres which h...",
+    "longDescription": "Visitors to the Park this autumn might be startled to discover three large silver spheres which have suddenly appeared in the landscape. ",
+    "venueId": 10,
+    "venueTitle": "This is title 10",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1379055600,
+    "endDateTime": 1396249200,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 65,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "70",
+    "name": "The Big Draw",
+    "shortDesc": "The Park hosts The Big Draw from 11am to 5pm.Celebrate London's newest&nbsp;public park with a da...",
+    "longDescription": "The Park hosts The Big Draw from 11am to 5pm.Celebrate London's newest&nbsp;public park with a day of fun drawing activities and DIY art installations for all ages. Bring family, friends and your imagination!\r\n- Invent buildings, gardens and fas",
+    "venueId": 11,
+    "venueTitle": "This is title 11",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1381561200,
+    "endDateTime": 1381561200,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 66,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "71",
+    "name": "Vintage Christmas Market and Real Ale Festival",
+    "shortDesc": "Get into the festive spirit with a vintage Christmas market, roller disco and real ale festival. ...",
+    "longDescription": "Get into the festive spirit with a vintage Christmas market, roller disco and real ale festival. Free entry.Fri 06 December 4 pm - 9 pm\nSat 07 December 12noon -&nbsp;10 pm\nSun 08 December&nbsp;12noon -&nbsp;7 pm\nJoin us at the Park and&n",
+    "venueId": 1,
+    "venueTitle": "This is title 1",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1386316800,
+    "endDateTime": 1386489600,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 67,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "72",
+    "name": "Yuri Suzuki music workshop 2",
+    "shortDesc": "Running from 11am - 5pm every day, Yuri Suzuki's workshops will explore instrument-making using e...",
+    "longDescription": "Running from 11am - 5pm every day, Yuri Suzuki's workshops will explore instrument-making using everyday materials.\r\n&nbsp;'Dexter' is an experimental synthesizer which allows you to combine sensors, inputs and touchpads to easily creat",
+    "venueId": 2,
+    "venueTitle": "This is title 2",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1385539200,
+    "endDateTime": 1385712000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 68,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "73",
+    "name": "Yuri Suzuki music workshops",
+    "shortDesc": "Running from 11am - 5pm every day, Yuri Suzuki's workshops will explore instrument-making using e...",
+    "longDescription": "Running from 11am - 5pm every day, Yuri Suzuki's workshops will explore instrument-making using everyday materials.'Dexter' is an experimental synthesizer which allows you to combine sensors, inputs and touchpads to easily create your own electronic mu",
+    "venueId": 3,
+    "venueTitle": "This is title 3",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1384934400,
+    "endDateTime": 1385107200,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 69,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "74",
+    "name": "Dereck Chisora V Andriy Rudenko",
+    "shortDesc": "More information to be added shortly&nbsp;\n&nbsp;...",
+    "longDescription": "More information to be added shortly&nbsp;\n&nbsp;",
+    "venueId": 4,
+    "venueTitle": "This is title 4",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1392451200,
+    "endDateTime": 1392451200,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 70,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "75",
+    "name": "Diving World Series 2014",
+    "shortDesc": "The world’s diving elite will return to the UK this year for the FINA/NVC Diving World Series.T...",
+    "longDescription": "The world’s diving elite will return to the UK this year for the FINA/NVC Diving World Series.The event sees the world’s top eight divers, across each event invited to challenge for honours across the Olympic programme of 3m and 10m individual and sync",
+    "venueId": 5,
+    "venueTitle": "This is title 5",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1398409200,
+    "endDateTime": 1398582000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 71,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "76",
+    "name": "East London Mini Marathon 2014",
+    "shortDesc": "Take part in East London’s race for young athletesThis year the East London mini marathon will ...",
+    "longDescription": "Take part in East London’s race for young athletesThis year the East London mini marathon will take place at the Park. An opportunity for young athletes to try for a place in your Borough’s team for the Virgin Money Giving Mini London Marathon.Ther",
+    "venueId": 6,
+    "venueTitle": "This is title 6",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1392537600,
+    "endDateTime": 1392537600,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 72,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "77",
+    "name": "England V Jamaica netball",
+    "shortDesc": "This event has been cancelledDue to damage to the floor of t...",
+    "longDescription": "This event has been cancelledDue to damage to the floor of t",
+    "venueId": 7,
+    "venueTitle": "This is title 7",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1390291200,
+    "endDateTime": 1390291200,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 73,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "78",
+    "name": "The Battle of London 2014",
+    "shortDesc": "Europe’s most exciting fitness event, the Battle of London, is coming to the Copper Box Arena o...",
+    "longDescription": "Europe’s most exciting fitness event, the Battle of London, is coming to the Copper Box Arena on 18 and 19 January 2014.",
+    "venueId": 8,
+    "venueTitle": "This is title 8",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1390032000,
+    "endDateTime": 1390118400,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 74,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "79",
+    "name": "DOGS UNITE",
+    "shortDesc": "Has your dog got what it takes to be a hero? Unite with Guide Dogs on the world’s most epic dog...",
+    "longDescription": "Has your dog got what it takes to be a hero? Unite with Guide Dogs on the world’s most epic dog walk and support our four-legged heroes!Calling all super dogs....\n\nHas your dog got what it takes to be a hero? Unite and join Guide Dogs on 14 Jun",
+    "venueId": 9,
+    "venueTitle": "This is title 9",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1402729200,
+    "endDateTime": 1402729200,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 75,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "80",
+    "name": "Family workshops at the Poetry Potting Shed",
+    "shortDesc": "Pop in to the Poetry Potting Shed and meet Poet in Residence, Niall O'Sullivan, listen to live po...",
+    "longDescription": "Pop in to the Poetry Potting Shed and meet Poet in Residence, Niall O'Sullivan, listen to live poetry, get involved in a workshop, or contribute to the installation created by young local poets.Activities are aimed at three to six year olds, but everyo",
+    "venueId": 10,
+    "venueTitle": "This is title 10",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1395471600,
+    "endDateTime": 1396681200,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 76,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "81",
+    "name": "Hackney half marathon",
+    "shortDesc": "Get involved in a truly unique running experience this summer. Be one of the first to take to the...",
+    "longDescription": "Get involved in a truly unique running experience this summer. Be one of the first to take to the streets in this brand new half marathon.On 22 June 2014, Hackney will close its roads to cars and open them to thousands of runners for the very first tim",
+    "venueId": 11,
+    "venueTitle": "This is title 11",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1403420400,
+    "endDateTime": 1403420400,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 77,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "82",
+    "name": "Holi Festival 2014",
+    "shortDesc": "The Holi Festival of Colours will offer a festival experience like no other when it comes to Quee...",
+    "longDescription": "The Holi Festival of Colours will offer a festival experience like no other when it comes to Queen Elizabeth Olympic Park this summer.Keep checking back for more information.",
+    "venueId": 1,
+    "venueTitle": "This is title 1",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1403938800,
+    "endDateTime": 1403938800,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 78,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "83",
+    "name": "Holi Festival of Colours",
+    "shortDesc": "The Holi Festival of Colours will offer a festival experience like no other when it comes to Quee...",
+    "longDescription": "The Holi Festival of Colours will offer a festival experience like no other when it comes to Queen Elizabeth Olympic Park this summer.Keep checking back for more information.",
+    "venueId": 2,
+    "venueTitle": "This is title 2",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1404025200,
+    "endDateTime": 1404025200,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 79,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "84",
+    "name": "London Lions v Cheshire Phoenix",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box Arena.The Copper Box...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box Arena.The Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Oly",
+    "venueId": 3,
+    "venueTitle": "This is title 3",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1396594800,
+    "endDateTime": 1396594800,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 80,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "85",
+    "name": "London Lions v Surrey United",
+    "shortDesc": "See London’s only professional basketball team in action at the Copper Box Arena.The Copper Box...",
+    "longDescription": "See London’s only professional basketball team in action at the Copper Box Arena.The Copper Box Arena is the home match and training base for the London Lions professional basketball team - the first legacy team to take residence on Queen Elizabeth Oly",
+    "venueId": 4,
+    "venueTitle": "This is title 4",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1395990000,
+    "endDateTime": 1395990000,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 81,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "86",
+    "name": "PARK OPENING WEEKEND SATURDAY",
+    "shortDesc": "From 5 April 2014, there will be lots more to explore at Queen Elizabeth Olympic Park. Join us to...",
+    "longDescription": "From 5 April 2014, there will be lots more to explore at Queen Elizabeth Olympic Park. Join us to celebrate London’s new Park!Bring your friends and family and celebrate the opening weekend of London's new Park. There will be activities running from 10",
+    "venueId": 5,
+    "venueTitle": "This is title 5",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1396681200,
+    "endDateTime": 1396681200,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 82,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "87",
+    "name": "PARK OPENING WEEKEND SUNDAY",
+    "shortDesc": "Bring your friends and family and join us as celebrations and festivities for the opening of Lond...",
+    "longDescription": "Bring your friends and family and join us as celebrations and festivities for the opening of London's new Park continue on Sunday*.At 10am, activities through the south of the Park begin, including Bikeworks all-ability cycling at Mandeville Place; fit",
+    "venueId": 6,
+    "venueTitle": "This is title 6",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1396767600,
+    "endDateTime": 1396767600,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 83,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "88",
+    "name": "Prudential RideLondonSurrey 100",
+    "shortDesc": "Celebrating the cycling legacy of the London 2012 Olympic and Paralympic Games, the Prudential Ri...",
+    "longDescription": "Celebrating the cycling legacy of the London 2012 Olympic and Paralympic Games, the Prudential RideLondon-Surrey 100 will start at the Park.The day begins with the Prudential RideLondon-Surrey 100 as 24,000 riders gather in Queen Elizabeth Olympic Park",
+    "venueId": 7,
+    "venueTitle": "This is title 7",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1407654000,
+    "endDateTime": 1407654000,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 84,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "89",
+    "name": "Revolution Series",
+    "shortDesc": "A packed house will watch Olympic heroes like Laura Trott, Jason Kenny, Lizzie Armitstead and Ed ...",
+    "longDescription": "A packed house will watch Olympic heroes like Laura Trott, Jason Kenny, Lizzie Armitstead and Ed Clancy do battle on the boards in the first elite event at the velodrome since the London 2012 Olympics. The centrepiece of the Friday night session will b",
+    "venueId": 8,
+    "venueTitle": "This is title 8",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1394780400,
+    "endDateTime": 1394866800,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 85,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "90",
+    "name": "The National Lottery Newham Anniversary Run",
+    "shortDesc": "The National Lottery Newham London Anniversary Run is back! Runners can once again celebrate the ...",
+    "longDescription": "The National Lottery Newham London Anniversary Run is back! Runners can once again celebrate the legacy of the London 2012 Games.The five-mile course will feature a number of the iconic arenas around the Park that played host to such inspirational scen",
+    "venueId": 9,
+    "venueTitle": "This is title 9",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1405839600,
+    "endDateTime": 1405839600,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 86,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "91",
+    "name": "Tour de France stage 3",
+    "shortDesc": "The 101st edition of the iconic Tour de France will be visiting Queen Elizabeth Olympic Park for ...",
+    "longDescription": "The 101st edition of the iconic Tour de France will be visiting Queen Elizabeth Olympic Park for the first time.Keep checking back for more information.",
+    "venueId": 10,
+    "venueTitle": "This is title 10",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1404716400,
+    "endDateTime": 1404716400,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 87,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+            {
+                "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+            }
+        ]
+    }
+
+],
+"explore":
+{
+
+    "trails": 
+
+[
+
+{
+
+    "id": "4",
+    "name": "African arts and crafts market",
+    "shortDesc": "Unfortunately, due to the severe weather this event will no longer be taking place today.Come alo...",
+    "longDescription": "Unfortunately, due to the severe weather this event will no longer be taking place today.Come along to&nbsp;an exciting mini-market showcasing the very best in artefacts and pieces for sale from four African countries. Have a go at African drumming wit",
+    "venueId": 1,
+    "venueTitle": "This is title 1",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/trails/Trail_Entry_Slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/trails/Trail_Entry_Slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1382943600,
+    "endDateTime": -57600,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 1,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+            {
+                "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+            }
+        ]
+    }
+
+],
+"venues":
+[
+
+{
+
+    "id": "3",
+    "name": "Copper Box Arena",
+    "shortDesc": "Come and try the range of activities on offer at the Copper Box Arena, a world-class sports venue...",
+    "longDescription": "Come and try the range of activities on offer at the Copper Box Arena, a world-class sports venue that became known during the London 2012 Games as the ‘box that rocks’.Host of the handball, modern pentathlon fencing and go",
+    "venueId": "3",
+    "venueTitle": "Copper Box Arena",
+    "lat": 51.543266,
+    "long": -0.012477,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 0,
+    "endDateTime": 0,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 1,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "4",
+    "name": "The Stadium",
+    "shortDesc": "The Park’s most recognisable venue, the Stadium is a magnificent arena that has been designed t...",
+    "longDescription": "The Park’s most recognisable venue, the Stadium is a magnificent arena that has been designed to host world-class events long into the future.\r\n\r\nThe Stadium is currently closed and will re-open to the public in 2016.From 2016, the Stadium becomes the ",
+    "venueId": "4",
+    "venueTitle": "The Stadium",
+    "lat": 51.543316,
+    "long": -0.012427,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 0,
+    "endDateTime": 0,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 2,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "5",
+    "name": "Lee Valley Hockey and Tennis Centre",
+    "shortDesc": "Come and enjoy state-of-the-art facilities at this stylish and inspiring sports complex.From May ...",
+    "longDescription": "Come and enjoy state-of-the-art facilities at this stylish and inspiring sports complex.From May 2014, two of the UK&rsquo;s most dynamic sports will get a major boost in the shape of the &pound;30 million Lee Valley Hockey and Tennis Centre. The first",
+    "venueId": "5",
+    "venueTitle": "Lee Valley Hockey and Tennis Centre",
+    "lat": 51.54336600000001,
+    "long": -0.012377,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 0,
+    "endDateTime": 0,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 3,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "6",
+    "name": "Aquatics Centre",
+    "shortDesc": "Come and swim in the pools of champions, in one of London 2012’s best-known venues.Designed for...",
+    "longDescription": "Come and swim in the pools of champions, in one of London 2012’s best-known venues.Designed for swimmers of all abilities, from absolute beginners to Olympic champions, London Aquatics Centre will offer a wide-ranging programme of activities from 1 Mar",
+    "venueId": "6",
+    "venueTitle": "Aquatics Centre",
+    "lat": 51.543416,
+    "long": -0.012327,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 0,
+    "endDateTime": 0,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 4,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "7",
+    "name": "Lee Valley VeloPark",
+    "shortDesc": "Track cycling, road racing, BMX or mountain biking: however you get your two-wheeled thrills, you...",
+    "longDescription": "Track cycling, road racing, BMX or mountain biking: however you get your two-wheeled thrills, you will find it at the unrivalled Lee Valley VeloPark.&nbsp;Opening in March 2014, Lee Valley VeloPark will be the first place in the world where you can tak",
+    "venueId": "7",
+    "venueTitle": "Lee Valley VeloPark",
+    "lat": 51.543466,
+    "long": -0.012277,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 0,
+    "endDateTime": 0,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 5,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "8",
+    "name": "ArcelorMittal Orbit",
+    "shortDesc": "Stand on top of the world in the UK’s tallest sculpture.Standing 114.5m tall, this extraordinar...",
+    "longDescription": "Stand on top of the world in the UK’s tallest sculpture.Standing 114.5m tall, this extraordinary attraction is the result of a creative collaboration between world-renowned artist Sir Anish Kapoor, designer Cecil Balmond an",
+    "venueId": "8",
+    "venueTitle": "ArcelorMittal Orbit",
+    "lat": 51.543516,
+    "long": -0.012227,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 0,
+    "endDateTime": 0,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 6,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "9",
+    "name": "Canal Park",
+    "shortDesc": "The Canal Park will turn the towpath along the Lee Navigation canal on the west of the Park into ...",
+    "longDescription": "The Canal Park will turn the towpath along the Lee Navigation canal on the west of the Park into a beautiful new natural space. &nbsp;With close links to the Stadium and the upcoming Sweetwater neighbourhood, as well as the existing communities in Fish",
+    "venueId": "9",
+    "venueTitle": "Canal Park",
+    "lat": 51.54356600000001,
+    "long": -0.012177,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 0,
+    "endDateTime": 0,
+    "activeDays": "Mon - Fri",
+    "category": 1,
+    "color": "#e6007e",
+    "order": 7,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "10",
+    "name": "Timber Lodge Cafe",
+    "shortDesc": "Nestled in the stunning natural landscape of the north of the Park, this fantastic new café &nbs...",
+    "longDescription": "Nestled in the stunning natural landscape of the north of the Park, this fantastic new café &nbsp;and community centre provides visitors with a relaxing space to sit and chat over a drink and something to eat while the kids discover new adventures in the ",
+    "venueId": "10",
+    "venueTitle": "Timber Lodge Cafe",
+    "lat": 51.543616,
+    "long": -0.012127,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 0,
+    "endDateTime": 0,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 8,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+
+},
+
+        {
+            "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+        }
+    ]
+
+},
+{
+
+    "id": "11",
+    "name": "Tumbling Bay Playground",
+    "shortDesc": "Designed to be a bold, new space for local children to play, the Tumbling Bay playground features...",
+    "longDescription": "Designed to be a bold, new space for local children to play, the Tumbling Bay playground features rock pools, sand pits, tall treehouses, and wobbly bridges, as well as slides, swings and plenty of space to run about. We wanted to make sure children ha",
+    "venueId": "11",
+    "venueTitle": "Tumbling Bay Playground",
+    "lat": 51.543666,
+    "long": -0.012077,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 0,
+    "endDateTime": 0,
+    "activeDays": "Mon - Fri",
+    "category": 3,
+    "color": "#e6007e",
+    "order": 9,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+
+},
+
+            {
+                "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/venues/Venue_Entry_slant.png"
+            }
+        ]
+    }
+
+],
+"facilities":
+[
+
+{
+
+    "id": "6",
+    "name": "Break London Radio half term take over",
+    "shortDesc": "Come and enjoy one of east London's leading online radio stations.There'll be some amazing local ...",
+    "longDescription": "Come and enjoy one of east London's leading online radio stations.There'll be some amazing local talent live from Timber Lodge, as well as chat, competitions, music, dance performances and more. Running from 12pm to 4pm - everyone welcome!",
+    "venueId": 2,
+    "venueTitle": "This is title 2",
+    "lat": 51.543244,
+    "long": -0.012483,
+    "thumbImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant_thumbnail.png",
+    "largeImage": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png",
+    "flag": 1,
+    "isToday": 0,
+    "startDateTime": 1383462000,
+    "endDateTime": 1383462000,
+    "activeDays": "Mon - Fri",
+    "category": 2,
+    "color": "#e6007e",
+    "order": 2,
+    "media": 
+
+[
+
+{
+
+    "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+
+},
+
+                    {
+                        "imageLink": "http://dev.pocketapp.co.uk/dev/lldc/uploads/events/Event_Entry_slant.png"
+                    }
+                ]
+            }
+        ]
+    }
+
+}

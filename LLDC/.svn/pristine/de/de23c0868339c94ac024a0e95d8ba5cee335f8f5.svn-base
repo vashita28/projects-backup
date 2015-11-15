@@ -1,0 +1,67 @@
+package co.uk.android.lldc.models;
+
+public class VenueFacilityModel {
+
+	String id = "", facility_id = "", lat = "", lon = "";
+
+	/**
+	 * @return the id
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the facility_id
+	 */
+	public String getFacility_id() {
+		return facility_id;
+	}
+
+	/**
+	 * @param facility_id
+	 *            the facility_id to set
+	 */
+	public void setFacility_id(String facility_id) {
+		this.facility_id = facility_id;
+	}
+
+	/**
+	 * @return the lat
+	 */
+	public String getLat() {
+		return lat;
+	}
+
+	/**
+	 * @param lat
+	 *            the lat to set
+	 */
+	public void setLat(String lat) {
+		this.lat = lat;
+	}
+
+	/**
+	 * @return the lon
+	 */
+	public String getLon() {
+		return lon;
+	}
+
+	/**
+	 * @param lon
+	 *            the lon to set
+	 */
+	public void setLon(String lon) {
+		this.lon = lon;
+	}
+
+}

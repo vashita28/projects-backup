@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/whotel_spg_number_my_spg_btn" android:state_selected="true"></item>
+    <item android:drawable="@drawable/whotel_spg_number_my_spg_btn" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/whotel_menu_insider_grey"></item>
+
+</selector>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="123dp" >
+
+        <!-- <RelativeLayout -->
+        <!-- android:id="@+id/rl_main_bg" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_alignParentRight="true"> -->
+
+        <ImageView
+            android:id="@+id/imageview_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/map_marker_popup" />
+
+        <uk.co.pocketapp.whotel.customview.CustomTextView_boldfont
+            android:id="@+id/tv_marker_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:text="India"
+            android:textStyle="bold" />
+
+        <uk.co.pocketapp.whotel.customview.CustomTextView_bookfont
+            android:id="@+id/tv_marker_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_marker_title"
+            android:layout_marginLeft="10dp"
+            android:maxLines="2"
+            android:text="India Delhi" />
+
+        <!-- <uk.co.pocketapp.whotel.customview.CustomTextView_italicfont -->
+
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/tv_get_directions" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignBottom="@+id/imageview_bg" -->
+        <!-- android:layout_marginBottom="25dp" -->
+        <!-- android:layout_marginLeft="70dp" -->
+        <!-- android:text="GET DIRECTIONS" -->
+        <!-- android:textColor="@android:color/white" /> -->
+
+        <Button
+            android:id="@+id/btn_get_direction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imageview_bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:paddingBottom="20dp"
+            android:text="GET DIRECTIONS"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- </RelativeLayout> -->
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_appicon"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="7dp"
+        android:src="@drawable/launcher_icon" />
+
+    <TextView
+        android:id="@+id/tv_appname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_appicon"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/iv_appicon"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Yahoo"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_appname"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/iv_appicon"
+        android:text="Message"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+</RelativeLayout>

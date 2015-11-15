@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_checklist_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.80"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/et_numbers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/editText_bg_text_color"
+                android:editable="false"
+                android:ems="10"
+                android:gravity="center"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/special_data_heading" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.20"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/et_mohms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/editText_bg_text_color"
+                android:gravity="left"
+                android:inputType="textNoSuggestions|textFilter|none"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <View
+                android:layout_width="438dp"
+                android:layout_height="8dp"
+                android:layout_gravity="left"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/below_line_3" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+</LinearLayout>

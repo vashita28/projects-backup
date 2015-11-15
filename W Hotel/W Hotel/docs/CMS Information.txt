@@ -1,0 +1,10 @@
+https://pocketapp.basecamphq.com/projects/11116868-w-hotel/posts/79636549/comments
+
+Insider: (GET)
+URL: http://dev.pocketapp.co.uk/dev/whotel_wifi/administrator/api.php?q=get_insiders
+Find Hotspots: (POST)
+URL : http://dev.pocketapp.co.uk/dev/whotel_wifi/administrator/api.php?q=get_hotspot
+type: hotspots
+Hotels:(POST)
+URL: http://dev.pocketapp.co.uk/dev/whotel_wifi/administrator/api.php?q=get_hotels
+type: hotel

@@ -1,0 +1,280 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_color" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_buttons"
+        android:layout_below="@+id/header"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- Content::Page Heading(Upper heading) -->
+
+            <TextView
+                android:id="@+id/page_heading_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_bar"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="@string/HOLDING_PLATES_CENTER_HEADING"
+                android:textColor="@color/page_heading_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <!-- Numbering -->
+
+            <LinearLayout
+                android:id="@+id/ll_top_headings_numbering"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/numbering_Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.80"
+                    android:gravity="left"
+                    android:text="@string/NUMBERING"
+                    android:textColor="@color/textview_text_color"
+                    android:textSize="@dimen/special_data_heading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/numbering_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:text="@string/CLOCKWISE_SEND"
+                    android:textColor="@color/textview_text_color"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <!-- Heading: holding plates -->
+
+            <LinearLayout
+                android:id="@+id/ll_heading_holding_plates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_heading_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/tv_holding_plate_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="0.30"
+                        android:gravity="right"
+                        android:paddingRight="27dp"
+                        android:text="@string/HOLDING_PLATE_1"
+                        android:textColor="@color/textview_text_color"
+                        android:textSize="@dimen/special_data_heading"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_holding_plate_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="0.35"
+                        android:gravity="center"
+                        android:paddingLeft="7dp"
+                        android:text="@string/HOLDING_PLATE_2"
+                        android:textColor="@color/textview_text_color"
+                        android:textSize="@dimen/special_data_heading"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_holding_plate_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="0.35"
+                        android:gravity="center"
+                        android:text="@string/HOLDING_PLATE_3"
+                        android:textColor="@color/textview_text_color"
+                        android:textSize="@dimen/special_data_heading"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Heading Row: Holding plates -->
+
+                <LinearLayout
+                    android:id="@+id/ll_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/tv_item_keybar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.28"
+                            android:gravity="center"
+                            android:text="@string/ITEM_KEY_BAR"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_connection_side"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.24"
+                            android:gravity="center"
+                            android:text="@string/CONNECTION_SIDE"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.24"
+                            android:gravity="center"
+                            android:text="@string/CENTER"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_non_connection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.24"
+                            android:gravity="center"
+                            android:text="@string/NON_CONNECTION_SIDE_SIDE"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/plain_line" />
+                </LinearLayout>
+
+                <!-- rows layout:Holding plates layout -->
+
+                <LinearLayout
+                    android:id="@+id/ll_holding_plates_rows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <!-- Rows goes here: from layout:: simplerow_holding_plates.xml -->
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_orange"
+                android:text="@string/CANCEL"
+                android:textColor="@color/title_bar_data_text_color"
+                android:textSize="@dimen/button_text_size" />
+
+            <Button
+                android:id="@+id/btn_saveandcomplete"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_green"
+                android:text="@string/saveandcomplete"
+                android:textColor="@color/title_bar_data_text_color"
+                android:textSize="@dimen/button_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_holding_plates"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

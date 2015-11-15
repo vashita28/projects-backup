@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/registration_bg" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/ivCapAppIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/cab_app_icon" />
+
+            <TextView
+                android:id="@+id/tvDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivCapAppIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:text="D R I V E R"
+                android:textColor="@color/textview_selected"
+                android:textSize="20sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDriver"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="EMAIL OR USERNAME"
+                android:textColor="@color/textview_selected"
+                android:textSize="@dimen/bottom_tab_textsize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tvUserName"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+            <!-- android:hint="Email" -->
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etUserName"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="PASSWORD"
+                android:textColor="@color/textview_selected"
+                android:textSize="@dimen/bottom_tab_textsize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tvPassword"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/checkboxRememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPassword"
+                android:layout_gravity="center_vertical"
+                android:button="@android:color/transparent"
+                android:drawableLeft="@drawable/checkbox_selector"
+                android:drawablePadding="10dp"
+                android:padding="8dp"
+                android:text="REMEMBER ME"
+                android:textColor="@color/textview_selected"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLogIn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/checkboxRememberMe"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Log in"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tvLogIn"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:paddingRight="10dp"
+                android:text="@string/forgotpassword"
+                android:textColor="@color/textview_selected"
+                android:textSize="@dimen/bottom_tab_textsize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNewtoCabapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvForgotPassword"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:text="NEW TO CAB:APP DRIVER?"
+                android:textColor="@color/textview_selected"
+                android:textSize="@dimen/bottom_tab_textsize"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/viewBlank"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_below="@+id/tvForgotPassword" />
+
+            <TextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/viewBlank"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Sign Up"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red255\green39\blue18;}
+\margl1440\margr1440\vieww19200\viewh17280\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs36 \cf0 Getting Started
+\fs24 \
+\
+1. Go to {\field{\*\fldinst{HYPERLINK "http://Parse.com"}}{\fldrslt Parse.com}} and signed up for a free account.\
+\
+2. Locate the 
+\f1\fs22 \cf2 \CocoaLigature0 MainApplicationStartup.java
+\f0\fs24 \cf0 \CocoaLigature1  file located in the project tree in the src folder.\
+\
+3. Cope and paste your Parse.com \cf2 Application ID & Client Key\cf0  in the appropriate marked sections.\
+\
+
+\fs36 \
+Changing App Name and Other Details
+\fs24 \
+\
+1. Change the package name of app by right clicking on the package name 
+\f2\fs22 \cf2 com.coudriet.snapnshare.android
+\f0\fs24 \cf0  in the project tree under the src folder and select refactor / rename.\
+\
+2. Locate the res folder in the project tree then find the values folder. Double click on \cf2 strings.xml\cf0 . Locate the \cf2 app_name\cf0  and \cf2 app_name_alt\cf0  and change to your app name.\
+\
+3. Double click on the \cf2 AndroidManifest.xml\cf0  in the project tree and select the 5th tab \cf2 AndroidManifest.xml\cf0  at the bottom and rename all instances of 
+\f2\fs22 \cf2 com.coudriet.snapnshare.android
+\f0\fs24 \cf0  to your app's package name you changed in step 1.\
+\
+4. Locate the res folder in the project tree then find the layout folder. Double click on \cf2 activity_main.xml\cf0  then click on \cf2 activity_main.xml\cf0  in the bottom to show the xml layout. Locate 
+\f2\fs22 \cf2 com.coudriet.snapnshare.android.CustomViewPager
+\f0\fs24 \cf0  in the top and rename 
+\f2\fs22 \cf2 com.coudriet.snapnshare.android
+\f0\fs24 \cf0  to your app's package name you changed in step 1.\
+\
+5. Once all the steps 1-4 are complete you will get some errors in some of the java files and its related to changing the package name just go into each java file and at the top toggle open \cf2 #imports\cf0  and rename the package name from 
+\f2\fs22 \cf2 com.coudriet.snapnshare.android.R 
+\f0\fs24 \cf0 to your app's package name you changed in step 1.\
+\
+
+\fs36 \
+Changing Graphics And Tint Color
+\fs24 \
+\
+1. To change graphics locate the PSD+Extras folder located in the Snap-N-Share folder you purchased and downloaded then open them in Photoshop. Once you like your changes you can save the files as png's to the appropriate drawable folder located in the Snap-N-Share / res project folder. \
+\
+2. To change the color scheme of the app please visit: {\field{\*\fldinst{HYPERLINK "http://jgilfelt.github.io/android-actionbarstylegenerator/#name=CustomActionBar&compat=holo&theme=light_dark&actionbarstyle=solid&texture=0&hairline=0&neutralPressed=1&backColor=2D2D2D%2C100&secondaryColor=d673f3%2C100&tabColor=49cd4b%2C100&tertiaryColor=d673f3%2C100&accentColor=fff%2C100&cabBackColor=d673f3%2C100&cabHighlightColor=49cd4b%2C100"}}{\fldrslt http://jgilfelt.github.io/android-actionbarstylegenerator/#name=CustomActionBar&compat=holo&theme=light_dark&actionbarstyle=solid&texture=0&hairline=0&neutralPressed=1&backColor=2D2D2D%2C100&secondaryColor=d673f3%2C100&tabColor=49cd4b%2C100&tertiaryColor=d673f3%2C100&accentColor=fff%2C100&cabBackColor=d673f3%2C100&cabHighlightColor=49cd4b%2C100}}\
+\
+3. Once you save your changes and images to your computer just copy all the graphics from each downloaded drawable folder into the appropriate drawable folder located in the Snap-N-Share / res project folder.\
+\
+Enjoy!}

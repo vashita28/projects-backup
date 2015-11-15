@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="1.0" >
+
+    <!-- Top -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".10"
+        android:background="@drawable/border1" >
+
+        <TextView
+            android:id="@+id/menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/MenuTitle"
+            android:textColor="#ffffff"
+            android:textScaleX="1.2"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+    <!-- middle -  Menu scroll -->
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".67"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/menuscroll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/categories_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                android:background="#212121"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/MenuCategories"
+                    android:textColor="#ffffff"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+                
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- your order -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight=".05"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp" >
+
+        <TextView
+            android:id="@+id/yourorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/MenuYourOrder"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <!-- bottom -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".18"
+        android:background="@drawable/border2"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:weightSum="1" >
+
+        <!-- order scroll -->
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".80"
+            android:background="#212121"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/orderscroll"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/hinttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="@string/MenuOrderHint"
+                    android:textColor="#aaaaaa"
+                    android:typeface="sans" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".20" >
+
+            <ImageButton
+                android:id="@+id/startorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/enteraddress" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

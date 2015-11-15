@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlCabPinOverlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlCabPinOverlayHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_bg"
+        android:visibility="visible" >
+
+        <View
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:id="@+id/tvWhatsCabPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emptyView"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="WHAT&apos;S CAB PIN"
+            android:textColor="@color/textview_selected"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPassengerWhos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWhatsCabPin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="false"
+            android:text="Passenger who&apos;s registered a card get a unique 3 digits Cab:Pin (for added security) when booking so no need for card or CVV. You need to enter the pin to complete the job"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlFakeCabPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPassengerWhos" >
+
+            <TextView
+                android:id="@+id/textPassengerCabPin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/tab_unselected"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="*** Passenger&apos;s cab:PIN"
+                android:textColor="@color/textview_unselected"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/llCapPin"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/textPassengerCabPin"
+                android:background="@android:color/white"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/etCabPin1"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:hint="000"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:nextFocusRight="@+id/etCabPin2"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCabPinOkyGotIt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/registration_button"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/tvOkGotItCabPin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="OKAY GOT IT!"
+                android:textColor="@color/textview_selected"
+                android:textSize="25sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

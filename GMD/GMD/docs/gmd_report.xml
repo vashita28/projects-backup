@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<callback xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+	<head>
+		<status>1</status>
+	</head>
+	<body>
+		<reports>
+			<report_id>23</report_id>
+			<site_name>Gold Mine</site_name>
+			<report_details>
+				<customer>Mining Co</customer>
+				<site>Gold Mine</site>
+				<country>Argentina</country>
+				<customer_rep>John Smith</customer_rep>
+				<plant>New Plant</plant>
+				<plant_type>Cyclo</plant_type>
+				<unit>null</unit>
+				<system_machine>null</system_machine>
+				<type>null</type>
+				<serial_no>null</serial_no>
+				<year_of_delivery>null</year_of_delivery>
+				<operating_hours>null</operating_hours>
+				<service_information>
+					<service_type>
+						<new_plant>true</new_plant>
+						<upgrade>false</upgrade>
+						<troubleshooting>false</troubleshooting>
+						<others>false</others>
+						<first_installation>false</first_installation>
+						<minor_inspection>false</minor_inspection>
+						<major_overhaul>true</major_overhaul>
+					</service_type>
+					<service_tasks>
+						<installation>true</installation>
+						<comissioning>false</comissioning>
+						<test_assessment>true</test_assessment>
+						<others_service_task>true</others_service_task>
+						<overhaul_works>false</overhaul_works>
+						<re_comissioning>false</re_comissioning>
+						<diagnostics>false</diagnostics>
+						<factory_insp>false</factory_insp>
+						<repair>false</repair>
+						<investigation>false</investigation>
+						<inspection>false</inspection>
+						<motor_insp_inside>false</motor_insp_inside>
+						<motor_insp_external>false</motor_insp_external>
+					</service_tasks>
+				</service_information>
+				<desc_of_service_performed>
+					<stator>Main activity</stator>
+					<rotor_poles>null</rotor_poles>
+					<motor_auxillaries>Main activity</motor_auxillaries>
+					<cyclo_converter>null</cyclo_converter>
+				</desc_of_service_performed>
+				<list_of_distribution>null</list_of_distribution>
+				<distribution_to_customer>null</distribution_to_customer>
+			</report_details>
+			<summary>
+				<summary_of_inspection>null</summary_of_inspection>
+				<main_difficulties>null</main_difficulties>
+				<recommendations>null</recommendations>
+				<point_of_general_interest>null</point_of_general_interest>
+				<site_storage_conditions>null</site_storage_conditions>
+				<spare_parts_at_site>null</spare_parts_at_site>
+				<tools_instruments>null</tools_instruments>
+			</summary>
+			<service_checklist>
+				<mill>
+					<mill_id>5</mill_id>
+					<mill_name>Mill C</mill_name>
+					<gmd_type>Pedestal</gmd_type>
+					<services>
+						<item>
+							<id>1</id>
+							<parent_id>0</parent_id>
+							<name>Stator</name>
+							<services>
+								<item>
+									<id>5</id>
+									<parent_id>1</parent_id>
+									<name>Stator quators fixation</name>
+									<services>
+										<item>
+											<id>28</id>
+											<parent_id>5</parent_id>
+											<name>Check &amp; Describe presence of Corrosion</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>29</id>
+											<parent_id>5</parent_id>
+											<name>Check &amp; Describe Cleanliness level</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>30</id>
+											<parent_id>5</parent_id>
+											<name>Check &amp; Describe presence of eventual Discoloration</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>31</id>
+											<parent_id>5</parent_id>
+											<name>Check &amp; Describe presence of eventual cracks</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>32</id>
+											<parent_id>5</parent_id>
+											<name>Check bolts partition elongation</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+									</services>
+								</item>
+								<item>
+									<id>7</id>
+									<parent_id>1</parent_id>
+									<name>Sealing system</name>
+									<services>
+										<item>
+											<id>46</id>
+											<parent_id>7</parent_id>
+											<name>Check &amp; Describe presence of Corrosion</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>47</id>
+											<parent_id>7</parent_id>
+											<name>Check &amp; Describe Cleanliness level</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>48</id>
+											<parent_id>7</parent_id>
+											<name>Check &amp; Describe presence of eventual Discoloration</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>49</id>
+											<parent_id>7</parent_id>
+											<name>Check &amp; Describe presence of eventual cracks</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>50</id>
+											<parent_id>7</parent_id>
+											<name>Check wear of outer and inner lip seal</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>51</id>
+											<parent_id>7</parent_id>
+											<name>Check spring &amp; holding plate segments</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>52</id>
+											<parent_id>7</parent_id>
+											<name>Replacement of Sealing Segments and Lip Sealing</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>53</id>
+											<parent_id>7</parent_id>
+											<name>Check functionality of seal-wear alarm signal</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>54</id>
+											<parent_id>7</parent_id>
+											<name>Installed according drawings</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>55</id>
+											<parent_id>7</parent_id>
+											<name>Check for worn or damaged parts</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+									</services>
+								</item>
+								<item>
+									<id>8</id>
+									<parent_id>1</parent_id>
+									<name>Stator winding installation</name>
+									<services>
+										<item>
+											<id>56</id>
+											<parent_id>8</parent_id>
+											<name>Check &amp; Describe Cleanliness level</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>57</id>
+											<parent_id>8</parent_id>
+											<name>Check &amp; Describe presence of eventual Discoloration</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>58</id>
+											<parent_id>8</parent_id>
+											<name>Check &amp; Describe presence of eventual cracks</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>59</id>
+											<parent_id>8</parent_id>
+											<name>Check bars for visible damages</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>60</id>
+											<parent_id>8</parent_id>
+											<name>Check bar ends non connection side</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>61</id>
+											<parent_id>8</parent_id>
+											<name>Check bar ends connection side</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>62</id>
+											<parent_id>8</parent_id>
+											<name>Check bar and  interconnection</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>63</id>
+											<parent_id>8</parent_id>
+											<name>Check slot wedges</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>64</id>
+											<parent_id>8</parent_id>
+											<name>Check all winding fixation parts</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>65</id>
+											<parent_id>8</parent_id>
+											<name>Check Stator winding insulation resistance</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+									</services>
+								</item>
+								<item>
+									<id>9</id>
+									<parent_id>1</parent_id>
+									<name>Cabling</name>
+									<services>
+										<item>
+											<id>66</id>
+											<parent_id>9</parent_id>
+											<name>Check for brittle parts and damages</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>67</id>
+											<parent_id>9</parent_id>
+											<name>Check &amp; Describe Cleanliness level</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>68</id>
+											<parent_id>9</parent_id>
+											<name>Check air gap sensors coneection plugs</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+									</services>
+								</item>
+							</services>
+						</item>
+						<item>
+							<id>2</id>
+							<parent_id>0</parent_id>
+							<name>Rotarpole / Connections</name>
+							<services>
+								<item>
+									<id>10</id>
+									<parent_id>2</parent_id>
+									<name>Rotorpoles / Connections</name>
+									<services>
+										<item>
+											<id>69</id>
+											<parent_id>10</parent_id>
+											<name>Fixing bolts</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>70</id>
+											<parent_id>10</parent_id>
+											<name>Check &amp; Describe sealing between poles</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>71</id>
+											<parent_id>10</parent_id>
+											<name>Check &amp; Describe state of corrosion protection applied</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>72</id>
+											<parent_id>10</parent_id>
+											<name>Check &amp; Describe presence of Corrosion</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>73</id>
+											<parent_id>10</parent_id>
+											<name>Check &amp; Describe Cleanliness level</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>74</id>
+											<parent_id>10</parent_id>
+											<name>Check &amp; Describe presence of eventual Discoloration</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>75</id>
+											<parent_id>10</parent_id>
+											<name>Check &amp; Describe presence of eventual cracks</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>76</id>
+											<parent_id>10</parent_id>
+											<name>Check pole winding and insulation</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>77</id>
+											<parent_id>10</parent_id>
+											<name>Check locking plates of pole to pole connections</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>78</id>
+											<parent_id>10</parent_id>
+											<name>Check the rotor cover fixation</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>79</id>
+											<parent_id>10</parent_id>
+											<name>Check pole flange and core</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+									</services>
+								</item>
+								<item>
+									<id>11</id>
+									<parent_id>2</parent_id>
+									<name>Rotor connection leads</name>
+									<services>
+										<item>
+											<id>80</id>
+											<parent_id>11</parent_id>
+											<name>Check &amp; Describe Cleanliness level</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>81</id>
+											<parent_id>11</parent_id>
+											<name>Check for damages at the cable surface</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>82</id>
+											<parent_id>11</parent_id>
+											<name>Check fixation of cables</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>83</id>
+											<parent_id>11</parent_id>
+											<name>Check connection at slip rings</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>84</id>
+											<parent_id>11</parent_id>
+											<name>Installed according drawing</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+									</services>
+								</item>
+							</services>
+						</item>
+						<item>
+							<id>3</id>
+							<parent_id>0</parent_id>
+							<name>Motors Auxilliaries</name>
+							<services>
+								<item>
+									<id>15</id>
+									<parent_id>3</parent_id>
+									<name>Cooling system</name>
+									<services>
+										<item>
+											<id>104</id>
+											<parent_id>15</parent_id>
+											<name>Check &amp; Describe presence of Corrosion</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>105</id>
+											<parent_id>15</parent_id>
+											<name>Check &amp; Describe Cleanliness level</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>106</id>
+											<parent_id>15</parent_id>
+											<name>Check &amp; Describe presence of eventual leaks</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>107</id>
+											<parent_id>15</parent_id>
+											<name>Clean heat exchangers if needed</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+									</services>
+								</item>
+								<item>
+									<id>19</id>
+									<parent_id>3</parent_id>
+									<name>Rotor knife switch</name>
+									<services>
+										<item>
+											<id>122</id>
+											<parent_id>19</parent_id>
+											<name>Check &amp; Describe presence of Corrosion</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>123</id>
+											<parent_id>19</parent_id>
+											<name>Check &amp; Describe Cleanliness level</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>124</id>
+											<parent_id>19</parent_id>
+											<name>Check &amp; Describe presence of eventual Discoloration</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>125</id>
+											<parent_id>19</parent_id>
+											<name>Check &amp; Describe presence of eventual cracks</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>126</id>
+											<parent_id>19</parent_id>
+											<name>Check for mechanical damages</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+										<item>
+											<id>127</id>
+											<parent_id>19</parent_id>
+											<name>Check condition of main cablings and supports at stator</name>
+											<tasks>
+												<work_scope>Acc Time</work_scope>
+												<work_carried_out>null</work_carried_out>
+												<conditions>null</conditions>
+												<recommendations>null</recommendations>
+											</tasks>
+										</item>
+									</services>
+								</item>
+							</services>
+						</item>
+					</services>
+				</mill>
+			</service_checklist>
+		</reports>
+	</body>
+</callback>

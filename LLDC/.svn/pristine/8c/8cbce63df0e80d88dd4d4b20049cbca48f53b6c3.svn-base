@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:onClick="onRootViewClick" >
+
+    <LinearLayout
+        android:id="@+id/llTabs"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu_bg"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/menu_bg"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rlMenuTab"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp" >
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:paddingRight="30dp"
+                    android:src="@drawable/back_btn" />
+
+                <TextView
+                    android:id="@+id/tvMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/ivBack"
+                    android:gravity="center_vertical"
+                    android:text="@string/menu"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlWelcomeTab"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" >
+
+                <View
+                    android:id="@+id/viewPinkWelcome"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/textcolor_pink"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivWelcomeHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/welcome" />
+
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/ivWelcomeHome"
+                    android:layout_toRightOf="@+id/ivWelcomeHome"
+                    android:gravity="center_vertical"
+                    android:text="@string/welcome"
+                    android:textColor="@color/black_heading"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMapTab"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" >
+
+                <View
+                    android:id="@+id/viewPinkMap"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/textcolor_pink"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/map" />
+
+                <TextView
+                    android:id="@+id/tvMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/ivMap"
+                    android:gravity="center_vertical"
+                    android:text="@string/map"
+                    android:textColor="@color/black_heading"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlExploreTab"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" >
+
+                <View
+                    android:id="@+id/viewPinkExplore"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/textcolor_pink"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivExplore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/explore_icon" />
+
+                <TextView
+                    android:id="@+id/tvExplore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/ivExplore"
+                    android:gravity="center_vertical"
+                    android:text="@string/explore"
+                    android:textColor="@color/black_heading"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEventsTab"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" >
+
+                <View
+                    android:id="@+id/viewPinkEvent"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/textcolor_pink"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/events" />
+
+                <TextView
+                    android:id="@+id/tvEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/ivEvent"
+                    android:gravity="center_vertical"
+                    android:text="@string/events"
+                    android:textColor="@color/black_heading"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTheParkTab"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" >
+
+                <View
+                    android:id="@+id/viewPinkPark"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/textcolor_pink"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivThePark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/thepark" />
+
+                <TextView
+                    android:id="@+id/tvThePark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/ivThePark"
+                    android:gravity="center_vertical"
+                    android:text="@string/the_park"
+                    android:textColor="@color/black_heading"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:background="@android:color/transparent"
+            android:clickable="false" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivRightTransparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/menu_cutter"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llTabs1"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.62"
+            android:background="@android:color/transparent"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ivMenuLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:src="@drawable/menu_logo" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.38"
+            android:background="@android:color/transparent"
+            android:clickable="false" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tab_selected" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlLogout"
+        android:layout_below="@+id/topbar"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp" >
+
+            <TextView
+                android:id="@+id/tvDriverName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tab_unselected"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:textColor="@color/textview_unselected"
+                android:textSize="20sp" />
+            <!-- android:text="Jake Davis" -->
+
+            <LinearLayout
+                android:id="@+id/rlDueDateCredits"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/tvDriverName"
+                android:background="@android:color/white"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/llMoneyCredits"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center|bottom"
+                        android:text="-"
+                        android:textColor="@android:color/black"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDueDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center|top"
+                        android:text="Monies owed"
+                        android:textColor="@color/textview_selected"
+                        android:textSize="@dimen/heading_textsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDueDateCredits"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tvCredits"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center|bottom"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCreditsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center|top"
+                        android:text="Credits"
+                        android:textColor="@color/textview_selected"
+                        android:textSize="@dimen/heading_textsize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlBuyCredits"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlDueDateCredits"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvBuyCreditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="70dp"
+                    android:text="Buy Job Credits"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/nextarrow" />
+
+                <TextView
+                    android:id="@+id/textBuyCreditsStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/on"
+                    android:enabled="false"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="OFF"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAutoTopUp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlBuyCredits"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="false"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/tvAutoTopUpText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="20dp"
+                    android:text="Auto Top Up"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textAutoTopUpON"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/textAutoTopUpOFF"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="5dp"
+                    android:text="ON"
+                    android:textColor="@color/textcolor_grey"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textAutoTopUpOFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/dividerView"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:text="OFF"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <View
+                    android:id="@+id/dividerView"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@+id/tvAutoTopUpAmt"
+                    android:background="@color/badgecolor_unselected" />
+
+                <TextView
+                    android:id="@+id/tvAutoTopUpAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/registration_btn_selector"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:text="\u00A3 0.00"
+                    android:textColor="#fd6f01"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_myFilters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlAutoTopUp"
+                android:layout_marginTop="20dp" >
+
+                <!-- <fragment -->
+                <!-- android:id="@+id/fragment_myFilters" -->
+                <!-- android:name="com.android.cabapp.fragments.MyFiltersFragment" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="wrap_content" /> -->
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/fragment_myFilters"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvChangePasswordText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Change Password"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/nextarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPersonalDetails"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlChangePassword"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvPersonalDetailsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Personal Details"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/nextarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlVehicleLicenseDetails"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlPersonalDetails"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvVehicleLicenseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Vehicle/License Details"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/nextarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlDocumentUpload"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlVehicleLicenseDetails"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvDocumentUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Document Upload"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/nextarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlBankDetails"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlDocumentUpload"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvBankDetailsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Bank Details"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/nextarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlBillingAddress"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlBankDetails"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvBillingAddressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Billing Address"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/nextarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlVTutorial"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlBillingAddress"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvTutorialText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="View Tutorial"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/nextarrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlDistance"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlVTutorial"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/registration_btn_selector"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvDistanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Distance"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/registration_btn_selector"
+                    android:drawableLeft="@drawable/on"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:paddingRight="15dp"
+                    android:textColor="@android:color/white"
+                    android:textOff="km"
+                    android:textOn="miles"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlDeviceId"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlDistance"
+                android:layout_marginTop="20dp"
+                android:background="@color/registration_button"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/tvDeviceIdText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="Chip/pin serial no."
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/nextarrow"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvDeviceID"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rlDeviceId"
+                android:layout_marginTop="1dp"
+                android:background="@color/tab_unselected"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text=""
+                android:textColor="@color/textview_unselected"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlLogout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <TextView
+            android:id="@+id/tvLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/registration_btn_selector"
+            android:drawableLeft="@drawable/logout"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Log Out"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlOverlayMyAccountHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@color/overlay_bg"
+        android:paddingTop="15dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvOverlayMyAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="MY ACCOUNT"
+            android:textColor="@color/textview_selected"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvManageAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvOverlayMyAccount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="false"
+            android:text="Manage your account profile e.g. card payment, vehicle details, bank account, new password. You can also top up your Credits here to accept work, you only pay as you go"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlFakeBuyCredits"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tvManageAccount"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/registration_btn_selector" >
+
+            <TextView
+                android:id="@+id/tvFakeBuyCreditText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="70dp"
+                android:text="Buy Job Credits"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingRight="15dp"
+                android:src="@drawable/nextarrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlFakeAutoTopUp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rlFakeBuyCredits"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/registration_btn_selector"
+            android:clickable="false"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/tvFakeAutoTopUpText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:text="Auto Top Up"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textFakeAutoTopUpON"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/textFakeAutoTopUpOFF"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:text="ON"
+                android:textColor="@color/textcolor_grey"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textFakeAutoTopUpOFF"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/fakeDividerView"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:text="OFF"
+                android:textColor="@color/textview_selected"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/fakeDividerView"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/tvFakeAutoTopUpAmt"
+                android:background="@color/badgecolor_unselected" />
+
+            <TextView
+                android:id="@+id/tvFakeAutoTopUpAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/registration_btn_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:text="\u00A3 0.00"
+                android:textColor="#fd6f01"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/footerOverlayMyAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:background="@color/overlay_bg"
+            android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/tvOkGotItArrived"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/registration_button"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="OKAY GOT IT"
+                android:textColor="@color/textview_selected"
+                android:textSize="25sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+{
+  GetHotelDetail_Response: {
+    HotelId: "WSMA0809090398",
+    HotelName: "Convenient Park",
+    Rating: "3.00",
+    HotelRooms: "160",
+    Address1: "12 Sukhumvit 64",
+    Address2: "Phakhanong",
+    Address3: "Bangjak",
+    Continent: "Asia",
+    Region: "South Eastern Asia",
+    Location: "Sukhumvit",
+    Telephone: "(66) 2741 - 6710 - 7",
+    Facsimile: "(66) 2311 - 5104",
+    Email: {
+      
+    },
+    Website: "www.convenientpark.com",
+    Description: "The 160 guest rooms and suites are thoughtfully furnished to combine the utmost comfort with every convenience. No effort has been spared, no detail overlooked, to make the guest feel well and truly at home.",
+    Images: [
+      {
+        @attributes: {
+          path: "http://hoteltrip.travflex.com/services/ImageData/Hotel/convenient_park-logo.gif"
+        }
+      },
+      {
+        @attributes: {
+          path: "http://hoteltrip.travflex.com/services/ImageData/Hotel/convenient_park-general1.jpg"
+        }
+      },
+      {
+        @attributes: {
+          path: "http://hoteltrip.travflex.com/services/ImageData/Hotel/convenient_park-overview1.jpg"
+        }
+      },
+      {
+        @attributes: {
+          path: "http://hoteltrip.travflex.com/services/ImageData/Hotel/convenient_park-facility1.jpg"
+        }
+      },
+      {
+        @attributes: {
+          path: "http://hoteltrip.travflex.com/services/ImageData/Hotel/convenient_park-room1.jpg"
+        }
+      },
+      {
+        @attributes: {
+          path: "http://hoteltrip.travflex.com/services/ImageData/Hotel/convenient_park-facility2.jpg"
+        }
+      },
+      {
+        @attributes: {
+          path: "http://hoteltrip.travflex.com/services/ImageData/Hotel/convenient_park-room2.jpg"
+        }
+      },
+      {
+        @attributes: {
+          path: "http://hoteltrip.travflex.com/services/ImageData/Hotel/convenient_park-room3.jpg"
+        }
+      }
+    ]
+  }
+}

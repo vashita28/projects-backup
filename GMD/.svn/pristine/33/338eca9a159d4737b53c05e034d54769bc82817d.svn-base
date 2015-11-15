@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_page_color">#ffffff</color>
+	<color name="hint_text_color">#cccccc</color>
+	<color name="GMD_heading_text_color">#666666</color>
+	<color name="title_bar_data_text_color">#ffffff</color>
+	<color name="page_heading_text_color">#999999</color>
+	<color name="textview_text_color">#666666</color>
+	<color name="editText_bg_text_color">#00000000</color>
+	<color name="edtText_text_color">#cccccc</color>
+	<color name="service_checklist_text_color">#ffffff</color>
+</resources>

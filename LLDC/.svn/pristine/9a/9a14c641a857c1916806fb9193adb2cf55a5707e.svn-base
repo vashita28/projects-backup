@@ -1,0 +1,64 @@
+package co.uk.android.lldc.fragments.tablet;
+
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import co.uk.android.lldc.R;
+import co.uk.android.lldc.fragments.EventsFragment;
+import co.uk.android.lldc.tablet.HomeActivityTablet;
+
+public class TodaysEventFragmentTablet extends Fragment {
+
+	FragmentManager mFragmentManager;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		View rootView = null;
+		getActivity().setRequestedOrientation(
+				ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		rootView = inflater.inflate(R.layout.fragment_todays_event, container,
+				false);
+
+		((HomeActivityTablet) getActivity()).tvHeaderTitle
+				.setText("Today's Event");
+		((HomeActivityTablet) getActivity()).rlSearchWelcome
+				.setVisibility(View.GONE);
+		((HomeActivityTablet) getActivity()).rlSearchHeaderDefault
+				.setVisibility(View.VISIBLE);
+		displayView(1);
+
+		return rootView;
+	}
+
+	private void displayView(int position) {
+
+		Fragment fragment = null;
+		switch (position) {
+		case 1:
+			fragment = (Fragment) new EventsFragment();
+			Bundle bundle = new Bundle();
+			bundle.putBoolean("bIsComingFromExplore", false);
+			bundle.putString("bIsForTodayEvent", "TodaysEventActivity");
+			fragment.setArguments(bundle);
+			break;
+
+		}
+
+		if (fragment != null) {
+			mFragmentManager = getParentFragment().getChildFragmentManager();
+			mFragmentManager.beginTransaction()
+					.replace(R.id.frame_container, fragment)
+					.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+					.commit();
+		}
+
+	}
+
+}

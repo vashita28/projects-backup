@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- Header -->
+
+    <include
+        android:id="@+id/view_service_checklists_top_bar"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_service_checklists_top_bar" >
+
+        <include
+            android:id="@+id/view_sample_task_page"
+            layout="@layout/sample_task"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_below="@+id/view_service_checklists_top_bar" > -->
+
+
+    <!-- <include -->
+    <!-- android:id="@+id/view_sample_task_page_2" -->
+    <!-- layout="@layout/sample_task_2" -->
+    <!-- android:visibility="gone" /> -->
+    <!-- </LinearLayout> -->
+
+
+    <!-- Content -->
+
+
+    <!-- <Button -->
+    <!-- android:id="@+id/reportproblemBtn" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="36dp" -->
+    <!-- android:layout_below="@+id/view_service_checklists_top_bar" -->
+    <!-- android:layout_marginLeft="5dp" -->
+    <!-- android:text="Report a Problem" /> -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp" />
+
+</RelativeLayout>

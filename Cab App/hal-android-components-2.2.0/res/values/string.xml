@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Android HAL</string>
+	<!-- common -->
+	<string name="cancelling">Cancelling...</string>
+	<string name="cancel">Cancel</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="close">Close</string>
+	<string name="try_again">Try again</string>
+	<string name="done">Done</string>
+	<!-- device list -->
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <!-- xml command state -->
+    <string name="xml_cmd_progress_title">XML Command Request</string>
+    <string name="xml_cmd_starting">Starting XML command process...</string>
+    <string name="xml_cmd_completed">XML command process completed</string>
+    <!-- download device logs  state -->
+    <string name="logs_progress_title">Download Device Logs</string>
+    <string name="logs_starting">Starting download device logs process...</string>
+    <string name="logs_completed">Finished downloading device logs!</string>
+    <!-- financial transaction progress -->
+    <string name="ft_progress_title">Financial Transaction</string>
+	<string name="ft_starting">Starting financial transaction ...</string>
+	<string name="ft_started">Financial transaction is started</string>
+	<string name="ft_checking_status">Checking financial transaction status ...</string>
+	<string name="ft_notification_transaction_failed">Last transaction failed</string>
+	<string name="ft_notification_transaction_completed">Last transaction completed</string>
+			<!-- Bluetooth dialog -->
+	<string name="bt_enable_dialog_title">Bluetooth</string>
+	<string name="bt_enable_dialog_text">Bluetooth is not enabled, do you want turn it on?</string>
+	<string name="bt_disable_dialog_text">Do you want turn off Bluetooth?</string>
+	<string name="turning_on_bt">Turning ON bluetooth...</string>
+	<string name="turning_off_bt">Turning OFF bluetooth...</string>
+	<string name="bt_operation_error_text">Error is occurred during bluetooth operation, do you want try again?</string>
+	<string name="progress_scanning">Scanning...</string>	
+	<!-- Connection dialog -->
+	<string name="connect_ped_title">Connection to Card Reader</string>
+	<string name="connect_ped_message">Device is not connected to Card Reader, do you want connect?</string>	    
+	<string name="connecting">Connecting...</string>
+	<string name="connect_error_message">Connection to Card Reader failed</string>
+	<!-- logs download -->
+	<string name="logs_download">Downloading logs...</string>
+    <string name="logs_download_finish">Finished downloading logs...</string>
+	<!-- errors -->
+	<string name="bluetooth_not_available">Bluetooth is not available</string>
+	<string name="not_connected_to_ped">Device is not connected to Card Reader, please make connect first</string>
+	<string name="error_connection_ped">Error connection to Card Reader</string>
+	<string name="error_transaction">Error is occured during financial transaction, please try again later</string>
+	<string name="operation_in_progress">Transaction is in progress, please try again later</string>
+	<string name="ft_not_supported">Unsupported type of Financial Transaction</string>
+	<!-- statuses -->
+	<string-array name="statuses">
+		<item>Unknown status</item>
+		<item>Process completed correctly</item>
+		<item>Invalid data for the current command</item>
+		<item>General error occurred during processing</item>
+		<item>Command sent is not allowed in the current state</item>
+		<item>Terminal is not initialised</item>
+		<item>CONNECT_TIMEOUT</item>
+		<item>CONNECT_ERROR</item>
+		<item>SENDING_ERROR</item>
+		<item>RECEIVING_ERROR</item>
+		<item>NO_DATA_AVAILABLE</item>
+		<item>TRANS_NOT_ALLOWED</item>
+		<item>UNSUPPORTED_CURRENCY</item>
+		<item>NO_HOST_AVAILABLE</item>
+		<item>Error detected in the card reader</item>
+		<item>Card reading was unsuccessful</item>
+		<item>Card was read but it’s invalid</item>
+		<item>User input procedure timeout expired</item>
+		<item>Operation has been canceled by user</item>
+		<item>INVALID_SIGNATURE</item>
+		<item>Waiting for the card to be inserted...</item>
+		<item>Card was detected by the reader</item>
+		<item>EMV application selection in progress...</item>
+		<item>EMV application confirmation in progress...</item>
+		<item>Amount Validation in progress...</item>
+		<item>PIN input in progress...</item>
+		<item>Manual card data input in progress...</item>
+		<item>Waiting for the card to be removed...</item>
+	</string-array>
+	<string name="status_special_4097">Connecting to bureau...</string>
+	<string name="status_special_4098">Connected to bureau</string>
+	<string name="status_special_4099">Disconnected from bureau</string>	
+	<string-array name="transaction_types">
+		<item>Unknown</item>
+		<item>SALE</item>
+		<item>SALE VOID</item>
+		<item>REFUND</item>
+		<item>REFUND VOID</item>
+	</string-array>
+	<string-array name="transaction_statuses">
+		<item>UNKNOWN</item>
+		<item>APPROVED</item>
+		<item>DECLINED</item>
+		<item>PROCESSED</item>
+		<item>NOT_PROCESSED</item>	
+	</string-array>
+	<string name="connected">Connected</string>
+	<string name="disconnected">Disconnected</string>
+<!-- Timeout handler -->
+	<string name="th_waiting_timeout_handling">Waiting for timeout handling...</string>
+	<string name="th_message">Remote device does not answer</string>
+	<string name="th_positive_button_label">Wait</string>
+	<string name="th_negative_button_label">Cancel operation</string>
+<!-- Signature verification -->
+	<string name="sv_notification_text">Waiting for signature</string>
+	<string name="sv_positive_button_label">Accept</string>
+	<string name="sv_negative_button_label">Decline</string>
+	<string name="sv_signature_verified">Signature verified</string>
+<!-- Errors -->
+	<string name="error_common">Error occurred, try again later</string>	
+</resources>

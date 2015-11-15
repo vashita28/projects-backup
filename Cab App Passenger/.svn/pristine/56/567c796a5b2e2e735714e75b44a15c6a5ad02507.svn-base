@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_prebook_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_divider" >
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <include
+            android:id="@+id/inc_header"
+            layout="@layout/common_top_bar_maps" />
+
+        <include
+            android:id="@+id/inc_topbar"
+            layout="@layout/common_top_bar"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv_main"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rl_done"
+        android:layout_below="@id/ll_top"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp" >
+
+            <!-- Pick Up Point (pp) -->
+
+            <RelativeLayout
+                android:id="@+id/rel_pick_up_top_right"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="#272725" >
+
+                <TextView
+                    android:id="@+id/tv_pick_up_top_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="@dimen/prebook_rightdrawablepadding"
+                    android:background="@color/list_background"
+                    android:drawableLeft="@drawable/favorites"
+                    android:drawablePadding="@dimen/prebook_rightdrawablepadding"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/list_padding"
+                    android:text="@string/add"
+                    android:textColor="@color/textview_unselected"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_pick_up_top_left"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/list_background"
+                android:drawableLeft="@drawable/pickup_point"
+                android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/list_padding"
+                android:text="@string/pick_up_point"
+                android:textColor="@color/textview_unselected"
+                android:textSize="18sp" />
+
+            <com.example.cabapppassenger.util.CustomAutoCompleteTextView
+                android:id="@+id/atv_pick_up_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_pick_up_top_left"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/et_pick_up_pincode"
+                android:padding="@dimen/list_padding"
+                android:singleLine="true"
+                android:textColor="@color/prebook_textcolor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_pick_up_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/atv_pick_up_address"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:imeOptions="actionDone"
+                android:padding="@dimen/list_padding"
+                android:singleLine="true"
+                android:textColor="@color/prebook_textcolor"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_pick_up_bottombar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_pick_up_pincode"
+                android:background="@color/list_background"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_pick_up_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/track"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/location"
+                    android:textColor="@color/textview_selected" />
+
+                <TextView
+                    android:id="@+id/tv_pick_up_onmap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/onmap"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/on_map"
+                    android:textColor="@color/textcolor_grey" />
+
+                <TextView
+                    android:id="@+id/tv_pick_up_favorites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/favorites2"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/favourites"
+                    android:textColor="@color/textcolor_grey" />
+
+                <TextView
+                    android:id="@+id/tv_pick_up_recent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/recent"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/recent"
+                    android:textColor="@color/textcolor_grey" />
+            </LinearLayout>
+
+            <!-- Drop Off Point (pp) -->
+
+            <RelativeLayout
+                android:id="@+id/rel_drop_off_top_right"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/ll_pick_up_bottombar"
+                android:layout_marginTop="20dp"
+                android:background="#272725" >
+
+                <TextView
+                    android:id="@+id/tv_drop_off_top_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="@dimen/prebook_rightdrawablepadding"
+                    android:background="@color/list_background"
+                    android:drawableLeft="@drawable/favorites"
+                    android:drawablePadding="@dimen/prebook_rightdrawablepadding"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/list_padding"
+                    android:text="@string/add"
+                    android:textColor="@color/textview_unselected"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_drop_off_top_left"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/ll_pick_up_bottombar"
+                android:layout_marginTop="20dp"
+                android:background="@color/list_background"
+                android:drawableLeft="@drawable/dropoff_point"
+                android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                android:gravity="center_vertical"
+                android:padding="@dimen/list_padding"
+                android:text="@string/drop_off_point"
+                android:textColor="@color/textview_unselected"
+                android:textSize="18sp" />
+
+            <com.example.cabapppassenger.util.CustomAutoCompleteTextView
+                android:id="@+id/atv_drop_off_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_drop_off_top_left"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/et_drop_off_pincode"
+                android:padding="@dimen/list_padding"
+                android:singleLine="true"
+                android:textColor="@color/prebook_textcolor"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_drop_off_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/atv_drop_off_address"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:imeOptions="actionDone"
+                android:padding="@dimen/list_padding"
+                android:singleLine="true"
+                android:textColor="@color/prebook_textcolor"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_drop_off_bottombar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_drop_off_pincode"
+                android:background="@color/tab_unselected"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_drop_off_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/track"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/location"
+                    android:textAlignment="center"
+                    android:textColor="@color/textview_selected" />
+
+                <TextView
+                    android:id="@+id/tv_drop_off_onmap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/onmap"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/on_map"
+                    android:textColor="@color/textcolor_grey" />
+
+                <TextView
+                    android:id="@+id/tv_drop_off_favorites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/favorites2"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/favourites"
+                    android:textColor="@color/textcolor_grey" />
+
+                <TextView
+                    android:id="@+id/tv_drop_off_recent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/favorites2"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/recent"
+                    android:textColor="@color/textcolor_grey" />
+            </LinearLayout>
+
+            <!-- when (w) -->
+
+            <TextView
+                android:id="@+id/tv_w_top_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_drop_off_bottombar"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/tab_unselected"
+                android:drawableLeft="@drawable/time"
+                android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                android:gravity="center_vertical"
+                android:padding="@dimen/list_padding"
+                android:text="When?"
+                android:textColor="@color/textview_unselected"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_w_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_w_top_left"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:padding="@dimen/list_padding"
+                android:singleLine="true"
+                android:textColor="@color/prebook_textcolor"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_w_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_w_date"
+                android:layout_marginBottom="1dp"
+                android:background="@android:color/white"
+                android:padding="@dimen/list_padding"
+                android:singleLine="true"
+                android:textColor="@color/prebook_textcolor"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_w_bottombar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_w_time"
+                android:background="@color/tab_unselected"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_w_asap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/asap"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/asap"
+                    android:textColor="@color/textcolor_grey" />
+
+                <TextView
+                    android:id="@+id/tv_w_prebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/prebookselected"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/pre_book"
+                    android:textColor="@color/textview_selected" />
+            </LinearLayout>
+
+            <!-- passenger (p) -->
+
+            <TextView
+                android:id="@+id/tv_p_top_left"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ll_w_bottombar"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/tab_unselected"
+                android:drawableLeft="@drawable/passengers"
+                android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                android:gravity="center_vertical"
+                android:padding="@dimen/list_padding"
+                android:text="@string/passengers"
+                android:textColor="@color/textview_unselected"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinner_passenger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_p_top_left"
+                android:background="@android:color/white"
+                android:drawSelectorOnTop="true"
+                android:spinnerMode="dropdown" />
+
+            <!-- Expandable list for accessibility options and comments -->
+
+            <TextView
+                android:id="@+id/tv_ao_header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/spinner_passenger"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/tab_unselected"
+                android:clickable="true"
+                android:drawableLeft="@drawable/accessibility"
+                android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                android:drawableRight="@drawable/addcomment"
+                android:gravity="center_vertical"
+                android:padding="@dimen/list_padding"
+                android:text="@string/accessibility_options"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_ao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_ao_header"
+                android:background="@color/tab_unselected"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <View
+                    android:id="@+id/dummyview"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:id="@+id/tv_ao_wheelchair_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@id/dummyview"
+                    android:drawableTop="@drawable/wheelchair_user"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/wheelchair_user"
+                    android:textColor="@color/textcolor_grey" />
+
+                <TextView
+                    android:id="@+id/tv_ao_hearing_impaired"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@id/dummyview"
+                    android:drawableTop="@drawable/hearing_impaired"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/list_padding"
+                    android:paddingTop="@dimen/list_padding"
+                    android:text="@string/hearing_impaired"
+                    android:textColor="@color/textcolor_grey" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_comments"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/rl_ao"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/tab_unselected"
+                android:clickable="true"
+                android:drawableLeft="@drawable/comment"
+                android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                android:drawableRight="@drawable/addcomment"
+                android:gravity="center_vertical"
+                android:padding="@dimen/list_padding"
+                android:text="@string/comments"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_comments"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/tv_comments"
+                android:background="@android:color/white"
+                android:ellipsize="end"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="@string/add_your_comments_"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine|textNoSuggestions|textCapSentences"
+                android:overScrollMode="always"
+                android:padding="@dimen/list_padding"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:textColor="@color/prebook_textcolor"
+                android:textSize="18sp" >
+            </EditText>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="1dp"
+            android:drawableLeft="@drawable/yes"
+            android:drawablePadding="12dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="@dimen/list_padding"
+            android:text="@string/done"
+            android:textColor="@color/textview_unselected"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

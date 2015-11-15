@@ -1,0 +1,540 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_color" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_buttons"
+        android:layout_below="@+id/header"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- Content::Page Heading(Upper heading) -->
+
+            <TextView
+                android:id="@+id/page_heading_middle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_bar"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="@string/MAGNETIC_CENTERING_CENTER_HEADING"
+                android:textColor="@color/page_heading_text_color"
+                android:textSize="@dimen/normal_text_size" />
+
+            <!-- Numbering -->
+
+            <LinearLayout
+                android:id="@+id/ll_top_headings_numbering"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/numbering_Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.80"
+                    android:gravity="left"
+                    android:text="@string/NUMBERING"
+                    android:textColor="@color/textview_text_color"
+                    android:textSize="@dimen/special_data_heading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/numbering_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.20"
+                    android:gravity="center_vertical"
+                    android:text="@string/CLOCKWISE_SEEN_FROM_FEEDER_SIDE"
+                    android:textColor="@color/textview_text_color"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <!-- Heading: Physical Measurement -->
+
+            <LinearLayout
+                android:id="@+id/ll_heading_phy_measurement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_heading_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/item_physicalmeasurement_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="@string/PHYSICAL_MEASUREMENT_MM"
+                        android:textColor="@color/textview_text_color"
+                        android:textSize="@dimen/special_data_heading"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Heading Row: Position(Partition) :Physical -->
+
+                <LinearLayout
+                    android:id="@+id/ll_heading_physical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1" >
+
+                        <TextView
+                            android:id="@+id/tv_heading_position_physical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.22"
+                            android:gravity="center"
+                            android:text="@string/POSITION_ONLY"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_heading_position_physical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.21"
+                            android:gravity="center"
+                            android:text="@string/POLE_NO"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_heading_feeder_physical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.19"
+                            android:gravity="center"
+                            android:text="@string/FEEDER_SIDE"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_heading_discharge_physical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.19"
+                            android:gravity="center"
+                            android:text="@string/DISCHARGE_SIDE"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_heading_deviation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_weight="0.19"
+                            android:gravity="center"
+                            android:text="@string/DEVIATION"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/plain_line" />
+                </LinearLayout>
+
+                <!-- rows layout:air gap measurement -->
+
+                <LinearLayout
+                    android:id="@+id/ll_magnetic_centering_rows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <!-- Rows goes here: from layout:: simplerow_magnetic_centering.xml -->
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+
+            <!-- Heading: Winding/Stator/Ambient Temperature -->
+
+            <LinearLayout
+                android:id="@+id/ll_winding_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_winding_line_submenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <!-- Winding T'C -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/et_winding"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:editable="false"
+                            android:ems="10"
+                            android:gravity="center|left"
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:text="@string/WINDING_T"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+
+                        <!-- <View -->
+                        <!-- android:layout_width="wrap_content" -->
+                        <!-- android:layout_height="8dp" -->
+                        <!-- android:layout_gravity="center_horizontal" -->
+                        <!-- android:layout_marginBottom="1dp" -->
+                        <!-- android:background="@drawable/below_line_2" /> -->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/et_winding_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:gravity="left"
+                            android:paddingLeft="3dp"
+                            android:singleLine="true"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_1" />
+                    </LinearLayout>
+
+                    <!-- stator T'C -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/et_stator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/editText_bg_text_color"
+                            android:editable="false"
+                            android:gravity="center|left"
+                            android:paddingLeft="3dp"
+                            android:singleLine="true"
+                            android:text="@string/STATOR_T"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+
+                        <!-- <View -->
+                        <!-- android:layout_width="wrap_content" -->
+                        <!-- android:layout_height="8dp" -->
+                        <!-- android:layout_gravity="center_horizontal" -->
+                        <!-- android:layout_marginBottom="1dp" -->
+                        <!-- android:background="@drawable/below_line_2" /> -->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/et_stator_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:gravity="left"
+                            android:paddingLeft="3dp"
+                            android:singleLine="true"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_1" />
+                    </LinearLayout>
+
+                    <!-- Ambiante T'C -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/et_Ambiante"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/editText_bg_text_color"
+                            android:editable="false"
+                            android:gravity="center|left"
+                            android:paddingLeft="3dp"
+                            android:text="@string/AMBIANTE_T"
+                            android:singleLine="true"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading"
+                            android:textStyle="bold" />
+
+                        <!-- <View -->
+                        <!-- android:layout_width="wrap_content" -->
+                        <!-- android:layout_height="8dp" -->
+                        <!-- android:layout_gravity="center_horizontal" -->
+                        <!-- android:layout_marginBottom="1dp" -->
+                        <!-- android:background="@drawable/below_line_2" /> -->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/et_Ambiante_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:gravity="left"
+                            android:paddingLeft="3dp"
+                            android:singleLine="true"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/below_line_1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- <View -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="2dp" -->
+                <!-- android:layout_gravity="center_horizontal" -->
+                <!-- android:layout_marginBottom="10dp" -->
+                <!-- android:layout_marginLeft="12dp" -->
+                <!-- android:layout_marginRight="12dp" -->
+                <!-- android:layout_marginTop="5dp" -->
+                <!-- android:background="@drawable/plain_line" /> -->
+
+
+                <!-- remarks -->
+
+                <LinearLayout
+                    android:id="@+id/ll_remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:id="@+id/tv_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.90"
+                        android:gravity="left"
+                        android:text="@string/REMARKS"
+                        android:textColor="@color/textview_text_color"
+                        android:textSize="@dimen/special_data_heading"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.10"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/et_remarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/editText_bg_text_color"
+                            android:gravity="left"
+                            android:paddingLeft="3dp"
+                            android:singleLine="true"
+                            android:textColor="@color/textview_text_color"
+                            android:textSize="@dimen/special_data_heading" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="8dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/login_underline" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/remarks_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.10"
+                    android:gravity="center_vertical"
+                    android:text="@string/REMARKS_TEXT"
+                    android:textColor="@color/textview_text_color"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_orange"
+                android:text="@string/CANCEL"
+                android:textColor="@color/title_bar_data_text_color"
+                android:textSize="@dimen/button_text_size" />
+
+            <Button
+                android:id="@+id/btn_saveandcomplete"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_green"
+                android:text="@string/saveandcomplete"
+                android:textColor="@color/title_bar_data_text_color"
+                android:textSize="@dimen/button_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_magnetic_centering"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

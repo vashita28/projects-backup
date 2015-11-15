@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/today_event_tabcolor"
+    android:clickable="true"
+    android:paddingEnd="3dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="20dp"
+    android:paddingStart="0dp" >
+
+    <ImageView
+        android:id="@+id/ivCalenderBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/event_bg_img" />
+
+    <RelativeLayout
+        android:id="@+id/rlCalender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" >
+
+        <ImageView
+            android:id="@+id/ivCalenderBackGrd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@color/white_transparent" />
+
+        <ImageView
+            android:id="@+id/ivCalender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/todays_event_cal"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/rlDateMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivCalender"
+            android:layout_alignEnd="@+id/ivCalender"
+            android:layout_alignLeft="@+id/ivCalender"
+            android:layout_alignRight="@+id/ivCalender"
+            android:layout_alignStart="@+id/ivCalender"
+            android:layout_alignTop="@+id/ivCalender"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/todays_event_cal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:weightSum="1" >
+
+            <co.uk.android.lldc.custom.CustomTextView_CartiloRegular
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.60"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="11"
+                android:textColor="@color/textcolor_pink"
+                android:textSize="30sp" />
+
+            <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                android:id="@+id/tvMonth"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/tvDate"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="0.40"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Feb"
+                android:textColor="@color/textcolor_pink"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+            android:id="@+id/tvTodayEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlDateMonth"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="TODAY\&apos;S EVENTS"
+            android:textColor="@color/black_heading"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

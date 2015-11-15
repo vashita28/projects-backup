@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar" />
+
+    <FrameLayout
+        android:id="@+id/map_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottombar"
+        android:layout_below="@+id/topbar" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/map_frame"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/getataxi_bg"
+        android:clickable="false" >
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="55dp"
+            android:layout_toRightOf="@+id/iv_dragmap"
+            android:clickable="false"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_dragmap"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:clickable="false"
+            android:src="@drawable/passengers" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/rel_address"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/rel_address"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/addressedit"
+        android:textColor="#fd6f01"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/rel_noofcabs"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/ll_bottombar"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/mapimage" >
+
+        <RelativeLayout
+            android:id="@+id/rl_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_time"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/time" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_cabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_time"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/tv_cabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_cabs"
+                android:text=""
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_cabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/taxi" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_currentlocation"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/ll_bottombar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/mapimage" >
+
+        <ImageView
+            android:id="@+id/iv_currentlocation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/track" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tab_selected"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rel_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#272725" >
+
+            <ImageButton
+                android:id="@+id/imgbtn_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_now"
+                android:background="@drawable/hailnowicon" />
+
+            <TextView
+                android:id="@+id/tv_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/now"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/now_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_prebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#272725" >
+
+            <ImageButton
+                android:id="@+id/imgbtn_prebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_prebook"
+                android:background="@drawable/prebookicon" />
+
+            <TextView
+                android:id="@+id/tv_prebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/prebook"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/prebook_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/passenger" />
+
+    <View
+        android:id="@+id/view_slidingtoggle"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rel_currentlocation"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rel_address"
+        android:clickable="false"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view_editbackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottombar"
+        android:layout_below="@+id/rel_address"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/sc_airport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rel_currentlocation"
+        android:layout_below="@+id/rel_address"
+        android:layout_marginBottom="20dp"
+        android:fadeScrollbars="false"
+        android:scrollbarStyle="outsideOverlay"
+        android:visibility="gone" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/airport_layout" />
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sc_editlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rel_currentlocation"
+        android:layout_below="@+id/rel_address"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:fadeScrollbars="false"
+        android:scrollbarStyle="outsideOverlay"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rel_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp" >
+
+            <!-- Pick Up Point (pp) -->
+
+            <RelativeLayout
+                android:id="@+id/rel_pick_up_top_right"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#272725" >
+
+                <TextView
+                    android:id="@+id/tv_pick_up_top_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginRight="@dimen/prebook_rightdrawablepadding"
+                    android:background="@color/list_background"
+                    android:drawableLeft="@drawable/favorites"
+                    android:drawablePadding="@dimen/prebook_rightdrawablepadding"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/list_padding"
+                    android:text="@string/add"
+                    android:textColor="@color/textview_unselected"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_pick_up_top_left"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignTop="@id/rel_pick_up_top_right"
+                android:background="@color/list_background"
+                android:drawableLeft="@drawable/pickup_point"
+                android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/list_padding"
+                android:text="@string/pick_up_point"
+                android:textColor="@color/textview_unselected"
+                android:textSize="18sp" />
+
+            <com.example.cabapppassenger.util.CustomAutoCompleteTextView
+                android:id="@+id/atv_pick_up_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_pick_up_top_right"
+                android:background="@android:color/white"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/et_pick_up_pincode"
+                android:padding="@dimen/list_padding"
+                android:singleLine="true"
+                android:textColor="@color/prebook_textcolor"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/view_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/atv_pick_up_address"
+                android:background="#272725" />
+
+            <EditText
+                android:id="@+id/et_pick_up_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_edittext"
+                android:background="@android:color/white"
+                android:padding="@dimen/list_padding"
+                android:singleLine="true"
+                android:textColor="@color/prebook_textcolor"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_pick_up_bottombar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_pick_up_pincode"
+                android:background="@color/list_background"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_pick_up_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/track"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/edit_map_padding"
+                    android:paddingTop="@dimen/edit_map_padding"
+                    android:text="@string/location"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_pick_up_onmap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/onmap"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/edit_map_padding"
+                    android:paddingTop="@dimen/edit_map_padding"
+                    android:text="@string/on_map"
+                    android:textColor="@color/textcolor_grey"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_pick_up_favorites"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/favorites2"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/edit_map_padding"
+                    android:paddingTop="@dimen/edit_map_padding"
+                    android:text="@string/favorites"
+                    android:textColor="@color/textcolor_grey"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_pick_up_recent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/prebook_leftdrawablepadding"
+                    android:drawableTop="@drawable/recent"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="@dimen/edit_map_padding"
+                    android:paddingTop="@dimen/edit_map_padding"
+                    android:text="@string/recent"
+                    android:textColor="@color/textcolor_grey"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_getaquicker_taxi"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/ll_pick_up_bottombar"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/getataxi_bg" >
+
+                <TextView
+                    android:id="@+id/tv_extradetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/extradetails"
+                    android:textColor="@color/textview_selected"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_quickertaxi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_extradetails"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="-3dp"
+                    android:text="@string/quickercab"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sc_"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rel_currentlocation"
+        android:layout_below="@+id/rel_address"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rel_airport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rel_select_airport"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#272725" >
+
+                <TextView
+                    android:id="@+id/tv_selectairport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/list_background"
+                    android:gravity="center_vertical"
+                    android:text="@string/airport_dropoff"
+                    android:textColor="#727272"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/lv_airports"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/rel_select_airport"
+                android:layout_centerHorizontal="true" >
+            </ListView>
+
+            <RelativeLayout
+                android:id="@+id/rel_cabapp_loc_text"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_below="@+id/lv_airports"
+                android:background="#272725" >
+
+                <ImageView
+                    android:id="@+id/iv_cablocation"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/question" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/tv_notgoing_airport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/imageView1"
+                    android:layout_toRightOf="@+id/iv_cablocation"
+                    android:gravity="left"
+                    android:text="@string/notgoing_airport"
+                    android:textColor="#727272"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/airport_nextarrow" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

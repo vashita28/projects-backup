@@ -1,0 +1,539 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_color"
+    android:orientation="vertical" >
+
+    <!-- Header -->
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <!-- NEW LAYOUT -->
+
+    <ScrollView
+        android:id="@+id/content_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical" >
+
+            <!-- Site storage conditions -->
+
+            <TextView
+                android:id="@+id/site_storage_conditions_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="@string/SITE_STORAGE_CONDITIONS"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/bold_text_size" />
+
+            <View
+                android:id="@+id/ssc_view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/site_storage_conditions_text"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/plain_line" />
+
+            <!-- default rows : for site storage conditionsROW -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/ll_ssc_default_values" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_below="@+id/ssc_view" -->
+            <!-- android:layout_marginBottom="5dp" -->
+            <!-- android:layout_marginLeft="12dp" -->
+            <!-- android:layout_marginRight="12dp" -->
+            <!-- android:orientation="vertical" > -->
+
+
+            <!-- the row will be added  by site storage_conditions_simplerow_layout -->
+            <!-- </LinearLayout> -->
+
+            <include
+                android:id="@+id/add_Default_site_condition_row"
+                layout="@layout/site_storage_conditions_simplerow" />
+
+            <LinearLayout
+                android:id="@+id/ll_site_storage_conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical" >
+
+                <!-- the row will be added  by site storage_conditions_simplerow_layout -->
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_add_site_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_site_storage_conditions"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="@string/ADD_NEW_ITEM"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/button_text_size" />
+
+            <!-- Spare parts at site -->
+
+            <TextView
+                android:id="@+id/spare_parts_at_site_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_add_site_storage"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@string/SPARE_PARTS_AT_SITE"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/bold_text_size" />
+
+            <View
+                android:id="@+id/spas_view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/spare_parts_at_site_text"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/plain_line" />
+
+            <!-- default rows : for spare parts at site ROW -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/ll_spas_default_values" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_below="@+id/spas_view" -->
+            <!-- android:layout_marginLeft="12dp" -->
+            <!-- android:layout_marginRight="12dp" -->
+            <!-- android:orientation="vertical" > -->
+
+
+            <!-- the row will be added  by spare_parts_at_site_simplerow_layout -->
+            <!-- </LinearLayout> -->
+
+            <include
+                android:id="@+id/add_Default_spare_parts_at_site_row"
+                layout="@layout/spare_parts_at_site_simplerow" />
+
+            <LinearLayout
+                android:id="@+id/ll_spare_parts_at_site"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical" >
+
+                <!-- the row will be added  by spare_parts_at_site_simplerow_layout -->
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_add_spare_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_spare_parts_at_site"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="@string/ADD_NEW_ITEM"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/button_text_size" />
+
+            <!-- Tools and instruments -->
+
+            <TextView
+                android:id="@+id/tools_instruments_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_add_spare_part"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="@string/TOOLS_INSTRUMENTS"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/bold_text_size" />
+
+            <View
+                android:id="@+id/view_tools"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/tools_instruments_text"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/plain_line" />
+
+            <!-- default rows : for Tools and instruments ROW -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/ll_tni_default_values" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_below="@+id/view_tools" -->
+            <!-- android:layout_marginLeft="12dp" -->
+            <!-- android:layout_marginRight="12dp" -->
+            <!-- android:orientation="vertical" > -->
+
+
+            <!-- the row will be added  by tools_instruments_simplerow_layout -->
+            <!-- </LinearLayout> -->
+
+            <include
+                android:id="@+id/add_Default_tools_n_instruments_row"
+                layout="@layout/tools_instruments_simplerow" />
+
+            <LinearLayout
+                android:id="@+id/ll_tools_instruments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- the row will be added  by tools_instruments_simplerow_layout -->
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_add_tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_tools_instruments"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="@string/ADD_NEW_ITEM"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/button_text_size" />
+
+            <!-- save Button -->
+
+            <LinearLayout
+                android:id="@+id/ll_save_Btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/btn_add_tools"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/Save_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_save_changes"
+                    android:text="@string/SAVE_CHANGES"
+                    android:textColor="@color/title_bar_data_text_color"
+                    android:textSize="@dimen/button_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_siteConditions"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout> <!-- Content -->
+
+<!-- <LinearLayout -->
+<!-- android:id="@+id/ll_site_conditions" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="fill_parent" -->
+<!-- android:layout_below="@+id/header" -->
+<!-- android:orientation="vertical" > -->
+
+<!-- <Button -->
+<!-- android:id="@+id/addNew_Button" -->
+<!-- android:layout_width="wrap_content" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_gravity="center|center_vertical" -->
+<!-- android:layout_marginBottom="10dp" -->
+<!-- android:layout_marginTop="20dp" -->
+<!-- android:background="@drawable/btn_add_new_log" -->
+<!-- android:text="Add new material log" -->
+<!-- android:textColor="@color/title_bar_data_text_color" -->
+<!-- android:textSize="@dimen/button_text_size" /> -->
+
+<!-- <TextView -->
+<!-- android:id="@+id/existing_material_log_textview" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_marginBottom="3dp" -->
+<!-- android:layout_marginLeft="20dp" -->
+<!-- android:gravity="left" -->
+<!-- android:text="EXISTING MATERIAL LOGS" -->
+<!-- android:textColor="@color/textview_text_color" -->
+<!-- android:textSize="@dimen/bold_text_size" /> -->
+
+<!-- <View -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="2dp" -->
+<!-- android:layout_gravity="center_horizontal" -->
+<!-- android:layout_marginLeft="12dp" -->
+<!-- android:layout_marginRight="12dp" -->
+<!-- android:background="@drawable/plain_line" /> -->
+
+<!-- <LinearLayout -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" > -->
+
+<!-- <ListView -->
+<!-- android:id="@+id/siteCondition_list_view" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" > -->
+<!-- </ListView> -->
+<!-- </LinearLayout> -->
+<!-- </LinearLayout> -->
+
+<!-- add new material log -->
+
+<!-- <LinearLayout -->
+<!-- android:id="@+id/ll_add_new_material" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="fill_parent" -->
+<!-- android:layout_below="@+id/header" -->
+<!-- android:orientation="vertical" -->
+<!-- android:visibility="invisible" > -->
+
+<!-- <TextView -->
+<!-- android:id="@+id/new_material_heading" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_gravity="center_vertical|center_horizontal" -->
+<!-- android:layout_marginBottom="20dp" -->
+<!-- android:layout_marginTop="10dp" -->
+<!-- android:gravity="center_horizontal" -->
+<!-- android:text="Please enter the details of the report below" -->
+<!-- android:textColor="@color/page_heading_text_color" -->
+<!-- android:textSize="@dimen/normal_text_size" /> -->
+
+<!-- Material Name -->
+
+<!-- <LinearLayout -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:orientation="vertical" > -->
+
+<!-- <LinearLayout -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:orientation="horizontal" -->
+<!-- android:weightSum="1" > -->
+
+<!-- <TextView -->
+<!-- android:id="@+id/material_name_textview" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_marginLeft="120dp" -->
+<!-- android:layout_weight="0.6" -->
+<!-- android:gravity="left" -->
+<!-- android:text="Material Name" -->
+<!-- android:textColor="@color/textview_text_color" -->
+<!-- android:textSize="@dimen/normal_text_size" /> -->
+
+<!-- <EditText -->
+<!-- android:id="@+id/material_name_text" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_gravity="center" -->
+<!-- android:layout_marginLeft="20dp" -->
+<!-- android:layout_marginRight="140dp" -->
+<!-- android:layout_weight="0.4" -->
+<!-- android:background="@color/editText_bg_text_color" -->
+<!-- android:hint="Enter text here" -->
+<!-- android:keepScreenOn="false" -->
+<!-- android:lines="1" -->
+<!-- android:maxLines="1" -->
+<!-- android:singleLine="true" -->
+<!-- android:textColor="@color/textview_text_color" -->
+<!-- android:textSize="@dimen/normal_text_size" /> -->
+<!-- </LinearLayout> -->
+
+<!-- <View -->
+<!-- android:layout_width="wrap_content" -->
+<!-- android:layout_height="8dp" -->
+<!-- android:layout_gravity="center_horizontal" -->
+<!-- android:layout_marginBottom="20dp" -->
+<!-- android:layout_marginLeft="100dp" -->
+<!-- android:layout_marginRight="100dp" -->
+<!-- android:background="@drawable/line" /> -->
+<!-- </LinearLayout> -->
+
+<!-- Material Category -->
+
+<!-- <LinearLayout -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:orientation="vertical" > -->
+
+<!-- <LinearLayout -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:orientation="horizontal" -->
+<!-- android:weightSum="1" > -->
+
+<!-- <TextView -->
+<!-- android:id="@+id/material_category_textview" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_marginLeft="120dp" -->
+<!-- android:layout_weight="0.6" -->
+<!-- android:gravity="left" -->
+<!-- android:text="Material Category" -->
+<!-- android:textColor="@color/textview_text_color" -->
+<!-- android:textSize="@dimen/normal_text_size" /> -->
+
+<!-- <RelativeLayout -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_marginRight="110dp" -->
+<!-- android:layout_weight="0.4" > -->
+
+<!-- <Spinner -->
+<!-- android:id="@+id/material_category_spinner" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_marginLeft="20dp" -->
+<!-- android:background="@color/editText_bg_text_color" -->
+<!-- android:entries="@array/material_array" -->
+<!-- android:prompt="@string/material_prompt" -->
+<!-- android:tag="Material Category" -->
+<!-- android:textColor="@color/hint_text_color" -->
+<!-- android:textSize="@dimen/normal_text_size" /> -->
+<!-- android:entries="@array/country_arrays" -->
+
+<!-- <ImageView -->
+<!-- android:layout_width="wrap_content" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_marginTop="3dp" -->
+<!-- android:layout_alignParentRight="true" -->
+<!-- android:background="@drawable/spinner_dropdown" /> -->
+<!-- </RelativeLayout> -->
+<!-- </LinearLayout> -->
+
+<!-- <View -->
+<!-- android:layout_width="wrap_content" -->
+<!-- android:layout_height="8dp" -->
+<!-- android:layout_gravity="center_horizontal" -->
+<!-- android:layout_marginBottom="20dp" -->
+<!-- android:layout_marginLeft="100dp" -->
+<!-- android:layout_marginRight="100dp" -->
+<!-- android:background="@drawable/line" /> -->
+<!-- </LinearLayout> -->
+
+<!-- Information -->
+
+<!-- <LinearLayout -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:orientation="vertical" > -->
+
+<!-- <LinearLayout -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:orientation="horizontal" -->
+<!-- android:weightSum="1" > -->
+
+<!-- <TextView -->
+<!-- android:id="@+id/information_textview" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_marginLeft="120dp" -->
+<!-- android:layout_weight="0.6" -->
+<!-- android:gravity="left" -->
+<!-- android:text="Information" -->
+<!-- android:textColor="@color/textview_text_color" -->
+<!-- android:textSize="@dimen/normal_text_size" /> -->
+
+<!-- <EditText -->
+<!-- android:id="@+id/information_text" -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_gravity="center" -->
+<!-- android:layout_marginLeft="20dp" -->
+<!-- android:layout_marginRight="140dp" -->
+<!-- android:layout_weight="0.4" -->
+<!-- android:background="@color/editText_bg_text_color" -->
+<!-- android:hint="Enter text here" -->
+<!-- android:keepScreenOn="false" -->
+<!-- android:lines="1" -->
+<!-- android:maxLines="1" -->
+<!-- android:singleLine="true" -->
+<!-- android:textColor="@color/textview_text_color" -->
+<!-- android:textSize="@dimen/normal_text_size" /> -->
+<!-- </LinearLayout> -->
+
+<!-- <View -->
+<!-- android:layout_width="wrap_content" -->
+<!-- android:layout_height="8dp" -->
+<!-- android:layout_gravity="center_horizontal" -->
+<!-- android:layout_marginBottom="20dp" -->
+<!-- android:layout_marginLeft="100dp" -->
+<!-- android:layout_marginRight="100dp" -->
+<!-- android:background="@drawable/line" /> -->
+<!-- </LinearLayout> -->
+
+<!-- <LinearLayout -->
+<!-- android:layout_width="match_parent" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:orientation="horizontal" > -->
+
+<!-- <Button -->
+<!-- android:id="@+id/cancel_button" -->
+<!-- android:layout_width="wrap_content" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_marginLeft="100dp" -->
+<!-- android:layout_marginTop="100dp" -->
+<!-- android:layout_weight="1" -->
+<!-- android:background="@drawable/btn_orange" -->
+<!-- android:text="Cancel" -->
+<!-- android:textColor="@color/title_bar_data_text_color" -->
+<!-- android:textSize="@dimen/button_text_size" /> -->
+
+<!-- <Button -->
+<!-- android:id="@+id/save_button" -->
+<!-- android:layout_width="wrap_content" -->
+<!-- android:layout_height="wrap_content" -->
+<!-- android:layout_marginLeft="20dp" -->
+<!-- android:layout_marginRight="100dp" -->
+<!-- android:layout_marginTop="100dp" -->
+<!-- android:layout_weight="1" -->
+<!-- android:background="@drawable/btn_green" -->
+<!-- android:text="Save" -->
+<!-- android:textColor="@color/title_bar_data_text_color" -->
+<!-- android:textSize="@dimen/button_text_size" /> -->
+<!-- </LinearLayout> -->
+<!-- </LinearLayout> -->
+

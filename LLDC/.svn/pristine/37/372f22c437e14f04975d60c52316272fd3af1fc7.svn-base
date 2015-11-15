@@ -1,0 +1,56 @@
+package co.uk.android.lldc.fragments;
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import co.uk.android.lldc.LLDCApplication;
+import co.uk.android.lldc.R;
+
+public class StaticTrailsFragment extends Fragment {
+
+	TextView place_name, txt_eventdetails;
+	ImageView img_imagedetls;
+	String pageTitle;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		View rootView = inflater.inflate(R.layout.fragment_static_trails,
+				container, false);
+		pageTitle = getActivity().getIntent().getExtras()
+				.getString("PAGETITLE");
+		place_name = (TextView) rootView.findViewById(R.id.place_title);
+
+		txt_eventdetails = (TextView) rootView
+				.findViewById(R.id.txt_eventdetails);
+
+		// place_name.setTextSize(26f);
+		// txt_eventdetails.setTextSize(18f);
+
+		onLoad();
+		return rootView;
+	}
+
+	@SuppressLint("DefaultLocale")
+	public void onLoad() {
+
+		if (!pageTitle.equals("Guided Tours")) {
+			place_name.setText(LLDCApplication.boatTrails.getTitle()
+					.toUpperCase());
+			txt_eventdetails.setText(LLDCApplication.boatTrails
+					.getDescription());
+		} else {
+			place_name.setText(LLDCApplication.guidedTrails.getTitle()
+					.toUpperCase());
+			txt_eventdetails.setText(LLDCApplication.guidedTrails
+					.getDescription());
+		}
+	}
+
+}

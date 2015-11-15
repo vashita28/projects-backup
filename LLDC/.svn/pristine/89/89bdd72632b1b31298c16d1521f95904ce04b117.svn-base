@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/headerView"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/explorer_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerView"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:id="@+id/llPark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ebebeb"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <LinearLayout
+                android:id="@+id/rlOverview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="27"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:weightSum="10" >
+
+                <RelativeLayout
+                    android:id="@+id/rlOverviewImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:clickable="false" >
+
+                    <ImageView
+                        android:id="@+id/ivClock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:clickable="false"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/overview_icon" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlOverViewText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:clickable="false" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvOverview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="OVERVIEW"
+                        android:textSize="24sp" />
+
+                    <co.uk.android.lldc.custom.CustomTextView_CartiloRegular
+                        android:id="@+id/tvVenueOpeningTimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvOverview"
+                        android:clickable="false"
+                        android:paddingTop="10dp"
+                        android:text="VENUE OPENING TIMES"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlGettingToPark"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="27"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:weightSum="10" >
+
+                <RelativeLayout
+                    android:id="@+id/rlGettingToParkImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:clickable="false" >
+
+                    <ImageView
+                        android:id="@+id/ivGettingToPark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:clickable="false"
+                        android:src="@drawable/parttrain_icon" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlGettingToParkText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:clickable="false" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvGettingToPark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="GETTING TO THE PARK"
+                        android:textSize="24sp" />
+
+                    <co.uk.android.lldc.custom.CustomTextView_CartiloRegular
+                        android:id="@+id/tvNearestTubeAndTrain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvGettingToPark"
+                        android:clickable="false"
+                        android:paddingTop="10dp"
+                        android:text="NEAREST TUBE &amp; TRAINS"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlAccessibility"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="27"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:weightSum="10" >
+
+                <RelativeLayout
+                    android:id="@+id/rlAccessibilityImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:clickable="false" >
+
+                    <ImageView
+                        android:id="@+id/ivAccessibility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:clickable="false"
+                        android:src="@drawable/accessibilty_icon" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAccessibilityText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:clickable="false" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvAccessibility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="ACCESSIBILITY"
+                        android:textSize="24sp" />
+
+                    <co.uk.android.lldc.custom.CustomTextView_CartiloRegular
+                        android:id="@+id/tvOurAccess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAccessibility"
+                        android:clickable="false"
+                        android:maxLines="2"
+                        android:minLines="1"
+                        android:paddingTop="10dp"
+                        android:text="OUR ACCESS AND AVAILABLE OPTIONS"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlReportAnIssue"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="19"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:weightSum="10" >
+
+                <RelativeLayout
+                    android:id="@+id/rlReportIssueImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:clickable="false" >
+
+                    <ImageView
+                        android:id="@+id/ivReportAnIssue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:clickable="false"
+                        android:src="@drawable/help_icon" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlReportIssueText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:clickable="false" >
+
+                    <co.uk.android.lldc.custom.CustomTextView_CarlitoBoldFont
+                        android:id="@+id/tvReportIssue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:text="REPORT AN ISSUE"
+                        android:textSize="20sp" />
+
+                    <co.uk.android.lldc.custom.CustomTextView_CartiloRegular
+                        android:id="@+id/tvHelpUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvReportIssue"
+                        android:clickable="false"
+                        android:paddingTop="10dp"
+                        android:text="HELP US KEEP THE PARK SAFE"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

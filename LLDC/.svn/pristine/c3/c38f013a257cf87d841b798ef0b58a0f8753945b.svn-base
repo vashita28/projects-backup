@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearmain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:clickable="false"
+    android:focusable="true"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:paddingRight="10dp" >
+
+        <co.uk.android.lldc.custom.CustomTextView_calbiriBoldFont
+            android:id="@+id/venueTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eventcount"
+            android:alpha="0.9"
+            android:background="@drawable/roundedinfowindow"
+            android:clickable="true"
+            android:padding="10sp"
+            android:text="vsdkjgbksdjbgsd"
+            android:textColor="@color/black_heading"
+            android:textSize="18sp" />
+
+        <co.uk.android.lldc.custom.CustomTextView_calbiriBoldFont
+            android:id="@+id/eventcount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/venueTitle"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/venueTitle"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginRight="-10dp"
+            android:background="@drawable/circularinfowindow"
+            android:gravity="center"
+            android:text="vs"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

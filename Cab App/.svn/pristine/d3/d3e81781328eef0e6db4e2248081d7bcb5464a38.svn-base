@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cab App Driver</string>
+    <string name="app_version">0.8.0.4rc</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="luggage_text">\u0022I will be travelling with large bags and will require a car with boot.\u0022</string>
+    <string name="forgotpassword"><u>FORGOT PASSWORD?</u></string>
+    <string name="reset_password_text">Please enter email address that you registered with below and we will send you instructions to reset your password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="terms_and_conditions"><u>terms &amp; conditions</u></string>
+    <string name="licensing_document_text">Please attach a copy of your taxi driver licensing documents e.g. London bill, Dublin dash ID, Manchester badge &amp; vehicle plate. For safety and security reasons your account will only go live after we\'ve verified this information.</string>
+    <string name="auto_update_top_up">You will auto top up when your account\n reaches  credits</string>
+    <string name="no_jobs">There are no jobs\n around you currently</string>
+    <string name="no_active_jobs">you currently have\n no active jobs</string>
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Jobs</item>
+        <item>Inbox</item>
+        <item>My Jobs</item>
+        <item>Cab:Pay</item>
+        <item>Fare Calculator</item>
+        <item>Promotions</item>
+        <item>Contact Support</item>
+    </string-array>
+    <!-- <item>My Filters</item> -->
+
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/jobs</item>
+        <item>@drawable/inbox</item>
+        <item>@drawable/passengers</item>
+        <item>@drawable/card2</item>
+        <item>@drawable/faircalculator</item>
+        <item>@drawable/promotions</item>
+        <item>@drawable/contactsupport</item>
+    </array>
+    <!-- <item>@drawable/myfilter</item> -->
+
+    <string-array name="select_payment_method_array">
+        <item>Card</item>
+        <item>Cash</item>
+        <!-- <item>Other</item> -->
+    </string-array>
+    <string-array name="select_payment_method_array_onlycash">
+        <item>Cash</item>
+        <!-- <item>Other</item> -->
+    </string-array>
+    <string-array name="add_image_options">
+        <item>Take Picture</item>
+        <item>Select Picture</item>
+        <item>Take Video</item>
+        <item>Select Video</item>
+        <item>Cancel</item>
+    </string-array>
+    <string-array name="add_image_options_upload_documents">
+        <item>Camera</item>
+        <item>Gallery</item>
+        <item>Cancel</item>
+    </string-array>
+    <string-array name="passenger_options">
+        <item>1-4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="passenger_options_for_london">
+        <item>1-5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="color_options">
+        <item></item>
+        <item>BLACK</item>
+        <item>BLUE</item>
+        <item>GREEN</item>
+        <item>GREY</item>
+        <item>ORANGE</item>
+        <item>RED</item>
+        <item>SILVER</item>
+        <item>WHITE</item>
+        <item>YELLOW</item>
+    </string-array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="no_network_error">No network connection. Please try later</string>
+    <string name="miles">miles</string>
+
+    <!-- location -->
+    <string name="settings">Settings</string>
+    <string name="gps_enable">Enable GPS!</string>
+    <string name="gps_alert_message">For the fastest and most accurate location detection: Turn on GPS in location settings</string>
+    <string name="contact_support">Contact Support</string>
+    <string name="select_color">Select color</string>
+    <string name="personal_details_edit_note">Changing of marked fields will put your account into a pending state</string>
+    <string name="dialog_alert">Changing this information will put your account into pending and you will be notified when it has been verified</string>
+    <string name="arrived_at_pick_up">Arrived at pick up</string>
+    <string name="about_you">ABOUT YOU</string>
+    <string name="view_tutorial">View Tutorial</string>
+    <string name="nointernet">No Internet connection available!</string>
+    <string name="your_account_change_password">CHANGE PASSWORD</string>
+    <string name="vehicle_details">VEHICLE DETAILS</string>
+    <string name="driver_details">DRIVER DETAILS</string>
+    <string name="payment">BANK DETAILS</string>
+    <string name="send_a_cab">Send a cab related incident to your licensing authority e.g. touting</string>
+    <string name="bank_details_dialog">You have not entered your bank account details to receive the credit card payment. Do you want to add it now</string>
+
+    <!-- bluetooth -->
+    <string name="scanning">scanning for devices&#8230;</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="no_device_selected">Please select a valid device from the list</string>
+    <string name="bt_not_enabled">Bluetooth was not enabled</string>
+    <string name="connecting">Connecting&#8230;</string>
+
+</resources>

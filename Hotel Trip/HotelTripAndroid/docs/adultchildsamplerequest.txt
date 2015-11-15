@@ -1,0 +1,408 @@
+{
+  "RoomInfo2": {
+    "adultnum": 2,
+    "childages": {
+      "ChildAge1": 4,
+      "ChildAge2": 9
+    }
+  },
+  "RoomInfo1": {
+    "adultnum": 2,
+    "childages": {
+      "ChildAge1": 2,
+      "ChildAge2": 4
+    }
+  }
+}
+
+
+{
+  "SearchHotel_Response": {
+    "Hotel": {
+      "@attributes": {
+        "HotelId": "WSMA0511000174",
+        "HotelName": "Four Seasons Bangkok",
+        "Rating": "5",
+        "Currency": "THB",
+        "MarketName": "World Wide",
+        "dtCheckIn": "2014-01-30",
+        "dtCheckOut": "2014-01-31",
+        "CancelPolicyId": "",
+        "InternalCode": "CL098",
+        "avail": "False"
+      },
+      "RoomCateg": [
+        {
+          "@attributes": {
+            "Code": "WSMA05110039",
+            "Name": "STANDARD",
+            "NetPrice": "8330.00",
+            "GrossPrice": "8330.00",
+            "CommPrice": "0.00",
+            "Price": "8330.00",
+            "BFType": "RO"
+          },
+          "RoomType": {
+            "@attributes": {
+              "TypeName": "Triple",
+              "NumRooms": "2",
+              "TotalPrice": "8330.00",
+              "avrNightPrice": "8330.00",
+              "RTGrossPrice": "8330.00",
+              "RTCommPrice": "0.00",
+              "RTNetPrice": "8330.00"
+            },
+            "Rate": {
+              "@attributes": {
+                "offSet": "0",
+                "NightPrice": "8330.00"
+              },
+              "RoomRate": {
+                "RoomSeq": [
+                  {
+                    "@attributes": {
+                      "No": "1",
+                      "AdultNum": "2",
+                      "ChildNum": "2",
+                      "ChildAge1": "9",
+                      "ChildAge2": "4",
+                      "RoomPrice": "4280.00",
+                      "MinstayPrice": "0.00",
+                      "CompulsoryPrice": "0.00",
+                      "SupplementPrice": "0.00",
+                      "PromotionBFPrice": "0",
+                      "EarlyBirdDiscount": "0.00",
+                      "CommissionPrice": "0.00",
+                      "sRoomType": "N"
+                    }
+                  },
+                  {
+                    "@attributes": {
+                      "No": "2",
+                      "AdultNum": "2",
+                      "ChildNum": "2",
+                      "ChildAge1": "4",
+                      "ChildAge2": "2",
+                      "RoomPrice": "4050.00",
+                      "MinstayPrice": "0.00",
+                      "CompulsoryPrice": "0.00",
+                      "SupplementPrice": "0.00",
+                      "PromotionBFPrice": "0",
+                      "EarlyBirdDiscount": "0.00",
+                      "CommissionPrice": "0.00",
+                      "sRoomType": "N"
+                    }
+                  }
+                ]
+              },
+              "RoomRateInfo": {
+                "Child": {
+                  "@attributes": {
+                    "MinAge": "0",
+                    "MaxAge": "12",
+                    "Desc": ""
+                  }
+                },
+                "Minstay": {
+                  "@attributes": {
+                    "MSDay": "0.00",
+                    "MSType": "NONE",
+                    "MSRate": "0.00"
+                  }
+                },
+                "Compulsory": {
+                  "@attributes": {
+                    "Name": "NONE"
+                  }
+                },
+                "Supplement": {
+                  "@attributes": {
+                    "Name": "NONE"
+                  }
+                },
+                "Promotion": {
+                  "@attributes": {
+                    "Name": "NONE",
+                    "Value": "False",
+                    "PromoCode": ""
+                  }
+                },
+                "EarlyBird": {
+                  "@attributes": {
+                    "EBType": "NONE",
+                    "EBRate": "0.00"
+                  }
+                },
+                "Commission": {
+                  "@attributes": {
+                    "CommType": "NONE",
+                    "CommRate": "0.00"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@attributes": {
+            "Code": "WSMA05110039",
+            "Name": "STANDARD",
+            "NetPrice": "9400.00",
+            "GrossPrice": "9400.00",
+            "CommPrice": "0.00",
+            "Price": "9400.00",
+            "BFType": "ABF"
+          },
+          "RoomType": {
+            "@attributes": {
+              "TypeName": "Triple",
+              "NumRooms": "2",
+              "TotalPrice": "9400.00",
+              "avrNightPrice": "9400.00",
+              "RTGrossPrice": "9400.00",
+              "RTCommPrice": "0.00",
+              "RTNetPrice": "9400.00"
+            },
+            "Rate": {
+              "@attributes": {
+                "offSet": "0",
+                "NightPrice": "9400.00"
+              },
+              "RoomRate": {
+                "RoomSeq": [
+                  {
+                    "@attributes": {
+                      "No": "1",
+                      "AdultNum": "2",
+                      "ChildNum": "2",
+                      "ChildAge1": "9",
+                      "ChildAge2": "4",
+                      "RoomPrice": "4800.00",
+                      "MinstayPrice": "0.00",
+                      "CompulsoryPrice": "0.00",
+                      "SupplementPrice": "0.00",
+                      "PromotionBFPrice": "0",
+                      "EarlyBirdDiscount": "0.00",
+                      "CommissionPrice": "0.00",
+                      "sRoomType": "N"
+                    }
+                  },
+                  {
+                    "@attributes": {
+                      "No": "2",
+                      "AdultNum": "2",
+                      "ChildNum": "2",
+                      "ChildAge1": "4",
+                      "ChildAge2": "2",
+                      "RoomPrice": "4600.00",
+                      "MinstayPrice": "0.00",
+                      "CompulsoryPrice": "0.00",
+                      "SupplementPrice": "0.00",
+                      "PromotionBFPrice": "0",
+                      "EarlyBirdDiscount": "0.00",
+                      "CommissionPrice": "0.00",
+                      "sRoomType": "N"
+                    }
+                  }
+                ]
+              },
+              "RoomRateInfo": {
+                "Child": {
+                  "@attributes": {
+                    "MinAge": "0",
+                    "MaxAge": "12",
+                    "Desc": ""
+                  }
+                },
+                "Minstay": {
+                  "@attributes": {
+                    "MSDay": "0.00",
+                    "MSType": "NONE",
+                    "MSRate": "0.00"
+                  }
+                },
+                "Compulsory": {
+                  "@attributes": {
+                    "Name": "NONE"
+                  }
+                },
+                "Supplement": {
+                  "@attributes": {
+                    "Name": "NONE"
+                  }
+                },
+                "Promotion": {
+                  "@attributes": {
+                    "Name": "NONE",
+                    "Value": "False",
+                    "PromoCode": ""
+                  }
+                },
+                "EarlyBird": {
+                  "@attributes": {
+                    "EBType": "NONE",
+                    "EBRate": "0.00"
+                  }
+                },
+                "Commission": {
+                  "@attributes": {
+                    "CommType": "NONE",
+                    "CommRate": "0.00"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "trip_advisor_data": {
+        "hotel_location": [
+          {
+            "@attributes": {
+              "id": "36",
+              "place_id": "301884",
+              "type": "ratingimage",
+              "geoid": "293916",
+              "name": "Four Seasons Hotel Bangkok",
+              "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d301884-Reviews-m16981-Four_Seasons_Hotel_Bangkok-Bangkok.html",
+              "reviewcnt": "916",
+              "avgrating": "4.5",
+              "partner_id": "WSMA0511000174",
+              "img_type": "ratingimage",
+              "lang": "en_US",
+              "img_url": "http:\/\/www.tripadvisor.com\/img\/cdsi\/img2\/ratings\/traveler\/4.5-16981-4.gif"
+            }
+          },
+          {
+            "@attributes": {
+              "id": "36",
+              "place_id": "301884",
+              "type": "ratingimage",
+              "geoid": "293916",
+              "name": "Four Seasons Hotel Bangkok",
+              "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d301884-Reviews-m16981-Four_Seasons_Hotel_Bangkok-Bangkok.html",
+              "reviewcnt": "916",
+              "avgrating": "4.5",
+              "partner_id": "WSMA0511000174",
+              "img_type": "ratingimage",
+              "lang": "en_UK",
+              "img_url": "http:\/\/www.tripadvisor.co.uk\/img\/cdsi\/img2\/ratings\/traveler\/4.5-16981-4.gif"
+            }
+          },
+          {
+            "@attributes": {
+              "id": "36",
+              "place_id": "301884",
+              "type": "ratingimage",
+              "geoid": "293916",
+              "name": "Four Seasons Hotel Bangkok",
+              "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d301884-Reviews-m16981-Four_Seasons_Hotel_Bangkok-Bangkok.html",
+              "reviewcnt": "916",
+              "avgrating": "4.5",
+              "partner_id": "WSMA0511000174",
+              "img_type": "ratingimage",
+              "lang": "en_AU",
+              "img_url": "http:\/\/www.tripadvisor.com.au\/img\/cdsi\/img2\/ratings\/traveler\/4.5-16981-4.gif"
+            }
+          },
+          {
+            "@attributes": {
+              "id": "36",
+              "place_id": "301884",
+              "type": "ratingimage",
+              "geoid": "293916",
+              "name": "Four Seasons Hotel Bangkok",
+              "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d301884-Reviews-m16981-Four_Seasons_Hotel_Bangkok-Bangkok.html",
+              "reviewcnt": "916",
+              "avgrating": "4.5",
+              "partner_id": "WSMA0511000174",
+              "img_type": "ratingimage",
+              "lang": "en_CA",
+              "img_url": "http:\/\/www.tripadvisor.ca\/img\/cdsi\/img2\/ratings\/traveler\/4.5-16981-4.gif"
+            }
+          },
+          {
+            "@attributes": {
+              "id": "36",
+              "place_id": "301884",
+              "type": "ratingimage",
+              "geoid": "293916",
+              "name": "Four Seasons Hotel Bangkok",
+              "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d301884-Reviews-m16981-Four_Seasons_Hotel_Bangkok-Bangkok.html",
+              "reviewcnt": "916",
+              "avgrating": "4.5",
+              "partner_id": "WSMA0511000174",
+              "img_type": "ratingimage",
+              "lang": "en_IE",
+              "img_url": "http:\/\/www.tripadvisor.ie\/img\/cdsi\/img2\/ratings\/traveler\/4.5-16981-4.gif"
+            }
+          },
+          {
+            "@attributes": {
+              "id": "36",
+              "place_id": "301884",
+              "type": "ratingimage",
+              "geoid": "293916",
+              "name": "Four Seasons Hotel Bangkok",
+              "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d301884-Reviews-m16981-Four_Seasons_Hotel_Bangkok-Bangkok.html",
+              "reviewcnt": "916",
+              "avgrating": "4.5",
+              "partner_id": "WSMA0511000174",
+              "img_type": "ratingimage",
+              "lang": "en_IN",
+              "img_url": "http:\/\/www.tripadvisor.in\/img\/cdsi\/img2\/ratings\/traveler\/4.5-16981-4.gif"
+            }
+          },
+          {
+            "@attributes": {
+              "id": "36",
+              "place_id": "301884",
+              "type": "ratingimage",
+              "geoid": "293916",
+              "name": "Four Seasons Hotel Bangkok",
+              "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d301884-Reviews-m16981-Four_Seasons_Hotel_Bangkok-Bangkok.html",
+              "reviewcnt": "916",
+              "avgrating": "4.5",
+              "partner_id": "WSMA0511000174",
+              "img_type": "ratingimage",
+              "lang": "en_MY",
+              "img_url": "http:\/\/www.tripadvisor.com.my\/img\/cdsi\/img2\/ratings\/traveler\/4.5-16981-4.gif"
+            }
+          },
+          {
+            "@attributes": {
+              "id": "36",
+              "place_id": "301884",
+              "type": "ratingimage",
+              "geoid": "293916",
+              "name": "Four Seasons Hotel Bangkok",
+              "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d301884-Reviews-m16981-Four_Seasons_Hotel_Bangkok-Bangkok.html",
+              "reviewcnt": "916",
+              "avgrating": "4.5",
+              "partner_id": "WSMA0511000174",
+              "img_type": "ratingimage",
+              "lang": "en_SG",
+              "img_url": "http:\/\/www.tripadvisor.com.sg\/img\/cdsi\/img2\/ratings\/traveler\/4.5-16981-4.gif"
+            }
+          },
+          {
+            "@attributes": {
+              "id": "36",
+              "place_id": "301884",
+              "type": "ratingimage",
+              "geoid": "293916",
+              "name": "Four Seasons Hotel Bangkok",
+              "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d301884-Reviews-m16981-Four_Seasons_Hotel_Bangkok-Bangkok.html",
+              "reviewcnt": "916",
+              "avgrating": "4.5",
+              "partner_id": "WSMA0511000174",
+              "img_type": "ratingimage",
+              "lang": "id",
+              "img_url": "http:\/\/www.tripadvisor.co.id\/img\/cdsi\/img2\/ratings\/traveler\/4.5-16981-4.gif"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

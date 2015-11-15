@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191918" >
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/common_top_bar" />
+
+    <ScrollView
+        android:id="@+id/sv_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_cabapp_location"
+        android:layout_below="@+id/topbar"
+        android:paddingBottom="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/rel_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rel_topmore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" >
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:drawableLeft="@drawable/more"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="More"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_below="@+id/rel_topmore"
+                android:background="#fff" >
+
+                <TextView
+                    android:id="@+id/tv_aboutus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="@string/aboutus"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/view_aboutus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_tandc"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_below="@+id/rel_aboutus"
+                android:layout_marginTop="0.5dp"
+                android:background="#fff" >
+
+                <TextView
+                    android:id="@+id/tv_tandc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="@string/tandc"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/view_tandc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rel_tandc"
+                android:layout_marginTop="0.5dp"
+                android:background="#fff" >
+
+                <TextView
+                    android:id="@+id/tv_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="Contact us"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/view_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_viewtutorial"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rel_feedback"
+                android:layout_marginTop="0.5dp"
+                android:background="#fff" >
+
+                <TextView
+                    android:id="@+id/tv_viewtutorial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="@string/viewtutorial"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/view_viewtutorial"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_logout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rel_viewtutorial"
+                android:layout_marginTop="0.5dp"
+                android:background="#fff" >
+
+                <TextView
+                    android:id="@+id/tv_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="@string/logout"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/view_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_cabapp_loc_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_logout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="70dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/iv_cablocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/cablocation" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_cablocation"
+                    android:gravity="left"
+                    android:text="@string/cablocation_text"
+                    android:textColor="#666665" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_cabapp_location"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/registration_btn_selector"
+        android:clickable="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Cab:app Locations"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topbar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/tab_unselected" >
+
+    <!-- #f99944 -->
+
+    <RelativeLayout
+        android:id="@+id/relMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu2" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/circle"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/textBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_badge"
+                android:gravity="center"
+                android:minHeight="20dp"
+                android:minWidth="20dp"
+                android:text="3"
+                android:textColor="@color/bagde_textcolor" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:paddingRight="20dp"
+        android:src="@drawable/backbutton"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/relFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:id="@+id/relTextBadgeFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/circle"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/textBadgeFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_badge"
+                android:gravity="center"
+                android:minHeight="20dp"
+                android:minWidth="20dp"
+                android:text="8"
+                android:textColor="@color/bagde_textcolor" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvCashBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:textColor="#fd6f01"
+        android:textSize="18sp"
+        android:visibility="gone" />
+    <!-- android:text="\u00A315.50" -->
+
+</RelativeLayout>

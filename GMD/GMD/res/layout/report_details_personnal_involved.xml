@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/personnelinvolve_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:gravity="left"
+        android:text="@string/PERSONNEL_INVOLVED_FROM_ABB"
+        android:textColor="@color/textview_text_color"
+        android:textSize="@dimen/bold_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/plain_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_personnel_involve_from_ABB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add_personnel_involve_from_ABB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="@string/ADD_NEW_ITEM"
+        android:textColor="@color/textview_text_color"
+        android:textSize="@dimen/button_text_size" />
+
+    <TextView
+        android:id="@+id/personnel_involve_from_client_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:text="@string/PERSONNEL_INVOLVE_FROM_CLIENT"
+        android:textColor="@color/textview_text_color"
+        android:textSize="@dimen/bold_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/plain_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_personnel_involve_from_client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add_personnel_involve_from_client"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="@string/ADD_NEW_ITEM"
+        android:textColor="@color/textview_text_color"
+        android:textSize="@dimen/button_text_size" />
+
+</LinearLayout>

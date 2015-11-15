@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@android:color/white"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlWelcomeTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_vertical"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal|center_vertical" >
+
+        <ImageView
+            android:id="@+id/ivWelcomeHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:src="@drawable/tab_welcome" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoRegular
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivWelcomeHome"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:text="@string/welcome"
+            android:textColor="@color/divider_tabs"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/viewBorderWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvWelcome"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/strok_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlMapTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_vertical"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingTop="7dp" >
+
+        <ImageView
+            android:id="@+id/ivMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:src="@drawable/tab_map" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoRegular
+            android:id="@+id/tvMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivMap"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:text="@string/map"
+            android:textColor="@color/divider_tabs"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/viewBorderMap"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvMap"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/strok_color"
+            android:paddingTop="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlExploreTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_vertical"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingTop="7dp" >
+
+        <ImageView
+            android:id="@+id/ivExplore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:src="@drawable/explore_icon" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoRegular
+            android:id="@+id/tvExplore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivExplore"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:text="@string/explore"
+            android:textColor="@color/divider_tabs"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/viewBorderExplore"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvExplore"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/strok_color"
+            android:paddingTop="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlEventsTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_vertical"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingTop="7dp" >
+
+        <ImageView
+            android:id="@+id/ivEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:src="@drawable/events" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoRegular
+            android:id="@+id/tvEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivEvents"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:text="@string/events"
+            android:textColor="@color/divider_tabs"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/viewBorderEvent"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvEvents"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/strok_color"
+            android:paddingTop="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTheParkTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_vertical"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingTop="7dp" >
+
+        <ImageView
+            android:id="@+id/ivThePark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:paddingBottom="7dp"
+            android:src="@drawable/thepark" />
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoRegular
+            android:id="@+id/tvThePark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivThePark"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:text="@string/the_park"
+            android:textColor="@color/divider_tabs"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/viewBorderPark"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvThePark"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/strok_color"
+            android:paddingTop="5dp" />
+    </RelativeLayout>
+
+</LinearLayout>

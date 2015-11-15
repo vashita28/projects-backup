@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rlParkOutsideHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlContent"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/ivParkImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/dashboard_image_outside"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/headerview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/explorer_bg"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llWelcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tvExploreThePark"
+            android:layout_below="@+id/headerview"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <co.uk.android.lldc.custom.CustomTextView_calbiriBoldFont
+                android:id="@+id/tvWelcomeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:gravity="center_vertical"
+                android:minLines="4"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/welcome_text"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/welcometext_size"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8" />
+        </LinearLayout>
+
+        <co.uk.android.lldc.custom.CustomTextView_RobotoItalic
+            android:id="@+id/tvParkMinorNotice"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/ivParkImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/white_transparent"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/stadium_close_text"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <co.uk.android.lldc.custom.CustomTextView_HelveticaNeue_Regular
+            android:id="@+id/tvExploreThePark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvParkMinorNotice"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/text_bg"
+            android:gravity="end|center_vertical"
+            android:paddingEnd="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingStart="10dp"
+            android:text="@string/explore_the_park"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white" >
+
+        <co.uk.android.lldc.custom.CustomTextView_calbiriBoldFont
+            android:id="@+id/tvWhatOnPark"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical|start"
+            android:paddingEnd="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
+            android:paddingStart="3dp"
+            android:textSize="18sp"
+            android:text="@string/whats_on_park"
+            android:textColor="@color/black_heading"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/hsvWhatsOnPark"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvWhatOnPark"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/llParkTaskList"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/android:empty"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvWhatOnPark"
+            android:layout_centerInParent="true"
+            android:text="No events available"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

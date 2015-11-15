@@ -1,0 +1,260 @@
+{
+  "SearchHotel_Response": {
+    "Hotel": [
+      {
+        "@attributes": {
+          "HotelId": "WSMA0901011425",
+          "HotelName": "Grand Pinnacle Bangkok",
+          "Rating": "2",
+          "Currency": "THB",
+          "MarketName": "NONE",
+          "dtCheckIn": "2013-12-10",
+          "dtCheckOut": "2013-12-11",
+          "CancelPolicyId": "hkCJ8Jxem6SEI7NlkldxgQ9u",
+          "InternalCode": "CL098-CL918",
+          "avail": "True"
+        },
+        "RoomCateg": {
+          "@attributes": {
+            "Code": "WSMA05110039",
+            "Name": "STANDARD",
+            "NetPrice": "577.52",
+            "GrossPrice": "577.52",
+            "CommPrice": "0.00",
+            "Price": "577.52",
+            "BFType": "RO"
+          },
+          "RoomType": {
+            "@attributes": {
+              "TypeName": "Single",
+              "NumRooms": "1",
+              "TotalPrice": "577.52",
+              "avrNightPrice": "577.52",
+              "RTGrossPrice": "577.52",
+              "RTCommPrice": "0.00",
+              "RTNetPrice": "577.52"
+            },
+            "Rate": {
+              "@attributes": {
+                "offSet": "0",
+                "NightPrice": "577.52"
+              },
+              "RoomRate": {
+                "RoomSeq": {
+                  "@attributes": {
+                    "No": "1",
+                    "AdultNum": "1",
+                    "ChildNum": "0",
+                    "ChildAge1": "0",
+                    "ChildAge2": "0",
+                    "RoomPrice": "577.52",
+                    "MinstayPrice": "0.00",
+                    "CompulsoryPrice": "0.00",
+                    "SupplementPrice": "0.00",
+                    "PromotionBFPrice": "0.00",
+                    "EarlyBirdDiscount": "0",
+                    "CommissionPrice": "0.00",
+                    "sRoomType": "N"
+                  }
+                }
+              },
+              "RoomRateInfo": {
+                "Child": {
+                  "@attributes": {
+                    "MinAge": "0",
+                    "MaxAge": "11",
+                    "Desc": ""
+                  }
+                },
+                "Minstay": {
+                  "@attributes": {
+                    "MSDay": "0",
+                    "MSType": "NONE",
+                    "MSRate": "0"
+                  }
+                },
+                "Compulsory": {
+                  "@attributes": {
+                    "Name": "NONE"
+                  }
+                },
+                "Supplement": {
+                  "@attributes": {
+                    "Name": "NONE"
+                  }
+                },
+                "Promotion": {
+                  "@attributes": {
+                    "Name": "NONE",
+                    "Value": "False",
+                    "PromoCode": ""
+                  }
+                },
+                "EarlyBird": {
+                  "@attributes": {
+                    "EBType": "NONE",
+                    "EBRate": "0"
+                  }
+                },
+                "Commission": {
+                  "@attributes": {
+                    "CommType": "NONE",
+                    "CommRate": "0"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "trip_advisor_data": {
+          "hotel_location": [
+            {
+              "@attributes": {
+                "id": "487",
+                "place_id": "1082033",
+                "type": "ratingimage",
+                "geoid": "293916",
+                "name": "Grand Pinnacle",
+                "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d1082033-Reviews-m16981-Grand_Pinnacle-Bangkok.html",
+                "reviewcnt": "251",
+                "avgrating": "3.5",
+                "partner_id": "WSMA0901011425",
+                "img_type": "ratingimage",
+                "lang": "en_US",
+                "img_url": "http:\/\/www.tripadvisor.com\/img\/cdsi\/img2\/ratings\/traveler\/3.5-16981-4.gif"
+              }
+            },
+            {
+              "@attributes": {
+                "id": "487",
+                "place_id": "1082033",
+                "type": "ratingimage",
+                "geoid": "293916",
+                "name": "Grand Pinnacle",
+                "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d1082033-Reviews-m16981-Grand_Pinnacle-Bangkok.html",
+                "reviewcnt": "251",
+                "avgrating": "3.5",
+                "partner_id": "WSMA0901011425",
+                "img_type": "ratingimage",
+                "lang": "en_UK",
+                "img_url": "http:\/\/www.tripadvisor.co.uk\/img\/cdsi\/img2\/ratings\/traveler\/3.5-16981-4.gif"
+              }
+            },
+            {
+              "@attributes": {
+                "id": "487",
+                "place_id": "1082033",
+                "type": "ratingimage",
+                "geoid": "293916",
+                "name": "Grand Pinnacle",
+                "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d1082033-Reviews-m16981-Grand_Pinnacle-Bangkok.html",
+                "reviewcnt": "251",
+                "avgrating": "3.5",
+                "partner_id": "WSMA0901011425",
+                "img_type": "ratingimage",
+                "lang": "en_AU",
+                "img_url": "http:\/\/www.tripadvisor.com.au\/img\/cdsi\/img2\/ratings\/traveler\/3.5-16981-4.gif"
+              }
+            },
+            {
+              "@attributes": {
+                "id": "487",
+                "place_id": "1082033",
+                "type": "ratingimage",
+                "geoid": "293916",
+                "name": "Grand Pinnacle",
+                "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d1082033-Reviews-m16981-Grand_Pinnacle-Bangkok.html",
+                "reviewcnt": "251",
+                "avgrating": "3.5",
+                "partner_id": "WSMA0901011425",
+                "img_type": "ratingimage",
+                "lang": "en_CA",
+                "img_url": "http:\/\/www.tripadvisor.ca\/img\/cdsi\/img2\/ratings\/traveler\/3.5-16981-4.gif"
+              }
+            },
+            {
+              "@attributes": {
+                "id": "487",
+                "place_id": "1082033",
+                "type": "ratingimage",
+                "geoid": "293916",
+                "name": "Grand Pinnacle",
+                "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d1082033-Reviews-m16981-Grand_Pinnacle-Bangkok.html",
+                "reviewcnt": "251",
+                "avgrating": "3.5",
+                "partner_id": "WSMA0901011425",
+                "img_type": "ratingimage",
+                "lang": "en_IE",
+                "img_url": "http:\/\/www.tripadvisor.ie\/img\/cdsi\/img2\/ratings\/traveler\/3.5-16981-4.gif"
+              }
+            },
+            {
+              "@attributes": {
+                "id": "487",
+                "place_id": "1082033",
+                "type": "ratingimage",
+                "geoid": "293916",
+                "name": "Grand Pinnacle",
+                "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d1082033-Reviews-m16981-Grand_Pinnacle-Bangkok.html",
+                "reviewcnt": "251",
+                "avgrating": "3.5",
+                "partner_id": "WSMA0901011425",
+                "img_type": "ratingimage",
+                "lang": "en_IN",
+                "img_url": "http:\/\/www.tripadvisor.in\/img\/cdsi\/img2\/ratings\/traveler\/3.5-16981-4.gif"
+              }
+            },
+            {
+              "@attributes": {
+                "id": "487",
+                "place_id": "1082033",
+                "type": "ratingimage",
+                "geoid": "293916",
+                "name": "Grand Pinnacle",
+                "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d1082033-Reviews-m16981-Grand_Pinnacle-Bangkok.html",
+                "reviewcnt": "251",
+                "avgrating": "3.5",
+                "partner_id": "WSMA0901011425",
+                "img_type": "ratingimage",
+                "lang": "en_MY",
+                "img_url": "http:\/\/www.tripadvisor.com.my\/img\/cdsi\/img2\/ratings\/traveler\/3.5-16981-4.gif"
+              }
+            },
+            {
+              "@attributes": {
+                "id": "487",
+                "place_id": "1082033",
+                "type": "ratingimage",
+                "geoid": "293916",
+                "name": "Grand Pinnacle",
+                "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d1082033-Reviews-m16981-Grand_Pinnacle-Bangkok.html",
+                "reviewcnt": "251",
+                "avgrating": "3.5",
+                "partner_id": "WSMA0901011425",
+                "img_type": "ratingimage",
+                "lang": "en_SG",
+                "img_url": "http:\/\/www.tripadvisor.com.sg\/img\/cdsi\/img2\/ratings\/traveler\/3.5-16981-4.gif"
+              }
+            },
+            {
+              "@attributes": {
+                "id": "487",
+                "place_id": "1082033",
+                "type": "ratingimage",
+                "geoid": "293916",
+                "name": "Grand Pinnacle",
+                "url": "http:\/\/www.tripadvisor.com\/Hotel_Review-g293916-d1082033-Reviews-m16981-Grand_Pinnacle-Bangkok.html",
+                "reviewcnt": "251",
+                "avgrating": "3.5",
+                "partner_id": "WSMA0901011425",
+                "img_type": "ratingimage",
+                "lang": "id",
+                "img_url": "http:\/\/www.tripadvisor.co.id\/img\/cdsi\/img2\/ratings\/traveler\/3.5-16981-4.gif"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
